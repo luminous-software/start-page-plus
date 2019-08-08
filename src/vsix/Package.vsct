@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <Include href="KnownImageIds.vsct" />
+
+  <Commands package="Package">
+    <Groups>
+      <Group guid="PackageCommandSet" id="PackageGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="PackageCommandSet" id="PackageOptionsCommand" type="Button" priority="0x0002">
+        <Parent guid="PackageCommandSet" id="PackageGroup" />
+        <Icon guid="ImageCatalogGuid" id="Keyboard" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>PackageOptions</CommandName>
+          <CanonicalName>PackageOptions</CanonicalName>
+          <LocCanonicalName>PackageOptions</LocCanonicalName>
+          <ButtonText>Package Options</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="Package" value="{D260DDBA-7A30-4094-A145-23A778A11D04}" />
+
+    <GuidSymbol name="PackageCommandSet" value="{BD83D0A2-EC30-4F7A-A13E-DDF411CD63FD}">
+
+      <IDSymbol name="PackageGroup" value="0xB000" />
+
+      <IDSymbol name="PackageOptionsCommand" value="0x0215" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

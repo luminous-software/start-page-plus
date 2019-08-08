@@ -1,0 +1,81 @@
+# project
+site_name: 'Start Page'
+site_description: 'Documentation for Start Page (Visual Studio extension)'
+site_author: 'Yann Duran'
+copyright: 'Copyright &copy 2019 Luminous Software Solutions'
+site_url: 'https://luminous-software.solutions/start-page'
+site_dir: 'docs'
+docs_dir: 'docs-source'
+dev_addr: '127.0.0.1:8007'
+
+# repository
+#repo_name: 'start-page'
+#repo_url: 'https://github.com/luminous-software/start-page'
+remote_branch: 'master'
+remote_name: 'origin'
+
+# configuration
+theme:
+    name: 'material'
+    language: 'en'
+    palette:
+        primary: 'deep purple'
+        accent: 'purple'
+    custom_dir: 'docs-theme'
+    favicon: 'assets/images/favicon.ico'
+    feature:
+        tabs: false
+    font:
+        text: 'Ubuntu'
+        code: 'Ubuntu Mono'
+    logo:
+        icon: 'lightbulb_outline'
+
+# layout
+pages:
+    - Overview: 'index.md'
+    - Getting Started: 'getting-started.md'
+    - Features: 'features.md'
+    - Changelog: 'changelog.md'
+    - Roadmap: 'roadmap.md'
+
+# customisation
+extra:
+    version: ''
+    discus: ''
+    links:
+        - https://luminous-software.solutions
+    social:
+        - type: 'twitter'
+        - link: 'https://twitter.com/lumiinus'
+        - type: 'linkedin'
+        - link: 'https://linkedin.com/in/yannduran'
+    repo_icon: ''
+
+extra_css:
+    - assets/stylesheets/extra.css
+
+extra_javascript:
+    - assets/javascripts/extra.js
+
+# extensions
+markdown_extensions:
+    - markdown.extensions.tables
+    - codehilite(css_class=code)
+    - admonition
+    - toc:
+        permalink: true
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.magiclink:
+        repo_url_shortener: true
+        repo_url_shorthand: true
+        social_url_shorthand: true
+        provider: github
+        user: luminous-software
+        repo: time-savers
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.tilde
+    - pymdownx.superfences
+    - pymdownx.snippets
