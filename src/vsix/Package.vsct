@@ -7,35 +7,44 @@
 
   <Commands package="Package">
     <Groups>
-      <Group guid="PackageCommandSet" id="PackageGroup" priority="0x0600">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+      <Group guid="PackageCommandSet" id="PackageGroup" priority="0xFF00">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_TOOLS_OTHER2"/>
       </Group>
     </Groups>
 
     <Buttons>
-      <Button guid="PackageCommandSet" id="PackageOptionsCommand" type="Button" priority="0x0002">
-        <Parent guid="PackageCommandSet" id="PackageGroup" />
-        <Icon guid="ImageCatalogGuid" id="Keyboard" />
+      <Button guid="PackageCommandSet" id="ViewStartPagePlus" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_VIEW_BROWSER"/>
+        <Icon guid="ImageCatalogGuid" id="ConditionalRuleIfThen" />
         <CommandFlag>IconIsMoniker</CommandFlag>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>
-          <CommandName>PackageOptions</CommandName>
-          <CanonicalName>PackageOptions</CanonicalName>
-          <LocCanonicalName>PackageOptions</LocCanonicalName>
-          <ButtonText>Package Options</ButtonText>
+          <CommandName>ViewStartPagePlus</CommandName>
+          <ButtonText>Start Page+</ButtonText>
+        </Strings>
+      </Button>
+
+      <Button guid="PackageCommandSet" id="StartPagePlusOptions" type="Button" priority="0x00FF">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_TOOLS_OPTIONS" />
+        <Icon guid="ImageCatalogGuid" id="ConditionalRuleIfThen" />
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <CommandName>StartPagePlusOptions</CommandName>
+          <ButtonText>Start Page+ Options</ButtonText>
         </Strings>
       </Button>
     </Buttons>
   </Commands>
 
   <Symbols>
-    <GuidSymbol name="Package" value="{D260DDBA-7A30-4094-A145-23A778A11D04}" />
-
-    <GuidSymbol name="PackageCommandSet" value="{BD83D0A2-EC30-4F7A-A13E-DDF411CD63FD}">
+    <GuidSymbol name="Package" value="{863D9C86-C92D-4CE0-87C6-087E3A0B6CBF}" />
+    <GuidSymbol name="PackageCommandSet" value="{915AB04F-9AA8-4D24-B06B-BB1524E3C7BF}">
 
       <IDSymbol name="PackageGroup" value="0xB000" />
 
-      <IDSymbol name="PackageOptionsCommand" value="0x0215" />
+      <IDSymbol name="ViewStartPagePlus" value="0x0210" />
+      <IDSymbol name="StartPagePlusOptions" value="0x0215" />
     </GuidSymbol>
   </Symbols>
 </CommandTable>
