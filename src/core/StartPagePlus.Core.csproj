@@ -45,8 +45,9 @@
     <Compile Include="Constants\StringConstants.cs" />
     <Compile Include="Interfaces\IBrowserService.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
+    <Compile Include="Interfaces\ITabPage.cs" />
     <Compile Include="Models\FeedItem.cs" />
-    <Compile Include="Models\DevNewsFeedItem.cs" />
+    <Compile Include="Models\NewsItemFeedItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
