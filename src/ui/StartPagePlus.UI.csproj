@@ -52,16 +52,20 @@
     </Compile>
     <Compile Include="AttachedProperties\Grids\Props.cs" />
     <Compile Include="Constants\GuidConstants.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\ConverterMarkupExtension.cs" />
+    <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\NewsModel.cs" />
+    <Compile Include="Models\FavoritesModel.cs" />
+    <Compile Include="Models\CreateModel.cs" />
+    <Compile Include="Models\StartModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\FeedItemViewModel.cs" />
-    <Compile Include="ViewModels\MainControl\MainControlViewModel.cs" />
-    <Compile Include="ViewModels\NewsItems\NewsItemViewModel.cs" />
-    <Compile Include="ViewModels\NewsItems\NewsItemsViewModel.cs" />
+    <Compile Include="ViewModels\Main\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
-    <Compile Include="Views\MainControl.xaml.cs">
-      <DependentUpon>MainControl.xaml</DependentUpon>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MainWindow.cs" />
+    <Compile Include="Views\StartPagePlusWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Luminous.Code.VisualStudio">
@@ -93,11 +97,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Styles\MainStyles.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\MainControl.xaml">
+    <Page Include="Views\MainView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -8,13 +8,13 @@ namespace StartPagePlus.UI.Views
     using static UI.Constants.GuidConstants;
 
     [Guid(StartPagePlusPaneGuidString)]
-    public class MainWindow : ToolWindowPane
+    public class StartPagePlusWindow : ToolWindowPane
     {
-        public MainWindow() : base(null)
+        public StartPagePlusWindow() : base(null)
         {
             Caption = Vsix.Name;
             BitmapImageMoniker = KnownMonikers.Home;
-            Content = new MainControl();
+            Content = new MainView();
         }
     }
 }
