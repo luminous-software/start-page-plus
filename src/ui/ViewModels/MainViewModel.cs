@@ -14,26 +14,26 @@ namespace StartPagePlus.UI.ViewModels
         public MainViewModel()
         {
             Company = "Luminous Software Solutions";
-            IsVisible = true;
+            IsVisible = false;
             Models = new ObservableCollection<TabViewModel>
             {
                 new StartViewModel
                 {
                     Name ="Start",
-                    IsVisible =false
+                    IsVisible = true
                 }                ,
                 new FavoritesViewModel
                 {
                     Name ="Favorites",
-                    IsVisible =true
+                    IsVisible = true
                 },
                 new CreateViewModel{
                     Name ="Create",
-                    IsVisible =true
+                    IsVisible = true
                 },
                 new NewsViewModel{
                     Name ="News",
-                    IsVisible =true
+                    IsVisible = true
                 }
             };
         }
@@ -42,8 +42,11 @@ namespace StartPagePlus.UI.ViewModels
             => generalOptions ?? (generalOptions = AsyncPackageBase.GetDialogPage<GeneralDialogPage>());
 
         public string Company { get; }
+
         public bool IsVisible { get; }
+
         public ObservableCollection<TabViewModel> Models { get; }
+
         public static RegistryKey RegistryRoot { get; set; }
     }
 

@@ -58,7 +58,7 @@
 
     <DockPanel x:Name="LayoutRoot"
         Width="Auto"
-        Margin="20"
+        Margin="15"
         Background="Transparent"
         LastChildFill="True"
         >
@@ -160,7 +160,10 @@
 
             <TabControl.ItemTemplate>
                 <DataTemplate DataType="{x:Type vm:TabViewModel}">
-                    <TextBlock Text="{Binding Name}"/>
+                    <TextBlock
+                        Text="{Binding Name}"
+                        Visibility="{Binding IsVisible, Converter={c:BoolToVisibilityConverter}}"
+                        />
                 </DataTemplate>
             </TabControl.ItemTemplate>
         </TabControl>
