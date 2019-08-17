@@ -11,12 +11,16 @@ namespace StartPagePlus.UI.ViewModels
 
             ServiceLocator.SetLocatorProvider(() => container);
 
+            container.Register<FavoritesViewModel>();
             container.Register<StartViewModel>();
             container.Register<MainViewModel>();
         }
 
         public static MainViewModel MainViewModel
             => ServiceLocator.Current.GetInstance<MainViewModel>();
+
+        public static FavoritesViewModel FavoritesViewModel
+            => ServiceLocator.Current.GetInstance<FavoritesViewModel>();
 
         public static StartViewModel StartViewModel
             => ServiceLocator.Current.GetInstance<StartViewModel>();

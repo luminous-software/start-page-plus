@@ -22,10 +22,10 @@ namespace StartPagePlus.UI.ViewModels
                     Name ="Start",
                     IsVisible =true
                 }                ,
-                //new FavoritesViewModel{
-                //    Name ="Favorites",
-                //    IsVisible =true
-                //},
+                new FavoritesViewModel{
+                    Name ="Favorites",
+                    IsVisible =true
+                },
                 //new CreateModel{
                 //    Name ="Create",
                 //    IsVisible =true

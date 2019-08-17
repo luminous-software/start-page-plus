@@ -83,10 +83,11 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="TabItem">
                                 <Border x:Name="Border"
+                                    Margin="10,0,10,0"
                                     BorderBrush="{DynamicResource MenuActiveBrush}"
+                                    BorderThickness="0,0,0,2"
                                     >
                                     <ContentPresenter x:Name="ContentSite"
-                                        Margin="10,0,10,0"
                                         HorizontalAlignment="Center"
                                         VerticalAlignment="Center"
                                         ContentSource="Header"
@@ -96,13 +97,13 @@
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsSelected" Value="True">
                                         <Setter Property="Foreground" Value="{DynamicResource MenuActiveBrush}"/>
-                                        <Setter Property="BorderThickness" Value="0,0,0,2"/>
+                                        <Setter TargetName="Border" Property="BorderThickness" Value="0,0,0,2"/>
                                         <Setter Property="FontWeight" Value="DemiBold"/>
                                     </Trigger>
 
                                     <Trigger Property="IsSelected" Value="False">
                                         <Setter Property="Foreground" Value="{DynamicResource MenuInactiveBrush}"/>
-                                        <Setter Property="BorderThickness" Value="0"/>
+                                        <Setter TargetName="Border" Property="BorderThickness" Value="0"/>
                                         <Setter Property="FontWeight" Value="Normal"/>
                                     </Trigger>
                                 </ControlTemplate.Triggers>
@@ -113,6 +114,10 @@
 
                 <DataTemplate DataType="{x:Type vm:StartViewModel}">
                     <v:StartView/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type vm:FavoritesViewModel}">
+                    <v:FavoritesView/>
                 </DataTemplate>
             </TabControl.Resources>
 

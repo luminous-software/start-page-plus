@@ -5,11 +5,11 @@
     xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
     >
     <SolidColorBrush x:Key="MenuActiveBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.AutoHideTabMouseOverTextKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
         />
 
     <SolidColorBrush x:Key="MenuInactiveBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AutoHideTabMouseOverTextKey}}"
         />
 
     <SolidColorBrush x:Key="MenuBackgroundBrush"
