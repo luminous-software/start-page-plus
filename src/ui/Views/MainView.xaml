@@ -123,6 +123,10 @@
                 <DataTemplate DataType="{x:Type vm:CreateViewModel}">
                     <v:CreateView/>
                 </DataTemplate>
+
+                <DataTemplate DataType="{x:Type vm:NewsViewModel}">
+                    <v:NewsView/>
+                </DataTemplate>
             </TabControl.Resources>
 
             <TabControl.Template>

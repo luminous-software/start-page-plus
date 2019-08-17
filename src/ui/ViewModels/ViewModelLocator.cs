@@ -14,6 +14,7 @@ namespace StartPagePlus.UI.ViewModels
             container.Register<StartViewModel>();
             container.Register<FavoritesViewModel>();
             container.Register<CreateViewModel>();
+            container.Register<NewsViewModel>();
             container.Register<MainViewModel>();
         }
 
@@ -28,5 +29,8 @@ namespace StartPagePlus.UI.ViewModels
 
         public static CreateViewModel CreateViewModel
             => ServiceLocator.Current.GetInstance<CreateViewModel>();
+
+        public static NewsViewModel NewsViewModel
+            => ServiceLocator.Current.GetInstance<NewsViewModel>();
     }
 }

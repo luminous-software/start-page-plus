@@ -31,10 +31,10 @@ namespace StartPagePlus.UI.ViewModels
                     Name ="Create",
                     IsVisible =true
                 },
-                //new NewsViewModel{
-                //    Name ="News",
-                //    IsVisible =true
-                //}
+                new NewsViewModel{
+                    Name ="News",
+                    IsVisible =true
+                }
             };
         }
 
