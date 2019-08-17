@@ -24,6 +24,6 @@ namespace StartPagePlus.Commands
                 .ShowProblem();
 
         private CommandResult ExecuteCommand()
-            => PackageClass.ShowToolWindow<MainWindow>(Package.DisposalToken);
+            => PackageClass.ShowToolWindow<StartPagePlusWindow>(Package.DisposalToken);
     }
 }
