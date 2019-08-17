@@ -20,17 +20,18 @@ namespace StartPagePlus.UI.ViewModels
                 new StartViewModel
                 {
                     Name ="Start",
-                    IsVisible =true
+                    IsVisible =false
                 }                ,
-                new FavoritesViewModel{
+                new FavoritesViewModel
+                {
                     Name ="Favorites",
                     IsVisible =true
                 },
-                //new CreateModel{
-                //    Name ="Create",
-                //    IsVisible =true
-                //},
-                //new NewsModel{
+                new CreateViewModel{
+                    Name ="Create",
+                    IsVisible =true
+                },
+                //new NewsViewModel{
                 //    Name ="News",
                 //    IsVisible =true
                 //}

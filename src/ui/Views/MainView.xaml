@@ -119,6 +119,10 @@
                 <DataTemplate DataType="{x:Type vm:FavoritesViewModel}">
                     <v:FavoritesView/>
                 </DataTemplate>
+
+                <DataTemplate DataType="{x:Type vm:CreateViewModel}">
+                    <v:CreateView/>
+                </DataTemplate>
             </TabControl.Resources>
 
             <TabControl.Template>
