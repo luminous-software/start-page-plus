@@ -25,106 +25,6 @@
                 <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Styles/Brushes.xaml"/>
 
                 <ResourceDictionary>
-                    <!--<Style x:Key="TabTitleStyle"
-                        TargetType="TextBlock"
-                        >
-                        <Setter Property="Margin" Value="10,10,10,0"/>
-                        <Setter Property="FontSize" Value="24"/>
-                        <Setter Property="Foreground" Value="{DynamicResource TitleBrush}"/>
-                        <Setter Property="Height" Value="34"/>
-                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                        <Setter Property="TextAlignment" Value="Left"/>
-                        <Setter Property="VerticalAlignment" Value="Top"/>
-                    </Style>-->
-
-                    <!--<Style x:Key="TabHeadingStyle"
-                        TargetType="TextBlock"
-                        >
-                        <Setter Property="Margin" Value="10,15,10,0"/>
-                        <Setter Property="Padding" Value="5,0,0,0"/>
-                        <Setter Property="FontSize" Value="20"/>
-                        <Setter Property="Foreground" Value="{DynamicResource ColumnHeadingBrush}"/>
-                        <Setter Property="Height" Value="30"/>
-                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                        <Setter Property="TextAlignment" Value="Left"/>
-                        <Setter Property="VerticalAlignment" Value="Top"/>
-                    </Style>-->
-
-                    <Style x:Key="CompanyStyle"
-                        TargetType="TextBlock"
-                        >
-                        <Setter Property="Foreground" Value="{DynamicResource TextLightBrush}"/>
-                        <Setter Property="TextAlignment" Value="Center"/>
-                        <Setter Property="FontSize" Value="26"/>
-                        <Setter Property="Height" Value="50"/>
-                    </Style>
-
-                    <Style x:Key="TabContainerStyle"
-                        TargetType="Border"
-                        >
-                        <Setter Property="Margin" Value="0,10,10,10"/>
-                        <Setter Property="BorderBrush" Value="{DynamicResource ColumnBorderBrush}"/>
-                        <Setter Property="BorderThickness" Value="1"/>
-                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                        <Setter Property="Background" Value="{DynamicResource ColumnBackgroundBrush}"/>
-                    </Style>
-
-                    <Style TargetType="TabControl">
-                        <Setter Property="OverridesDefaultStyle" Value="True"/>
-                        <Setter Property="SnapsToDevicePixels" Value="True"/>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="{x:Type TabControl}">
-                                    <Grid
-                                        grid:Props.RowHeights="Auto,*"
-                                        Background="{DynamicResource MenuBackgroundBrush}"
-                                        KeyboardNavigation.TabNavigation="Local"
-                                        >
-                                        <TabPanel x:Name="HeaderPanel"
-                                            Grid.Row="0"
-                                            Margin="0,0,0,20"
-                                            Panel.ZIndex="1"
-                                            IsItemsHost="True"
-                                            KeyboardNavigation.TabIndex="1"
-                                            />
-
-                                        <Border x:Name="Border"
-                                            Grid.Row="1"
-                                            Background="Transparent"
-                                            BorderBrush="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowTextKey}}"
-                                            BorderThickness="1"
-                                            KeyboardNavigation.DirectionalNavigation="Contained"
-                                            KeyboardNavigation.TabIndex="2"
-                                            KeyboardNavigation.TabNavigation="Local"
-                                            >
-                                            <ContentPresenter x:Name="PART_SelectedContentHost"
-                                                ContentSource="SelectedContent"
-                                                />
-                                        </Border>
-
-                                        <VisualStateManager.VisualStateGroups>
-                                            <VisualStateGroup x:Name="CommonStates">
-                                                <VisualState x:Name="Disabled">
-                                                    <Storyboard>
-                                                        <ColorAnimationUsingKeyFrames
-                                                            Storyboard.TargetName="Border"
-                                                            Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-                                                            >
-                                                            <EasingColorKeyFrame
-                                                                KeyTime="0"
-                                                                Value="#FFAAAAAA"
-                                                                />
-                                                        </ColorAnimationUsingKeyFrames>
-                                                    </Storyboard>
-                                                </VisualState>
-                                            </VisualStateGroup>
-                                        </VisualStateManager.VisualStateGroups>
-                                    </Grid>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-
                     <Style TargetType="TabItem">
                         <Setter Property="FontSize" Value="26"/>
                         <Setter Property="Template">
@@ -157,41 +57,97 @@
     </UserControl.Resources>
 
     <DockPanel x:Name="LayoutRoot"
-        Width="Auto"[
+        Width="Auto"
         Margin="20"
-        Background="{DynamicResource TabBackgroundBrush}"
+        Background="Transparent"
         LastChildFill="True"
         >
         <TextBlock x:Name="Company"
+            Height="50"
             DockPanel.Dock="Top"
-            Style="{StaticResource CompanyStyle}"
+            FontSize="26"
+            Foreground="{DynamicResource TextLightBrush}"
             Text="{Binding Company}"
+            TextAlignment="Center"
             Visibility="{Binding IsVisible, Converter={c:BoolToVisibilityConverter}}"
             />
 
         <TabControl
             Background="Transparent"
-            Foreground="{DynamicResource MenuInactiveBrush}"
             ItemsSource="{Binding Models}"
             >
-            <!--<TabControl.Resources>
-                <DataTemplate DataType="{x:Type m:StartModel}">
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="FontSize" Value="26"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <Border x:Name="Border"
+                                    BorderBrush="{DynamicResource MenuActiveBrush}"
+                                    >
+                                    <ContentPresenter x:Name="ContentSite"
+                                        Margin="10,0,10,0"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        ContentSource="Header"
+                                        />
+                                </Border>
+
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Foreground" Value="{DynamicResource MenuActiveBrush}"/>
+                                        <Setter Property="BorderThickness" Value="0,0,0,2"/>
+                                        <Setter Property="FontWeight" Value="DemiBold"/>
+                                    </Trigger>
+
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter Property="Foreground" Value="{DynamicResource MenuInactiveBrush}"/>
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                        <Setter Property="FontWeight" Value="Normal"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+
+                <DataTemplate DataType="{x:Type vm:StartViewModel}">
                     <v:StartView/>
                 </DataTemplate>
+            </TabControl.Resources>
 
-                <DataTemplate DataType="{x:Type m:FavoritesPage}">
-                    <v:FavoritesView/>
-                </DataTemplate>
-            </TabControl.Resources>-->
+            <TabControl.Template>
+                <ControlTemplate TargetType="TabControl">
+                    <Grid
+                        grid:Props.RowHeights="Auto,*"
+                        Background="{DynamicResource MenuBackgroundBrush}"
+                        KeyboardNavigation.TabNavigation="Local"
+                        >
+                        <TabPanel x:Name="HeaderPanel"
+                            Grid.Row="0"
+                            Margin="0,0,0,20"
+                            Panel.ZIndex="1"
+                            IsItemsHost="True"
+                            KeyboardNavigation.TabIndex="1"
+                            />
+
+                        <Border x:Name="Border"
+                            Grid.Row="1"
+                            Background="Transparent"
+                            BorderBrush="{DynamicResource {x:Static vsshell:VsBrushes.ToolWindowTextKey}}"
+                            BorderThickness="1"
+                            >
+                            <ContentPresenter x:Name="PART_SelectedContentHost"
+                                ContentSource="SelectedContent"
+                                />
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </TabControl.Template>
 
             <TabControl.ItemTemplate>
-                <DataTemplate DataType="{x:Type m:ModelBase}">
-                    <Border
-                        BorderBrush="Transparent"
-                        BorderThickness="0,0,0,2"
-                        >
-                        <TextBlock Text="{Binding Name}"/>
-                    </Border>
+                <DataTemplate DataType="{x:Type vm:TabViewModel}">
+                    <TextBlock Text="{Binding Name}"/>
                 </DataTemplate>
             </TabControl.ItemTemplate>
         </TabControl>

@@ -16,6 +16,10 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowBackgroundKey}}"
         />
 
+    <SolidColorBrush x:Key="ContentBackgroundBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowFloatingFrameKey}}"
+        />
+
     <SolidColorBrush x:Key="TextLightBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
         />

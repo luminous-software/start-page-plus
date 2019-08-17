@@ -5,8 +5,6 @@ using Microsoft.Win32;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using Core.Interfaces;
-    using Models;
     using Options.Pages;
 
     public class MainViewModel : ViewModelBase
@@ -17,25 +15,25 @@ namespace StartPagePlus.UI.ViewModels
         {
             Company = "Luminous Software Solutions";
             IsVisible = true;
-            Models = new ObservableCollection<IModel>
+            Models = new ObservableCollection<TabViewModel>
             {
-                new StartModel
+                new StartViewModel
                 {
                     Name ="Start",
                     IsVisible =true
-                },
-                new FavoritesModel{
-                    Name ="Favorites",
-                    IsVisible =true
-                },
-                new CreateModel{
-                    Name ="Create",
-                    IsVisible =true
-                },
-                new NewsModel{
-                    Name ="News",
-                    IsVisible =true
-                }
+                }                ,
+                //new FavoritesViewModel{
+                //    Name ="Favorites",
+                //    IsVisible =true
+                //},
+                //new CreateModel{
+                //    Name ="Create",
+                //    IsVisible =true
+                //},
+                //new NewsModel{
+                //    Name ="News",
+                //    IsVisible =true
+                //}
             };
         }
 
@@ -44,7 +42,7 @@ namespace StartPagePlus.UI.ViewModels
 
         public string Company { get; }
         public bool IsVisible { get; }
-        public ObservableCollection<IModel> Models { get; }
+        public ObservableCollection<TabViewModel> Models { get; }
         public static RegistryKey RegistryRoot { get; set; }
     }
 
