@@ -20,7 +20,7 @@
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Styles/Brushes.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
 
                 <ResourceDictionary>
                     <Style TargetType="TabItem">
