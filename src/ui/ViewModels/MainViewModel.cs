@@ -3,11 +3,11 @@ using GalaSoft.MvvmLight;
 using Luminous.Code.VisualStudio.Packages;
 using Microsoft.Win32;
 
-namespace StartPagePlus.UI.ViewModels.Main
+namespace StartPagePlus.UI.ViewModels
 {
     using Core.Interfaces;
+    using Models;
     using Options.Pages;
-    using StartPagePlus.UI.Models;
 
     public class MainViewModel : ViewModelBase
     {
