@@ -134,7 +134,7 @@
                         >
                         <TabPanel x:Name="HeaderPanel"
                             Grid.Row="0"
-                            Margin="0,0,0,20"
+                            Margin="0,0,0,15"
                             Panel.ZIndex="1"
                             IsItemsHost="True"
                             KeyboardNavigation.TabIndex="1"
