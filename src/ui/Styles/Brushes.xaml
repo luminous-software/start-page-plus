@@ -4,6 +4,26 @@
     xmlns:grid="clr-namespace:StartPage.UI.AttachedProperties.Grids"
     xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
     >
+    <SolidColorBrush x:Key="MenuActiveBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AutoHideTabMouseOverTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="MenuInactiveBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="MenuBackgroundBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowBackgroundKey}}"
+        />
+
+    <SolidColorBrush x:Key="TextLightBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="TextDarkBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
     <SolidColorBrush x:Key="ColumnBorderBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.AccentBorderKey}}"
         />
