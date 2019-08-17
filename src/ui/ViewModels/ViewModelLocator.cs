@@ -3,7 +3,7 @@ using GalaSoft.MvvmLight.Ioc;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using ViewModels.MainControl;
+    using ViewModels.Main;
 
     public class ViewModelLocator
     {
@@ -13,13 +13,11 @@ namespace StartPagePlus.UI.ViewModels
 
             ServiceLocator.SetLocatorProvider(() => container);
 
-
-            container.Register<MainControlViewModel>();
+            container.Register<MainViewModel>();
         }
 
-        public static MainControlViewModel MainControlViewModel
-            => ServiceLocator.Current.GetInstance<MainControlViewModel>();
-
+        public static MainViewModel MainViewModel
+            => ServiceLocator.Current.GetInstance<MainViewModel>();
 
     }
 }
