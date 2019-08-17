@@ -3,9 +3,10 @@ using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Imaging;
 using Microsoft.VisualStudio.Shell;
 
-namespace StartPagePlus.UI.Views
+namespace StartPagePlus.UI
 {
-    using static UI.Constants.GuidConstants;
+    using Views;
+    using static Constants.GuidConstants;
 
     [Guid(StartPagePlusPaneGuidString)]
     public class StartPagePlusWindow : ToolWindowPane

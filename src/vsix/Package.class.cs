@@ -13,8 +13,8 @@ namespace StartPagePlus
 {
     using Commands;
     using Options.Pages;
+    using UI;
     using UI.ViewModels;
-    using UI.Views;
     using static Core.Constants.StringConstants;
     using static PackageGuids;
     using static Vsix;

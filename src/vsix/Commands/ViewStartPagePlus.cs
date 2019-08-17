@@ -5,7 +5,7 @@ using Tasks = System.Threading.Tasks;
 
 namespace StartPagePlus.Commands
 {
-    using UI.Views;
+    using UI;
 
     internal sealed class ViewStartPagePlus : StartPagePlusCommand
     {
