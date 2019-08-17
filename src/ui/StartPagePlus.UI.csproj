@@ -54,11 +54,6 @@
     <Compile Include="Constants\GuidConstants.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\ConverterMarkupExtension.cs" />
-    <Compile Include="Models\ModelBase.cs" />
-    <Compile Include="Models\NewsModel.cs" />
-    <Compile Include="Models\FavoritesModel.cs" />
-    <Compile Include="Models\CreateModel.cs" />
-    <Compile Include="Models\StartModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\NewsViewModel.cs" />
     <Compile Include="ViewModels\CreateViewModel.cs" />
