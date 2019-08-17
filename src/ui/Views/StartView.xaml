@@ -11,6 +11,18 @@
     mc:Ignorable="d"
     >
     <DockPanel LastChildFill="True">
+        <TextBlock x:Name="Title"
+            Height="34"
+            Margin="10,10,10,0"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Top"
+            DockPanel.Dock="Top"
+            FontSize="24"
+            Foreground="{DynamicResource TitleBrush}"
+            Text="{Binding Title}"
+            TextAlignment="Left"
+            />
+
         <Button
             Margin="10"
             Content="Start View"

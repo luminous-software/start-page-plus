@@ -11,6 +11,8 @@ namespace StartPagePlus.UI.ViewModels
 
         public string Name { get; set; }
 
+        public string Title { get; set; }
+
         public bool IsVisible { get; set; }
 
         public static GeneralDialogPage GeneralOptions
