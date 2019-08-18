@@ -5,16 +5,15 @@ using System.Windows.Markup;
 
 namespace StartPagePlus.UI.Converters
 {
-    public abstract class ConverterMarkupExtension<T> : MarkupExtension, IValueConverter
-        where T : class, new()
-    {
-        private static T converter = null;
+    //https://www.broculos.net/2014/04/wpf-how-to-use-converters-without.html
 
+    public abstract class ConverterMarkupExtension : MarkupExtension, IValueConverter
+    {
         public ConverterMarkupExtension()
         { }
 
         public override object ProvideValue(IServiceProvider serviceProvider)
-            => converter ?? (converter = new T());
+            => this;
 
         public abstract object Convert(object value, Type targetType, object parameter, CultureInfo culture);
 
