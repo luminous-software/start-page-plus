@@ -4,6 +4,7 @@ namespace StartPagePlus.UI.Views
 {
     public partial class RecentItemsView : UserControl
     {
-        public RecentItemsView() => InitializeComponent();
+        public RecentItemsView()
+            => InitializeComponent();
     }
 }

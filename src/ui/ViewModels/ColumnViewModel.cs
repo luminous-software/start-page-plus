@@ -3,6 +3,7 @@ using Luminous.Code.VisualStudio.Packages;
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using System.Collections.ObjectModel;
     using Options.Pages;
 
     public class ColumnViewModel : ViewModelBase
@@ -15,5 +16,8 @@ namespace StartPagePlus.UI.ViewModels
 
         public static GeneralDialogPage GeneralOptions
             => generalOptions ?? (generalOptions = AsyncPackageBase.GetDialogPage<GeneralDialogPage>());
+
+        public ObservableCollection<CommandViewModel> Columns { get; set; }
+
     }
 }

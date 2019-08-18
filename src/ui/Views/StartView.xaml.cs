@@ -2,15 +2,10 @@
 
 namespace StartPagePlus.UI.Views
 {
-    using ViewModels;
-
     public partial class StartView : UserControl
     {
         public StartView()
-        {
-            InitializeComponent();
+            => InitializeComponent();
 
-            DataContext = ViewModelLocator.StartViewModel;
-        }
     }
 }

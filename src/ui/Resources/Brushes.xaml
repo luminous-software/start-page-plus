@@ -21,7 +21,7 @@
     <!--  Content  -->
 
     <SolidColorBrush x:Key="ContentBackgroundBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.AccentBorderKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AccentDarkKey}}"
         />
 
     <SolidColorBrush x:Key="TextLightBrush"
@@ -35,11 +35,11 @@
     <!--  Columns  -->
 
     <SolidColorBrush x:Key="ColumnBorderBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.AccentBorderKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
         />
 
     <SolidColorBrush x:Key="ColumnBackgroundBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.EnvironmentBackgroundKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AccentLightKey}}"
         />
 
     <SolidColorBrush x:Key="ColumnHeadingBrush"
@@ -63,4 +63,10 @@
     <SolidColorBrush x:Key="ItemDateBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
         />
+
+    <!--  Items  -->
+    <SolidColorBrush x:Key="FilterBackgroundBrushBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
 </ResourceDictionary>

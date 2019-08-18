@@ -13,7 +13,7 @@ namespace StartPagePlus.UI.ViewModels
             {
                 new RecentItemsViewModel
                 {
-                    Heading = "Open a recent Item",
+                    Heading = "Open a Recent Item",
                     IsVisible = true
                 },
                 new StartActionsViewModel

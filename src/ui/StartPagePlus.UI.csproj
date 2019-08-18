@@ -52,6 +52,7 @@
     </Compile>
     <Compile Include="AttachedProperties\Grids\Props.cs" />
     <Compile Include="Constants\GuidConstants.cs" />
+    <Compile Include="Converters\DateConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\ConverterMarkupExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="ViewModels\RecentItemsViewModel.cs" />
     <Compile Include="ViewModels\StartActionsViewModel.cs" />
     <Compile Include="ViewModels\StartViewModel.cs" />
+    <Compile Include="ViewModels\CommandViewModel.cs" />
     <Compile Include="ViewModels\TabViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
     <Compile Include="Views\CreateView.xaml.cs">

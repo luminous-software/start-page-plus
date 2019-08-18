@@ -1,5 +1,8 @@
 ﻿namespace StartPagePlus.UI.ViewModels
 {
-    internal class RecentItemsViewModel : ColumnViewModel
-    { }
+    public class RecentItemsViewModel : ColumnViewModel
+    {
+
+
+    }
 }
