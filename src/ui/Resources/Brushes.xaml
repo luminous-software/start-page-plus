@@ -4,6 +4,8 @@
     xmlns:grid="clr-namespace:StartPage.UI.AttachedProperties.Grids"
     xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
     >
+    <!--  Menu  -->
+
     <SolidColorBrush x:Key="MenuActiveBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
         />
@@ -16,8 +18,10 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowBackgroundKey}}"
         />
 
+    <!--  Content  -->
+
     <SolidColorBrush x:Key="ContentBackgroundBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowFloatingFrameKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AccentBorderKey}}"
         />
 
     <SolidColorBrush x:Key="TextLightBrush"
@@ -28,6 +32,8 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
         />
 
+    <!--  Columns  -->
+
     <SolidColorBrush x:Key="ColumnBorderBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.AccentBorderKey}}"
         />
@@ -36,13 +42,15 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.EnvironmentBackgroundKey}}"
         />
 
+    <SolidColorBrush x:Key="ColumnHeadingBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
     <SolidColorBrush x:Key="TitleBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
         />
 
-    <SolidColorBrush x:Key="ColumnHeadingBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
-        />
+    <!--  Items  -->
 
     <SolidColorBrush x:Key="ItemNameBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
