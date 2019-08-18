@@ -17,7 +17,7 @@ namespace StartPagePlus.UI.ViewModels
         public static GeneralDialogPage GeneralOptions
             => generalOptions ?? (generalOptions = AsyncPackageBase.GetDialogPage<GeneralDialogPage>());
 
-        public ObservableCollection<CommandViewModel> Columns { get; set; }
+        public ObservableCollection<CommandViewModel> Commands { get; set; }
 
     }
 }

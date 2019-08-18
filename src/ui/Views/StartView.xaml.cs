@@ -6,6 +6,5 @@ namespace StartPagePlus.UI.Views
     {
         public StartView()
             => InitializeComponent();
-
     }
 }
