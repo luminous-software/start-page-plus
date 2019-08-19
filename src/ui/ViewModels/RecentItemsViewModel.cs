@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.CommandWpf;
 
 namespace StartPagePlus.UI.ViewModels
@@ -16,6 +15,12 @@ namespace StartPagePlus.UI.ViewModels
                 },
                 new CommandViewModel
                 {
+                    Name = "Remove Filter",
+                    Command = new RelayCommand(ExecuteRemoveFilter, CanExecuteRemoveFilter),
+                    IsVisible = false
+                },
+                new CommandViewModel
+                {
                     Name = "Refresh",
                     Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
                 }
@@ -23,12 +28,22 @@ namespace StartPagePlus.UI.ViewModels
 
         public bool FilterVisible { get; set; }
 
-        private bool CanExecuteFilter() => FilterVisible = true;
+        private bool CanExecuteFilter()
+            => !FilterVisible;
 
-        private void ExecuteFilter() => throw new NotImplementedException();
+        private void ExecuteFilter()
+            => FilterVisible = true;
 
-        private bool CanExecuteRefresh() => true;
+        private bool CanExecuteRemoveFilter()
+            => FilterVisible;
 
-        private void ExecuteRefresh() => throw new NotImplementedException();
+        private void ExecuteRemoveFilter()
+            => FilterVisible = false;
+
+        private bool CanExecuteRefresh()
+            => true;
+
+        private void ExecuteRefresh()
+        { }
     }
 }
