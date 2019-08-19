@@ -2,6 +2,14 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     >
+    <Style x:Key="ColumnHeadingStyle"
+        TargetType="TextBlock"
+        >
+        <Setter Property="Margin" Value="10,20,10,10"/>
+        <Setter Property="Padding" Value="5,0,0,0"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="{DynamicResource ColumnHeadingBrush}"/>
+    </Style>
 
     <!--  https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377  -->
     <Style x:Key="HyperlinkButton"

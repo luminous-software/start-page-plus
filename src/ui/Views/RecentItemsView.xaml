@@ -26,11 +26,8 @@
         >
         <DockPanel LastChildFill="true">
             <TextBlock x:Name="Heading"
-                Margin="10,20,10,10"
-                Padding="5,0,0,0"
                 DockPanel.Dock="Top"
-                FontSize="20"
-                Foreground="{DynamicResource ColumnHeadingBrush}"
+                Style="{StaticResource ColumnHeadingStyle}"
                 Text="{Binding Heading}"
                 />
 
