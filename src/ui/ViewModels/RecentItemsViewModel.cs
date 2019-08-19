@@ -23,12 +23,12 @@ namespace StartPagePlus.UI.ViewModels
 
         public bool FilterVisible { get; set; }
 
-        private bool CanExecuteRefresh() => throw new NotImplementedException();
-
-        private void ExecuteRefresh() => throw new NotImplementedException();
-
         private bool CanExecuteFilter() => FilterVisible = true;
 
         private void ExecuteFilter() => throw new NotImplementedException();
+
+        private bool CanExecuteRefresh() => true;
+
+        private void ExecuteRefresh() => throw new NotImplementedException();
     }
 }

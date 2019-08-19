@@ -71,7 +71,10 @@
             <ListView x:Name="RecentItems"
                 Margin="10,0,10,0"
                 Background="Transparent"
+                BorderThickness="0"
                 DockPanel.Dock="Top"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
                 >
             </ListView>
         </DockPanel>
