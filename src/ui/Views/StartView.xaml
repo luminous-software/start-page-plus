@@ -54,6 +54,10 @@
                 <DataTemplate DataType="{x:Type vm:RecentItemsViewModel}">
                     <v:RecentItemsView/>
                 </DataTemplate>
+
+                <DataTemplate DataType="{x:Type vm:StartActionsViewModel}">
+                    <v:StartActionsView/>
+                </DataTemplate>
             </ItemsControl.Resources>
         </ItemsControl>
     </DockPanel>
