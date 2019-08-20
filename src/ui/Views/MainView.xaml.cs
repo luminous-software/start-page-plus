@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Controls;
+using Microsoft.Win32;
 
 namespace StartPagePlus.UI.Views
 {
@@ -7,11 +8,14 @@ namespace StartPagePlus.UI.Views
 
     public partial class MainView : UserControl
     {
-        public MainView()
+        public MainView(RegistryKey registryRoot)
         {
             InitializeComponent();
 
-            DataContext = ViewModelLocator.MainViewModel;
+            var mainViewModel = ViewModelLocator.MainViewModel;
+
+            MainViewModel.RegistryRoot = registryRoot;
+            DataContext = mainViewModel;
 
         }
 

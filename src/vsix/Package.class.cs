@@ -46,6 +46,26 @@ namespace StartPagePlus
             //await JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
         }
 
+        protected override async Tasks.Task<object> InitializeToolWindowAsync(Type toolWindowType, int id, CancellationToken cancellationToken)
+        {
+            await base.InitializeToolWindowAsync(toolWindowType, id, cancellationToken);
+
+            // any potentially expensive work, preferably done on a background thread where possible
+
+            return UserRegistryRoot; // this is passed to the tool window constructor
+        }
+
+        public override IVsAsyncToolWindowFactory GetAsyncToolWindowFactory(Guid toolWindowType)
+            => (toolWindowType == typeof(StartPagePlusWindow).GUID)
+                ? this
+                : null; //base.GetAsyncToolWindowFactory(toolWindowType);
+
+        //TODO: is GetToolWindowTitle REALLY necessary?
+        protected override string GetToolWindowTitle(Type toolWindowType, int id)
+            => (toolWindowType == typeof(StartPagePlusWindow))
+                ? $"{Vsix.Name}"
+                : base.GetToolWindowTitle(toolWindowType, id);
+
         //TODO: remove ShowToolWindow<T>(CancellationToken cancellationToken, string problem = null)
         public static CommandResult ShowToolWindow<T>(CancellationToken cancellationToken, string problem = null)
             where T : ToolWindowPane
