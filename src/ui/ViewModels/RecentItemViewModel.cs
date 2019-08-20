@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.ViewModels
 {
@@ -7,7 +6,7 @@ namespace StartPagePlus.UI.ViewModels
 
     public class RecentItemViewModel : IRecentItem
     {
-        public ImageMoniker Moniker { get; set; }
+        public string Extension { get; set; }
 
         public string Name { get; set; }
 
