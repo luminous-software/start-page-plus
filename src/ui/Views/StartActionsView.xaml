@@ -52,7 +52,7 @@
                             Command="{Binding Command}"
                             Content="{Binding Name}"
                             FontSize="16"
-                            Style="{StaticResource HyperlinkButton}"
+                            Style="{StaticResource ColumnCommandStyle}"
                             />
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
