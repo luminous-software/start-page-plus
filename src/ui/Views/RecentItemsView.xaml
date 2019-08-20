@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:c="clr-namespace:StartPagePlus.UI.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:imaging="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.Imaging"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="450"
     d:DesignWidth="800"
@@ -58,7 +59,7 @@
                             HorizontalAlignment="Center"
                             Command="{Binding Command}"
                             Content="{Binding Name}"
-                            Style="{StaticResource HyperlinkButton}"
+                            Style="{StaticResource ColumnCommandStyle}"
                             Visibility="{Binding FilterVisible, Converter={c:BoolToVisibilityConverter}}"
                             />
                     </DataTemplate>
@@ -70,9 +71,50 @@
                 Background="Transparent"
                 BorderThickness="0"
                 DockPanel.Dock="Top"
+                ItemsSource="{Binding Items}"
                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                 ScrollViewer.VerticalScrollBarVisibility="Auto"
                 >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <DockPanel LastChildFill="True">
+                            <imaging:CrispImage
+                                Name="RecentItemImage"
+                                Width="24"
+                                Height="24"
+                                Margin="0,3,5,5"
+                                VerticalAlignment="Top"
+                                DockPanel.Dock="Left"
+                                Moniker="{Binding Extension, Converter={c:ExtensionToMonikerConverter}}"
+                                />
+
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock x:Name="Name"
+                                    Margin="2"
+                                    HorizontalAlignment="Left"
+                                    FontFamily="Segoe WP Semilight"
+                                    FontSize="14"
+                                    FontWeight="SemiBold"
+                                    Foreground="{DynamicResource ItemNameBrush}"
+                                    Text="{Binding Name}"
+                                    TextWrapping="Wrap"
+                                    />
+
+                                <TextBlock x:Name="Folder"
+                                    Margin="2"
+                                    Padding="0,2,0,2"
+                                    HorizontalAlignment="Left"
+                                    FontFamily="Segoe WP Semilight"
+                                    FontSize="12"
+                                    FontWeight="Normal"
+                                    Foreground="{DynamicResource ItemDescriptionBrush}"
+                                    Text="{Binding Folder}"
+                                    TextWrapping="Wrap"
+                                    />
+                            </StackPanel>
+                        </DockPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </DockPanel>
     </Border>

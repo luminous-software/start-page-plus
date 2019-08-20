@@ -55,6 +55,7 @@
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\ConverterMarkupExtension.cs" />
     <Compile Include="Converters\DummyConverter.cs" />
+    <Compile Include="Converters\ExtensionToMonikerConverter.cs" />
     <Compile Include="Interfaces\IRecentItem.cs" />
     <Compile Include="Interfaces\IRecentItemDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

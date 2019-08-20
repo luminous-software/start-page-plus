@@ -1,11 +1,10 @@
 ﻿using System;
-using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.Services
 {
     public interface IRecentItem
     {
-        ImageMoniker Moniker { get; set; }
+        string Extension { get; set; }
 
         string Name { get; set; }
 

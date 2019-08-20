@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using Luminous.Code.Extensions.ExceptionExtensions;
-using Microsoft.VisualStudio.Imaging;
 using Newtonsoft.Json.Linq;
 
 namespace StartPagePlus.UI.Services
@@ -42,7 +41,7 @@ namespace StartPagePlus.UI.Services
                         new RecentItemViewModel
                         {
                             Name = Path.GetFileName(result.Key),
-                            Moniker = KnownMonikers.Solution,
+                            Extension = Path.GetExtension(result.Key),
                             Folder = Path.GetDirectoryName(result.Key),
                             Pinned = result.Value.IsFavorite,
                             LastAccessed = result.Value.LastAccessed

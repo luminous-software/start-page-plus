@@ -8,6 +8,8 @@ namespace StartPagePlus.UI.ViewModels
     {
         public StartActionsViewModel()
         {
+            Heading = "Get Started";
+            IsVisible = true;
             StartActions = new ObservableCollection<StartActionViewModel>
             {
                 new StartActionViewModel

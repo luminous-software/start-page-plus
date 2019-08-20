@@ -9,9 +9,9 @@ namespace StartPagePlus.UI.ViewModels
     {
         public RecentItemsViewModel(IRecentItemDataService dataService)
         {
+            DataService = dataService;
             Heading = "Open a Recent Item";
             IsVisible = true;
-            Items = dataService.GetItems();
             Commands = new ObservableCollection<CommandViewModel>
             {
                 //new CommandViewModel
@@ -35,7 +35,9 @@ namespace StartPagePlus.UI.ViewModels
 
         public bool Filtered { get; set; }
 
-        public ObservableCollection<RecentItemViewModel> Items { get; }
+        public ObservableCollection<RecentItemViewModel> Items { get; set; }
+
+        public IRecentItemDataService DataService { get; }
 
         private bool CanExecuteShowFilter()
             => !Filtered;
@@ -52,7 +54,7 @@ namespace StartPagePlus.UI.ViewModels
         private bool CanExecuteRefresh()
             => true;
 
-        private void ExecuteRefresh()
-        { }
+        public void ExecuteRefresh()
+            => Items = DataService.GetItems();
     }
 }
