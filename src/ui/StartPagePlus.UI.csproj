@@ -55,9 +55,13 @@
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\ConverterMarkupExtension.cs" />
     <Compile Include="Converters\DummyConverter.cs" />
+    <Compile Include="Interfaces\IRecentItem.cs" />
+    <Compile Include="Interfaces\IRecentItemDataService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\RecentItemDataService.cs" />
     <Compile Include="StartPagePlusWindow.cs" />
     <Compile Include="ViewModels\ColumnViewModel.cs" />
+    <Compile Include="ViewModels\RecentItemViewModel.cs" />
     <Compile Include="ViewModels\StartActionViewModel.cs" />
     <Compile Include="ViewModels\NewsItemsViewModel.cs" />
     <Compile Include="ViewModels\NewsViewModel.cs" />

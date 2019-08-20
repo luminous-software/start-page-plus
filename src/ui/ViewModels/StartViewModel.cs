@@ -6,16 +6,13 @@ namespace StartPagePlus.UI.ViewModels
     {
         public StartViewModel() : base()
         {
+
             Name = "Start";
             Title = "Hi User, what would you like to do today?";
             IsVisible = true;
             Columns = new ObservableCollection<ColumnViewModel>
             {
-                new RecentItemsViewModel
-                {
-                    Heading = "Open a Recent Item",
-                    IsVisible = true
-                },
+                ViewModelLocator.RecentItemsViewModel,
                 new StartActionsViewModel
                 {
                     Heading = "Get Started",
