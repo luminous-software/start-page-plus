@@ -23,6 +23,8 @@ namespace StartPagePlus.UI.ViewModels
         private void RegisterViewModels(SimpleIoc container)
         {
             container.Register<RecentItemsViewModel>();
+            container.Register<StartActionsViewModel>();
+            container.Register<NewsItemsViewModel>();
             container.Register<StartViewModel>();
 
             container.Register<FavoritesViewModel>();
@@ -42,6 +44,12 @@ namespace StartPagePlus.UI.ViewModels
 
         public static RecentItemsViewModel RecentItemsViewModel
             => ServiceLocator.Current.GetInstance<RecentItemsViewModel>();
+
+        public static StartActionsViewModel StartActionsViewModel
+            => ServiceLocator.Current.GetInstance<StartActionsViewModel>();
+
+        public static NewsItemsViewModel NewsItemsViewModel
+            => ServiceLocator.Current.GetInstance<NewsItemsViewModel>();
 
         public static FavoritesViewModel FavoritesViewModel
             => ServiceLocator.Current.GetInstance<FavoritesViewModel>();

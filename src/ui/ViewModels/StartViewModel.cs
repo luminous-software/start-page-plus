@@ -13,16 +13,8 @@ namespace StartPagePlus.UI.ViewModels
             Columns = new ObservableCollection<ColumnViewModel>
             {
                 ViewModelLocator.RecentItemsViewModel,
-                new StartActionsViewModel
-                {
-                    Heading = "Get Started",
-                    IsVisible = true
-                },
-                new NewsItemsViewModel
-                {
-                    Heading = "Read Developer News",
-                    IsVisible = true
-                }
+                ViewModelLocator.StartActionsViewModel,
+                ViewModelLocator.NewsItemsViewModel,
             };
         }
 

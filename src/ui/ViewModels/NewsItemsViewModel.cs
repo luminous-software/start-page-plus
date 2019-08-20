@@ -1,5 +1,12 @@
 ﻿namespace StartPagePlus.UI.ViewModels
 {
-    internal class NewsItemsViewModel : ColumnViewModel
-    { }
+    public class NewsItemsViewModel : ColumnViewModel
+    {
+        public NewsItemsViewModel()
+        {
+            Heading = "Read Developer News";
+            IsVisible = true;
+        }
+
+    }
 }
