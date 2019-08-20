@@ -10,7 +10,7 @@ namespace StartPagePlus.UI.Converters
     //https://www.broculos.net/2014/04/wpf-how-to-use-converters-without.html
 
     //usage:
-    //<Button Content = "Cancel" Visibility="{Binding IsCancelVisible, Converter={FolderViewer:BooleanToVisibilityConverter WhenFalse = Collapsed}}">
+    //<Button Content="Cancel" Visibility="{Binding IsCancelVisible, Converter={c:BooleanToVisibilityConverter WhenFalse=Hidden}}">
 
     [ValueConversion(typeof(bool), typeof(Visibility))]
     public class BoolToVisibilityConverter : ConverterMarkupExtension
@@ -24,32 +24,28 @@ namespace StartPagePlus.UI.Converters
         [ConstructorArgument("WhenFalse")]
         public Visibility WhenFalse { get; set; }
 
-        public override object Convert(object value, Type targetType, object parameter,
-                         CultureInfo culture)
+        public bool IsReversed { get; set; }
+
+        public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var result = (value is bool?)
                 ? ((bool?)value).GetValueOrDefault(false)
                 : false;
+
             if (value is bool)
             {
                 result = (bool)value;
             }
+
+            if (IsReversed)
+            {
+                result = !result;
+            }
+
             return result
                 ? Visibility.Visible
                 : WhenFalse;
         }
-
-        public override object ConvertBack(object value, Type targetType, object parameter,
-                                  CultureInfo culture) => (value is Visibility) ?
-                      (Visibility)value == Visibility.Visible : false;
-
-        //public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        //    => (value != null) && (value is bool) && (bool)value
-        //        ? Visibility.Visible
-        //        : (object)Visibility.Collapsed;
-
-        //public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        //    => throw new NotImplementedException();
     }
 
     //[ValueConversion(typeof(bool), typeof(Visibility))]
