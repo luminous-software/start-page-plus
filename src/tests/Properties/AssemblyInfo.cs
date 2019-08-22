@@ -1,6 +1,6 @@
-﻿using DeveloperNews;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
+using StartPagePlus;
 
 [assembly: AssemblyTitle(Vsix.Name + ".Tests")]
 [assembly: AssemblyDescription(Vsix.Description)]
