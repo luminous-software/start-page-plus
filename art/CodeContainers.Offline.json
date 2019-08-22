@@ -1,0 +1,4274 @@
+﻿[
+  {
+    "Key": "c:\\dev\\repos\\ClearRecent\\ClearRecent.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ClearRecent\\ClearRecent.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-17T01:21:16.5700828+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\ClearRecent",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ClearRecent",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-17T01:15:02.9193672+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\SolutionBook\\SolutionBook.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\SolutionBook\\SolutionBook.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-12T13:37:11.2748533+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\start-page\\start-page.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\start-page\\start-page.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": true,
+      "LastAccessed": "2019-07-11T14:42:05.3906398+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Downloads\\WPFColorPicker\\WPFColorPicker.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Downloads\\WPFColorPicker\\WPFColorPicker.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-10T06:25:58.9440982+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Downloads\\WPFColorPicker\\WPFColorPicker.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Downloads\\WPFColorPicker\\WPFColorPicker.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-10T06:24:33.1342912+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\oss\\lss\\developer-news\\developer-news.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\oss\\lss\\developer-news\\developer-news.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": true,
+      "LastAccessed": "2019-07-09T07:07:53.7118922+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\research\\HockeyManager\\HockeyManager.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\research\\HockeyManager\\HockeyManager.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-04T07:01:36.3463867+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\GistManager\\GistManager.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\GistManager\\GistManager.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-04T03:37:54.4612776+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\WPF-Samples-master\\WPFSamples.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\WPF-Samples-master\\WPFSamples.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-03T07:22:03.5855605+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Downloads\\DCOM.WPF.MVVM.Tabs\\DCOM.WPF.MVVM.Tabs\\DCOM.WPF.MVVM.Tabs.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Downloads\\DCOM.WPF.MVVM.Tabs\\DCOM.WPF.MVVM.Tabs\\DCOM.WPF.MVVM.Tabs.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-03T05:28:13.3562576+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\start-page\\src\\ioc\\StartPage.IOC.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\start-page\\src\\ioc\\StartPage.IOC.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-03T02:35:16.8737932+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\SolutionStartPage\\SolutionStartPage.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\SolutionStartPage\\SolutionStartPage.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-03T02:05:43.5377268+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\SolutionStartPage",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\SolutionStartPage",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-03T02:04:29.3583558+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\SolutionBook",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\SolutionBook",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-07-03T01:38:02.2972681+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\GistManager",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\GistManager",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-23T08:27:45.4247323+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-code\\lss-code.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-code\\lss-code.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": true,
+      "LastAccessed": "2019-06-20T06:03:11.7375962+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\oss\\lss\\start-page-plus\\start-page-plus.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\oss\\lss\\start-page-plus\\start-page-plus.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-19T10:30:17.9814695+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\start-page-plus\\src\\ui\\StartPagePlus.UI.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\start-page-plus\\src\\ui\\StartPagePlus.UI.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-19T10:13:45.4553454+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\oss\\lss\\start-page-plus",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\oss\\lss\\start-page-plus",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-19T10:05:39.6118818+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\oss\\lss\\start-page-plus",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\oss\\lss\\start-page-plus",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-19T10:03:34.8466818+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extensibility-solution-template\\extensibility-solution-template.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extensibility-solution-template\\extensibility-solution-template.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": true,
+      "LastAccessed": "2019-06-17T05:51:30.3596007+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\InventorySample",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\InventorySample",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-10-04T04:11:17.0824793+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\start-page\\src\\ui\\StartPage.UI.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\start-page\\src\\ui\\StartPage.UI.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-15T13:53:53.2943642+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\start-page",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\start-page",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-13T14:06:59.5256265+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\clients\\northline\\northline",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\clients\\northline\\northline",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-13T13:30:38.817062+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\clients\\northline\\customer-portal-static",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\clients\\northline\\customer-portal-static",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-13T06:09:02.2531963+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\start-page\\src\\vsix\\StartPage.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\start-page\\src\\vsix\\StartPage.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-13T05:56:16.8012836+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\start-page\\src\\options\\StartPage.Options.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\start-page\\src\\options\\StartPage.Options.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-13T05:55:55.0988513+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\start-page\\src\\core\\StartPage.Core.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\start-page\\src\\core\\StartPage.Core.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-13T05:55:28.5004602+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\start-page\\src\\StartPage\\StartPage.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\start-page\\src\\StartPage\\StartPage.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-13T05:54:20.4754547+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\LoginApp\\LoginApp.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\LoginApp\\LoginApp.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-11T12:58:04.7989395+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\developer-news\\src\\services\\DeveloperNews.Services.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\developer-news\\src\\services\\DeveloperNews.Services.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-09T06:04:38.7786883+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\developer-news\\src\\ioc\\DeveloperNews.IOC.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\developer-news\\src\\ioc\\DeveloperNews.IOC.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-09T05:53:33.9002425+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\BuildVision\\BuildVision.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\BuildVision\\BuildVision.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-08T06:26:25.5515158+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\oss\\lss\\developer-news",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\oss\\lss\\developer-news",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-06T06:32:42.7633831+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extensibility-logs\\extensibility-logs.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extensibility-logs\\extensibility-logs.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-06T06:30:35.4832867+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\ClearComponentCache\\ClearComponentCache.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ClearComponentCache\\ClearComponentCache.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-06T02:29:14.2281086+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\ClearComponentCache",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ClearComponentCache",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-06-05T06:51:12.9518472+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\extensibility-logs.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\extensibility-logs.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": true,
+      "LastAccessed": "2019-06-01T03:03:47.0171693+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-time-savers\\lss-time-savers.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-time-savers\\lss-time-savers.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": true,
+      "LastAccessed": "2019-06-01T02:59:27.0668569+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\ExtensibilityEssentials\\ExtensibilityEssentials.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ExtensibilityEssentials\\ExtensibilityEssentials.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-30T00:24:01.5646567+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\developer-news\\src\\tests\\DeveloperNews.Tests.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\developer-news\\src\\tests\\DeveloperNews.Tests.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-29T00:35:49.1140536+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Downloads\\HockeyManager\\HockeyManager.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Downloads\\HockeyManager\\HockeyManager.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-26T13:39:46.8205307+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\Windows-appsample-rssreader\\RssReader.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\Windows-appsample-rssreader\\RssReader.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-26T13:33:33.2979165+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\wpf-designer-experiments\\WpfDesignerExperiments.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\wpf-designer-experiments\\WpfDesignerExperiments.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-26T13:31:29.0322003+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Downloads\\MVVM\\DCOM.WPF.MVVM.Tabs\\DCOM.WPF.MVVM.Tabs.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Downloads\\MVVM\\DCOM.WPF.MVVM.Tabs\\DCOM.WPF.MVVM.Tabs.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-26T07:31:10.6729052+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\OpenInExternalBrowser\\OpenInExternalBrowser.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\OpenInExternalBrowser\\OpenInExternalBrowser.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-23T10:33:01.3908526+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\OpenInExternalBrowser",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\OpenInExternalBrowser",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-23T10:27:23.755353+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\mvvmlight\\GalaSoft.MvvmLight\\GalaSoft.MvvmLight (VS2017).sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\mvvmlight\\GalaSoft.MvvmLight\\GalaSoft.MvvmLight (VS2017).sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-22T13:28:15.5868114+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\mvvmlight\\Installer\\StandardVSIX\\MvvmLight.VS2017.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\mvvmlight\\Installer\\StandardVSIX\\MvvmLight.VS2017.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-22T13:25:04.1546102+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\Windows-appsample-rssreader",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\Windows-appsample-rssreader",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-09T06:25:04.6968915+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\VisualStudio\\GitHubVS.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\VisualStudio\\GitHubVS.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-05-08T00:33:01.9935395+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\oss\\lss\\extension-explorer",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\oss\\lss\\extension-explorer",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-27T09:33:37.9890139+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\VisibilityConstraintsSample\\VisibilityConstraintsSample.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\VisibilityConstraintsSample\\VisibilityConstraintsSample.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-23T04:54:43.9693386+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\ExtensibilityTemplates\\ExtensibilityTemplates.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\ExtensibilityTemplates\\ExtensibilityTemplates.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-23T04:54:44.6851269+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\ExtensibilityCommandGroups\\ExtensibilityCommandGroups.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\ExtensibilityCommandGroups\\ExtensibilityCommandGroups.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-23T04:40:22.5942304+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\OpenBinFolder\\OpenBinFolder.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\OpenBinFolder\\OpenBinFolder.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-09T23:33:05.3689374+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\sidewafflev2\\sidewafflev2.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\sidewafflev2\\sidewafflev2.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-09T07:24:06.7980909+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\sidewafflev2",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\sidewafflev2",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-09T07:21:54.6678387+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\vs-setup-samples\\Samples.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\vs-setup-samples\\Samples.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-08T02:20:41.9102339+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\vs-setup-samples",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\vs-setup-samples",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-08T02:20:37.7295481+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\CommandTableInfo",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\CommandTableInfo",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-08T02:20:28.1342551+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\CommentsPlus",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\CommentsPlus",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-08T02:17:56.6580973+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\EventLogBrowser\\EventLogBrowser.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\EventLogBrowser\\EventLogBrowser.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-04T01:37:53.8377077+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\ExtensibilityTools",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\ExtensibilityTools",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-03T03:45:12.2937272+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\InventorySample\\src\\Inventory.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\InventorySample\\src\\Inventory.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-03T01:51:55.8338807+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\CommandTableInfo\\CommandTableInfo.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\CommandTableInfo\\CommandTableInfo.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-01T00:31:13.1745913+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extension-publisher\\extension-publisher.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extension-publisher\\extension-publisher.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-29T01:04:19.4375261+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extensibility-solution-template",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extensibility-solution-template",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-27T00:28:59.0166074+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extension-publisher\\src\\core\\ExtensionPublisher.Core.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extension-publisher\\src\\core\\ExtensionPublisher.Core.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-26T05:30:11.641931+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extension-publisher\\src\\options\\ExtensionPublisher.Options.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extension-publisher\\src\\options\\ExtensionPublisher.Options.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-26T04:44:52.0347134+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extension-publisher\\src\\options\\ExtensibilityLogs.Options.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extension-publisher\\src\\options\\ExtensibilityLogs.Options.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-26T04:44:03.4008261+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extension-publisher\\src\\vsix\\ExtensionPublisher.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extension-publisher\\src\\vsix\\ExtensionPublisher.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-26T04:28:08.4250295+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extension-publisher\\src\\ExtensionPublisher.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extension-publisher\\src\\ExtensionPublisher.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-26T04:27:20.6595325+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\ExtensibilityTools\\ExtensibilityTools.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\ExtensibilityTools\\ExtensibilityTools.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-24T06:38:44.6630497+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\extension-publisher\\ExtensionPublisher\\ExtensionPublisher.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\extension-publisher\\ExtensionPublisher\\ExtensionPublisher.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-24T06:31:44.3285499+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\vsix.saved\\ExtensibilityLogs.Saved.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\vsix.saved\\ExtensibilityLogs.Saved.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-20T19:20:09.6139523+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\vsix\\ExtensibilityLogs.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\vsix\\ExtensibilityLogs.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-20T19:05:01.8879544+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\ExtensibilityLogs\\ExtensibilityLogs.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\ExtensibilityLogs\\ExtensibilityLogs.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-20T19:02:36.7899902+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\research\\VSIXProject1\\VSIXProject1.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\research\\VSIXProject1\\VSIXProject1.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-11T08:00:03.678036+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\research\\VSIXProject2\\VSIXProject2.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\research\\VSIXProject2\\VSIXProject2.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-10T08:02:25.7383746+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\options\\ExtensibilityLogs.Options.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\options\\ExtensibilityLogs.Options.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-08T12:28:23.1109752+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\core\\ExtensibilityLogs.Core.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\core\\ExtensibilityLogs.Core.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-06T06:30:25.2386987+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\ExtensibilityLogs.Core\\ExtensibilityLogs.Core.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\ExtensibilityLogs.Core\\ExtensibilityLogs.Core.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-06T06:28:39.9558212+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\lss-time-savers.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\lss-time-savers.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-05T00:24:25.4451409+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\vs",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\vs",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-02T05:28:21.0443884+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Downloads\\BuildVision-2.2.0-preview-1\\BuildVision-2.2.0-preview-1\\BuildVision.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Downloads\\BuildVision-2.2.0-preview-1\\BuildVision-2.2.0-preview-1\\BuildVision.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-01T12:22:10.1612034+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-code\\src\\vs\\Luminous.Code.VisualStudio.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-code\\src\\vs\\Luminous.Code.VisualStudio.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-02-24T00:31:10.4519715+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-code\\src\\core\\Luminous.Code.Core.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-code\\src\\core\\Luminous.Code.Core.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-02-24T00:31:03.5711885+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-blog\\lss-blog.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-blog\\lss-blog.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-02-21T19:37:05.0237777+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\VSIXProject1\\VSIXProject1.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\VSIXProject1\\VSIXProject1.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-02-20T22:23:32.1312827+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\ColorsViewer\\ColorsViewer.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ColorsViewer\\ColorsViewer.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-02-13T19:03:14.8026782+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-code\\lss-code.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-code\\lss-code.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-02-03T06:33:20.5408039+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\yannduran\\ExtensionPackTools",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\yannduran\\ExtensionPackTools",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-02-02T04:48:09.6211807+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\yd\\extensibility-logs\\extensibility-logs.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\yd\\extensibility-logs\\extensibility-logs.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-01-30T07:54:30.7171758+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\ExtensionGallery\\ExtensionGallery.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ExtensionGallery\\ExtensionGallery.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-01-17T05:14:45.7859857+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\ExtensionGallery",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ExtensionGallery",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-01-17T05:14:21.9062218+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\yd\\yd-movies\\yd-movies.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\yd\\yd-movies\\yd-movies.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": true,
+      "LastAccessed": "2018-09-19T03:29:54.0140705+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\ProPowerTools\\_Release\\ProPowerTools.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\ProPowerTools\\_Release\\ProPowerTools.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-21T03:55:55.9760189+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\research\\TestApp\\TestApp.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\research\\TestApp\\TestApp.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-14T06:43:17.1808114+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\VSPackageDesigner.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\VSPackageDesigner.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-11-29T00:32:34.0323272+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\CleanSolution\\CloseAllTabs.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\CleanSolution\\CloseAllTabs.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-12-04T21:20:08.1082365+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\VisualStudio.GitStashExtension\\VisualStudio.GitStashExtension\\VisualStudio.GitStashExtension.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\VisualStudio.GitStashExtension\\VisualStudio.GitStashExtension\\VisualStudio.GitStashExtension.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-10-27T05:54:30.5767621+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-code\\src\\te\\Luminous.Code.TeamExplorer.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-code\\src\\te\\Luminous.Code.TeamExplorer.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-10-16T00:45:12.8493295+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\yannduran\\vs-git-operations\\GitOperations.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\yannduran\\vs-git-operations\\GitOperations.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-10-14T17:13:30.981757+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\vs-commitizen\\vs-commitizen.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\vs-commitizen\\vs-commitizen.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-10-14T17:03:32.7544202+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\JB.Common\\JB.Common.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\JB.Common\\JB.Common.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-09-29T22:24:45.8683529+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\aspnet\\Docs\\aspnetcore\\data\\ef-rp\\intro\\samples\\cu21\\ContosoUniversity.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\aspnet\\Docs\\aspnetcore\\data\\ef-rp\\intro\\samples\\cu21\\ContosoUniversity.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-09-21T00:30:18.2333913+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\aspnet\\Docs\\aspnetcore\\data\\ef-rp\\intro\\samples\\cu21\\ContosoUniversity.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\aspnet\\Docs\\aspnetcore\\data\\ef-rp\\intro\\samples\\cu21\\ContosoUniversity.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-09-21T00:19:25.210422+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\aspnet\\Docs",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\aspnet\\Docs",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-09-21T00:13:31.7275552+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\research\\Web_api_Core_Test\\Web_api_Core_Test.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\research\\Web_api_Core_Test\\Web_api_Core_Test.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-08-10T01:17:10.4984466+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\research\\web-api-core-test\\Web-api-core-test\\Web-api-core-test.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\research\\web-api-core-test\\Web-api-core-test\\Web-api-core-test.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-08-10T01:10:58.9098748+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\research\\web-api-core-test\\web-api-core-test.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\research\\web-api-core-test\\web-api-core-test.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-08-10T00:37:30.8910821+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-blog\\lss-blog.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-blog\\lss-blog.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-07-21T01:47:33.5484536+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\codemaid\\CodeMaid.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\codemaid\\CodeMaid.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-06-18T04:59:14.9849388+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Source\\Repos\\test",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Source\\Repos\\test",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-06-07T19:53:57.7836653+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\bitbucket-for-visual-studio\\GitClientVS.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\bitbucket-for-visual-studio\\GitClientVS.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-06-05T12:57:35.1422906+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\bitbucket-for-visual-studio",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\bitbucket-for-visual-studio",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-06-05T12:51:45.7262146+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\WindowsCommunityToolkit\\Windows Community Toolkit.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\WindowsCommunityToolkit\\Windows Community Toolkit.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-06-03T04:24:25.0470023+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-web\\lss-web.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-web\\lss-web.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-06-02T01:33:59.6613049+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Downloads\\BudgieTalk\\3.7.0\\aspnet-core\\BudgieTalk.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Downloads\\BudgieTalk\\3.7.0\\aspnet-core\\BudgieTalk.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-05-20T06:07:21.1029549+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\yd\\budgie-talk\\budgie-talk.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\yd\\budgie-talk\\budgie-talk.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-05-19T02:35:58.9483292+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\raml-dotnet-tools\\samples\\MoviesClientSample\\MoviesClientSample.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\raml-dotnet-tools\\samples\\MoviesClientSample\\MoviesClientSample.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-05-12T01:18:14.8421292+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\raml-dotnet-tools\\samples\\ChinookClientSample\\ChinookClientSample\\ChinookClientSample.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\raml-dotnet-tools\\samples\\ChinookClientSample\\ChinookClientSample\\ChinookClientSample.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-05-03T21:55:44.4902377+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\raml-dotnet-tools\\samples\\ChinookAspNet5Sample\\ChinookAspNet5Sample\\ChinookAspNet5Sample.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\raml-dotnet-tools\\samples\\ChinookAspNet5Sample\\ChinookAspNet5Sample\\ChinookAspNet5Sample.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-05-03T21:38:38.3635275+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\raml-dotnet-tools\\samples\\OrdersWebApiSample\\OrdersWebApiSample\\OrdersWebApiSample.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\raml-dotnet-tools\\samples\\OrdersWebApiSample\\OrdersWebApiSample\\OrdersWebApiSample.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-05-03T02:05:57.6504728+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\raml-dotnet-tools\\samples\\OrdersClientSample\\OrdersClientSample\\OrdersClientSample.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\raml-dotnet-tools\\samples\\OrdersClientSample\\OrdersClientSample\\OrdersClientSample.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-05-03T02:00:01.7738348+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\raml-dotnet-tools\\samples\\MoviesWebApi2Sample\\MoviesWebApi2Sample.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\raml-dotnet-tools\\samples\\MoviesWebApi2Sample\\MoviesWebApi2Sample.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-05-03T01:57:15.6251244+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\src\\vsix\\Luminous.TimeSavers.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\src\\vsix\\Luminous.TimeSavers.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-04-10T07:23:58.0472809+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\OptionsSample\\OptionsSample.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\OptionsSample\\OptionsSample.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-04-10T01:41:00.2956555+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\src\\ui\\Luminous.TimeSavers.UI.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\src\\ui\\Luminous.TimeSavers.UI.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-04-10T01:17:50.0395973+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\src\\options\\Luminous.TimeSavers.Options.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\src\\options\\Luminous.TimeSavers.Options.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-04-10T01:01:21.8867076+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\src\\core\\Luminous.TimeSavers.Core.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\src\\core\\Luminous.TimeSavers.Core.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-04-10T01:01:17.8603842+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\src\\pkg\\Luminous.TimeSavers.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\src\\pkg\\Luminous.TimeSavers.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-04-10T01:00:59.694489+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-04-10T00:52:40.9130519+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\Luminous.TimeSavers.Test\\Luminous.TimeSavers.Test.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\Luminous.TimeSavers.Test\\Luminous.TimeSavers.Test.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-04-10T00:32:06.5455748+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\VisibilityConstraintsSample\\VisibilityConstraintsSample.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\VisibilityConstraintsSample\\VisibilityConstraintsSample.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-04-05T00:48:37.1279852+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\EFDesigner\\src\\EFDesigner.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\EFDesigner\\src\\EFDesigner.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-03-25T12:51:43.2515051+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\ExtensibilityTools\\ExtensibilityTools.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\ExtensibilityTools\\ExtensibilityTools.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-03-18T01:54:22.5261902+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\EditorUtils\\EditorUtils.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\EditorUtils\\EditorUtils.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-03-18T01:52:18.8245064+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\BuildVision\\BuildVision.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\BuildVision\\BuildVision.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-03-18T01:50:29.8085238+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\CleanComments\\Vsix\\Vsix.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\CleanComments\\Vsix\\Vsix.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-03-18T01:49:08.7190269+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\BetterStartPage\\BetterStartPage.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\BetterStartPage\\BetterStartPage.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-03-18T01:44:44.7768916+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\vsixTemplates\\VSIXTemplates.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\vsixTemplates\\VSIXTemplates.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-03-03T07:32:51.2887013+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\VSSDK-Extensibility-Samples\\Reference_Services\\C#\\Reference.Services.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\VSSDK-Extensibility-Samples\\Reference_Services\\C#\\Reference.Services.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-03-03T06:58:06.5894028+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\GitLab.VisualStudio\\GitLabVS.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\GitLab.VisualStudio\\GitLabVS.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-02-25T22:06:24.0044016+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\ebay",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\ebay",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-02-23T03:21:06.1526542+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\Cake-Example\\src\\Example.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\Cake-Example\\src\\Example.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-02-13T21:15:06.5214598+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\Cake-Example\\src\\UnitTestProject1\\UnitTestProject1.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\Cake-Example\\src\\UnitTestProject1\\UnitTestProject1.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-02-13T21:06:41.2559536+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\Cake-Example\\src\\MyAwesomeApp.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\Cake-Example\\src\\MyAwesomeApp.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-02-13T19:10:49.724165+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-01-26T06:53:55.9603881+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\knowncolors\\src\\KnownColors.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\knowncolors\\src\\KnownColors.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-01-25T13:34:57.352041+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\yd\\movies.wizard\\Movies.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\yd\\movies.wizard\\Movies.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-01-07T14:47:49.2288726+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\yd\\movies.wizard\\Movies.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\yd\\movies.wizard\\Movies.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-01-07T14:46:01.7808029+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\yd\\movies\\Movies.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\yd\\movies\\Movies.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2018-01-07T14:16:14.283926+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\AppData\\Local\\Syncfusion\\EssentialStudio\\15.4.0.17\\WPF\\Tools.WPF\\Samples\\AutoComplete\\CS\\SfAutoComplete_2017.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\AppData\\Local\\Syncfusion\\EssentialStudio\\15.4.0.17\\WPF\\Tools.WPF\\Samples\\AutoComplete\\CS\\SfAutoComplete_2017.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-31T10:55:21.3863358+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\IgniteDemos\\OrgTracker\\OrgTracker.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\IgniteDemos\\OrgTracker\\OrgTracker.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-30T01:17:22.3610698+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\IgniteDemos\\OrgTracker\\OrgTracker.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\IgniteDemos\\OrgTracker\\OrgTracker.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-30T01:13:33.3115883+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-ensure",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-ensure",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-29T03:35:57.9869805+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\UsingDirectiveFormatter\\UsingDirectiveFormatter.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\UsingDirectiveFormatter\\UsingDirectiveFormatter.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-29T02:23:07.2086276+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\scr\\Luminous.TimeSavers.Core\\Luminous.TimeSavers.Core.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\scr\\Luminous.TimeSavers.Core\\Luminous.TimeSavers.Core.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-24T14:41:56.4564392+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\src\\Luminous.TimeSavers.Options\\Luminous.TimeSavers.Options.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\src\\Luminous.TimeSavers.Options\\Luminous.TimeSavers.Options.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-23T06:04:13.0501087+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\System-Wake-Manager\\systemWakeManager.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\System-Wake-Manager\\systemWakeManager.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-21T23:44:17.8495175+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\System-Wake-Manager\\systemWakeManager.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\System-Wake-Manager\\systemWakeManager.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-21T23:31:34.956426+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-code",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-code",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-21T13:07:07.7901327+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\vssetup.powershell",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\vssetup.powershell",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-20T11:59:37.0792641+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\PrivateGalleryCreator\\PrivateGalleryCreator.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\PrivateGalleryCreator\\PrivateGalleryCreator.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-20T03:54:09.123291+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\research\\PythonApplication1\\PythonApplication1.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\research\\PythonApplication1\\PythonApplication1.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-16T12:51:38.7849885+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\research\\TestApp\\TestApp.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\research\\TestApp\\TestApp.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-14T02:52:37.5471372+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\windowsDevBasics\\04_02\\finish\\DiceOut\\DiceOut.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\windowsDevBasics\\04_02\\finish\\DiceOut\\DiceOut.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-14T01:21:03.5959969+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\BetterStartPage",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\BetterStartPage",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-13T13:03:50.2740088+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\src\\Luminous.TimeSavers.UI\\Luminous.TimeSavers.UI.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\src\\Luminous.TimeSavers.UI\\Luminous.TimeSavers.UI.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-12T00:48:16.385609+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\src\\BrowserControl\\Luminous.TimeSavers.BrowserControl.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\src\\BrowserControl\\Luminous.TimeSavers.BrowserControl.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-12T00:29:41.4725531+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\Luminous.TimeSavers.BrowserControl\\Luminous.TimeSavers.BrowserControl.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\Luminous.TimeSavers.BrowserControl\\Luminous.TimeSavers.BrowserControl.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-11T05:07:48.1268094+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-time-savers\\WpfBrowserApp1\\WpfBrowserApp1.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-time-savers\\WpfBrowserApp1\\WpfBrowserApp1.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-11T02:14:42.4368897+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\research\\CalculatorApp\\CalculatorApp.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\research\\CalculatorApp\\CalculatorApp.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-08T01:17:54.7286466+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\research\\CalculatorApp\\CalculatorApp.Services\\CalculatorApp.Services.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\research\\CalculatorApp\\CalculatorApp.Services\\CalculatorApp.Services.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-07T23:54:01.5123687+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\yd\\movies\\src\\Movies.Core\\Movies.Core.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\yd\\movies\\src\\Movies.Core\\Movies.Core.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-03T14:41:11.7585317+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\yd\\movies\\src\\Movies.Data\\Movies.Data.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\yd\\movies\\src\\Movies.Data\\Movies.Data.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-03T14:38:10.8816902+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\yd\\movies\\Movies\\Movies.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\yd\\movies\\Movies\\Movies.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-12-01T21:40:56.3403758+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\CefSharp.MinimalExample",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\CefSharp.MinimalExample",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-11-30T12:41:32.2525962+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\yd\\yd-web\\yd-web.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\yd\\yd-web\\yd-web.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-25T04:57:22.7760655+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-set-debug-properties\\lss-set-debug-properties.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-set-debug-properties\\lss-set-debug-properties.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-11-28T14:15:25.1645661+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\BuildVision",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\BuildVision",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-11-24T04:57:43.1471725+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\draconyx",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\draconyx",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-11-10T06:31:26.9224102+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\VSDiagnostics",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\VSDiagnostics",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-11-06T01:00:43.756211+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\VS-ColorThemes\\VSColorThemes.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\VS-ColorThemes\\VSColorThemes.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-11-05T04:22:14.4658474+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\CommitFormatter\\CommitFormatter.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\CommitFormatter\\CommitFormatter.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-11-02T22:57:27.8760257+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\CommitFormatter",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\CommitFormatter",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-11-02T01:17:39.9134696+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\OpenInExternalBrowser",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\OpenInExternalBrowser",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-09-07T07:43:16.3741367+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\vsext-docs\\vsext-docs.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\vsext-docs\\vsext-docs.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-09-02T01:01:05.2119295+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\NuGetPackageConfigConverter\\NuGetPackageConfigConverter.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\NuGetPackageConfigConverter\\NuGetPackageConfigConverter.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-09-02T00:59:06.4669843+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\NuGetPackageConfigConverter",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\NuGetPackageConfigConverter",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-09-01T23:44:00.4014882+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\dotvvm",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\dotvvm",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-25T03:42:35.1559996+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\OpenInApp.Launcher\\src\\OpenInApp.Launcher.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\OpenInApp.Launcher\\src\\OpenInApp.Launcher.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-23T02:19:25.3309114+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\lss\\lss-versioning-vsix",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\lss\\lss-versioning-vsix",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-22T01:26:53.1840523+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\ExtensionAnalyzer\\ExtensionAnalyzer.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\ExtensionAnalyzer\\ExtensionAnalyzer.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-15T14:49:11.210409+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\src\\Dsl\\Dsl.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\src\\Dsl\\Dsl.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-13T07:10:50.3695825+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\ProPowerTools\\Closed\\_Experimental\\PeekRelationshipsView\\RelationshipsPopupPackage\\RelationshipsPopupPackage.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\ProPowerTools\\Closed\\_Experimental\\PeekRelationshipsView\\RelationshipsPopupPackage\\RelationshipsPopupPackage.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-13T07:10:50.3690828+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\research\\toggle-doc-header\\toggle-doc-header.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\research\\toggle-doc-header\\toggle-doc-header.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-13T07:10:50.3690828+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\eShopOnContainers",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\eShopOnContainers",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-08-12T07:24:10.3386293+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\experimental-tools\\ExperimentalTools.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\experimental-tools\\ExperimentalTools.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-07-29T06:56:32.2743604+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\yd\\BudgieTalk\\BudgieTalk\\BudgieTalk.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\yd\\BudgieTalk\\BudgieTalk\\BudgieTalk.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-07-28T02:51:48.2060369+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\yd\\BudgieTalk\\BudgieTalk.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\yd\\BudgieTalk\\BudgieTalk.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-07-28T02:52:01.4354197+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\gong-wpf-dragdrop\\src\\GongSolutions.WPF.DragDrop.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\gong-wpf-dragdrop\\src\\GongSolutions.WPF.DragDrop.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-07-15T15:58:55.1759175+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Downloads\\TreeView_MVVM609985180\\TreeView_MVVM\\TreeView_MVVM.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Downloads\\TreeView_MVVM609985180\\TreeView_MVVM\\TreeView_MVVM.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-07-14T11:30:39.7739136+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\AppData\\Local\\Microsoft\\VisualStudio\\15.0_a955f84f\\Extensions\\x5voqvzj.rh5\\PluginExample\\SourceLinksApiExtension.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\AppData\\Local\\Microsoft\\VisualStudio\\15.0_a955f84f\\Extensions\\x5voqvzj.rh5\\PluginExample\\SourceLinksApiExtension.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-07-13T16:17:19.2090736+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\CodeSnippetStudio\\CodeSnippetStudio.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\CodeSnippetStudio\\CodeSnippetStudio.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-07-14T04:06:20.2459705+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\research\\ServiceProviderTest\\ServiceProviderTest.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\research\\ServiceProviderTest\\ServiceProviderTest.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-29T04:58:14.9173495+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\ProPowerTools2\\_Release\\ProPowerTools.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\ProPowerTools2\\_Release\\ProPowerTools.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-19T22:47:36.7363398+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\research\\ProPowerTools\\_Release\\ProPowerTools.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\research\\ProPowerTools\\_Release\\ProPowerTools.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-17T22:28:27.0190768+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\ProPowerTools\\Closed\\PowerCommands\\PowerCommands.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\ProPowerTools\\Closed\\PowerCommands\\PowerCommands.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-14T02:18:16.8094744+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\NuGet.Client\\NuGet.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\NuGet.Client\\NuGet.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-13T11:46:31.917741+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\github\\gitignore",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\github\\gitignore",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-10T00:09:29.6415585+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\jc\\HotTabs\\HotTabs.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\jc\\HotTabs\\HotTabs.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-08T23:29:37.010511+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\src\\Debugging\\Debugging.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\src\\Debugging\\Debugging.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-07T03:35:47.2889656+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\ProPowerTools\\Open\\src\\ProPowerTools.Open.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\ProPowerTools\\Open\\src\\ProPowerTools.Open.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-07T01:00:20.4804847+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\ProPowerTools",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\ProPowerTools",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-07T00:50:59.8622793+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\Projects\\MinimalLanguage\\VSPackageDesigner\\VSPackageDesigner.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\Projects\\MinimalLanguage\\VSPackageDesigner\\VSPackageDesigner.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-06T00:50:26.8384043+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\src\\UI\\UI.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\src\\UI\\UI.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-06T00:06:34.5328806+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\Projects\\MinimalWPF\\VSPackageDesigner\\VSPackageDesigner.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\Projects\\MinimalWPF\\VSPackageDesigner\\VSPackageDesigner.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-06T00:06:44.1489612+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repo\\MinimalWPF\\VSPackageDesigner\\VSPackageDesigner.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repo\\MinimalWPF\\VSPackageDesigner\\VSPackageDesigner.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-05T23:40:01.6278882+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\DSLTest\\DSLTest.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\DSLTest\\DSLTest.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-05T23:06:31.2947939+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\src\\DslPackage\\DslPackage.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\src\\DslPackage\\DslPackage.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-05T22:45:05.077261+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\VSPackageDesigner\\VSPackageDesigner.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\VSPackageDesigner\\VSPackageDesigner.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-05T22:30:11.3143937+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\src\\Debugging\\Debugging.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\src\\Debugging\\Debugging.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-05T03:52:41.05277+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\VSPackageDesigner\\VSPackageDesigner .sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\VSPackageDesigner\\VSPackageDesigner .sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-05T02:08:54.2681055+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\DslPackage\\DslPackage.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\DslPackage\\DslPackage.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-04T13:58:26.6738188+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\src\\VSPackageDesigner.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\src\\VSPackageDesigner.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-04T13:29:28.521474+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\oss\\ms\\VSPackageDesigner\\vs-package-designer.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\oss\\ms\\VSPackageDesigner\\vs-package-designer.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-04T13:12:56.9833997+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\repos\\VS-Macros\\VSMacros.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\repos\\VS-Macros\\VSMacros.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-01T03:18:46.9573321+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\research\\ClassLibrary1\\ClassLibrary1.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\research\\ClassLibrary1\\ClassLibrary1.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-06-01T03:13:41.9428278+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\Users\\Yann\\Downloads\\WPF-16089707\\WPF\\RowDragAndDrop_2013.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\Users\\Yann\\Downloads\\WPF-16089707\\WPF\\RowDragAndDrop_2013.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-05-10T10:01:50.1828349+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-web",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-web",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-04-09T00:19:04.6708748+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-time-savers\\src\\insert-guid\\Luminous.TimeSavers.InsertGuid.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-time-savers\\src\\insert-guid\\Luminous.TimeSavers.InsertGuid.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-04-08T07:51:02.1261105+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-time-savers\\src\\pkg\\Luminous.TimeSavers.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-time-savers\\src\\pkg\\Luminous.TimeSavers.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-04-08T07:49:40.5112862+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-blog\\themes\\icarus",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-blog\\themes\\icarus",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-04-06T02:38:00.7567724+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\data\\dev\\oss\\lss\\lss-blog-node.njsproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\data\\dev\\oss\\lss\\lss-blog-node.njsproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-04-03T07:00:05.610414+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\repos\\CodeSnippetStudio\\CodeSnippetStudio.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\repos\\CodeSnippetStudio\\CodeSnippetStudio.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-03-09T03:30:37.7366317+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\repos\\PrettyPaste\\PrettyPaste.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\repos\\PrettyPaste\\PrettyPaste.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-03-09T02:18:36.807406+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-time-savers\\src\\Luminous.TimeSavers\\Luminous.TimeSavers.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-time-savers\\src\\Luminous.TimeSavers\\Luminous.TimeSavers.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-03-08T17:18:54.8293354+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-time-savers\\src\\pkg\\Luminous.TimeSavers.shproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-time-savers\\src\\pkg\\Luminous.TimeSavers.shproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-03-08T15:49:47.3545483+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\repos\\lss-code\\lss-code.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\repos\\lss-code\\lss-code.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-03-01T14:49:40.665802+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-code\\tests\\core\\Luminous.Code.Core.Tests.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-code\\tests\\core\\Luminous.Code.Core.Tests.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-03-01T14:48:09.2261411+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-code\\src\\vs\\Luminous.Code.VisualStudio.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-code\\src\\vs\\Luminous.Code.VisualStudio.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-03-01T14:45:45.5194055+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-code\\src\\core\\Luminous.Code.Core.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-code\\src\\core\\Luminous.Code.Core.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-03-01T14:45:21.315032+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\oss\\lss\\lss-code\\src\\info\\Luminous.Code.Info.shproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\oss\\lss\\lss-code\\src\\info\\Luminous.Code.Info.shproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-03-01T14:45:07.7825672+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "D:\\dev\\research\\hexo-test",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "D:\\dev\\research\\hexo-test",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2017-02-27T10:26:29.6587035+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\BetterStartPage\\BetterStartPage.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\BetterStartPage\\BetterStartPage.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-13T01:36:47.8411969+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\vsix\\ExtensibilityLogs.Saved.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\vsix\\ExtensibilityLogs.Saved.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-17T06:54:07.2536667+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\Test\\ExtensibilityLogs.csproj",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\oss\\lss\\lss-extensibility-logs\\src\\Test\\ExtensibilityLogs.csproj",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-17T06:55:24.8612275+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\VisibilityConstraintsSample",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\VisibilityConstraintsSample",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:11:21.0294899+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\VuePack2017",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\VuePack2017",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:12:49.3774439+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\SolutionExtensions",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\SolutionExtensions",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:13:51.7628139+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\SnippetPackTemplate",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\SnippetPackTemplate",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:15:03.8011309+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\VuePack",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\VuePack",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:16:13.8996079+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\VsixLogger",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\VsixLogger",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:17:33.575516+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\FeedCollector",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\FeedCollector",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:18:35.5753658+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\TemplateCreator",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\TemplateCreator",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:20:05.2270345+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\BetterStartPage",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\BetterStartPage",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:25:53.9367097+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\RomanNumeral",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\RomanNumeral",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:36:19.2419951+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\MyToolkit",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\MyToolkit",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-23T12:39:29.2264494+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "C:\\dev\\repos\\VsctIntellisense",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "C:\\dev\\repos\\VsctIntellisense",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-03-24T02:37:58.3646739+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\ExtensionPackTools",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ExtensionPackTools",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-01T03:48:37.7685935+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\ExtensionPackTools\\ExtensionManager.sln",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\ExtensionPackTools\\ExtensionManager.sln",
+        "Type": 0,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-01T03:49:14.2068812+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  },
+  {
+    "Key": "c:\\dev\\repos\\VsixSynchronizer",
+    "Value": {
+      "LocalProperties": {
+        "FullPath": "c:\\dev\\repos\\VsixSynchronizer",
+        "Type": 1,
+        "SourceControl": null
+      },
+      "Remote": null,
+      "IsFavorite": false,
+      "LastAccessed": "2019-04-01T04:41:18.5254244+00:00",
+      "IsLocal": true,
+      "HasRemote": false,
+      "IsSourceControlled": false
+    }
+  }
+]

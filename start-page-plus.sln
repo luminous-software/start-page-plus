@@ -58,6 +58,49 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. main", "1. main", "{99A9
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPagePlus.Tests", "src\tests\StartPagePlus.Tests.csproj", "{20408910-F7C0-4B37-A230-30AB3B7814DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "art", "art", "{2A516AFD-D80F-4AAB-9DDD-42E6557C1313}"
+	ProjectSection(SolutionItems) = preProject
+		art\1366434.jpg = art\1366434.jpg
+		art\2019-07-01_00FF.png = art\2019-07-01_00FF.png
+		art\2019-07-10_ThisWeek.png = art\2019-07-10_ThisWeek.png
+		art\2019-07-17_18-42_VS2019PrivateRegistry.png = art\2019-07-17_18-42_VS2019PrivateRegistry.png
+		art\2019-07-17_1_StartPage.png = art\2019-07-17_1_StartPage.png
+		art\2019-07-17_2_StartWindow.png = art\2019-07-17_2_StartWindow.png
+		art\2019-07-17_3_FileMenu.png = art\2019-07-17_3_FileMenu.png
+		art\2019-07-17_4_CodeContainers.offline.png = art\2019-07-17_4_CodeContainers.offline.png
+		art\ClassicCreateNewProject.jpg = art\ClassicCreateNewProject.jpg
+		art\clone-or-checkout-code.jpg = art\clone-or-checkout-code.jpg
+		art\CodeContainers.Offline.json = art\CodeContainers.Offline.json
+		art\Create a New Project Dialog.png = art\Create a New Project Dialog.png
+		art\lss-vsip.png = art\lss-vsip.png
+		art\lss.png = art\lss.png
+		art\new-project.png = art\new-project.png
+		art\old-vs-new-start-page.png = art\old-vs-new-start-page.png
+		art\Recent_VS2015.png = art\Recent_VS2015.png
+		art\RecentFiles_Options.png = art\RecentFiles_Options.png
+		art\RecerntProjects_ContextMenu.png = art\RecerntProjects_ContextMenu.png
+		art\SearchRecentProjects.gif = art\SearchRecentProjects.gif
+		art\ss5.png = art\ss5.png
+		art\start-window-preview-1-pc.png = art\start-window-preview-1-pc.png
+		art\start-window.jpg = art\start-window.jpg
+		art\StartPage-2015.png = art\StartPage-2015.png
+		art\StartPage-2017-with-favorites.png = art\StartPage-2017-with-favorites.png
+		art\StartPage-2017.png = art\StartPage-2017.png
+		art\startup-options.png = art\startup-options.png
+		art\StartWindow-2019-reimagined-new.png = art\StartWindow-2019-reimagined-new.png
+		art\StartWindow-2019-reimagined-pinned.png = art\StartWindow-2019-reimagined-pinned.png
+		art\StartWindow-2019.png = art\StartWindow-2019.png
+		art\turn-off-start-window.png = art\turn-off-start-window.png
+		art\visual-studio-2013-start-page-.png = art\visual-studio-2013-start-page-.png
+		art\visual-studio-2017-start-page-recent.png = art\visual-studio-2017-start-page-recent.png
+		art\visual-studio-2017-start-page.png = art\visual-studio-2017-start-page.png
+		art\VS2017PrivateRegistry.png = art\VS2017PrivateRegistry.png
+		art\vs4mac-start.png = art\vs4mac-start.png
+		art\vsip.png = art\vsip.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +123,10 @@ Global
 		{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20408910-F7C0-4B37-A230-30AB3B7814DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20408910-F7C0-4B37-A230-30AB3B7814DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20408910-F7C0-4B37-A230-30AB3B7814DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20408910-F7C0-4B37-A230-30AB3B7814DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
