@@ -14,6 +14,7 @@
     </Style>
 
     <!--  https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377  -->
+
     <Style x:Key="ColumnCommandStyle"
         TargetType="{x:Type Button}"
         >
@@ -22,6 +23,7 @@
                 <ControlTemplate TargetType="{x:Type Button}">
                     <TextBlock x:Name="text"
                         Height="25"
+                        HorizontalAlignment="Center"
                         Cursor="Hand"
                         FontSize="15"
                         FontWeight="Bold"
@@ -42,4 +44,6 @@
 
     <!--  Items  -->
 
+    <!--<Style x:Key="ListViewItemStyle" TargetType="{x:Type ListViewItem}">
+    </Style>-->
 </ResourceDictionary>
