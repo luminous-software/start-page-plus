@@ -18,7 +18,12 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         private void RegisterServices(SimpleIoc container)
-            => container.Register<IRecentItemDataService, RecentItemDataService>();
+        {
+            container.Register<IRecentItemDataService, RecentItemDataService>();
+            container.Register<INewsItemDataService, NewsItemDataService>();
+
+
+        }
 
         private void RegisterViewModels(SimpleIoc container)
         {
