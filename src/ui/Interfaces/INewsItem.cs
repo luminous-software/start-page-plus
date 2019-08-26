@@ -1,4 +1,4 @@
-﻿namespace StartPagePlus.UI.Services
+﻿namespace StartPagePlus.UI.Interfaces
 {
     public interface INewsItem
     {

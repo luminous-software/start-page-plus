@@ -8,6 +8,7 @@ using System.Xml.Linq;
 
 namespace StartPagePlus.UI.Services
 {
+    using Interfaces;
     using ViewModels;
 
     public class NewsItemDataService : INewsItemDataService

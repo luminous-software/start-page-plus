@@ -1,10 +1,10 @@
 ﻿using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Command;
+using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using Microsoft.VisualStudio.Shell;
-    using Services;
+    using Interfaces;
 
     public class NewsItemsViewModel : ColumnViewModel
     {

@@ -1,8 +1,8 @@
 ﻿using System;
+using GalaSoft.MvvmLight;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using GalaSoft.MvvmLight;
 
     public class NewsItemViewModel : ViewModelBase
     {

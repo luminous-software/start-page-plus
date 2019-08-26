@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace StartPagePlus.UI.Services
+namespace StartPagePlus.UI.Interfaces
 {
     using ViewModels;
 

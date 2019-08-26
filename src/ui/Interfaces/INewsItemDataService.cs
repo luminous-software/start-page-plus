@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 
 
-namespace StartPagePlus.UI.Services
+namespace StartPagePlus.UI.Interfaces
 {
     using ViewModels;
 

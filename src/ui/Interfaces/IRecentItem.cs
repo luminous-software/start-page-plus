@@ -1,17 +1,20 @@
 ﻿using System;
+using Microsoft.VisualStudio.Imaging.Interop;
 
-namespace StartPagePlus.UI.Services
+namespace StartPagePlus.UI.Interfaces
 {
     public interface IRecentItem
     {
-        string Extension { get; set; }
+        string Key { get; set; }
 
         string Name { get; set; }
 
-        string Folder { get; set; }
+        string Description { get; set; }
+
+        DateTime Date { get; set; }
+
+        ImageMoniker Moniker { get; set; }
 
         bool Pinned { get; set; }
-
-        DateTime LastAccessed { get; set; }
     }
 }
