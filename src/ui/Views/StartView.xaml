@@ -58,6 +58,10 @@
                 <DataTemplate DataType="{x:Type vm:StartActionsViewModel}">
                     <v:StartActionsView/>
                 </DataTemplate>
+
+                <DataTemplate DataType="{x:Type vm:NewsItemsViewModel}">
+                    <v:NewsItemsView/>
+                </DataTemplate>
             </ItemsControl.Resources>
         </ItemsControl>
     </DockPanel>
