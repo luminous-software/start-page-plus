@@ -35,13 +35,7 @@ namespace StartPagePlus.UI.ViewModels
                     Moniker=KnownMonikers.AddDocumentGroup,
                     Name = "Create a new project",
                     Description = "Choose a project template with code scaffolding to get started"
-                },
-                //new StartActionViewModel
-                //{
-                //    Moniker=KnownMonikers.GoToNext,
-                //    Name = "Continue without code",
-                //    Description = "Close the Start Page and continue without any code"
-                //}
+                }
             };
 
             Commands = new ObservableCollection<CommandViewModel>

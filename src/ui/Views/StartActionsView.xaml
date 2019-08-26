@@ -61,7 +61,7 @@
             <ListView x:Name="StartActions"
                 MinHeight="70"
                 Margin="10,0,10,0"
-                Padding="5"
+                Padding="5,0,5,5"
                 HorizontalAlignment="Stretch"
                 HorizontalContentAlignment="Stretch"
                 Background="Transparent"
@@ -77,9 +77,11 @@
                         <Setter Property="MinHeight" Value="70"/>
                         <Setter Property="Margin" Value="0,0,0,10"/>
                         <Setter Property="Padding" Value="5"/>
-                        <Setter Property="Background" Value="{DynamicResource ColumnBackgroundBrush}"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
 
-                        <!--  https://stackoverflow.com/questions/17188699/remove-the-mouse-over-effect-on-a-listview-in-wpf/17189210#17189210  -->
+                <!--  https://stackoverflow.com/questions/17188699/remove-the-mouse-over-effect-on-a-listview-in-wpf/17189210#17189210  -->
+                <!--
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="ListViewItem">
@@ -88,7 +90,9 @@
                                         >
                                         <ContentPresenter RecognizesAccessKey="True"/>
 
-                                        <!--  https://docs.microsoft.com/en-us/dotnet/framework/wpf/controls/listview-styles-and-templates#listviewitem-states  -->
+                -->
+                <!--  https://docs.microsoft.com/en-us/dotnet/framework/wpf/controls/listview-styles-and-templates#listviewitem-states  -->
+                <!--
                                         <VisualStateManager.VisualStateGroups>
                                             <VisualStateGroup x:Name="CommonStates">
                                                 <VisualState x:Name="Normal"/>
@@ -123,14 +127,16 @@
                             </Setter.Value>
                         </Setter>
 
-                        <!--<Style.Triggers>
+                -->
+                <!--<Style.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" Value="{DynamicResource MenuActiveBrush}"/>
                                 <Setter Property="BorderThickness" Value="1"/>
                             </Trigger>
                         </Style.Triggers>-->
+                <!--
                     </Style>
-                </ListView.ItemContainerStyle>
+                </ListView.ItemContainerStyle>-->
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -145,14 +151,12 @@
                                 Moniker="{Binding Moniker}"
                                 />
 
-                            <!--  Grayscale="{Binding IsEnabled, ElementName=UpButton, Converter={StaticResource NegateBooleanConverter}}"  -->
-
                             <StackPanel x:Name="TextBlocks"
                                 Grid.Column="1"
                                 Margin="10,0,0,0"
                                 Orientation="Vertical"
                                 >
-                                <TextBlock
+                                <TextBlock x:Name="StartActionName"
                                     Margin="0"
                                     Padding="5,0,5,0"
                                     HorizontalAlignment="Left"
@@ -163,7 +167,8 @@
                                     Text="{Binding Name}"
                                     TextWrapping="Wrap"
                                     />
-                                <TextBlock
+
+                                <TextBlock x:Name="StartActionDescription"
                                     Margin="0"
                                     Padding="5,0,5,5"
                                     FontFamily="Segoe WP Semilight"
@@ -173,6 +178,7 @@
                                     Text="{Binding Description}"
                                     TextWrapping="Wrap"
                                     />
+
                                 <!--
                                 //http://www.mobilemotion.eu/?p=1048&lang=en
                                 <TextBlock
