@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using Luminous.Code.Extensions.ExceptionExtensions;
+using Microsoft.VisualStudio.Imaging;
 using Newtonsoft.Json.Linq;
 
 namespace StartPagePlus.UI.Services
 {
-    using System.Diagnostics;
+    using Interfaces;
     using ViewModels;
 
     public class RecentItemDataService : IRecentItemDataService
@@ -19,6 +21,7 @@ namespace StartPagePlus.UI.Services
 
         public ObservableCollection<RecentItemViewModel> GetItems()
         {
+
             var items = new ObservableCollection<RecentItemViewModel>();
 
             using (var regKey = MainViewModel.RegistryRoot
@@ -41,10 +44,13 @@ namespace StartPagePlus.UI.Services
                         new RecentItemViewModel
                         {
                             Name = Path.GetFileName(result.Key),
-                            Extension = Path.GetExtension(result.Key),
-                            Folder = Path.GetDirectoryName(result.Key),
+                            Key = Path.GetExtension(result.Key),
+                            Description = Path.GetDirectoryName(result.Key),
+                            Date = result.Value.LastAccessed,
                             Pinned = result.Value.IsFavorite,
-                            LastAccessed = result.Value.LastAccessed
+                            Moniker = (result.Value.IsFavorite)
+                                ? KnownMonikers.Pin
+                                : KnownMonikers.Unpin
                         })
                     );
                 }

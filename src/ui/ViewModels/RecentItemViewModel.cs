@@ -1,19 +1,22 @@
 ﻿using System;
+using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using Services;
+    using Interfaces;
 
     public class RecentItemViewModel : IRecentItem
     {
-        public string Extension { get; set; }
+        public string Key { get; set; }
 
         public string Name { get; set; }
 
-        public string Folder { get; set; }
+        public string Description { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public ImageMoniker Moniker { get; set; }
 
         public bool Pinned { get; set; }
-
-        public DateTime LastAccessed { get; set; }
     }
 }

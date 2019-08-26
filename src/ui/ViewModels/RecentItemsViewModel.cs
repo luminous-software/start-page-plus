@@ -3,13 +3,18 @@ using GalaSoft.MvvmLight.CommandWpf;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using Services;
+    using Interfaces;
 
     public class RecentItemsViewModel : ColumnViewModel
     {
-        public RecentItemsViewModel(IRecentItemDataService dataService)
+        private RecentItemViewModel selectedItem;
+        private int selectedIndex;
+
+
+        public RecentItemsViewModel(IRecentItemDataService dataService, IRecentItemActionService actionService)
         {
             DataService = dataService;
+            ActionService = actionService;
             Heading = "Open a Recent Item";
             IsVisible = true;
             Commands = new ObservableCollection<CommandViewModel>
@@ -37,7 +42,30 @@ namespace StartPagePlus.UI.ViewModels
 
         public ObservableCollection<RecentItemViewModel> Items { get; set; }
 
+        public RecentItemViewModel SelectedItem
+        {
+            get => selectedItem;
+            set
+            {
+                Set(ref selectedItem, value);
+
+                if (value != null)
+                {
+                    ActionService.OpenItem(value.Key);
+                    SelectedItem = null;
+                }
+            }
+        }
+
+        public int SelectedIndex
+        {
+            get => selectedIndex;
+            set => Set(ref selectedIndex, value);
+        }
+
         public IRecentItemDataService DataService { get; }
+
+        public IRecentItemActionService ActionService { get; }
 
         private bool CanExecuteShowFilter()
             => !Filtered;

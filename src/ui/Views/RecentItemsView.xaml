@@ -18,6 +18,14 @@
         <ResourceDictionary>
             <utilities:BrushToColorConverter x:Key="BrushToColorConverter"/>
 
+            <CollectionViewSource x:Key="GroupedItems"
+                Source="{Binding Items}"
+                >
+                <CollectionViewSource.GroupDescriptions>
+                    <PropertyGroupDescription PropertyName="Pinned"/>
+                </CollectionViewSource.GroupDescriptions>
+            </CollectionViewSource>
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Styles.xaml"/>
@@ -31,7 +39,9 @@
         BorderBrush="{DynamicResource ColumnBorderBrush}"
         BorderThickness="1"
         >
-        <DockPanel LastChildFill="true">
+        <DockPanel x:Name="LayoutRoot"
+            LastChildFill="true"
+            >
             <TextBlock x:Name="Heading"
                 DockPanel.Dock="Top"
                 Style="{StaticResource ColumnHeadingStyle}"
@@ -76,32 +86,124 @@
                 Background="Transparent"
                 BorderThickness="0"
                 DockPanel.Dock="Top"
-                ItemsSource="{Binding Items}"
+                ItemsSource="{Binding Source={StaticResource GroupedItems}}"
                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                SelectedIndex="{Binding SelectedIndex, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                SelectionMode="Single"
                 >
+                <ListView.Resources>
+                    <!--<Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate>
+                                    <Border
+                                        Padding="{TemplateBinding Padding}"
+                                        Background="{TemplateBinding Background}"
+                                        BorderThickness="1"
+                                        >
+                                        <ContentPresenter
+                                            Width="{TemplateBinding Width}"
+                                            Height="{TemplateBinding Height}"
+                                            Margin="{TemplateBinding Margin}"
+                                            />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>-->
+                </ListView.Resources>
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+                <ListView.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.ContainerStyle>
+                            <Style TargetType="GroupItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type GroupItem}">
+                                            <StackPanel>
+                                                <TextBlock
+                                                    FontSize="15"
+                                                    FontWeight="Bold"
+                                                    Foreground="{DynamicResource ColumnBorderBrush}"
+                                                    Text="{Binding Path=Name, Converter={c:BoolToPinnedConverter}}"
+                                                    />
+                                                <ItemsPresenter/>
+                                            </StackPanel>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </GroupStyle.ContainerStyle>
+                    </GroupStyle>
+                </ListView.GroupStyle>
+
+                <!--  https://www.wpf-tutorial.com/listview-control/listview-grouping/  -->
+                <!--<ListView.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock
+                                    FontSize="14"
+                                    FontWeight="Bold"
+                                    Text="{Binding Name}"
+                                    />
+                            </DataTemplate>
+                        </GroupStyle.HeaderTemplate>
+                    </GroupStyle>
+                </ListView.GroupStyle>-->
+
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid x:Name="RecentItemDataTemplate"
-                            grid:Props.ColumnWidths="Auto,*,Auto"
+                        <DockPanel x:Name="RecentItemContainer"
+                            LastChildFill="true"
                             >
-                            <imaging:CrispImage
-                                Name="RecentItemImage"
-                                Grid.Column="0"
+                            <imaging:CrispImage x:Name="RecentItemImage"
                                 Width="24"
                                 Height="24"
                                 Margin="0,3,5,5"
                                 VerticalAlignment="Top"
-                                Moniker="{Binding Extension, Converter={c:ExtensionToMonikerConverter}}"
+                                DockPanel.Dock="Left"
+                                Moniker="{Binding Key, Converter={c:ExtensionToMonikerConverter}}"
                                 />
 
-                            <StackPanel
-                                Grid.Column="1"
-                                HorizontalAlignment="Stretch"
+                            <StackPanel x:Name="RecentItemCommandContainer"
+                                DockPanel.Dock="Right"
                                 Orientation="Vertical"
                                 >
-                                <TextBlock x:Name="Name"
-                                    Margin="2"
+
+                                <Button x:Name="RecentItemPinButton"
+                                    Margin="0"
+                                    Padding="0"
+                                    Background="Transparent"
+                                    BorderBrush="Transparent"
+                                    Command="{Binding PinCommand}"
+                                    >
+                                    <imaging:CrispImage x:Name="RecentItemPinImage"
+                                        Width="16"
+                                        Height="16"
+                                        Margin="0"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Top"
+                                        Moniker="{Binding Pinned, Converter={c:BoolToPinConverter}}"
+                                        Visibility="{Binding Pinned, Converter={c:BoolToVisibilityConverter}}"
+                                        />
+                                </Button>
+                            </StackPanel>
+
+                            <StackPanel x:Name="RecentItemTextContainer"
+                                DockPanel.Dock="Top"
+                                Orientation="Vertical"
+                                >
+                                <TextBlock x:Name="RecentItemName"
+                                    Margin="3"
                                     HorizontalAlignment="Stretch"
                                     FontFamily="Segoe WP Semilight"
                                     FontSize="14"
@@ -110,30 +212,20 @@
                                     Text="{Binding Name}"
                                     TextWrapping="Wrap"
                                     />
-                                <TextBlock x:Name="Folder"
-                                    Margin="2"
-                                    Padding="0,2,0,2"
+
+                                <TextBlock x:Name="RecentItemDescription"
+                                    Margin="3"
+                                    Padding="0"
                                     HorizontalAlignment="Stretch"
                                     FontFamily="Segoe WP Semilight"
                                     FontSize="12"
                                     FontWeight="Normal"
                                     Foreground="{DynamicResource ItemDescriptionBrush}"
-                                    Text="{Binding Folder}"
+                                    Text="{Binding Description}"
                                     TextWrapping="Wrap"
                                     />
                             </StackPanel>
-
-                            <imaging:CrispImage
-                                Name="PinnedImage"
-                                Grid.Column="2"
-                                Width="16"
-                                Height="16"
-                                Margin="0,3,5,5"
-                                VerticalAlignment="Top"
-                                Moniker="{x:Static catalog:KnownMonikers.Pin}"
-                                Visibility="{Binding Pinned, Converter={c:BoolToVisibilityConverter}}"
-                                />
-                        </Grid>
+                        </DockPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

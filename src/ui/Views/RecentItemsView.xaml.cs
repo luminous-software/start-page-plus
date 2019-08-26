@@ -10,12 +10,17 @@ namespace StartPagePlus.UI.Views
         {
             InitializeComponent();
 
-            var recentItemsViewModel = ViewModelLocator.RecentItemsViewModel;
+            var viewModel = ViewModelLocator.RecentItemsViewModel;
 
-            recentItemsViewModel.ExecuteRefresh();
+            viewModel.ExecuteRefresh();
+            DataContext = viewModel;
 
-            DataContext = recentItemsViewModel;
+            //https://www.wpf-tutorial.com/listview-control/listview-grouping/
 
+            //var view = (CollectionView)CollectionViewSource.GetDefaultView(RecentItems.ItemsSource); - returns null!!!
+            //var groupDescription = new PropertyGroupDescription("Pinned");
+
+            //view.GroupDescriptions.Add(groupDescription);
         }
     }
 }

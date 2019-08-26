@@ -3,6 +3,7 @@ using GalaSoft.MvvmLight.Ioc;
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Interfaces;
     using Services;
 
     public class ViewModelLocator
@@ -20,6 +21,7 @@ namespace StartPagePlus.UI.ViewModels
         private void RegisterServices(SimpleIoc container)
         {
             container.Register<IRecentItemDataService, RecentItemDataService>();
+            container.Register<IRecentItemActionService, RecentItemActionService>();
             container.Register<INewsItemDataService, NewsItemDataService>();
 
 
