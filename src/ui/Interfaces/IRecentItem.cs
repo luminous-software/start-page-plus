@@ -13,6 +13,9 @@ namespace StartPagePlus.UI.Interfaces
 
         DateTime Date { get; set; }
 
+        string Path { get; set; }
+
+
         ImageMoniker Moniker { get; set; }
 
         bool Pinned { get; set; }

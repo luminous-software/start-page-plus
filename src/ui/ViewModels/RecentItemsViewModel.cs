@@ -51,7 +51,7 @@ namespace StartPagePlus.UI.ViewModels
 
                 if (value != null)
                 {
-                    ActionService.OpenItem(value.Key);
+                    ActionService.OpenItem(value.Path);
                     SelectedItem = null;
                 }
             }
