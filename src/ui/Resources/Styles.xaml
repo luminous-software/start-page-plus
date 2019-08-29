@@ -4,6 +4,10 @@
     >
     <!--  Columns  -->
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
     <Style x:Key="ColumnHeadingStyle"
         TargetType="TextBlock"
         >
@@ -12,6 +16,7 @@
         <Setter Property="FontSize" Value="20"/>
         <Setter Property="Foreground" Value="{DynamicResource ColumnHeadingBrush}"/>
     </Style>
+
 
     <!--  https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377  -->
 
@@ -22,12 +27,13 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <TextBlock x:Name="text"
-                        Height="25"
+                        Height="30"
                         HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
                         Cursor="Hand"
-                        FontSize="16"
-                        FontWeight="DemiBold"
-                        Foreground="{DynamicResource MenuInactiveBrush}"
+                        FontSize="15"
+                        FontWeight="Medium"
+                        Foreground="{DynamicResource TextDarkBrush}"
                         >
                         <ContentPresenter/>
                     </TextBlock>
@@ -35,6 +41,8 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="Button.IsMouseOver" Value="true">
                             <Setter TargetName="text" Property="Foreground" Value="{DynamicResource MenuActiveBrush}"/>
+                            <Setter TargetName="text" Property="FontSize" Value="16"/>
+                            <Setter TargetName="text" Property="FontWeight" Value="Normal"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -44,6 +52,4 @@
 
     <!--  Items  -->
 
-    <!--<Style x:Key="ListViewItemStyle" TargetType="{x:Type ListViewItem}">
-    </Style>-->
 </ResourceDictionary>
