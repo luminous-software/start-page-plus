@@ -2,6 +2,8 @@
 
 namespace Luminous.Code.Dates
 {
+    // https://markb.uk/csharp-datetime-get-first-last-day-of-week-or-month.html
+
     public static class DateMethods
     {
         public enum DatePeriods
@@ -53,29 +55,25 @@ namespace Luminous.Code.Dates
                     break;
             }
 
-            if (ThisWeek())
-            {
-                return (int)DatePeriods.ThisWeek;
-            }
-
-            if (LastWeek())
-            {
-                return (int)DatePeriods.ThisMonth;
-            }
-
-            return (int)DatePeriods.Older;
+            return ThisWeek()
+                ? (int)DatePeriods.ThisWeek
+                : (LastWeek() || ThisMonth())
+                    ? (int)DatePeriods.ThisMonth
+                    : (int)DatePeriods.Older;
 
             bool ThisWeek()
             {
-                var startDayOfWeek = currentDate.StartOfWeek().DayOfWeek;
-                var comparisonDayOfWeek = comparisonDate.DayOfWeek;
-
                 return (comparisonDate < currentDate) && (comparisonDate >= currentDate.FirstDayOfWeek());
             }
 
             bool LastWeek()
             {
                 return (comparisonDate >= currentDate.FirstDayOfWeek().AddDays(-7)) && (comparisonDate <= currentDate.LastDayOfWeek().AddDays(-7));
+            }
+
+            bool ThisMonth()
+            {
+                return (comparisonDate >= currentDate.FirstDayOfMonth()) && (comparisonDate < currentDate.FirstDayOfWeek().AddDays(-7));
             }
         }
     }
