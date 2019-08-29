@@ -76,9 +76,7 @@
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                        <Setter Property="MinHeight" Value="70"/>
-                        <Setter Property="Margin" Value="0,0,0,10"/>
-                        <Setter Property="Padding" Value="5"/>
+                        <Setter Property="Cursor" Value="Hand"/>
                     </Style>
                 </ListView.ItemContainerStyle>
 
@@ -88,22 +86,22 @@
                             Margin="5"
                             >
                             <TextBlock x:Name="Title"
-                                Margin="0,0,0,2px"
+                                Margin="0,0,0,2"
                                 DockPanel.Dock="Top"
                                 FontFamily="Segoe WP Semilight"
-                                FontSize="12"
+                                FontSize="14"
                                 FontWeight="Bold"
                                 Foreground="{DynamicResource ItemNameBrush}"
                                 Text="{Binding Title}"
-                                TextTrimming="None"
-                                TextWrapping="Wrap"
+                                TextTrimming="WordEllipsis"
+                                TextWrapping="NoWrap"
                                 />
 
                             <TextBlock x:Name="Description"
-                                MaxHeight="40"
+                                MaxHeight="44"
                                 DockPanel.Dock="Top"
                                 FontFamily="Segoe WP Semilight"
-                                FontSize="10"
+                                FontSize="12"
                                 Foreground="{DynamicResource ItemDescriptionBrush}"
                                 Text="{Binding Description}"
                                 TextTrimming="WordEllipsis"
@@ -111,13 +109,13 @@
                                 />
 
                             <StackPanel x:Name="DatePanelStyle"
-                                Margin="0,2px,0,0"
+                                Margin="0,2,0,0"
                                 DockPanel.Dock="Top"
                                 Orientation="Horizontal"
                                 >
                                 <TextBlock x:Name="New"
                                     FontFamily="Segoe WP Semilight"
-                                    FontSize="9"
+                                    FontSize="10"
                                     Foreground="Orange"
                                     Text="{Binding New}"
                                     Visibility="Collapsed"
@@ -125,7 +123,7 @@
 
                                 <TextBlock x:Name="Date"
                                     FontFamily="Segoe WP Semilight"
-                                    FontSize="9"
+                                    FontSize="10"
                                     FontWeight="Bold"
                                     Foreground="{DynamicResource ItemDateBrush}"
                                     Text="{Binding Date, StringFormat='dddd, d MMMM yyyy'}"

@@ -14,6 +14,6 @@ namespace StartPagePlus.UI.ViewModels
 
         public string Content { get; set; }
 
-        public DateTime PublishDate { get; set; }
+        public DateTime Date { get; set; }
     }
 }
