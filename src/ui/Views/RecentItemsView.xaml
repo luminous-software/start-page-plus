@@ -5,9 +5,11 @@
     xmlns:c="clr-namespace:StartPagePlus.UI.Converters"
     xmlns:catalog="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.ImageCatalog"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dat="clr-namespace:System.Windows.Data;assembly=PresentationFramework"
     xmlns:grid="clr-namespace:StartPagePlus.UI.AttachedProperties.Grids"
     xmlns:imaging="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.Imaging"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
     xmlns:theming="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Imaging"
     xmlns:utilities="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Utilities"
     d:DesignHeight="450"
@@ -18,11 +20,30 @@
         <ResourceDictionary>
             <utilities:BrushToColorConverter x:Key="BrushToColorConverter"/>
 
+            <!--  https://stackoverflow.com/questions/3894195/wpf-collectionviewsource-grouping  -->
+
             <CollectionViewSource x:Key="GroupedItems"
                 Source="{Binding Items}"
                 >
+                <CollectionViewSource.SortDescriptions>
+                    <!--  this will sort groups  -->
+                    <scm:SortDescription
+                        Direction="Ascending"
+                        PropertyName="DatePeriod"
+                        />
+
+                    <!--  this will sort items  -->
+                    <scm:SortDescription
+                        Direction="Ascending"
+                        PropertyName="Date"
+                        />
+                </CollectionViewSource.SortDescriptions>
+
                 <CollectionViewSource.GroupDescriptions>
-                    <PropertyGroupDescription PropertyName="Pinned"/>
+                    <dat:PropertyGroupDescription x:Name="GroupByDatePeriod"
+                        Converter="{c:DatePeriodToStringConverter}"
+                        PropertyName="DatePeriod"
+                        />
                 </CollectionViewSource.GroupDescriptions>
             </CollectionViewSource>
 
@@ -86,6 +107,7 @@
                 Background="Transparent"
                 BorderThickness="0"
                 DockPanel.Dock="Top"
+                IsSynchronizedWithCurrentItem="True"
                 ItemsSource="{Binding Source={StaticResource GroupedItems}}"
                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                 ScrollViewer.VerticalScrollBarVisibility="Auto"
@@ -93,31 +115,10 @@
                 SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                 SelectionMode="Single"
                 >
-                <ListView.Resources>
-                    <!--<Style TargetType="{x:Type Button}">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate>
-                                    <Border
-                                        Padding="{TemplateBinding Padding}"
-                                        Background="{TemplateBinding Background}"
-                                        BorderThickness="1"
-                                        >
-                                        <ContentPresenter
-                                            Width="{TemplateBinding Width}"
-                                            Height="{TemplateBinding Height}"
-                                            Margin="{TemplateBinding Margin}"
-                                            />
-                                    </Border>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>-->
-                </ListView.Resources>
-
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter Property="Cursor" Value="Hand"/>
                     </Style>
                 </ListView.ItemContainerStyle>
 
@@ -130,8 +131,9 @@
                                         <ControlTemplate TargetType="{x:Type GroupItem}">
                                             <StackPanel>
                                                 <TextBlock
+                                                    Margin="5,0,5,5"
                                                     FontSize="15"
-                                                    FontWeight="Bold"
+                                                    FontWeight="Medium"
                                                     Foreground="{DynamicResource ColumnBorderBrush}"
                                                     Text="{Binding Path=Name, Converter={c:BoolToPinnedConverter}}"
                                                     />
@@ -144,21 +146,6 @@
                         </GroupStyle.ContainerStyle>
                     </GroupStyle>
                 </ListView.GroupStyle>
-
-                <!--  https://www.wpf-tutorial.com/listview-control/listview-grouping/  -->
-                <!--<ListView.GroupStyle>
-                    <GroupStyle>
-                        <GroupStyle.HeaderTemplate>
-                            <DataTemplate>
-                                <TextBlock
-                                    FontSize="14"
-                                    FontWeight="Bold"
-                                    Text="{Binding Name}"
-                                    />
-                            </DataTemplate>
-                        </GroupStyle.HeaderTemplate>
-                    </GroupStyle>
-                </ListView.GroupStyle>-->
 
                 <ListView.ItemTemplate>
                     <DataTemplate>

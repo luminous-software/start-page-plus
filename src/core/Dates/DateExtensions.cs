@@ -11,6 +11,9 @@ namespace Luminous.Code.Dates
             return date.AddDays(-1 * diff).Date;
         }
 
+        // https://markb.uk/csharp-datetime-get-first-last-day-of-week-or-month.html
+
+        //TODO: add tests for FirstDayOfWeek, LastDayOfWeek, FirstDayOfMonth, LastDayOfMonth, FirstDayOfNextMonth
         public static DateTime FirstDayOfWeek(this DateTime date, DayOfWeek weekStarts = DayOfWeek.Monday)
         {
             //var culture = System.Threading.Thread.CurrentThread.CurrentCulture;

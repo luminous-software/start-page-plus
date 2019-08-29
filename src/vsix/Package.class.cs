@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Threading;
-using Luminous.Code.Extensions.ExceptionExtensions; //TODO: remove
-using Luminous.Code.VisualStudio.Commands; //TODO: remove
+using Luminous.Code.Extensions.ExceptionExtensions;
+using Luminous.Code.VisualStudio.Commands;
 using Luminous.Code.VisualStudio.Packages;
-using Microsoft.VisualStudio; //TODO: remove
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
-using Microsoft.VisualStudio.Shell.Interop; //TODO: remove Microsoft.VisualStudio.Shell.Interop
+using Microsoft.VisualStudio.Shell.Interop;
 using Tasks = System.Threading.Tasks;
 
 namespace StartPagePlus
@@ -66,7 +66,6 @@ namespace StartPagePlus
                 ? $"{Vsix.Name}"
                 : base.GetToolWindowTitle(toolWindowType, id);
 
-        //TODO: remove ShowToolWindow<T>(CancellationToken cancellationToken, string problem = null)
         public static CommandResult ShowToolWindow<T>(CancellationToken cancellationToken, string problem = null)
             where T : ToolWindowPane
         {
@@ -94,7 +93,6 @@ namespace StartPagePlus
             }
         }
 
-        //TODO: remove ShowToolWindow<T>(Type type, string problem = null)
         public static CommandResult ShowToolWindow(Type type, string problem = null)
         {
             try
