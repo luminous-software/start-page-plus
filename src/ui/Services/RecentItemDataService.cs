@@ -47,6 +47,7 @@ namespace StartPagePlus.UI.Services
                             Key = Path.GetExtension(result.Key),
                             Description = Path.GetDirectoryName(result.Key),
                             Date = result.Value.LastAccessed,
+                            Path = result.Key,
                             Pinned = result.Value.IsFavorite,
                             Moniker = (result.Value.IsFavorite)
                                 ? KnownMonikers.Pin

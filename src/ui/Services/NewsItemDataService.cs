@@ -37,7 +37,7 @@ namespace StartPagePlus.UI.Services
                         Title = ExtractTitle(item),
                         Description = ExtractDescription(item),
                         Link = ExtractLink(item),
-                        PublishDate = ExtractPublishDate(item)
+                        Date = ExtractPublishDate(item)
                     }
                 ).ToList();
 
