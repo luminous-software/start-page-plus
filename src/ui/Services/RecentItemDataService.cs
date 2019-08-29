@@ -6,18 +6,21 @@ using System.IO;
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Microsoft.VisualStudio.Imaging;
 using Newtonsoft.Json.Linq;
+using static Luminous.Code.Dates.DateMethods;
 
 namespace StartPagePlus.UI.Services
 {
+    using Core.Interfaces;
     using Interfaces;
     using ViewModels;
 
     public class RecentItemDataService : IRecentItemDataService
     {
         private const string MRUItems_Projects = "{a9c4a31f-f9cb-47a9-abc0-49ce82d0b3ac}";
+        public IDateTimeService DateTimeService { get; }
 
-        public RecentItemDataService()
-        { }
+        public RecentItemDataService(IDateTimeService dateTimeService) => DateTimeService = dateTimeService;
+
 
         public ObservableCollection<RecentItemViewModel> GetItems()
         {
@@ -47,6 +50,7 @@ namespace StartPagePlus.UI.Services
                             Key = Path.GetExtension(result.Key),
                             Description = Path.GetDirectoryName(result.Key),
                             Date = result.Value.LastAccessed,
+                            DatePeriod = DatePeriod(result.Value.IsFavorite, result.Value.LastAccessed, DateTimeService.Today),
                             Path = result.Key,
                             Pinned = result.Value.IsFavorite,
                             Moniker = (result.Value.IsFavorite)
