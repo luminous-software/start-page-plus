@@ -2,7 +2,7 @@
 
 namespace Luminous.Code.Dates
 {
-    public static class Dates
+    public static class DateMethods
     {
         public enum DatePeriods
         {
@@ -11,31 +11,71 @@ namespace Luminous.Code.Dates
             Today = 1,
             Yesterday = 2,
             ThisWeek = 3,
-            LastWeek = 4,
-            LastMonth = 5,
-            Older = 10
+            ThisMonth = 4,
+            Older = 5
         }
 
         public static int DaysAgo(DateTime currentDate, DateTime comparisonDate)
         {
-            var days = (comparisonDate.Date - currentDate.Date).Days;
+            var days = (currentDate.Date - comparisonDate.Date).Days;
 
-            return (days >= 0)
-                ? days
-                : 0;
+            if (days < 0)
+            {
+                throw new ArgumentOutOfRangeException("DaysAgo: comparison date can't be in the future");
+            }
+
+            return days;
         }
 
-        public static int DatePeriod(DateTime currentDate, DateTime comparisonDate)
+        public static int DatePeriod(bool pinned, DateTime currentDate, DateTime comparisonDate)
         {
+            if (currentDate < comparisonDate)
+            {
+                throw new ArgumentOutOfRangeException("DatePeriod: comparison date can't be in the future");
+            }
+
+            if (pinned)
+            {
+                return (int)DatePeriods.Pinned;
+            }
+
             var daysAgo = DaysAgo(currentDate, comparisonDate);
 
             switch (daysAgo)
             {
                 case 0:
-                    return daysAgo;
+                    return (int)DatePeriods.Today;
+
+                case 1:
+                    return (int)DatePeriods.Yesterday;
 
                 default:
-                    return -1;
+                    break;
+            }
+
+            if (ThisWeek())
+            {
+                return (int)DatePeriods.ThisWeek;
+            }
+
+            if (LastWeek())
+            {
+                return (int)DatePeriods.ThisMonth;
+            }
+
+            return (int)DatePeriods.Older;
+
+            bool ThisWeek()
+            {
+                var startDayOfWeek = currentDate.StartOfWeek().DayOfWeek;
+                var comparisonDayOfWeek = comparisonDate.DayOfWeek;
+
+                return (comparisonDate < currentDate) && (comparisonDate >= currentDate.FirstDayOfWeek());
+            }
+
+            bool LastWeek()
+            {
+                return (comparisonDate >= currentDate.FirstDayOfWeek().AddDays(-7)) && (comparisonDate <= currentDate.LastDayOfWeek().AddDays(-7));
             }
         }
     }

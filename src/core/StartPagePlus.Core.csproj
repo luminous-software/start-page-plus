@@ -43,6 +43,7 @@
       <Link>Properties\source.extension.cs</Link>
     </Compile>
     <Compile Include="Constants\StringConstants.cs" />
+    <Compile Include="Dates\DateExtensions.cs" />
     <Compile Include="Dates\Dates.cs" />
     <Compile Include="Interfaces\IBrowserService.cs" />
     <Compile Include="Interfaces\IDataItem.cs" />
