@@ -15,6 +15,8 @@ namespace StartPagePlus.UI.ViewModels
 
         public DateTime Date { get; set; }
 
+        public int DatePeriod { get; set; }
+
         public string Path { get; set; }
 
         public ImageMoniker Moniker { get; set; }

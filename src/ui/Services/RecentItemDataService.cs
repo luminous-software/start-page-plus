@@ -16,10 +16,10 @@ namespace StartPagePlus.UI.Services
 
     public class RecentItemDataService : IRecentItemDataService
     {
-        private const string MRUItems_Projects = "{a9c4a31f-f9cb-47a9-abc0-49ce82d0b3ac}";
         public IDateTimeService DateTimeService { get; }
 
-        public RecentItemDataService(IDateTimeService dateTimeService) => DateTimeService = dateTimeService;
+        public RecentItemDataService(IDateTimeService dateTimeService)
+            => DateTimeService = dateTimeService;
 
 
         public ObservableCollection<RecentItemViewModel> GetItems()
@@ -43,21 +43,28 @@ namespace StartPagePlus.UI.Services
                     var offline = ((string)regKey.GetValue("Offline")).Substring(1);
                     var results = JArray.Parse(offline).ToObject<List<Result>>();
 
-                    results.ForEach((result) => items.Add(
-                        new RecentItemViewModel
-                        {
-                            Name = Path.GetFileName(result.Key),
-                            Key = Path.GetExtension(result.Key),
-                            Description = Path.GetDirectoryName(result.Key),
-                            Date = result.Value.LastAccessed,
-                            DatePeriod = DatePeriod(result.Value.IsFavorite, result.Value.LastAccessed, DateTimeService.Today),
-                            Path = result.Key,
-                            Pinned = result.Value.IsFavorite,
-                            Moniker = (result.Value.IsFavorite)
-                                ? KnownMonikers.Pin
-                                : KnownMonikers.Unpin
-                        })
-                    );
+                    results.ForEach((result) =>
+                    {
+                        var path = result.Key;
+                        var pinned = result.Value.IsFavorite;
+                        var date = result.Value.LastAccessed;
+
+                        items.Add(
+                            new RecentItemViewModel
+                            {
+                                Name = Path.GetFileName(path),
+                                Key = Path.GetExtension(path),
+                                Description = Path.GetDirectoryName(path),
+                                Date = date,
+                                DatePeriod = DatePeriod(pinned, date, DateTimeService.Today),
+                                Path = path,
+                                Pinned = pinned,
+                                Moniker = (pinned)
+                                    ? KnownMonikers.Pin
+                                    : KnownMonikers.Unpin
+                            }
+                        );
+                    });
                 }
                 catch (Exception ex)
                 {
