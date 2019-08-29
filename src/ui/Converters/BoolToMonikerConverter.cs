@@ -6,6 +6,8 @@ using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.Converters
 {
+    //TODO: BoolToMonikerConverter doesn't work
+
     // usage:
     // xmlns:c="clr-namespace:StartPagePlus.UI.Converters"
 
@@ -30,14 +32,12 @@ namespace StartPagePlus.UI.Converters
 
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var result = (value is bool?)
-                ? ((bool?)value).GetValueOrDefault(false)
-                : false;
-
-            if (value is bool)
+            if (!(value is bool))
             {
-                result = (bool)value;
+                return value;
             }
+
+            var result = (bool)value;
 
             if (Reversed)
             {

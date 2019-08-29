@@ -20,7 +20,7 @@ namespace StartPagePlus.UI.Converters
         {
             if (!(value is bool))
             {
-                return KnownMonikers.ExclamationPoint;
+                return value;
             }
 
             var result = (bool)value;

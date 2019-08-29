@@ -4,6 +4,8 @@ using System.Windows.Data;
 
 namespace StartPagePlus.UI.Converters
 {
+    //TODO: BoolToPinnedConverter is temporary
+
     // usage:
     // xmlns:c="clr-namespace:StartPagePlus.UI.Converters"
 
