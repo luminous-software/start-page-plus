@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
+using Luminus.Code.Enums;
 using static Luminous.Code.Dates.DateMethods;
 
 // usage:
@@ -15,13 +16,8 @@ namespace StartPagePlus.UI.Converters
     public class DatePeriodToStringConverter : ConverterMarkupExtension
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            if (!(value is DatePeriods))
-            {
-                return value;
-            }
-
-            return null;
-        }
+            => (value is DatePeriods datePeriod)
+                ? DatePeriodToString(datePeriod)
+                : value;
     };
 }
