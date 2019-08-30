@@ -1,10 +1,11 @@
 ﻿using System;
 using FluentAssertions;
+using Luminus.Code.Enums;
 using Xunit;
 
-namespace Luminous.Code.DateTests
+namespace Luminous.Code.Tests.Dates
 {
-    using static Dates.DateMethods;
+    using static Luminous.Code.Dates.DateMethods;
 
     public class DatePeriod_Tests
     {

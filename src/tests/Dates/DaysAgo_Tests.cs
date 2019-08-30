@@ -2,24 +2,12 @@
 using FluentAssertions;
 using Xunit;
 
-namespace Luminous.Code.DateTests
+namespace Luminous.Code.Tests.Dates
 {
-    using static Dates.DateMethods;
+    using static Luminous.Code.Dates.DateMethods;
 
     public class DaysAgo_Tests
     {
-        [Fact]
-        public void SameDate_ReturnsZero()
-        {
-            var currentDate = new DateTime(2019, 8, 21);
-            var comparisonDate = new DateTime(2019, 8, 21);
-            var expectedValue = 0;
-
-            var result = DaysAgo(currentDate, comparisonDate);
-
-            result.Should().Be(expectedValue);
-        }
-
         [Fact]
         public void FutureDate_ThrowsArgumentOutOfRangeException()
         {
@@ -33,6 +21,30 @@ namespace Luminous.Code.DateTests
 
             //https://fluentassertions.com/exceptions/
             //.WithMessage("DaysAgo: comparison date can't be in the future");
+        }
+
+        [Fact]
+        public void SameDay_ReturnsZero()
+        {
+            var currentDate = new DateTime(2019, 8, 21);
+            var comparisonDate = new DateTime(2019, 8, 21);
+            var expectedValue = 0;
+
+            var result = DaysAgo(currentDate, comparisonDate);
+
+            result.Should().Be(expectedValue);
+        }
+
+        [Fact]
+        public void PreviousDay_ReturnsOne()
+        {
+            var currentDate = new DateTime(2019, 8, 21);
+            var comparisonDate = new DateTime(2019, 8, 20);
+            var expectedValue = 1;
+
+            var result = DaysAgo(currentDate, comparisonDate);
+
+            result.Should().Be(expectedValue);
         }
     }
 

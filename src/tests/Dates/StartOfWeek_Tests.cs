@@ -2,9 +2,9 @@
 using FluentAssertions;
 using Xunit;
 
-namespace Luminous.Code.DateTests
+namespace Luminous.Code.Tests.Dates
 {
-    using static Dates.DateExtensions;
+    using static Luminous.Code.Dates.DateExtensions;
 
     public class StartOfWeek_Tests
     {
