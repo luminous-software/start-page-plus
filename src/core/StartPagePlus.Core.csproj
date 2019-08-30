@@ -44,8 +44,6 @@
     </Compile>
     <Compile Include="Constants\StringConstants.cs" />
     <Compile Include="Dates\DateExtensions.cs" />
-    <Compile Include="Dates\DatesMethods.cs" />
-    <Compile Include="Enums\DatePeriods.cs" />
     <Compile Include="Enums\EnumExtensions.cs" />
     <Compile Include="Interfaces\IBrowserService.cs" />
     <Compile Include="Interfaces\IDataItem.cs" />

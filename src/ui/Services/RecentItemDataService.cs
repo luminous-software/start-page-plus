@@ -6,13 +6,13 @@ using System.IO;
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Microsoft.VisualStudio.Imaging;
 using Newtonsoft.Json.Linq;
-using static Luminous.Code.Dates.DateMethods;
 
 namespace StartPagePlus.UI.Services
 {
     using Core.Interfaces;
     using Interfaces;
     using ViewModels;
+    using static Dates.DateMethods;
 
     public class RecentItemDataService : IRecentItemDataService
     {
@@ -56,7 +56,7 @@ namespace StartPagePlus.UI.Services
                                 Key = Path.GetExtension(path),
                                 Description = Path.GetDirectoryName(path),
                                 Date = date,
-                                DatePeriod = DatePeriod(pinned, date, DateTimeService.Today),
+                                DatePeriod = DatePeriod(pinned, DateTimeService.Today, date),
                                 Path = path,
                                 Pinned = pinned,
                                 Moniker = (pinned)

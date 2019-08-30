@@ -59,7 +59,10 @@
     <Compile Include="Converters\ConverterMarkupExtension.cs" />
     <Compile Include="Converters\DatePeriodToStringConverter.cs" />
     <Compile Include="Converters\DummyConverter.cs" />
+    <Compile Include="Converters\EnumToStringConverter.cs" />
     <Compile Include="Converters\ExtensionToMonikerConverter.cs" />
+    <Compile Include="Dates\DatesMethods.cs" />
+    <Compile Include="Enums\DatePeriods.cs" />
     <Compile Include="Interfaces\INewsItem.cs" />
     <Compile Include="Interfaces\IRecentItem.cs" />
     <Compile Include="Interfaces\INewsItemDataService.cs" />
@@ -71,6 +74,7 @@
     <Compile Include="Services\RecentItemActionService.cs" />
     <Compile Include="Services\RecentItemDataService.cs" />
     <Compile Include="StartPagePlusWindow.cs" />
+    <Compile Include="Strings\StringMethods.cs" />
     <Compile Include="ViewModels\ColumnViewModel.cs" />
     <Compile Include="ViewModels\RecentItemViewModel.cs" />
     <Compile Include="ViewModels\NewsItemViewModel.cs" />

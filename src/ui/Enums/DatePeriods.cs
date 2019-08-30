@@ -1,5 +1,10 @@
-﻿namespace Luminus.Code.Enums
+﻿using System.ComponentModel;
+
+namespace StartPagePlus.UI.Enums
 {
+    using Converters;
+
+    [TypeConverter(typeof(EnumToStringConverter<DatePeriods>))]
     public enum DatePeriods
     {
 

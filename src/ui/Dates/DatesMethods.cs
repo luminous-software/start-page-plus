@@ -1,8 +1,9 @@
 ﻿using System;
+using Luminous.Code.Dates;
 
-namespace Luminous.Code.Dates
+namespace StartPagePlus.UI.Dates
 {
-    using Luminus.Code.Enums;
+    using UI.Enums;
 
     // https://markb.uk/csharp-datetime-get-first-last-day-of-week-or-month.html
 
@@ -20,7 +21,7 @@ namespace Luminous.Code.Dates
             return days;
         }
 
-        public static int DatePeriod(bool pinned, DateTime currentDate, DateTime comparisonDate)
+        public static DatePeriods DatePeriod(bool pinned, DateTime currentDate, DateTime comparisonDate)
         {
             if (currentDate < comparisonDate)
             {
@@ -29,7 +30,7 @@ namespace Luminous.Code.Dates
 
             if (pinned)
             {
-                return (int)DatePeriods.Pinned;
+                return DatePeriods.Pinned;
             }
 
             var daysAgo = DaysAgo(currentDate, comparisonDate);
@@ -37,35 +38,29 @@ namespace Luminous.Code.Dates
             switch (daysAgo)
             {
                 case 0:
-                    return (int)DatePeriods.Today;
+                    return DatePeriods.Today;
 
                 case 1:
-                    return (int)DatePeriods.Yesterday;
+                    return DatePeriods.Yesterday;
 
                 default:
                     break;
             }
 
             return ThisWeek()
-                ? (int)DatePeriods.ThisWeek
+                ? DatePeriods.ThisWeek
                 : (LastWeek() || ThisMonth())
-                    ? (int)DatePeriods.ThisMonth
-                    : (int)DatePeriods.Older;
+                    ? DatePeriods.ThisMonth
+                    : DatePeriods.Older;
 
             bool ThisWeek()
-            {
-                return (comparisonDate < currentDate) && (comparisonDate >= currentDate.FirstDayOfWeek());
-            }
+                => (comparisonDate < currentDate) && (comparisonDate >= currentDate.FirstDayOfWeek());
 
             bool LastWeek()
-            {
-                return (comparisonDate >= currentDate.FirstDayOfWeek().AddDays(-7)) && (comparisonDate <= currentDate.LastDayOfWeek().AddDays(-7));
-            }
+                => (comparisonDate >= currentDate.FirstDayOfPreviousWeek()) && (comparisonDate <= currentDate.LastDayOfPreviousWeek());
 
             bool ThisMonth()
-            {
-                return (comparisonDate >= currentDate.FirstDayOfMonth()) && (comparisonDate < currentDate.FirstDayOfWeek().AddDays(-7));
-            }
+                => (comparisonDate >= currentDate.FirstDayOfNextMonth()) && (comparisonDate < currentDate.LastDayOfMonth());
         }
 
         public static string DatePeriodToString(DatePeriods datePeriod)
