@@ -4,15 +4,19 @@ using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Core.Interfaces;
     using Interfaces;
 
     public class NewsItemsViewModel : ColumnViewModel
     {
         private const string DEV_NEWS_FEED_URL = "https://vsstartpage.blob.core.windows.net/news/vs";
+        private NewsItemViewModel selectedItem;
+        private int selectedIndex;
 
-        public NewsItemsViewModel(INewsItemDataService dataService)
+        public NewsItemsViewModel(INewsItemDataService dataService, INewsItemActionService actionService)
         {
             DataService = dataService;
+            ActionService = actionService;
             Heading = "Read Developer News";
             IsVisible = true;
             Commands = new ObservableCollection<CommandViewModel>
@@ -33,6 +37,29 @@ namespace StartPagePlus.UI.ViewModels
         public ObservableCollection<NewsItemViewModel> Items { get; set; }
 
         public INewsItemDataService DataService { get; }
+
+        public INewsItemActionService ActionService { get; }
+
+        public NewsItemViewModel SelectedItem
+        {
+            get => selectedItem;
+            set
+            {
+                if (value != null)
+                {
+                    ActionService.OpenItem(value.Link);
+                }
+
+                Set(ref selectedItem, value);
+            }
+        }
+
+        public int SelectedIndex
+        {
+            get => selectedIndex;
+            set => Set(ref selectedIndex, value);
+        }
+
 
         private bool CanExecuteMoreNews
             => true;
