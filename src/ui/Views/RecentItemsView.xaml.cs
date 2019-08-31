@@ -15,12 +15,14 @@ namespace StartPagePlus.UI.Views
             viewModel.ExecuteRefresh();
             DataContext = viewModel;
 
-            //https://www.wpf-tutorial.com/listview-control/listview-grouping/
+            RecentItemsListView.SelectionChanged += (sender, e) =>
+            {
+                var listView = (ListView)sender;
 
-            //var view = (CollectionView)CollectionViewSource.GetDefaultView(RecentItems.ItemsSource); - returns null!!!
-            //var groupDescription = new PropertyGroupDescription("Pinned");
-
-            //view.GroupDescriptions.Add(groupDescription);
+                listView.SelectedItem = null;
+            };
         }
+
+
     }
 }

@@ -41,7 +41,6 @@
 
                 <CollectionViewSource.GroupDescriptions>
                     <dat:PropertyGroupDescription x:Name="GroupByDatePeriod"
-                        Converter="{c:DatePeriodToStringConverter}"
                         PropertyName="DatePeriod"
                         />
                 </CollectionViewSource.GroupDescriptions>
@@ -102,7 +101,7 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
-            <ListView x:Name="RecentItems"
+            <ListView x:Name="RecentItemsListView"
                 Margin="10,0,10,0"
                 Background="Transparent"
                 BorderThickness="0"
@@ -113,6 +112,7 @@
                 ScrollViewer.VerticalScrollBarVisibility="Auto"
                 SelectedIndex="{Binding SelectedIndex, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                 SelectedItem="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                SelectedValue=""
                 SelectionMode="Single"
                 >
                 <ListView.ItemContainerStyle>
@@ -135,9 +135,10 @@
                                                     FontSize="15"
                                                     FontWeight="Medium"
                                                     Foreground="{DynamicResource ColumnBorderBrush}"
-                                                    Text="{Binding Path=Name, Converter={c:BoolToPinnedConverter}}"
+                                                    Text="{Binding Path=Name}"
                                                     />
                                                 <ItemsPresenter/>
+                                                <!--  , Converter={c:DatePeriodToStringConverter}}"  -->
                                             </StackPanel>
                                         </ControlTemplate>
                                     </Setter.Value>

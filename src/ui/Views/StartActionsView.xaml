@@ -58,7 +58,7 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
-            <ListView x:Name="StartActions"
+            <ListView x:Name="StartActionsListView"
                 MinHeight="70"
                 Margin="10,0,10,0"
                 Padding="5,0,5,5"

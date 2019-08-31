@@ -61,7 +61,7 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
-            <ListView x:Name="NewsItemsList"
+            <ListView x:Name="NewsItemsListView"
                 Margin="10,0,10,0"
                 Background="Transparent"
                 BorderThickness="0"

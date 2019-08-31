@@ -16,6 +16,9 @@ namespace StartPagePlus.UI.Views
 
             DataContext = viewModel;
 
+
+            NewsItemsListView.SelectionChanged += (sender, e)
+                => ((ListView)sender).SelectedItem = null;
         }
     }
 }
