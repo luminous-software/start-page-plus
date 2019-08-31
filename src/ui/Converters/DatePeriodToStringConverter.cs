@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
-using Luminus.Code.Enums;
-using static Luminous.Code.Dates.DateMethods;
 
 // usage:
 // xmlns:dat="clr-namespace:System.Windows.Data;assembly=PresentationFramework"
@@ -12,6 +10,9 @@ using static Luminous.Code.Dates.DateMethods;
 
 namespace StartPagePlus.UI.Converters
 {
+    using Enums;
+    using static Dates.DateMethods;
+
     [ValueConversion(typeof(DatePeriods), typeof(string))]
     public class DatePeriodToStringConverter : ConverterMarkupExtension
     {
