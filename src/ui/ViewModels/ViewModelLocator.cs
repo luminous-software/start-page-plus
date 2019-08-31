@@ -3,7 +3,8 @@ using GalaSoft.MvvmLight.Ioc;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using Interfaces;
+    using Core.Interfaces;
+    using Interfaces;   //TODO: why are these interfaces not in Core.Interfaces?
     using Services;
 
     public class ViewModelLocator
@@ -20,6 +21,7 @@ namespace StartPagePlus.UI.ViewModels
 
         private void RegisterServices(SimpleIoc container)
         {
+            container.Register<IDateTimeService, DateTimeService>();
             container.Register<IRecentItemDataService, RecentItemDataService>();
             container.Register<IRecentItemActionService, RecentItemActionService>();
             container.Register<INewsItemDataService, NewsItemDataService>();

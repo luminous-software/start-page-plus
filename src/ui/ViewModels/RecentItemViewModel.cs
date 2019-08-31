@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Enums;
     using Interfaces;
 
     public class RecentItemViewModel : IRecentItem
@@ -15,7 +16,7 @@ namespace StartPagePlus.UI.ViewModels
 
         public DateTime Date { get; set; }
 
-        public int DatePeriod { get; set; }
+        public DatePeriods DatePeriod { get; set; }
 
         public string Path { get; set; }
 
