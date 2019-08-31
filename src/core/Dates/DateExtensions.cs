@@ -13,30 +13,40 @@ namespace Luminous.Code.Dates
 
         // https://markb.uk/csharp-datetime-get-first-last-day-of-week-or-month.html
 
-        //TODO: add tests for FirstDayOfWeek, LastDayOfWeek, FirstDayOfMonth, LastDayOfMonth, FirstDayOfNextMonth
-        public static DateTime FirstDayOfWeek(this DateTime date, DayOfWeek weekStarts = DayOfWeek.Monday)
+        //TODO: add tests for FirstDayOfPreviousWeek, LastDayOfPreviousWeek, FirstDayOfWeek, LastDayOfWeek, FirstDayOfMonth, LastDayOfMonth, FirstDayOfPreviousMonth, LastDayOfPreviousMonth
+
+        public static DateTime FirstDayOfPreviousWeek(this DateTime instance)
+            => instance.LastDayOfPreviousWeek().AddDays(-6);
+
+        public static DateTime LastDayOfPreviousWeek(this DateTime instance)
+            => instance.FirstDayOfWeek().AddDays(-1);
+
+        public static DateTime FirstDayOfWeek(this DateTime instance, DayOfWeek weekStarts = DayOfWeek.Monday)
         {
             //var culture = System.Threading.Thread.CurrentThread.CurrentCulture;
-            var diff = date.DayOfWeek - weekStarts;
+            var diff = instance.DayOfWeek - weekStarts;
 
             if (diff < 0)
             {
                 diff += 7;
             }
 
-            return date.AddDays(-diff).Date;
+            return instance.AddDays(-diff).Date;
         }
 
-        public static DateTime LastDayOfWeek(this DateTime date)
-            => date.FirstDayOfWeek().AddDays(6);
+        public static DateTime LastDayOfWeek(this DateTime instance)
+            => instance.FirstDayOfWeek().AddDays(6);
 
-        public static DateTime FirstDayOfMonth(this DateTime date)
-            => new DateTime(date.Year, date.Month, 1);
+        public static DateTime FirstDayOfMonth(this DateTime instance) =>
+        new DateTime(instance.Year, instance.Month, 1);
 
-        public static DateTime LastDayOfMonth(this DateTime date)
-            => date.FirstDayOfMonth().AddMonths(1).AddDays(-1);
+        public static DateTime LastDayOfMonth(this DateTime instance) =>
+            instance.FirstDayOfMonth().AddMonths(1).AddDays(-1);
 
-        public static DateTime FirstDayOfNextMonth(this DateTime date)
-            => date.FirstDayOfMonth().AddMonths(1);
+        public static DateTime FirstDayOfNextMonth(this DateTime instance)
+            => new DateTime(instance.Year, instance.Month, 1);
+
+        public static DateTime LastDayOfNextMonth(this DateTime instance)
+            => instance.FirstDayOfNextMonth().AddMonths(1).AddDays(-1);
     }
 }

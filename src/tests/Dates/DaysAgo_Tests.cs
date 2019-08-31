@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Luminous.Code.Tests.Dates
 {
-    using static Luminous.Code.Dates.DateMethods;
+    using static StartPagePlus.UI.Dates.DateMethods;
 
     public class DaysAgo_Tests
     {

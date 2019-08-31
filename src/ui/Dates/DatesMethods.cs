@@ -64,7 +64,8 @@ namespace StartPagePlus.UI.Dates
         }
 
         public static string DatePeriodToString(DatePeriods datePeriod)
-            => datePeriod.ToString();//.ToWords();
+            =>
+            datePeriod.ToString();//.ToWords();
 
     }
 }

@@ -5,6 +5,7 @@
 
     public class DateTimeService : IDateTimeService
     {
-        public DateTime Today => DateTime.Today;
+        public DateTime Today
+            => DateTime.Today.Date;
     }
 }

@@ -1,10 +1,10 @@
 ﻿using FluentAssertions;
-using Luminus.Code.Enums;
 using Xunit;
 
 namespace Luminous.Code.Tests.Dates
 {
-    using static Luminous.Code.Dates.DateMethods;
+    using StartPagePlus.UI.Enums;
+    using static StartPagePlus.UI.Dates.DateMethods;
 
     public class DatePeriodToString_Tests
     {
@@ -42,10 +42,32 @@ namespace Luminous.Code.Tests.Dates
         }
 
         [Fact]
-        public void ThisWeek_ReturnsThisSpaceWeek()
+        public void DateThisWeek_ReturnsThisSpaceWeek()
         {
             const DatePeriods datePeriod = DatePeriods.ThisWeek;
             const string expectedValue = "This Week";
+
+            var result = DatePeriodToString(datePeriod);
+
+            result.Should().Be(expectedValue);
+        }
+
+        [Fact]
+        public void DatesThisMonth_ReturnsThisSpaceMonth()
+        {
+            const DatePeriods datePeriod = DatePeriods.ThisMonth;
+            const string expectedValue = "This Month";
+
+            var result = DatePeriodToString(datePeriod);
+
+            result.Should().Be(expectedValue);
+        }
+
+        [Fact]
+        public void DatesOlder_ReturnsOlder()
+        {
+            const DatePeriods datePeriod = DatePeriods.Older;
+            const string expectedValue = "Older";
 
             var result = DatePeriodToString(datePeriod);
 
