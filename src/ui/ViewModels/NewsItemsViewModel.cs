@@ -10,6 +10,7 @@ namespace StartPagePlus.UI.ViewModels
     public class NewsItemsViewModel : ColumnViewModel
     {
         private const string DEV_NEWS_FEED_URL = "https://vsstartpage.blob.core.windows.net/news/vs";
+        private const string HEADING = "Read Developer News";
         private NewsItemViewModel selectedItem;
         private int selectedIndex;
 
@@ -17,20 +18,8 @@ namespace StartPagePlus.UI.ViewModels
         {
             DataService = dataService;
             ActionService = actionService;
-            Heading = "Read Developer News";
-            Commands = new ObservableCollection<CommandViewModel>
-            {
-                new CommandViewModel
-                {
-                    Name = "View More News",
-                    Command = new RelayCommand(ExecuteMoreNews, CanExecuteMoreNews)
-                },
-                new CommandViewModel
-                {
-                    Name = "Refresh",
-                    Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
-                }
-            };
+            Heading = HEADING;
+            Commands = GetCommands();
             IsVisible = true;
         }
 
@@ -74,5 +63,21 @@ namespace StartPagePlus.UI.ViewModels
             {
                 Items = await DataService.GetItemsAsync(DEV_NEWS_FEED_URL);
             });
+
+
+        private ObservableCollection<CommandViewModel> GetCommands()
+            => new ObservableCollection<CommandViewModel>
+            {
+                //new CommandViewModel
+                //{
+                //    Name = "View More News",
+                //    Command = new RelayCommand(ExecuteMoreNews, CanExecuteMoreNews)
+                //},
+                new CommandViewModel
+                {
+                    Name = "Refresh",
+                    Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
+                }
+            };
     }
 }

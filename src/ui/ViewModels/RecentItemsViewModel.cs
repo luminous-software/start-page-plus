@@ -7,6 +7,7 @@ namespace StartPagePlus.UI.ViewModels
 
     public class RecentItemsViewModel : ColumnViewModel
     {
+        private const string HEADING = "Open a Recent Item";
         private RecentItemViewModel selectedItem;
         private int selectedIndex;
 
@@ -15,29 +16,10 @@ namespace StartPagePlus.UI.ViewModels
         {
             DataService = dataService;
             ActionService = actionService;
-            Heading = "Open a Recent Item";
-            Commands = new ObservableCollection<CommandViewModel>
-            {
-                //new CommandViewModel
-                //{
-                //    Name = "Filter",
-                //    Command = new RelayCommand(ExecuteFilter, CanExecuteFilter)
-                //},
-                //new CommandViewModel
-                //{
-                //    Name = "Remove Filter",
-                //    Command = new RelayCommand(ExecuteRemoveFilter, CanExecuteRemoveFilter),
-                //    IsVisible = false
-                //},
-                new CommandViewModel
-                {
-                    Name = "Refresh",
-                    Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
-                }
-            };
+            Heading = HEADING;
+            Commands = GetCommands();
             IsVisible = true;
         }
-
 
         public IRecentItemDataService DataService { get; }
 
@@ -86,5 +68,26 @@ namespace StartPagePlus.UI.ViewModels
             Items = null;
             Items = DataService.GetItems();
         }
+
+        private ObservableCollection<CommandViewModel> GetCommands()
+            => new ObservableCollection<CommandViewModel>
+            {
+                //new CommandViewModel
+                //{
+                //    Name = "Filter",
+                //    Command = new RelayCommand(ExecuteFilter, CanExecuteFilter)
+                //},
+                //new CommandViewModel
+                //{
+                //    Name = "Remove Filter",
+                //    Command = new RelayCommand(ExecuteRemoveFilter, CanExecuteRemoveFilter),
+                //    IsVisible = false
+                //},
+                new CommandViewModel
+                {
+                    Name = "Refresh",
+                    Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
+                }
+            };
     }
 }

@@ -3,9 +3,7 @@ using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using Interfaces;
-
-    public class RecentItemViewModel : IRecentItem
+    public class RecentItemViewModel
     {
         public string Key { get; set; }
 

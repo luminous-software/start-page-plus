@@ -7,6 +7,7 @@ namespace StartPagePlus.UI.ViewModels
 
     public class StartActionsViewModel : ColumnViewModel
     {
+        private const string HEADING = "Get Started";
         private StartActionViewModel selectedItem;
         private int selectedIndex;
 
@@ -14,18 +15,10 @@ namespace StartPagePlus.UI.ViewModels
         {
             DataService = dataService;
             ActionService = actionService;
-            Heading = "Get Started";
-            Commands = new ObservableCollection<CommandViewModel>
-            {
-                new CommandViewModel
-                {
-                    Name = "Continue With No Code",
-                    Command = new RelayCommand(ExecuteContinue, CanExecuteContinue)
-                }
-            };
+            Heading = HEADING;
+            Commands = GetCommands();
             IsVisible = true;
         }
-
         public IStartActionDataService DataService { get; }
 
         public IStartActionActionService ActionService { get; }
@@ -58,5 +51,15 @@ namespace StartPagePlus.UI.ViewModels
         private void ExecuteContinue()
         { }
 
+
+        private ObservableCollection<CommandViewModel> GetCommands()
+            => new ObservableCollection<CommandViewModel>
+            {
+                new CommandViewModel
+                {
+                    Name = "Continue With No Code",
+                    Command = new RelayCommand(ExecuteContinue, CanExecuteContinue)
+                }
+            };
     }
 }
