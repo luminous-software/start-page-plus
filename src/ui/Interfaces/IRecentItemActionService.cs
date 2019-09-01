@@ -1,7 +1,9 @@
 ﻿namespace StartPagePlus.UI.Interfaces
 {
+    using ViewModels;
+
     public interface IRecentItemActionService
     {
-        void OpenItem(string path);
+        void DoAction(RecentItemViewModel currentViewModel);
     }
 }

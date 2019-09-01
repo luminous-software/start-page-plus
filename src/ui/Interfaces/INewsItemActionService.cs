@@ -1,7 +1,9 @@
 ﻿namespace StartPagePlus.Core.Interfaces
 {
+    using UI.ViewModels;
+
     public interface INewsItemActionService
     {
-        void OpenItem(string url, bool InternalBrowser = true);
+        void DoAction(NewsItemViewModel currentViewModel, bool internalBrowser = true);
     }
 }

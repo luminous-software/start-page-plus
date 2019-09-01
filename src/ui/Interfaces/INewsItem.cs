@@ -1,10 +1,15 @@
-﻿namespace StartPagePlus.UI.Interfaces
+﻿using System;
+
+namespace StartPagePlus.UI.Interfaces
 {
     public interface INewsItem
     {
-        string Name { get; }
+        string Title { get; }
+
         string Description { get; }
-        string Date { get; }
+
+        DateTime Date { get; }
+
         string Link { get; }
     }
 }
