@@ -135,10 +135,9 @@
                                                     FontSize="15"
                                                     FontWeight="Medium"
                                                     Foreground="{DynamicResource ColumnBorderBrush}"
-                                                    Text="{Binding Path=Name}"
+                                                    Text="{Binding Path=Name, Converter={c:DatePeriodIdToDatePeriodStringConverter}}"
                                                     />
                                                 <ItemsPresenter/>
-                                                <!--  , Converter={c:DatePeriodToStringConverter}}"  -->
                                             </StackPanel>
                                         </ControlTemplate>
                                     </Setter.Value>
