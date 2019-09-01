@@ -1,43 +1,20 @@
 ﻿using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Command;
-using Microsoft.VisualStudio.Imaging;
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Interfaces;
+
     public class StartActionsViewModel : ColumnViewModel
     {
-        public StartActionsViewModel()
-        {
-            Heading = "Get Started";
-            IsVisible = true;
-            StartActions = new ObservableCollection<StartActionViewModel>
-            {
-                new StartActionViewModel
-                {
-                    Moniker=KnownMonikers.DownloadNoColor,
-                    Name = "Clone or checkout code",
-                    Description = "Get code from an online repository like GitHub or Azure DevOps"
-                },
-                new StartActionViewModel
-                {
-                    Moniker=KnownMonikers.OpenFolder,
-                    Name = "Open a local folder",
-                    Description = "Navigate and edit code within any folder"
-                },
-                new StartActionViewModel
-                {
-                    Moniker=KnownMonikers.OpenDocumentGroup,
-                    Name = "Open a project or solution",
-                    Description = "Open a local Visual Studio project or a .sln file"
-                },
-                new StartActionViewModel
-                {
-                    Moniker=KnownMonikers.AddDocumentGroup,
-                    Name = "Create a new project",
-                    Description = "Choose a project template with code scaffolding to get started"
-                }
-            };
+        private StartActionViewModel selectedItem;
+        private int selectedIndex;
 
+        public StartActionsViewModel(IStartActionDataService dataService, IStartActionActionService actionService)
+        {
+            DataService = dataService;
+            ActionService = actionService;
+            Heading = "Get Started";
             Commands = new ObservableCollection<CommandViewModel>
             {
                 new CommandViewModel
@@ -46,9 +23,34 @@ namespace StartPagePlus.UI.ViewModels
                     Command = new RelayCommand(ExecuteContinue, CanExecuteContinue)
                 }
             };
+            IsVisible = true;
         }
 
-        public ObservableCollection<StartActionViewModel> StartActions { get; set; }
+        public IStartActionDataService DataService { get; }
+
+        public IStartActionActionService ActionService { get; }
+
+        public ObservableCollection<StartActionViewModel> Items { get; set; }
+
+        public StartActionViewModel SelectedItem
+        {
+            get => selectedItem;
+            set
+            {
+                if (value != null)
+                {
+                    ActionService.DoAction(value);
+                }
+
+                Set(ref selectedItem, value);
+            }
+        }
+
+        public int SelectedIndex
+        {
+            get => selectedIndex;
+            set => Set(ref selectedIndex, value);
+        }
 
         private bool CanExecuteContinue()
             => true;

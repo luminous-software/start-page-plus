@@ -22,10 +22,15 @@ namespace StartPagePlus.UI.ViewModels
         private void RegisterServices(SimpleIoc container)
         {
             container.Register<IDateTimeService, DateTimeService>();
-            container.Register<INewsItemActionService, NewsItemActionService>();
+
             container.Register<IRecentItemDataService, RecentItemDataService>();
             container.Register<IRecentItemActionService, RecentItemActionService>();
+
+            container.Register<IStartActionDataService, StartActionDataService>();
+            container.Register<IStartActionActionService, StartActionActionService>();
+
             container.Register<INewsItemDataService, NewsItemDataService>();
+            container.Register<INewsItemActionService, NewsItemActionService>();
 
 
         }

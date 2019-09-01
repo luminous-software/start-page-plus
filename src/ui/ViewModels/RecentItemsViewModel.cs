@@ -16,7 +16,6 @@ namespace StartPagePlus.UI.ViewModels
             DataService = dataService;
             ActionService = actionService;
             Heading = "Open a Recent Item";
-            IsVisible = true;
             Commands = new ObservableCollection<CommandViewModel>
             {
                 //new CommandViewModel
@@ -36,9 +35,13 @@ namespace StartPagePlus.UI.ViewModels
                     Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
                 }
             };
+            IsVisible = true;
         }
 
-        public bool Filtered { get; set; }
+
+        public IRecentItemDataService DataService { get; }
+
+        public IRecentItemActionService ActionService { get; }
 
         public ObservableCollection<RecentItemViewModel> Items { get; set; }
 
@@ -47,13 +50,12 @@ namespace StartPagePlus.UI.ViewModels
             get => selectedItem;
             set
             {
-                Set(ref selectedItem, value);
-
                 if (value != null)
                 {
-                    ActionService.OpenItem(value.Path);
-                    SelectedItem = null;
+                    ActionService.DoAction(value);
                 }
+
+                Set(ref selectedItem, value);
             }
         }
 
@@ -63,10 +65,7 @@ namespace StartPagePlus.UI.ViewModels
             set => Set(ref selectedIndex, value);
         }
 
-        public IRecentItemDataService DataService { get; }
-
-        public IRecentItemActionService ActionService { get; }
-
+        public bool Filtered { get; set; }
         private bool CanExecuteShowFilter()
             => !Filtered;
 
@@ -83,6 +82,9 @@ namespace StartPagePlus.UI.ViewModels
             => true;
 
         public void ExecuteRefresh()
-            => Items = DataService.GetItems();
+        {
+            Items = null;
+            Items = DataService.GetItems();
+        }
     }
 }

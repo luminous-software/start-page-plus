@@ -18,7 +18,6 @@ namespace StartPagePlus.UI.ViewModels
             DataService = dataService;
             ActionService = actionService;
             Heading = "Read Developer News";
-            IsVisible = true;
             Commands = new ObservableCollection<CommandViewModel>
             {
                 new CommandViewModel
@@ -32,13 +31,14 @@ namespace StartPagePlus.UI.ViewModels
                     Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
                 }
             };
+            IsVisible = true;
         }
-
-        public ObservableCollection<NewsItemViewModel> Items { get; set; }
 
         public INewsItemDataService DataService { get; }
 
         public INewsItemActionService ActionService { get; }
+
+        public ObservableCollection<NewsItemViewModel> Items { get; set; }
 
         public NewsItemViewModel SelectedItem
         {
@@ -47,7 +47,7 @@ namespace StartPagePlus.UI.ViewModels
             {
                 if (value != null)
                 {
-                    ActionService.OpenItem(value.Link);
+                    ActionService.DoAction(value);
                 }
 
                 Set(ref selectedItem, value);
@@ -59,7 +59,6 @@ namespace StartPagePlus.UI.ViewModels
             get => selectedIndex;
             set => Set(ref selectedIndex, value);
         }
-
 
         private bool CanExecuteMoreNews
             => true;
