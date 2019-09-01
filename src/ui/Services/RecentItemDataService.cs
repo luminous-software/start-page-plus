@@ -12,7 +12,7 @@ namespace StartPagePlus.UI.Services
     using Core.Interfaces;
     using Interfaces;
     using ViewModels;
-    using static Dates.DateMethods;
+    using static DatePeriods.Methods.DatePeriodMethods;
 
     public class RecentItemDataService : IRecentItemDataService
     {
@@ -56,7 +56,7 @@ namespace StartPagePlus.UI.Services
                                 Key = Path.GetExtension(path),
                                 Description = Path.GetDirectoryName(path),
                                 Date = date,
-                                DatePeriod = DatePeriod(pinned, DateTimeService.Today, date),
+                                DatePeriod = CalculateDatePeriod(pinned, DateTimeService.Today, date),
                                 Path = path,
                                 Pinned = pinned,
                                 Moniker = (pinned)
@@ -79,14 +79,6 @@ namespace StartPagePlus.UI.Services
             return items;
         }
 
-
-        public class RootObject
-        {
-            public Result[] Results { get; set; }
-
-            public RootObject()
-            { }
-        }
 
         public class Result
         {

@@ -43,8 +43,8 @@
       <Link>Properties\source.extension.cs</Link>
     </Compile>
     <Compile Include="Constants\StringConstants.cs" />
-    <Compile Include="Dates\DateExtensions.cs" />
-    <Compile Include="Enums\EnumExtensions.cs" />
+    <Compile Include="Extensions\DateExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Interfaces\IDataItem.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="Interfaces\IDateTimeService.cs" />

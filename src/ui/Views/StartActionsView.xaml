@@ -122,8 +122,9 @@
                                     Foreground="{DynamicResource ItemDescriptionBrush}"
                                     Text="{Binding Description}"
                                     TextWrapping="Wrap"
-                                    <!-- http://www.mobilemotion.eu/?p=1048&lang=en -->
+                                    />
 
+                                <!--  http://www.mobilemotion.eu/?p=1048&lang=en  -->
                             </StackPanel>
                         </Grid>
                     </DataTemplate>

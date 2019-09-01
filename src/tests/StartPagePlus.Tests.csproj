@@ -42,8 +42,8 @@
     <Compile Include="..\vsix\source.extension.cs">
       <Link>Properties\source.extension.cs</Link>
     </Compile>
-    <Compile Include="Dates\DatePeriodToString_Tests.cs" />
-    <Compile Include="Dates\DatePeriod_Tests.cs" />
+    <Compile Include="DatePeriods\DatePeriodToString_Tests.cs" />
+    <Compile Include="DatePeriods\CalculateDatePeriod_Tests.cs" />
     <Compile Include="Dates\DaysAgo_Tests.cs" />
     <Compile Include="Dates\StartOfWeek_Tests.cs" />
     <Compile Include="Enums\GetName_Tests.cs" />

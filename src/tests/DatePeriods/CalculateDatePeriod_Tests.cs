@@ -4,8 +4,8 @@ using Xunit;
 
 namespace Luminous.Code.Tests.Dates
 {
-    using StartPagePlus.UI.Enums;
-    using static StartPagePlus.UI.Dates.DateMethods;
+    using StartPagePlus.UI.DatePeriods.Enums;
+    using static StartPagePlus.UI.DatePeriods.Methods.DatePeriodMethods;
 
     public class DatePeriod_Tests
     {
@@ -19,9 +19,9 @@ namespace Luminous.Code.Tests.Dates
         {
             const bool pinned = true;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
-            result.Should().Be(DatePeriods.Pinned);
+            result.Should().Be((int)DatePeriod.Pinned);
         }
 
         [Theory]
@@ -32,9 +32,9 @@ namespace Luminous.Code.Tests.Dates
         {
             const bool pinned = false;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
-            result.Should().Be(DatePeriods.Today);
+            result.Should().Be((int)DatePeriod.Today);
         }
 
         //previous day
@@ -50,9 +50,9 @@ namespace Luminous.Code.Tests.Dates
         {
             const bool pinned = true;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
-            result.Should().Be(DatePeriods.Pinned);
+            result.Should().Be((int)DatePeriod.Pinned);
         }
 
         [Theory]
@@ -66,9 +66,9 @@ namespace Luminous.Code.Tests.Dates
         {
             const bool pinned = false;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
-            result.Should().Be(DatePeriods.Yesterday);
+            result.Should().Be((int)DatePeriod.Yesterday);
         }
 
         // this week
@@ -83,9 +83,9 @@ namespace Luminous.Code.Tests.Dates
         public void Pinned_ThisWeek_ReturnsPinned(DateTime currentDate, DateTime comparisonDate)
         {
             const bool pinned = true;
-            const DatePeriods expectedValue = DatePeriods.Pinned;
+            const int expectedValue = (int)DatePeriod.Pinned;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
             result.Should().Be(expectedValue);
         }
@@ -99,9 +99,9 @@ namespace Luminous.Code.Tests.Dates
         public void NotPinned_ThisWeek_ReturnsThisWeek(DateTime currentDate, DateTime comparisonDate)
         {
             const bool pinned = false;
-            const DatePeriods expectedValue = DatePeriods.ThisWeek;
+            const int expectedValue = (int)DatePeriod.ThisWeek;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
             result.Should().Be(expectedValue);
         }
@@ -119,9 +119,9 @@ namespace Luminous.Code.Tests.Dates
         public void Pinned_LastWeek_ReturnsPinned(DateTime currentDate, DateTime comparisonDate)
         {
             const bool pinned = true;
-            const DatePeriods expectedValue = DatePeriods.Pinned;
+            const int expectedValue = (int)DatePeriod.Pinned;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
             result.Should().Be(expectedValue);
         }
@@ -137,9 +137,9 @@ namespace Luminous.Code.Tests.Dates
         public void NotPinned_LastWeek_ReturnsThisMonth(DateTime currentDate, DateTime comparisonDate)
         {
             const bool pinned = false;
-            const DatePeriods expectedValue = DatePeriods.ThisMonth;
+            const int expectedValue = (int)DatePeriod.ThisMonth;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
             result.Should().Be(expectedValue);
         }
@@ -152,9 +152,9 @@ namespace Luminous.Code.Tests.Dates
         public void Pinned_ThisMonth_ReturnsPinned(DateTime currentDate, DateTime comparisonDate)
         {
             const bool pinned = true;
-            const DatePeriods expectedValue = DatePeriods.Pinned;
+            const int expectedValue = (int)DatePeriod.Pinned;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
             result.Should().Be(expectedValue);
         }
@@ -167,9 +167,9 @@ namespace Luminous.Code.Tests.Dates
         public void NotPinned_ThisMonth_ReturnsThisMonth(DateTime currentDate, DateTime comparisonDate)
         {
             const bool pinned = false;
-            const DatePeriods expectedValue = DatePeriods.ThisMonth;
+            const int expectedValue = (int)DatePeriod.ThisMonth;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
             result.Should().Be(expectedValue);
         }
@@ -181,9 +181,9 @@ namespace Luminous.Code.Tests.Dates
         public void Pinned_Older_ReturnsPinned(DateTime currentDate, DateTime comparisonDate)
         {
             const bool pinned = true;
-            const DatePeriods expectedValue = DatePeriods.Pinned;
+            const int expectedValue = (int)DatePeriod.Pinned;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
             result.Should().Be(expectedValue);
         }
@@ -195,9 +195,9 @@ namespace Luminous.Code.Tests.Dates
         public void NotPinned_Older_ReturnsOlder(DateTime currentDate, DateTime comparisonDate)
         {
             const bool pinned = false;
-            const DatePeriods expectedValue = DatePeriods.Older;
+            const int expectedValue = (int)DatePeriod.Older;
 
-            var result = DatePeriod(pinned, currentDate, comparisonDate);
+            var result = CalculateDatePeriod(pinned, currentDate, comparisonDate);
 
             result.Should().Be(expectedValue);
         }

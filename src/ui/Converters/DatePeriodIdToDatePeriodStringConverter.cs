@@ -10,15 +10,15 @@ using System.Windows.Data;
 
 namespace StartPagePlus.UI.Converters
 {
-    using Enums;
-    using static Dates.DateMethods;
+    using static StartPagePlus.UI.DatePeriods.Methods.DatePeriodMethods;
 
-    [ValueConversion(typeof(DatePeriods), typeof(string))]
-    public class DatePeriodToStringConverter : ConverterMarkupExtension
+
+    [ValueConversion(typeof(int), typeof(string))]
+    public class DatePeriodIdToDatePeriodStringConverter : ConverterMarkupExtension
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-            => (value is DatePeriods datePeriod)
-                ? DatePeriodToString(datePeriod)
+            => (value is int id)
+                ? IdToString(id)
                 : value;
     };
 }

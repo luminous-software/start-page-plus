@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace Luminous.Code.Enums
+namespace StartPagePlus.Core.Extensions.EnumExtensions
 {
     public static class EnumExtensions
     {
@@ -18,9 +18,7 @@ namespace Luminous.Code.Enums
                 if (field != null)
                 {
                     if (Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) is DescriptionAttribute attr)
-                    {
                         return attr.Description;
-                    }
                 }
             }
             return value.ToString();
