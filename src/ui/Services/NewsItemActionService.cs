@@ -6,11 +6,12 @@ using Microsoft.VisualStudio.Shell.Interop;
 
 namespace StartPagePlus.UI.Services
 {
-    using StartPagePlus.Core.Interfaces;
+    using Core.Interfaces;
+    using ViewModels;
 
     public class NewsItemActionService : INewsItemActionService
     {
-        private const uint navigation = (uint)__VSWBNAVIGATEFLAGS.VSNWB_ForceNew;
+        private const uint FORCE_NEW_WINDOW = (uint)__VSWBNAVIGATEFLAGS.VSNWB_ForceNew;
         private IVsWebBrowsingService browsingService;
         private ProcessStartInfo startInfo;
 
@@ -21,21 +22,24 @@ namespace StartPagePlus.UI.Services
             => browsingService ?? (browsingService = AsyncPackageBase.GetGlobalService<SVsWebBrowsingService, IVsWebBrowsingService>());
 
         private ProcessStartInfo StartInfo
-            => startInfo ?? (startInfo = new ProcessStartInfo
-            {
-                UseShellExecute = true,
-                Verb = "Open"
-            });
+            => startInfo
+                ?? (startInfo = new ProcessStartInfo
+                {
+                    UseShellExecute = true,
+                    Verb = "Open"
+                });
 
-        public void OpenItem(string url, bool internalBrowser = true)
+        public void DoAction(NewsItemViewModel currentViewModel, bool internalBrowser = true)
         {
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
+                var url = currentViewModel.Link;
+
                 if (internalBrowser == true)
                 {
-                    BrowsingService.Navigate(url, navigation, out var ppFrame);
+                    BrowsingService.Navigate(url, FORCE_NEW_WINDOW, out var ppFrame);
                 }
                 else
                 {

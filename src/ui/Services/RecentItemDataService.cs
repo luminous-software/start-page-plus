@@ -91,12 +91,11 @@ namespace StartPagePlus.UI.Services
         public class Result
         {
             public string Key { get; set; }
+
             public Value Value { get; set; }
 
             public Result()
-            {
-
-            }
+            { }
         }
 
         public class Value
@@ -116,49 +115,5 @@ namespace StartPagePlus.UI.Services
             public int Type { get; set; }
             public object SourceControl { get; set; }
         }
-
-
-        //public class LocalProperties
-        //{
-        //    [JsonProperty("FullPath")]
-        //    public string FullPath { get; set; }
-        //    public int Type { get; set; }
-
-        //    [JsonProperty("SourceControl")]
-        //    public object SourceControl { get; set; }
-        //}
-
-        //public class Value
-        //{
-        //    [JsonProperty("LocalProperties")]
-        //    public LocalProperties LocalProperties { get; set; }
-
-        //    [JsonProperty("Remote")]
-        //    public object Remote { get; set; }
-
-        //    [JsonProperty("IsFavorite")]
-        //    public bool IsFavorite { get; set; }
-
-        //    [JsonProperty("LastAccessed")]
-        //    public DateTime LastAccessed { get; set; }
-
-        //    [JsonProperty("IsLocal")]
-        //    public bool IsLocal { get; set; }
-
-        //    [JsonProperty("HasRemote")]
-        //    public bool HasRemote { get; set; }
-
-        //    [JsonProperty("IsSourceControlled")]
-        //    public bool IsSourceControlled { get; set; }
-        //}
-
-        //public class RootObject
-        //{
-        //    [JsonProperty("Key")]
-        //    public string Key { get; set; }
-
-        //    [JsonProperty("Value")]
-        //    public Value Value { get; set; }
-        //}
     }
 }

@@ -21,6 +21,9 @@ namespace StartPagePlus.UI.Services
         private const string LINK_ELEMENT_NAME = "link";
         private const string PUB_DATE_ELEMENT_NAME = "pubDate";
 
+        public NewsItemDataService()
+        { }
+
         public async Task<ObservableCollection<NewsItemViewModel>> GetItemsAsync(string feedUrl)
         {
             //https://wp.qmatteoq.com/?p=6486
