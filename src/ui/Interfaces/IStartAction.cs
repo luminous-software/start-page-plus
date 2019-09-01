@@ -11,5 +11,7 @@ namespace StartPagePlus.UI.Interfaces
         string Description { get; set; }
 
         bool IsVisible { get; set; }
+
+        bool DoAction();
     }
 }

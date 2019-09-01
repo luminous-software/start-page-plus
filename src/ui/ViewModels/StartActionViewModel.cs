@@ -3,9 +3,7 @@ using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using Interfaces;
-
-    public class StartActionViewModel : ViewModelBase, IStartAction
+    public class StartActionViewModel : ViewModelBase
     {
         public ImageMoniker Moniker { get; set; }
 

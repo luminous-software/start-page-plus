@@ -3,9 +3,7 @@ using GalaSoft.MvvmLight;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using Interfaces;
-
-    public class NewsItemViewModel : ViewModelBase, INewsItem
+    public class NewsItemViewModel : ViewModelBase
     {
         public string Title { get; set; }
 
