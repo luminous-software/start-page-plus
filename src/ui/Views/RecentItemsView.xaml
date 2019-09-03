@@ -53,12 +53,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Border
-        Margin="0,10,10,10"
-        Background="{DynamicResource ColumnBackgroundBrush}"
-        BorderBrush="{DynamicResource ColumnBorderBrush}"
-        BorderThickness="1"
-        >
+    <Border Style="{StaticResource ColumnStyle}">
         <DockPanel x:Name="LayoutRoot"
             LastChildFill="true"
             >
