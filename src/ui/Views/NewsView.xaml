@@ -10,10 +10,24 @@
     Background="{DynamicResource ContentBackgroundBrush}"
     mc:Ignorable="d"
     >
-    <DockPanel LastChildFill="True">
-        <Button
-            Margin="10"
-            Content="News View"
-            />
-    </DockPanel>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border
+        Margin="10"
+        Style="{StaticResource ColumnStyle}"
+        >
+        <DockPanel LastChildFill="True">
+            <Button
+                Background="Transparent"
+                Content="News View"
+                />
+        </DockPanel>
+    </Border>
 </UserControl>

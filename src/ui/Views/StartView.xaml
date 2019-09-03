@@ -27,6 +27,7 @@
             VerticalAlignment="Top"
             DockPanel.Dock="Top"
             FontSize="24"
+            FontWeight="Light"
             Foreground="{DynamicResource TitleBrush}"
             Text="{Binding Title}"
             TextAlignment="Left"

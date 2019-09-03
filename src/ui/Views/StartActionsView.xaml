@@ -30,41 +30,14 @@
                 />
 
             <ItemsControl x:Name="Commands"
-                Margin="10,5"
-                DockPanel.Dock="bottom"
-                ItemsSource="{Binding Commands}"
+                Style="{StaticResource ColumnCommandsStyle}"
                 >
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <UniformGrid Rows="1"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Button
-                            HorizontalAlignment="Center"
-                            Command="{Binding Command}"
-                            Content="{Binding Name}"
-                            FontSize="16"
-                            Style="{StaticResource ColumnCommandStyle}"
-                            />
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
             </ItemsControl>
 
             <ListView x:Name="StartActionsListView"
                 MinHeight="70"
-                Margin="10,0,10,0"
-                Padding="5,0,5,5"
-                HorizontalAlignment="Stretch"
-                HorizontalContentAlignment="Stretch"
-                Background="Transparent"
-                BorderThickness="0"
-                DockPanel.Dock="Top"
                 ItemsSource="{Binding Items}"
-                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                Style="{StaticResource ColumnListStyle}"
                 >
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
@@ -72,7 +45,6 @@
                         <Setter Property="MinHeight" Value="70"/>
                         <Setter Property="Margin" Value="0,0,0,10"/>
                         <Setter Property="Padding" Value="5"/>
-                        <Setter Property="Cursor" Value="Hand"/>
                     </Style>
                 </ListView.ItemContainerStyle>
 

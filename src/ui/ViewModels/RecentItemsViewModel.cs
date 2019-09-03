@@ -72,11 +72,11 @@ namespace StartPagePlus.UI.ViewModels
         private ObservableCollection<CommandViewModel> GetCommands()
             => new ObservableCollection<CommandViewModel>
             {
-                //new CommandViewModel
-                //{
-                //    Name = "Filter",
-                //    Command = new RelayCommand(ExecuteFilter, CanExecuteFilter)
-                //},
+                new CommandViewModel
+                {
+                    Name = "Filter",
+                    Command = new RelayCommand(ExecuteShowFilter, CanExecuteShowFilter)
+                },
                 //new CommandViewModel
                 //{
                 //    Name = "Remove Filter",
