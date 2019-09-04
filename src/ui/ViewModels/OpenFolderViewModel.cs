@@ -10,5 +10,8 @@ namespace StartPagePlus.UI.ViewModels
             Name = "Open a local folder";
             Description = "Navigate and edit code within any folder";
         }
+
+        public override void DoAction()
+        { }
     }
 }

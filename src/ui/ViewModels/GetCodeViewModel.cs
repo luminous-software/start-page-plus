@@ -11,5 +11,8 @@ namespace StartPagePlus.UI.ViewModels
             Description = "Get code from an online repository like GitHub or Azure DevOps";
 
         }
+
+        public override void DoAction()
+        { }
     }
 }

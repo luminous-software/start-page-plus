@@ -10,5 +10,8 @@ namespace StartPagePlus.UI.ViewModels
             Name = "Create a new project";
             Description = "Choose a project template with code scaffolding to get started";
         }
+
+        public override void DoAction()
+        { }
     }
 }
