@@ -83,6 +83,9 @@
     <Compile Include="StartPagePlusWindow.cs" />
     <Compile Include="Strings\StringMethods.cs" />
     <Compile Include="ViewModels\ColumnViewModel.cs" />
+    <Compile Include="ViewModels\OpenFolderViewModel.cs" />
+    <Compile Include="ViewModels\OpenProjectViewModel.cs" />
+    <Compile Include="ViewModels\CreateProjectViewModel.cs" />
     <Compile Include="ViewModels\RecentItemViewModel.cs" />
     <Compile Include="ViewModels\NewsItemViewModel.cs" />
     <Compile Include="ViewModels\StartActionViewModel.cs" />
@@ -93,6 +96,7 @@
     <Compile Include="ViewModels\FavoritesViewModel.cs" />
     <Compile Include="ViewModels\RecentItemsViewModel.cs" />
     <Compile Include="ViewModels\StartActionsViewModel.cs" />
+    <Compile Include="ViewModels\GetCodeViewModel.cs" />
     <Compile Include="ViewModels\StartViewModel.cs" />
     <Compile Include="ViewModels\CommandViewModel.cs" />
     <Compile Include="ViewModels\TabViewModel.cs" />
