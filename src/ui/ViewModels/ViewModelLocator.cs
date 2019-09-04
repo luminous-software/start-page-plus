@@ -27,7 +27,6 @@ namespace StartPagePlus.UI.ViewModels
             container.Register<IRecentItemActionService, RecentItemActionService>();
 
             container.Register<IStartActionDataService, StartActionDataService>();
-            container.Register<IStartActionActionService, StartActionActionService>();
 
             container.Register<INewsItemDataService, NewsItemDataService>();
             container.Register<INewsItemActionService, NewsItemActionService>();

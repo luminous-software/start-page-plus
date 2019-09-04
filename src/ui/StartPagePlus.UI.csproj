@@ -67,7 +67,6 @@
     <Compile Include="Extensions\DatePeriodExtensions.cs" />
     <Compile Include="Interfaces\INewsItemActionService.cs" />
     <Compile Include="Interfaces\INewsItemDataService.cs" />
-    <Compile Include="Interfaces\IStartActionActionService.cs" />
     <Compile Include="Interfaces\IRecentItemActionService.cs" />
     <Compile Include="Interfaces\IRecentItemDataService.cs" />
     <Compile Include="Interfaces\IStartActionDataService.cs" />
@@ -78,7 +77,6 @@
     <Compile Include="Services\NewsItemDataService.cs" />
     <Compile Include="Services\RecentItemActionService.cs" />
     <Compile Include="Services\RecentItemDataService.cs" />
-    <Compile Include="Services\StartActionActionService.cs" />
     <Compile Include="Services\StartActionDataService.cs" />
     <Compile Include="StartPagePlusWindow.cs" />
     <Compile Include="Strings\StringMethods.cs" />

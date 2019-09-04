@@ -11,17 +11,16 @@ namespace StartPagePlus.UI.ViewModels
         private StartActionViewModel selectedItem;
         private int selectedIndex;
 
-        public StartActionsViewModel(IStartActionDataService dataService, IStartActionActionService actionService)
+        public StartActionsViewModel(IStartActionDataService dataService)
         {
             DataService = dataService;
-            ActionService = actionService;
             Heading = HEADING;
             Commands = GetCommands();
             IsVisible = true;
+
+            Items = DataService.GetItems();
         }
         public IStartActionDataService DataService { get; }
-
-        public IStartActionActionService ActionService { get; }
 
         public ObservableCollection<StartActionViewModel> Items { get; set; }
 
