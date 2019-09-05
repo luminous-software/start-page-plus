@@ -3,13 +3,12 @@ using GalaSoft.MvvmLight.CommandWpf;
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using GalaSoft.MvvmLight.Messaging;
     using Interfaces;
 
     public class RecentItemsViewModel : ColumnViewModel
     {
         private const string HEADING = "Open a Recent Item";
-        private RecentItemViewModel selectedItem;
-        private int selectedIndex;
 
 
         public RecentItemsViewModel(IRecentItemDataService dataService, IRecentItemActionService actionService)
@@ -19,6 +18,9 @@ namespace StartPagePlus.UI.ViewModels
             Heading = HEADING;
             Commands = GetCommands();
             IsVisible = true;
+
+            MessengerInstance.Register<NotificationMessage<RecentItemViewModel>>(this, (message)
+                => ActionService.DoAction(message.Content));
         }
 
         public IRecentItemDataService DataService { get; }
@@ -27,67 +29,39 @@ namespace StartPagePlus.UI.ViewModels
 
         public ObservableCollection<RecentItemViewModel> Items { get; set; }
 
-        public RecentItemViewModel SelectedItem
-        {
-            get => selectedItem;
-            set
+        private ObservableCollection<CommandViewModel> GetCommands()
+            => new ObservableCollection<CommandViewModel>
             {
-                if (value != null)
-                {
-                    ActionService.DoAction(value);
-                }
-
-                Set(ref selectedItem, value);
-            }
-        }
-
-        public int SelectedIndex
-        {
-            get => selectedIndex;
-            set => Set(ref selectedIndex, value);
-        }
+                        new CommandViewModel
+                        {
+                            Name = "Filter Items",
+                            Command = new RelayCommand(ExecuteFilterItems, !Filtered)
+                        },
+                        new CommandViewModel
+                        {
+                            Name = "Remove Filter",
+                            Command = new RelayCommand(ExecuteRemoveFilter, Filtered),
+                            IsVisible = false
+                        },
+                        new CommandViewModel
+                        {
+                            Name = "Refresh",
+                            Command = new RelayCommand(ExecuteRefresh, true)
+                        }
+            };
 
         public bool Filtered { get; set; }
-        private bool CanExecuteShowFilter()
-            => !Filtered;
 
-        private void ExecuteShowFilter()
+        private void ExecuteFilterItems()
             => Filtered = true;
 
-        private bool CanExecuteHideFilter()
-            => Filtered;
-
-        private void ExecuteHideFilter()
+        private void ExecuteRemoveFilter()
             => Filtered = false;
-
-        private bool CanExecuteRefresh()
-            => true;
 
         public void ExecuteRefresh()
         {
             Items = null;
             Items = DataService.GetItems();
         }
-
-        private ObservableCollection<CommandViewModel> GetCommands()
-            => new ObservableCollection<CommandViewModel>
-            {
-                new CommandViewModel
-                {
-                    Name = "Filter",
-                    Command = new RelayCommand(ExecuteShowFilter, CanExecuteShowFilter)
-                },
-                //new CommandViewModel
-                //{
-                //    Name = "Remove Filter",
-                //    Command = new RelayCommand(ExecuteRemoveFilter, CanExecuteRemoveFilter),
-                //    IsVisible = false
-                //},
-                new CommandViewModel
-                {
-                    Name = "Refresh",
-                    Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
-                }
-            };
     }
 }

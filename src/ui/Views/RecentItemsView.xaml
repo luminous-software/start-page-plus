@@ -75,6 +75,7 @@
                 />
 
             <ListView x:Name="RecentItemsListView"
+                ItemContainerStyle="{StaticResource ColumnCommandContainerStyle}"
                 ItemsSource="{Binding Source={StaticResource GroupedItems}}"
                 Style="{StaticResource ColumnListStyle}"
                 >

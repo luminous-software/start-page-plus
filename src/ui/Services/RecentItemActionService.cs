@@ -35,6 +35,9 @@ namespace StartPagePlus.UI.Services
                         break;
 
                     case "":
+                        dte?.ExecuteCommand("File.OpenFolder", path);
+                        break;
+
                     default:
                         MessageBox.Show($"Unhandled extension:'{ext}'");
                         break;
