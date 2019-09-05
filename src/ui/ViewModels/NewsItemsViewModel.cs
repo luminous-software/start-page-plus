@@ -5,14 +5,13 @@ using Microsoft.VisualStudio.Shell;
 namespace StartPagePlus.UI.ViewModels
 {
     using Core.Interfaces;
+    using GalaSoft.MvvmLight.Messaging;
     using Interfaces;
 
     public class NewsItemsViewModel : ColumnViewModel
     {
         private const string DEV_NEWS_FEED_URL = "https://vsstartpage.blob.core.windows.net/news/vs";
         private const string HEADING = "Read Developer News";
-        private NewsItemViewModel selectedItem;
-        private int selectedIndex;
 
         public NewsItemsViewModel(INewsItemDataService dataService, INewsItemActionService actionService)
         {
@@ -21,6 +20,9 @@ namespace StartPagePlus.UI.ViewModels
             Heading = HEADING;
             Commands = GetCommands();
             IsVisible = true;
+
+            MessengerInstance.Register<NotificationMessage<NewsItemViewModel>>(this, (message)
+                => ActionService.DoAction(message.Content));
         }
 
         public INewsItemDataService DataService { get; }
@@ -29,55 +31,34 @@ namespace StartPagePlus.UI.ViewModels
 
         public ObservableCollection<NewsItemViewModel> Items { get; set; }
 
-        public NewsItemViewModel SelectedItem
-        {
-            get => selectedItem;
-            set
-            {
-                if (value != null)
-                {
-                    ActionService.DoAction(value);
-                }
-
-                Set(ref selectedItem, value);
-            }
-        }
-
-        public int SelectedIndex
-        {
-            get => selectedIndex;
-            set => Set(ref selectedIndex, value);
-        }
-
-        private bool CanExecuteMoreNews
-            => true;
-
-        public void ExecuteMoreNews()
-        { }
-
-        private bool CanExecuteRefresh
-            => true;
-
-        public void ExecuteRefresh()
-            => ThreadHelper.JoinableTaskFactory.RunAsync(async delegate
-            {
-                Items = await DataService.GetItemsAsync(DEV_NEWS_FEED_URL);
-            });
-
-
         private ObservableCollection<CommandViewModel> GetCommands()
             => new ObservableCollection<CommandViewModel>
             {
-                //new CommandViewModel
-                //{
-                //    Name = "View More News",
-                //    Command = new RelayCommand(ExecuteMoreNews, CanExecuteMoreNews)
-                //},
+                new CommandViewModel
+                {
+                    Name = "More News",
+                    Command = new RelayCommand(ExecuteMoreNews, CanExecuteMoreNews)
+                },
                 new CommandViewModel
                 {
                     Name = "Refresh",
                     Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
                 }
             };
+
+        private bool CanExecuteMoreNews
+            => true;
+
+        private void ExecuteMoreNews()
+        { }
+
+        private bool CanExecuteRefresh
+            => true;
+
+        public void ExecuteRefresh()
+            => ThreadHelper.JoinableTaskFactory.RunAsync(async ()
+                => Items = await DataService.GetItemsAsync(DEV_NEWS_FEED_URL)
+            );
     }
+
 }

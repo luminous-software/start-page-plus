@@ -32,59 +32,65 @@
                 />
 
             <ListView x:Name="NewsItemsListView"
+                ItemContainerStyle="{StaticResource ColumnCommandContainerStyle}"
                 ItemsSource="{Binding Items}"
                 Style="{StaticResource ColumnListStyle}"
                 >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <DockPanel x:Name="NewsItemContainer"
-                            Margin="0,0,0,5"
+                        <Button
+                            Command="{Binding ActionCommand}"
+                            Style="{StaticResource ColumnListItemStyle}"
                             >
-                            <TextBlock x:Name="Title"
-                                Margin="0,0,0,2"
-                                DockPanel.Dock="Top"
-                                FontFamily="Segoe WP Semilight"
-                                FontSize="14"
-                                FontWeight="Bold"
-                                Foreground="{DynamicResource ItemNameBrush}"
-                                Text="{Binding Title}"
-                                TextTrimming="WordEllipsis"
-                                TextWrapping="NoWrap"
-                                />
-
-                            <TextBlock x:Name="Description"
-                                MaxHeight="45"
-                                DockPanel.Dock="Top"
-                                FontFamily="Segoe WP Semilight"
-                                FontSize="12"
-                                Foreground="{DynamicResource ItemDescriptionBrush}"
-                                Text="{Binding Description}"
-                                TextTrimming="WordEllipsis"
-                                TextWrapping="Wrap"
-                                />
-
-                            <StackPanel x:Name="DatePanelStyle"
-                                Margin="0,4,0,0"
-                                DockPanel.Dock="Top"
-                                Orientation="Horizontal"
+                            <DockPanel x:Name="NewsItemContainer"
+                                Margin="0,0,0,5"
                                 >
-                                <TextBlock x:Name="New"
+                                <TextBlock x:Name="Title"
+                                    Margin="0,0,0,2"
+                                    DockPanel.Dock="Top"
                                     FontFamily="Segoe WP Semilight"
-                                    FontSize="10"
-                                    Foreground="Orange"
-                                    Text="{Binding New}"
-                                    Visibility="Collapsed"
+                                    FontSize="14"
+                                    FontWeight="Bold"
+                                    Foreground="{DynamicResource ItemNameBrush}"
+                                    Text="{Binding Title}"
+                                    TextTrimming="WordEllipsis"
+                                    TextWrapping="NoWrap"
                                     />
 
-                                <TextBlock x:Name="Date"
+                                <TextBlock x:Name="Description"
+                                    MaxHeight="45"
+                                    DockPanel.Dock="Top"
                                     FontFamily="Segoe WP Semilight"
-                                    FontSize="10"
-                                    FontWeight="Bold"
-                                    Foreground="{DynamicResource ItemDateBrush}"
-                                    Text="{Binding Date, StringFormat='dddd, d MMMM yyyy'}"
+                                    FontSize="12"
+                                    Foreground="{DynamicResource ItemDescriptionBrush}"
+                                    Text="{Binding Description}"
+                                    TextTrimming="WordEllipsis"
+                                    TextWrapping="Wrap"
                                     />
-                            </StackPanel>
-                        </DockPanel>
+
+                                <StackPanel x:Name="DatePanelStyle"
+                                    Margin="0,4,0,0"
+                                    DockPanel.Dock="Top"
+                                    Orientation="Horizontal"
+                                    >
+                                    <TextBlock x:Name="New"
+                                        FontFamily="Segoe WP Semilight"
+                                        FontSize="10"
+                                        Foreground="Orange"
+                                        Text="{Binding New}"
+                                        Visibility="Collapsed"
+                                        />
+
+                                    <TextBlock x:Name="Date"
+                                        FontFamily="Segoe WP Semilight"
+                                        FontSize="10"
+                                        FontWeight="Bold"
+                                        Foreground="{DynamicResource ItemDateBrush}"
+                                        Text="{Binding Date, StringFormat='dddd, d MMMM yyyy'}"
+                                        />
+                                </StackPanel>
+                            </DockPanel>
+                        </Button>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

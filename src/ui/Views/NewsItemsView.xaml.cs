@@ -12,8 +12,9 @@ namespace StartPagePlus.UI.Views
 
             var viewModel = ViewModelLocator.NewsItemsViewModel;
 
-            DataContext = viewModel;
             viewModel.ExecuteRefresh();
+
+            DataContext = viewModel;
 
             NewsItemsListView.SelectionChanged += (sender, e) =>
             {
