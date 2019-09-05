@@ -44,15 +44,62 @@
         <Setter Property="SelectedIndex" Value="{Binding SelectedIndex, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
         <Setter Property="SelectedItem" Value="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
         <Setter Property="SelectionMode" Value="Single"/>
-        <Setter Property="ItemContainerStyle">
+    </Style>
+
+    <Style x:Key="ColumnListItemStyle"
+        TargetType="Button"
+        >
+        <Setter Property="Template">
             <Setter.Value>
-                <Style>
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                    <Setter Property="Cursor" Value="Hand"/>
-                </Style>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                        Background="Transparent"
+                        >
+                        <ContentPresenter/>
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+
+                                <VisualState x:Name="Disabled"/>
+                            </VisualStateGroup>
+
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Unselected"/>
+
+                                <VisualState x:Name="Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames
+                                            Storyboard.TargetName="border"
+                                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                            >
+                                            <EasingColorKeyFrame
+                                                KeyTime="0"
+                                                Value="LightBlue"
+                                                />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualState x:Name="SelectedUnfocused">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames
+                                            Storyboard.TargetName="border"
+                                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                            >
+                                            <EasingColorKeyFrame
+                                                KeyTime="0"
+                                                Value="SkyBlue"
+                                                />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Border>
+                </ControlTemplate>
             </Setter.Value>
         </Setter>
-
     </Style>
 
     <!--  https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377  -->
@@ -105,5 +152,12 @@
                 </DataTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style x:Key="ColumnCommandContainerStyle"
+        TargetType="ListViewItem"
+        >
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="Cursor" Value="Hand"/>
     </Style>
 </ResourceDictionary>
