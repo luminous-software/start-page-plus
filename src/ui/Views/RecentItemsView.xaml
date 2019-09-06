@@ -106,70 +106,75 @@
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <DockPanel x:Name="RecentItemContainer"
-                            LastChildFill="true"
+                        <Button
+                            Command="{Binding ActionCommand}"
+                            Style="{StaticResource ColumnListItemStyle}"
                             >
-                            <imaging:CrispImage x:Name="RecentItemImage"
-                                Width="24"
-                                Height="24"
-                                Margin="0,3,5,5"
-                                VerticalAlignment="Top"
-                                DockPanel.Dock="Left"
-                                Moniker="{Binding Key, Converter={c:ExtensionToMonikerConverter}}"
-                                />
-
-                            <StackPanel x:Name="RecentItemCommandContainer"
-                                DockPanel.Dock="Right"
-                                Orientation="Vertical"
+                            <DockPanel x:Name="RecentItemContainer"
+                                LastChildFill="true"
                                 >
+                                <imaging:CrispImage x:Name="RecentItemImage"
+                                    Width="24"
+                                    Height="24"
+                                    Margin="0,3,5,5"
+                                    VerticalAlignment="Top"
+                                    DockPanel.Dock="Left"
+                                    Moniker="{Binding Key, Converter={c:ExtensionToMonikerConverter}}"
+                                    />
 
-                                <Button x:Name="RecentItemPinButton"
-                                    Margin="0"
-                                    Padding="0"
-                                    Background="Transparent"
-                                    BorderBrush="Transparent"
-                                    Command="{Binding PinCommand}"
+                                <StackPanel x:Name="RecentItemCommandContainer"
+                                    DockPanel.Dock="Right"
+                                    Orientation="Vertical"
                                     >
-                                    <imaging:CrispImage x:Name="RecentItemPinImage"
-                                        Width="16"
-                                        Height="16"
+
+                                    <Button x:Name="RecentItemPinButton"
                                         Margin="0"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Top"
-                                        Moniker="{Binding Pinned, Converter={c:BoolToPinConverter}}"
-                                        Visibility="{Binding Pinned, Converter={c:BoolToVisibilityConverter}}"
+                                        Padding="0"
+                                        Background="Transparent"
+                                        BorderBrush="Transparent"
+                                        Command="{Binding PinCommand}"
+                                        >
+                                        <imaging:CrispImage x:Name="RecentItemPinImage"
+                                            Width="16"
+                                            Height="16"
+                                            Margin="0"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Moniker="{Binding Pinned, Converter={c:BoolToPinConverter}}"
+                                            Visibility="{Binding Pinned, Converter={c:BoolToVisibilityConverter}}"
+                                            />
+                                    </Button>
+                                </StackPanel>
+
+                                <StackPanel x:Name="RecentItemTextContainer"
+                                    DockPanel.Dock="Top"
+                                    Orientation="Vertical"
+                                    >
+                                    <TextBlock x:Name="RecentItemName"
+                                        Margin="3"
+                                        HorizontalAlignment="Stretch"
+                                        FontFamily="Segoe WP Semilight"
+                                        FontSize="14"
+                                        FontWeight="SemiBold"
+                                        Foreground="{DynamicResource ItemNameBrush}"
+                                        Text="{Binding Name}"
+                                        TextWrapping="Wrap"
                                         />
-                                </Button>
-                            </StackPanel>
 
-                            <StackPanel x:Name="RecentItemTextContainer"
-                                DockPanel.Dock="Top"
-                                Orientation="Vertical"
-                                >
-                                <TextBlock x:Name="RecentItemName"
-                                    Margin="3"
-                                    HorizontalAlignment="Stretch"
-                                    FontFamily="Segoe WP Semilight"
-                                    FontSize="14"
-                                    FontWeight="SemiBold"
-                                    Foreground="{DynamicResource ItemNameBrush}"
-                                    Text="{Binding Name}"
-                                    TextWrapping="Wrap"
-                                    />
-
-                                <TextBlock x:Name="RecentItemDescription"
-                                    Margin="3"
-                                    Padding="0"
-                                    HorizontalAlignment="Stretch"
-                                    FontFamily="Segoe WP Semilight"
-                                    FontSize="12"
-                                    FontWeight="Normal"
-                                    Foreground="{DynamicResource ItemDescriptionBrush}"
-                                    Text="{Binding Description}"
-                                    TextWrapping="Wrap"
-                                    />
-                            </StackPanel>
-                        </DockPanel>
+                                    <TextBlock x:Name="RecentItemDescription"
+                                        Margin="3"
+                                        Padding="0"
+                                        HorizontalAlignment="Stretch"
+                                        FontFamily="Segoe WP Semilight"
+                                        FontSize="12"
+                                        FontWeight="Normal"
+                                        Foreground="{DynamicResource ItemDescriptionBrush}"
+                                        Text="{Binding Description}"
+                                        TextWrapping="Wrap"
+                                        />
+                                </StackPanel>
+                            </DockPanel>
+                        </Button>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

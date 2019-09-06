@@ -125,7 +125,7 @@
                     <Button x:Name="CommandButton"
                         Command="{Binding Command}"
                         Content="{Binding Name}"
-                        Visibility="{Binding Filtered, Converter={c:BoolToVisibilityConverter}}"
+                        Visibility="{Binding IsVisible, Converter={c:BoolToVisibilityConverter}}"
                         >
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">

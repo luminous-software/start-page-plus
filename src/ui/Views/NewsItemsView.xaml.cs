@@ -8,11 +8,11 @@ namespace StartPagePlus.UI.Views
     {
         public NewsItemsView()
         {
-            InitializeComponent();
-
             var viewModel = ViewModelLocator.NewsItemsViewModel;
 
             viewModel.ExecuteRefresh();
+
+            InitializeComponent();
 
             DataContext = viewModel;
 
