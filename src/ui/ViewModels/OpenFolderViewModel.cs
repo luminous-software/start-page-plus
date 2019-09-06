@@ -11,7 +11,7 @@ namespace StartPagePlus.UI.ViewModels
             Description = "Navigate and edit code within any folder";
         }
 
-        public override void DoAction()
-        { }
+        protected override void ExecuteAction()
+            => Dte?.ExecuteCommand("File.OpenFolder");
     }
 }
