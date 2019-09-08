@@ -88,10 +88,11 @@
                                         <ControlTemplate TargetType="{x:Type GroupItem}">
                                             <StackPanel>
                                                 <TextBlock
-                                                    Margin="5,0,5,0"
-                                                    FontSize="15"
+                                                    Margin="5,1"
+                                                    HorizontalAlignment="Left"
+                                                    FontSize="12"
                                                     FontWeight="Medium"
-                                                    Foreground="{DynamicResource MenuInactiveBrush}"
+                                                    Foreground="{DynamicResource ItemGroupNameBrush}"
                                                     Text="{Binding Path=Name, Converter={c:DatePeriodIdToDatePeriodStringConverter}}"
                                                     />
                                                 <ItemsPresenter/>

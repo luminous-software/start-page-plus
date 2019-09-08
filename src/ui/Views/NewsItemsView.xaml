@@ -83,8 +83,8 @@
 
                                     <TextBlock x:Name="Date"
                                         FontFamily="Segoe WP Semilight"
-                                        FontSize="10"
-                                        FontWeight="Bold"
+                                        FontSize="11"
+                                        FontWeight="Medium"
                                         Foreground="{DynamicResource ItemDateBrush}"
                                         Text="{Binding Date, StringFormat='dddd, d MMMM yyyy'}"
                                         />
