@@ -11,7 +11,7 @@ namespace StartPagePlus.UI.ViewModels
             Description = "Open a local Visual Studio project or a .sln file";
         }
 
-        protected override void ExecuteAction()
+        protected override void ExecuteClick()
             => Dte?.ExecuteCommand("File.OpenProject");
     }
 }

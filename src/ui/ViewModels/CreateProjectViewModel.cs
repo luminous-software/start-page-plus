@@ -11,7 +11,7 @@ namespace StartPagePlus.UI.ViewModels
             Description = "Choose a project template with code scaffolding to get started";
         }
 
-        protected override void ExecuteAction()
+        protected override void ExecuteClick()
             => Dte?.ExecuteCommand("File.NewProject");
     }
 }

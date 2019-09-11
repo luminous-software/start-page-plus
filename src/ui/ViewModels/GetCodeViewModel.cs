@@ -12,7 +12,7 @@ namespace StartPagePlus.UI.ViewModels
 
         }
 
-        protected override void ExecuteAction()
+        protected override void ExecuteClick()
             => Dte?.ExecuteCommand("File.Cloneorcheckoutcode");
     }
 }

@@ -13,7 +13,7 @@ namespace StartPagePlus.UI.ViewModels
         private static DTE2 dte;
 
         public StartActionViewModel()
-            => ActionCommand = new RelayCommand(ExecuteAction, true);
+            => ClickCommand = new RelayCommand(ExecuteClick, true);
 
         public ImageMoniker Moniker { get; set; }
 
@@ -25,9 +25,9 @@ namespace StartPagePlus.UI.ViewModels
 
         protected DTE2 Dte = dte ?? (dte = Package.GetGlobalService(typeof(_DTE)) as DTE2);
 
-        public ICommand ActionCommand { get; set; }
+        public ICommand ClickCommand { get; set; }
 
-        protected virtual void ExecuteAction()
+        protected virtual void ExecuteClick()
         { }
     }
 }
