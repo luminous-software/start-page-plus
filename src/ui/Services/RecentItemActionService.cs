@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows;
 using EnvDTE;
 using EnvDTE80;
@@ -9,6 +8,7 @@ using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.Services
 {
+    using System.IO;
     using UI.Interfaces;
     using ViewModels;
 
@@ -22,26 +22,8 @@ namespace StartPagePlus.UI.Services
 
                 var dte = Package.GetGlobalService(typeof(_DTE)) as DTE2;
                 var path = currentViewModel.Path;
-                var ext = Path.GetExtension(path).Substring(1);
-
-                switch (ext)
-                {
-                    case "sln":
-                        dte?.Solution.Open(path);
-                        break;
-
-                    case "csproj":
-                        dte?.Solution.Open(path);
-                        break;
-
-                    case "":
-                        dte?.ExecuteCommand("File.OpenFolder", path);
-                        break;
-
-                    default:
-                        MessageBox.Show($"Unhandled extension:'{ext}'");
-                        break;
-                }
+                var folder = Path.GetDirectoryName(path);
+                var ext = Path.GetExtension(path);
 
             }
             catch (Exception ex)

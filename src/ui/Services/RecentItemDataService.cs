@@ -1,21 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
+using System.Windows;
 using Luminous.Code.Extensions.ExceptionExtensions;
-using Microsoft.VisualStudio.Imaging;
 using Newtonsoft.Json.Linq;
 
 namespace StartPagePlus.UI.Services
 {
-    using System.Windows;
     using Core.Interfaces;
     using Interfaces;
+    using Models;
     using ViewModels;
-    using static DatePeriods.Methods.DatePeriodMethods;
 
     public class RecentItemDataService : IRecentItemDataService
     {
+        private const string ROOT = "ApplicationPrivateSettings";
+        private const string METADATA = "_metadata";
+        private const string BASELINES = "baselines";
+        private const string CODE_CONTAINERS = "CodeContainers";
+        private const string OFFLINE = "Offline";
+
         public IDateTimeService DateTimeService { get; }
 
         public RecentItemDataService(IDateTimeService dateTimeService)
@@ -28,10 +32,10 @@ namespace StartPagePlus.UI.Services
             var items = new ObservableCollection<RecentItemViewModel>();
 
             using (var regKey = MainViewModel.RegistryRoot
-                .OpenSubKey("ApplicationPrivateSettings")
-                .OpenSubKey("_metadata")
-                .OpenSubKey("baselines")
-                .OpenSubKey("CodeContainers")
+                .OpenSubKey(ROOT)
+                .OpenSubKey(METADATA)
+                .OpenSubKey(BASELINES)
+                .OpenSubKey(CODE_CONTAINERS)
                 )
             {
                 try
@@ -40,32 +44,12 @@ namespace StartPagePlus.UI.Services
                     {
                         return items;
                     }
-                    var offline = ((string)regKey.GetValue("Offline")).Substring(1);
-                    var results = JArray.Parse(offline).ToObject<List<Result>>();
+                    var offline = ((string)regKey.GetValue(OFFLINE)).Substring(1);
+                    var results = JArray.Parse(offline).ToObject<List<RecentItem>>();
+                    var today = DateTimeService.Today.Date;
 
-                    results.ForEach((result) =>
-                    {
-                        var path = result.Key;
-                        var pinned = result.Value.IsFavorite;
-                        var date = result.Value.LastAccessed.Date;
-                        var today = DateTimeService.Today.Date;
-
-                        items.Add(
-                            new RecentItemViewModel
-                            {
-                                Name = Path.GetFileName(path),
-                                Key = Path.GetExtension(path),
-                                Description = Path.GetDirectoryName(path),
-                                Date = date,
-                                DatePeriod = CalculateDatePeriod(pinned, today, date),
-                                Path = path,
-                                Pinned = pinned,
-                                Moniker = (pinned)
-                                    ? KnownMonikers.Pin
-                                    : KnownMonikers.Unpin
-                            }
-                        );
-                    });
+                    results.ForEach((result)
+                        => items.Add(RecentItem.ToViewModel(result, today)));
                 }
                 catch (Exception ex)
                 {
@@ -79,34 +63,7 @@ namespace StartPagePlus.UI.Services
 
             return items;
         }
-
-
-        public class Result
-        {
-            public string Key { get; set; }
-
-            public Value Value { get; set; }
-
-            public Result()
-            { }
-        }
-
-        public class Value
-        {
-            public Localproperties LocalProperties { get; set; }
-            public object Remote { get; set; }
-            public bool IsFavorite { get; set; }
-            public DateTime LastAccessed { get; set; }
-            public bool IsLocal { get; set; }
-            public bool HasRemote { get; set; }
-            public bool IsSourceControlled { get; set; }
-        }
-
-        public class Localproperties
-        {
-            public string FullPath { get; set; }
-            public int Type { get; set; }
-            public object SourceControl { get; set; }
-        }
     }
+
+
 }
