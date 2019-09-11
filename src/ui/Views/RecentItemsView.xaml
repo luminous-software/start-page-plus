@@ -31,7 +31,7 @@
                     <!--  this will sort groups  -->
                     <scm:SortDescription
                         Direction="Ascending"
-                        PropertyName="DatePeriod"
+                        PropertyName="PeriodType"
                         />
 
                     <!--  this will sort items  -->
@@ -42,8 +42,8 @@
                 </CollectionViewSource.SortDescriptions>
 
                 <CollectionViewSource.GroupDescriptions>
-                    <dat:PropertyGroupDescription x:Name="GroupByDatePeriod"
-                        PropertyName="DatePeriod"
+                    <dat:PropertyGroupDescription x:Name="GroupByPeriodType"
+                        PropertyName="PeriodType"
                         />
                 </CollectionViewSource.GroupDescriptions>
             </CollectionViewSource>
@@ -93,7 +93,7 @@
                                                     FontSize="12"
                                                     FontWeight="Medium"
                                                     Foreground="{DynamicResource ItemGroupNameBrush}"
-                                                    Text="{Binding Path=Name, Converter={c:DatePeriodIdToDatePeriodStringConverter}}"
+                                                    Text="{Binding Path=Name, Converter={c:PeriodTypeIdToPeriodTypeStringConverter}}"
                                                     />
                                                 <ItemsPresenter/>
                                             </StackPanel>

@@ -6,15 +6,15 @@ using System.Windows.Data;
 // xmlns:dat="clr-namespace:System.Windows.Data;assembly=PresentationFramework"
 // xmlns:c="clr-namespace:StartPagePlus.UI.Converters"
 
-//<dat:PropertyGroupDescription x:Name="GroupByDatePeriod" PropertyName="DatePeriod" Converter="{c:DatePeriodToStringConverter}"/>
+//<dat:PropertyGroupDescription x:Name="GroupByPeriodType" PropertyName="PeriodType" Converter="{c:PeriodTypeToStringConverter}"/>
 
 namespace StartPagePlus.UI.Converters
 {
-    using static StartPagePlus.UI.DatePeriods.Methods.DatePeriodMethods;
+    using static StartPagePlus.UI.Enums.PeriodTypes;
 
 
     [ValueConversion(typeof(int), typeof(string))]
-    public class DatePeriodIdToDatePeriodStringConverter : ConverterMarkupExtension
+    public class PeriodTypeIdToPeriodTypeStringConverter : ConverterMarkupExtension
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             => (value is int id)

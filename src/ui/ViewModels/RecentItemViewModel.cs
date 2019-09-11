@@ -7,12 +7,12 @@ using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Enums;
+
     public class RecentItemViewModel : ViewModelBase
     {
         public RecentItemViewModel()
             => ClickCommand = new RelayCommand(ExecuteClick, true);
-
-        public string Key { get; set; }
 
         public string Name { get; set; }
 
@@ -20,7 +20,9 @@ namespace StartPagePlus.UI.ViewModels
 
         public DateTime Date { get; set; }
 
-        public int DatePeriod { get; set; }
+        public PeriodType PeriodType { get; set; }
+
+        internal RecentItemType ItemType { get; set; }
 
         public string Path { get; set; }
 

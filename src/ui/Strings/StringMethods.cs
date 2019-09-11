@@ -6,6 +6,7 @@ namespace StartPagePlus.UI.Strings
 {
     public static class StringMethods
     {
+        [Obsolete]
         public static ImageMoniker ExtensionToMoniker(string value)
         {
             if (value is null)
