@@ -36,7 +36,7 @@
 
                     <!--  this will sort items  -->
                     <scm:SortDescription
-                        Direction="Ascending"
+                        Direction="Descending"
                         PropertyName="Date"
                         />
                 </CollectionViewSource.SortDescriptions>
@@ -108,7 +108,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Button
-                            Command="{Binding ActionCommand}"
+                            Command="{Binding ClickCommand}"
                             Style="{StaticResource ColumnListItemStyle}"
                             >
                             <DockPanel x:Name="RecentItemContainer"
@@ -129,22 +129,31 @@
                                     >
 
                                     <Button x:Name="RecentItemPinButton"
-                                        Margin="0"
+                                        Width="16"
+                                        Margin="5,0,5,5"
                                         Padding="0"
                                         Background="Transparent"
                                         BorderBrush="Transparent"
                                         Command="{Binding PinCommand}"
                                         >
                                         <imaging:CrispImage x:Name="RecentItemPinImage"
-                                            Width="16"
                                             Height="16"
                                             Margin="0"
                                             HorizontalAlignment="Center"
                                             VerticalAlignment="Top"
                                             Moniker="{Binding Pinned, Converter={c:BoolToPinConverter}}"
-                                            Visibility="{Binding Pinned, Converter={c:BoolToVisibilityConverter}}"
+                                            Visibility="{Binding Pinned, Converter={c:BoolToVisibilityConverter WhenFalse=Hidden}}"
                                             />
                                     </Button>
+
+                                    <TextBlock
+                                        Margin="3"
+                                        FontFamily="Segoe WP Semilight"
+                                        FontSize="11"
+                                        FontWeight="Regular"
+                                        Foreground="{DynamicResource ItemDescriptionBrush}"
+                                        Text="{Binding Date, StringFormat='d MMM yyyy'}"
+                                        />
                                 </StackPanel>
 
                                 <StackPanel x:Name="RecentItemTextContainer"
