@@ -12,6 +12,7 @@ namespace StartPagePlus.UI.Converters
 {
     using static StartPagePlus.UI.Strings.StringMethods;
 
+    [Obsolete]
     [ValueConversion(typeof(string), typeof(ImageMoniker))]
     public class ExtensionToMonikerConverter : ConverterMarkupExtension
     {

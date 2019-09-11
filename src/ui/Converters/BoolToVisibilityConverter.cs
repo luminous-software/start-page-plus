@@ -18,12 +18,16 @@ namespace StartPagePlus.UI.Converters
         public BoolToVisibilityConverter() : this(Visibility.Collapsed)
         { }
 
-        public BoolToVisibilityConverter(Visibility whenFalse)
-            => WhenFalse = whenFalse;
+        public BoolToVisibilityConverter(Visibility whenFalse, bool reverse = false)
+        {
+            WhenFalse = whenFalse;
+            Reverse = reverse;
+        }
 
         [ConstructorArgument("WhenFalse")]
         public Visibility WhenFalse { get; set; }
 
+        [ConstructorArgument("Reverse")]
         public bool Reverse { get; set; }
 
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)

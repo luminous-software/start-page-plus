@@ -16,7 +16,7 @@ namespace StartPagePlus.UI.Converters
         private static bool isInitialized;
 
         static EnumToStringConverter()
-            => Debug.Assert(typeof(T).IsEnum, "The custom enum class must be used with an enum type.");
+            => Debug.Assert(typeof(T).IsEnum, "The custom enum class must be used with an enum type.");  //TODO: EnumToStringConverter's constructor should throw an exception
 
         public EnumToStringConverter() : base(typeof(T))
         {
