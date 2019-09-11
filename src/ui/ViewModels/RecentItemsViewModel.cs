@@ -9,7 +9,8 @@ namespace StartPagePlus.UI.ViewModels
     public class RecentItemsViewModel : ColumnViewModel
     {
         private const string HEADING = "Open a Recent Item";
-
+        private ObservableCollection<RecentItemViewModel> items;
+        private bool filtered;
 
         public RecentItemsViewModel(IRecentItemDataService dataService, IRecentItemActionService actionService)
         {
@@ -19,38 +20,46 @@ namespace StartPagePlus.UI.ViewModels
             Commands = GetCommands();
             IsVisible = true;
 
-            MessengerInstance.Register<NotificationMessage<RecentItemViewModel>>(this, (message)
-                => ActionService.DoAction(message.Content));
+            MessengerInstance.Register<NotificationMessage<RecentItemViewModel>>(this,
+                (message) => ActionService.DoAction(message.Content));
         }
 
         public IRecentItemDataService DataService { get; }
 
         public IRecentItemActionService ActionService { get; }
 
-        public ObservableCollection<RecentItemViewModel> Items { get; set; }
+        public ObservableCollection<RecentItemViewModel> Items
+        {
+            get => items;
+            set => Set(ref items, value);
+        }
 
         private ObservableCollection<CommandViewModel> GetCommands()
             => new ObservableCollection<CommandViewModel>
             {
-                        new CommandViewModel
-                        {
-                            Name = "Filter Items",
-                            Command = new RelayCommand(ExecuteFilterItems, !Filtered)
-                        },
-                        new CommandViewModel
-                        {
-                            Name = "Remove Filter",
-                            Command = new RelayCommand(ExecuteRemoveFilter, Filtered),
-                            IsVisible = false
-                        },
-                        new CommandViewModel
-                        {
-                            Name = "Refresh",
-                            Command = new RelayCommand(ExecuteRefresh, true)
-                        }
+                new CommandViewModel
+                {
+                    Name = "Filter Items",
+                    Command = new RelayCommand(ExecuteFilterItems, !Filtered)
+                },
+                new CommandViewModel
+                {
+                    Name = "Remove Filter",
+                    Command = new RelayCommand(ExecuteRemoveFilter, Filtered),
+                    IsVisible = false
+                },
+                new CommandViewModel
+                {
+                    Name = "Refresh",
+                    Command = new RelayCommand(ExecuteRefresh, true)
+                }
             };
 
-        public bool Filtered { get; set; }
+        public bool Filtered
+        {
+            get => filtered;
+            set => Set(ref filtered, value);
+        }
 
         private void ExecuteFilterItems()
             => Filtered = true;
@@ -58,7 +67,7 @@ namespace StartPagePlus.UI.ViewModels
         private void ExecuteRemoveFilter()
             => Filtered = false;
 
-        public void ExecuteRefresh()
+        internal void ExecuteRefresh()
         {
             Items = null;
             Items = DataService.GetItems();

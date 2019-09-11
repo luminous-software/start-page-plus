@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.IO;
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Microsoft.VisualStudio.Imaging;
@@ -9,6 +8,7 @@ using Newtonsoft.Json.Linq;
 
 namespace StartPagePlus.UI.Services
 {
+    using System.Windows;
     using Core.Interfaces;
     using Interfaces;
     using ViewModels;
@@ -47,7 +47,8 @@ namespace StartPagePlus.UI.Services
                     {
                         var path = result.Key;
                         var pinned = result.Value.IsFavorite;
-                        var date = result.Value.LastAccessed;
+                        var date = result.Value.LastAccessed.Date;
+                        var today = DateTimeService.Today.Date;
 
                         items.Add(
                             new RecentItemViewModel
@@ -56,7 +57,7 @@ namespace StartPagePlus.UI.Services
                                 Key = Path.GetExtension(path),
                                 Description = Path.GetDirectoryName(path),
                                 Date = date,
-                                DatePeriod = CalculateDatePeriod(pinned, DateTimeService.Today, date),
+                                DatePeriod = CalculateDatePeriod(pinned, today, date),
                                 Path = path,
                                 Pinned = pinned,
                                 Moniker = (pinned)
@@ -68,7 +69,7 @@ namespace StartPagePlus.UI.Services
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine(ex.ExtendedMessage());
+                    MessageBox.Show(ex.ExtendedMessage());
                 }
                 finally
                 {

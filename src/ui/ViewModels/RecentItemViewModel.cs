@@ -10,7 +10,7 @@ namespace StartPagePlus.UI.ViewModels
     public class RecentItemViewModel : ViewModelBase
     {
         public RecentItemViewModel()
-            => ActionCommand = new RelayCommand(ExecuteAction, CanExecuteAction);
+            => ClickCommand = new RelayCommand(ExecuteClick, true);
 
         public string Key { get; set; }
 
@@ -28,12 +28,9 @@ namespace StartPagePlus.UI.ViewModels
 
         public bool Pinned { get; set; }
 
-        public ICommand ActionCommand { get; set; }
+        public ICommand ClickCommand { get; set; }
 
-        private bool CanExecuteAction()
-            => true;
-
-        private void ExecuteAction()
+        private void ExecuteClick()
             => MessengerInstance.Send(new NotificationMessage<RecentItemViewModel>(this, Path));
     }
 }
