@@ -18,11 +18,12 @@ namespace StartPagePlus.UI.ViewModels
             DataService = dataService;
             ActionService = actionService;
             Heading = HEADING;
+            ExecuteRefresh();
             Commands = GetCommands();
             IsVisible = true;
 
-            MessengerInstance.Register<NotificationMessage<NewsItemViewModel>>(this, (message)
-                => ActionService.DoAction(message.Content));
+            MessengerInstance.Register<NotificationMessage<NewsItemViewModel>>(this,
+                (message) => ActionService.DoAction(message.Content));
         }
 
         public INewsItemDataService DataService { get; }
@@ -37,28 +38,21 @@ namespace StartPagePlus.UI.ViewModels
                 new CommandViewModel
                 {
                     Name = "More News",
-                    Command = new RelayCommand(ExecuteMoreNews, CanExecuteMoreNews)
+                    Command = new RelayCommand(ExecuteMoreNews, true)
                 },
                 new CommandViewModel
                 {
                     Name = "Refresh",
-                    Command = new RelayCommand(ExecuteRefresh, CanExecuteRefresh)
+                    Command = new RelayCommand(ExecuteRefresh, true)
                 }
             };
-
-        private bool CanExecuteMoreNews
-            => true;
 
         private void ExecuteMoreNews()
         { }
 
-        private bool CanExecuteRefresh
-            => true;
-
         public void ExecuteRefresh()
-            => ThreadHelper.JoinableTaskFactory.RunAsync(async ()
-                => Items = await DataService.GetItemsAsync(DEV_NEWS_FEED_URL)
-            );
+             => ThreadHelper.JoinableTaskFactory.RunAsync(async ()
+                 => Items = await DataService.GetItemsAsync(DEV_NEWS_FEED_URL)
+             );
     }
-
 }

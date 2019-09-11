@@ -39,7 +39,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Button
-                            Command="{Binding ActionCommand}"
+                            Command="{Binding ClickCommand}"
                             Style="{StaticResource ColumnListItemStyle}"
                             >
                             <DockPanel x:Name="NewsItemContainer"

@@ -9,7 +9,7 @@ namespace StartPagePlus.UI.ViewModels
     public class NewsItemViewModel : ViewModelBase
     {
         public NewsItemViewModel()
-            => ActionCommand = new RelayCommand(ExecuteAction, CanExecuteAction);
+            => ClickCommand = new RelayCommand(ExecuteClick, () => !string.IsNullOrEmpty(Link));
 
         public string Title { get; set; }
 
@@ -19,12 +19,9 @@ namespace StartPagePlus.UI.ViewModels
 
         public DateTime Date { get; set; }
 
-        public ICommand ActionCommand { get; set; }
+        public ICommand ClickCommand { get; set; }
 
-        private bool CanExecuteAction()
-            => !string.IsNullOrEmpty(Link);
-
-        private void ExecuteAction()
+        private void ExecuteClick()
             => MessengerInstance.Send(new NotificationMessage<NewsItemViewModel>(this, Link));
     }
 }
