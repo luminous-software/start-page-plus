@@ -1,39 +1,36 @@
-﻿using Microsoft.VisualStudio.Imaging;
+﻿using System;
+using System.IO;
+using Microsoft.VisualStudio.Imaging;
 using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.Enums
 {
     public static class RecentItemTypes
     {
-        public static RecentItemType CalculateRecentItemType(string path)
+        public static RecentItemType CalculateRecentItemType(this string instance)
         {
-            var type = RecentItemType.Unknown;
+            if (instance is null)
+                throw new ArgumentException("Recent item type can't be calculated from a null string");
 
-            return type;
+            if (instance == "")
+                throw new ArgumentException("Recent item type can't be calculated from an empty string");
 
-            //var ext = value.ToString().TrimStart(new char[] { '.' });
-            //var type = string.IsNullOrEmpty("")
-            //    ? ""
-            //    : Path.GetExtension(path).Substring(1);
+            var ext = Path.GetExtension(instance).TrimStart(new char[] { '.' });
 
-            //switch (type)
-            //{
-            //    case "sln":
-            //        dte?.Solution.Open(path);
-            //        break;
+            switch (ext)
+            {
+                case "":
+                    return RecentItemType.Folder;
 
-            //    case "csproj":
-            //        dte?.Solution.Open(path);
-            //        break;
+                case "sln":
+                    return RecentItemType.Solution;
 
-            //    case "":
-            //        dte?.ExecuteCommand("File.OpenFolder", folder);
-            //        break;
+                case "csproj":
+                    return RecentItemType.CsProject;
 
-            //    default:
-            //        MessageBox.Show($"Unhandled extension:'{ext}'");
-            //        break;
-            //}
+                default:
+                    return RecentItemType.Unknown;
+            }
         }
 
         public static ImageMoniker ToImageMoniker(this RecentItemType itemType)

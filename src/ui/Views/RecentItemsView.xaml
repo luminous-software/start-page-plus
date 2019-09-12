@@ -93,7 +93,7 @@
                                                     FontSize="12"
                                                     FontWeight="Medium"
                                                     Foreground="{DynamicResource ItemGroupNameBrush}"
-                                                    Text="{Binding Path=Name, Converter={c:PeriodTypeToStringConverter}}"
+                                                    Text="{Binding Path=Name, Converter={c:PeriodTypeToNameConverter}}"
                                                     />
                                                 <ItemsPresenter/>
                                             </StackPanel>
@@ -120,8 +120,9 @@
                                     Margin="0,3,5,5"
                                     VerticalAlignment="Top"
                                     DockPanel.Dock="Left"
-                                    Moniker="{Binding Key, Converter={c:RecentItemTypeToMonikerConverter}}"
+                                    Moniker="{Binding Moniker}"
                                     />
+                                <!--  Moniker="{Binding ItemType, Converter={c:RecentItemTypeToImageMonikerConverter}}"  -->
 
                                 <StackPanel x:Name="RecentItemCommandContainer"
                                     DockPanel.Dock="Right"
@@ -141,7 +142,7 @@
                                             Margin="0"
                                             HorizontalAlignment="Center"
                                             VerticalAlignment="Top"
-                                            Moniker="{Binding Pinned, Converter={c:BoolToPinConverter}}"
+                                            Moniker="{Binding Pinned, Converter={c:BoolToPinMonikerConverter}}"
                                             Visibility="{Binding Pinned, Converter={c:BoolToVisibilityConverter WhenFalse=Hidden}}"
                                             />
                                     </Button>

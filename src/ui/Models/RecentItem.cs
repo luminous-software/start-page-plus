@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using Microsoft.VisualStudio.Imaging;
 
 namespace StartPagePlus.UI.Models
 {
@@ -20,12 +19,13 @@ namespace StartPagePlus.UI.Models
         public static RecentItemViewModel ToViewModel(RecentItem result, DateTime today)
         {
             var path = result.Value.LocalProperties.FullPath;
-            var pinned = result.Value.IsFavorite;
             var date = result.Value.LastAccessed.Date;
             var name = Path.GetFileName(path);
+            var pinned = result.Value.IsFavorite;
             var folder = Path.GetDirectoryName(path);
-            var type = CalculateRecentItemType(path);
             var period = CalculatePeriodType(pinned, today, date);
+            var type = path.CalculateRecentItemType();
+            var moniker = type.ToImageMoniker();
 
             return new RecentItemViewModel
             {
@@ -36,9 +36,7 @@ namespace StartPagePlus.UI.Models
                 Pinned = pinned,
                 PeriodType = period,
                 ItemType = type,
-                Moniker = (pinned)
-                    ? KnownMonikers.Pin
-                    : KnownMonikers.Unpin
+                Moniker = moniker
             };
         }
 
