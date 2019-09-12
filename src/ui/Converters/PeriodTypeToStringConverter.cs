@@ -12,8 +12,8 @@ namespace StartPagePlus.UI.Converters
 {
     using Enums;
 
-    [ValueConversion(typeof(int), typeof(string))]
-    public class PeriodTypeToStringConverter : ConverterMarkupExtension
+    [ValueConversion(typeof(PeriodType), typeof(string))]
+    public class PeriodTypeToNameConverter : ConverterMarkupExtension
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             => (value is PeriodType periodType)

@@ -12,7 +12,6 @@ namespace StartPagePlus.UI.Converters
 {
     using StartPagePlus.UI.Enums;
 
-    [Obsolete]
     [ValueConversion(typeof(RecentItemType), typeof(ImageMoniker))]
     public class RecentItemTypeToImageMonikerConverter : ConverterMarkupExtension
     {

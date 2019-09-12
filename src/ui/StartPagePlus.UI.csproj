@@ -53,9 +53,7 @@
     <Compile Include="AttachedProperties\Grids\Props.cs" />
     <Compile Include="Constants\GuidConstants.cs" />
     <Compile Include="Converters\BoolToPinConverter.cs" />
-    <Compile Include="Converters\BoolToPinnedConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
-    <Compile Include="Converters\BoolToMonikerConverter.cs" />
     <Compile Include="Converters\ConverterMarkupExtension.cs" />
     <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
     <Compile Include="Converters\DummyConverter.cs" />

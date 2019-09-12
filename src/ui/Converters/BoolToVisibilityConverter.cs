@@ -2,7 +2,6 @@
 using System.Globalization;
 using System.Windows;
 using System.Windows.Data;
-using System.Windows.Markup;
 
 namespace StartPagePlus.UI.Converters
 {
@@ -15,36 +14,26 @@ namespace StartPagePlus.UI.Converters
     [ValueConversion(typeof(bool), typeof(Visibility))]
     public class BoolToVisibilityConverter : ConverterMarkupExtension
     {
-        public BoolToVisibilityConverter() : this(Visibility.Collapsed)
-        { }
+        public Visibility WhenFalse { get; set; } = Visibility.Collapsed;
 
-        public BoolToVisibilityConverter(Visibility whenFalse, bool reverse = false)
-        {
-            WhenFalse = whenFalse;
-            Reverse = reverse;
-        }
-
-        [ConstructorArgument("WhenFalse")]
-        public Visibility WhenFalse { get; set; }
-
-        [ConstructorArgument("Reverse")]
-        public bool Reverse { get; set; }
+        public bool Reverse { get; set; } = false;
 
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        //=> (value is bool boolValue)
+        //    ? Reverse
+        //        ? !boolValue
+        //        : boolValue
+        //    : value;
         {
-            if (!(value is bool))
-            {
+            if (!(value is bool boolValue))
                 return value;
-            }
-
-            var result = (bool)value;
 
             if (Reverse)
             {
-                result = !result;
+                boolValue = !boolValue;
             }
 
-            return result
+            return boolValue
                 ? Visibility.Visible
                 : WhenFalse;
         }
