@@ -120,7 +120,7 @@
                                     Margin="0,3,5,5"
                                     VerticalAlignment="Top"
                                     DockPanel.Dock="Left"
-                                    Moniker="{Binding Key, Converter={c:ExtensionToMonikerConverter}}"
+                                    Moniker="{Binding Key, Converter={c:RecentItemTypeToMonikerConverter}}"
                                     />
 
                                 <StackPanel x:Name="RecentItemCommandContainer"

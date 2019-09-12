@@ -60,7 +60,7 @@
     <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
     <Compile Include="Converters\DummyConverter.cs" />
     <Compile Include="Converters\EnumToStringConverter.cs" />
-    <Compile Include="Converters\ExtensionToMonikerConverter.cs" />
+    <Compile Include="Converters\RecentItemTypeToMonikerConverter.cs" />
     <Compile Include="Enums\PeriodTypes.cs" />
     <Compile Include="Enums\PeriodType.cs" />
     <Compile Include="Dates\DatesMethods.cs" />
@@ -83,7 +83,6 @@
     <Compile Include="Services\RecentItemDataService.cs" />
     <Compile Include="Services\StartActionDataService.cs" />
     <Compile Include="StartPagePlusWindow.cs" />
-    <Compile Include="Strings\StringMethods.cs" />
     <Compile Include="ViewModels\ColumnViewModel.cs" />
     <Compile Include="ViewModels\OpenFolderViewModel.cs" />
     <Compile Include="ViewModels\OpenProjectViewModel.cs" />

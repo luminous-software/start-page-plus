@@ -6,19 +6,19 @@ using Microsoft.VisualStudio.Imaging.Interop;
 // usage:
 // xmlns:c="clr-namespace:StartPagePlus.UI.Converters"
 
-//<Image Moniker="{Binding Extension, Converter={c:ExtensionToMonikerConverter}">
+//<Image Moniker="{Binding RecentItemType, Converter={c:RecentItemTypeToImageMonikerConverter}">
 
 namespace StartPagePlus.UI.Converters
 {
-    using static StartPagePlus.UI.Strings.StringMethods;
+    using StartPagePlus.UI.Enums;
 
     [Obsolete]
-    [ValueConversion(typeof(string), typeof(ImageMoniker))]
-    public class ExtensionToMonikerConverter : ConverterMarkupExtension
+    [ValueConversion(typeof(RecentItemType), typeof(ImageMoniker))]
+    public class RecentItemTypeToImageMonikerConverter : ConverterMarkupExtension
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-            => (value is string stringValue)
-                ? ExtensionToMoniker(stringValue)
+            => (value is RecentItemType itemType)
+                ? itemType.ToImageMoniker()
                 : value;
     };
 }

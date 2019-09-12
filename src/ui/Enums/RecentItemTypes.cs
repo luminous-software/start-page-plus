@@ -11,6 +11,7 @@ namespace StartPagePlus.UI.Enums
 
             return type;
 
+            //var ext = value.ToString().TrimStart(new char[] { '.' });
             //var type = string.IsNullOrEmpty("")
             //    ? ""
             //    : Path.GetExtension(path).Substring(1);
@@ -35,10 +36,8 @@ namespace StartPagePlus.UI.Enums
             //}
         }
 
-        public static ImageMoniker ToMoniker(this RecentItemType itemType)
+        public static ImageMoniker ToImageMoniker(this RecentItemType itemType)
         {
-            //var ext = value.ToString().TrimStart(new char[] { '.' });
-
             switch (itemType)
             {
                 case RecentItemType.Unknown:
