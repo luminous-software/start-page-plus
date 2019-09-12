@@ -23,13 +23,14 @@ namespace StartPagePlus.UI.Models
             var pinned = result.Value.IsFavorite;
             var date = result.Value.LastAccessed.Date;
             var name = Path.GetFileName(path);
+            var folder = Path.GetDirectoryName(path);
             var type = CalculateRecentItemType(path);
             var period = CalculatePeriodType(pinned, today, date);
 
             return new RecentItemViewModel
             {
                 Name = name,
-                Description = path,
+                Description = folder,
                 Date = date,
                 Path = path,
                 Pinned = pinned,
