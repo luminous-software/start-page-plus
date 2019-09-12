@@ -16,8 +16,7 @@ namespace Luminous.Code.Tests.Dates
 
             Action action = () => DaysAgo(currentDate, comparisonDate);
 
-            action.Should()
-                .Throw<ArgumentOutOfRangeException>();
+            action.Should().Throw<ArgumentOutOfRangeException>();
 
             //https://fluentassertions.com/exceptions/
             //.WithMessage("DaysAgo: comparison date can't be in the future");

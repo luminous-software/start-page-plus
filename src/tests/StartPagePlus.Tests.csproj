@@ -42,13 +42,15 @@
     <Compile Include="..\vsix\source.extension.cs">
       <Link>Properties\source.extension.cs</Link>
     </Compile>
+    <Compile Include="Converters\RecentItemTypeConverter_Tests.cs" />
+    <Compile Include="Enums\CalculateRecentItemType_Tests.cs" />
     <Compile Include="Enums\PeriodTypeToString_Tests.cs" />
     <Compile Include="Enums\CalculatePeriodType_Tests.cs" />
     <Compile Include="Dates\DaysAgo_Tests.cs" />
     <Compile Include="Dates\StartOfWeek_Tests.cs" />
     <Compile Include="Enums\GetName_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Enums\RecentItemTypeToMoniker_Tests.cs" />
+    <Compile Include="Enums\RecentItemTypeToImageMoniker_Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\core\StartPagePlus.Core.csproj">
