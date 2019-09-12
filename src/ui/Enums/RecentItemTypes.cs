@@ -1,6 +1,9 @@
-﻿namespace StartPagePlus.UI.Enums
+﻿using Microsoft.VisualStudio.Imaging;
+using Microsoft.VisualStudio.Imaging.Interop;
+
+namespace StartPagePlus.UI.Enums
 {
-    public class RecentItemTypes
+    public static class RecentItemTypes
     {
         public static RecentItemType CalculateRecentItemType(string path)
         {
@@ -32,5 +35,27 @@
             //}
         }
 
+        public static ImageMoniker ToMoniker(this RecentItemType itemType)
+        {
+            //var ext = value.ToString().TrimStart(new char[] { '.' });
+
+            switch (itemType)
+            {
+                case RecentItemType.Unknown:
+                    return KnownMonikers.QuestionMark;
+
+                case RecentItemType.Folder:
+                    return KnownMonikers.FolderOpened;
+
+                case RecentItemType.Solution:
+                    return KnownMonikers.Solution;
+
+                case RecentItemType.CsProject:
+                    return KnownMonikers.CSProjectNode;
+
+                default:
+                    return KnownMonikers.QuestionMark;
+            }
+        }
     }
 }

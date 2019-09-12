@@ -1,12 +1,12 @@
 ﻿using System;
 using Luminous.Code.Extensions.DateExtensions;
+using StartPagePlus.Core.Extensions.EnumExtensions;
 
 namespace StartPagePlus.UI.Enums
 {
-    using Core.Extensions.EnumExtensions;
     using static Dates.DateMethods;
 
-    public class PeriodTypes
+    public static class PeriodTypes
     {
         public static PeriodType CalculatePeriodType(bool pinned, DateTime currentDate, DateTime comparisonDate)
         {
@@ -50,11 +50,7 @@ namespace StartPagePlus.UI.Enums
                 => (comparisonDate >= currentDate.FirstDayOfNextMonth()) && (comparisonDate < currentDate.LastDayOfMonth());
         }
 
-
-        public static string IdToString(int id)
-        => ((PeriodType)id).GetName();
-
-        public static string PeriodTypeToString(PeriodType period)
+        public static string ToName(this PeriodType period)
             => period.GetName();
     }
 }

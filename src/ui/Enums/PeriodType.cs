@@ -16,5 +16,4 @@ namespace StartPagePlus.UI.Enums
         ThisMonth = 4,
         Older = 5
     }
-
 }

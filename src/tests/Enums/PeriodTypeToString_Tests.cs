@@ -1,20 +1,19 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace Luminous.Code.Tests.Dates
+namespace Luminous.Code.Tests.Enums
 {
-    using StartPagePlus.UI.DatePeriods.Enums;
-    using static StartPagePlus.UI.DatePeriods.Methods.DatePeriodMethods;
+    using StartPagePlus.UI.Enums;
 
-    public class DatePeriodToString_Tests
+    public class PeriodTypeToName_Tests
     {
         [Fact]
         public void Pinned_ReturnsPinned()
         {
-            const DatePeriod datePeriod = DatePeriod.Pinned;
+            const PeriodType periodType = PeriodType.Pinned;
             const string expectedValue = "Pinned";
 
-            var result = DatePeriodToString(datePeriod);
+            var result = periodType.ToName();
 
             result.Should().Be(expectedValue);
         }
@@ -22,10 +21,10 @@ namespace Luminous.Code.Tests.Dates
         [Fact]
         public void Today_ReturnsToday()
         {
-            const DatePeriod datePeriod = DatePeriod.Today;
+            const PeriodType periodType = PeriodType.Today;
             const string expectedValue = "Today";
 
-            var result = DatePeriodToString(datePeriod);
+            var result = periodType.ToName();
 
             result.Should().Be(expectedValue);
         }
@@ -33,10 +32,10 @@ namespace Luminous.Code.Tests.Dates
         [Fact]
         public void Yesterday_ReturnsYesterday()
         {
-            const DatePeriod datePeriod = DatePeriod.Yesterday;
+            const PeriodType periodType = PeriodType.Yesterday;
             const string expectedValue = "Yesterday";
 
-            var result = DatePeriodToString(datePeriod);
+            var result = periodType.ToName();
 
             result.Should().Be(expectedValue);
         }
@@ -44,10 +43,10 @@ namespace Luminous.Code.Tests.Dates
         [Fact]
         public void DateThisWeek_ReturnsThisSpaceWeek()
         {
-            const DatePeriod datePeriod = DatePeriod.ThisWeek;
+            const PeriodType periodType = PeriodType.ThisWeek;
             const string expectedValue = "This Week";
 
-            var result = DatePeriodToString(datePeriod);
+            var result = periodType.ToName();
 
             result.Should().Be(expectedValue);
         }
@@ -55,10 +54,10 @@ namespace Luminous.Code.Tests.Dates
         [Fact]
         public void DatesThisMonth_ReturnsThisSpaceMonth()
         {
-            const DatePeriod datePeriod = DatePeriod.ThisMonth;
+            const PeriodType periodType = PeriodType.ThisMonth;
             const string expectedValue = "This Month";
 
-            var result = DatePeriodToString(datePeriod);
+            var result = periodType.ToName();
 
             result.Should().Be(expectedValue);
         }
@@ -66,10 +65,10 @@ namespace Luminous.Code.Tests.Dates
         [Fact]
         public void DatesOlder_ReturnsOlder()
         {
-            const DatePeriod datePeriod = DatePeriod.Older;
+            const PeriodType periodType = PeriodType.Older;
             const string expectedValue = "Older";
 
-            var result = DatePeriodToString(datePeriod);
+            var result = periodType.ToName();
 
             result.Should().Be(expectedValue);
         }
