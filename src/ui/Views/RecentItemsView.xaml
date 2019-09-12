@@ -93,7 +93,7 @@
                                                     FontSize="12"
                                                     FontWeight="Medium"
                                                     Foreground="{DynamicResource ItemGroupNameBrush}"
-                                                    Text="{Binding Path=Name, Converter={c:PeriodTypeIdToPeriodTypeStringConverter}}"
+                                                    Text="{Binding Path=Name, Converter={c:PeriodTypeToStringConverter}}"
                                                     />
                                                 <ItemsPresenter/>
                                             </StackPanel>

@@ -10,15 +10,14 @@ using System.Windows.Data;
 
 namespace StartPagePlus.UI.Converters
 {
-    using static StartPagePlus.UI.Enums.PeriodTypes;
-
+    using Enums;
 
     [ValueConversion(typeof(int), typeof(string))]
-    public class PeriodTypeIdToPeriodTypeStringConverter : ConverterMarkupExtension
+    public class PeriodTypeToStringConverter : ConverterMarkupExtension
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-            => (value is int id)
-                ? IdToString(id)
+            => (value is PeriodType periodType)
+                ? periodType.ToName()
                 : value;
     };
 }

@@ -57,7 +57,7 @@
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\BoolToMonikerConverter.cs" />
     <Compile Include="Converters\ConverterMarkupExtension.cs" />
-    <Compile Include="Converters\DatePeriodIdToDatePeriodStringConverter.cs" />
+    <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
     <Compile Include="Converters\DummyConverter.cs" />
     <Compile Include="Converters\EnumToStringConverter.cs" />
     <Compile Include="Converters\ExtensionToMonikerConverter.cs" />
