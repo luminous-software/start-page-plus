@@ -17,24 +17,10 @@ namespace StartPagePlus.UI.ViewModels
             IsVisible = false;
             Models = new ObservableCollection<TabViewModel>
             {
-                new StartViewModel
-                {
-                    Name ="Start",
-                    IsVisible = true
-                }                ,
-                new FavoritesViewModel
-                {
-                    Name ="Favorites",
-                    IsVisible = true
-                },
-                new CreateViewModel{
-                    Name ="Create",
-                    IsVisible = true
-                },
-                new NewsViewModel{
-                    Name ="News",
-                    IsVisible = true
-                }
+                new StartViewModel(),
+                new FavoritesViewModel(),
+                new CreateViewModel(),
+                new NewsViewModel()
             };
         }
 

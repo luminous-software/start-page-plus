@@ -21,6 +21,8 @@ namespace StartPagePlus.UI.ViewModels
 
         private void RegisterServices(SimpleIoc container)
         {
+            container.Register<IDialogService, DialogService>();
+
             container.Register<IDateTimeService, DateTimeService>();
 
             container.Register<IRecentItemDataService, RecentItemDataService>();

@@ -13,6 +13,8 @@ namespace StartPagePlus.UI.ViewModels
         private const string DEV_NEWS_FEED_URL = "https://vsstartpage.blob.core.windows.net/news/vs";
         private const string HEADING = "Read Developer News";
 
+        private ObservableCollection<NewsItemViewModel> items;
+
         public NewsItemsViewModel(INewsItemDataService dataService, INewsItemActionService actionService)
         {
             DataService = dataService;
@@ -30,7 +32,11 @@ namespace StartPagePlus.UI.ViewModels
 
         public INewsItemActionService ActionService { get; }
 
-        public ObservableCollection<NewsItemViewModel> Items { get; set; }
+        public ObservableCollection<NewsItemViewModel> Items
+        {
+            get => items;
+            set => Set(ref items, value);
+        }
 
         private ObservableCollection<CommandViewModel> GetCommands()
             => new ObservableCollection<CommandViewModel>
@@ -52,7 +58,11 @@ namespace StartPagePlus.UI.ViewModels
 
         public void ExecuteRefresh()
              => ThreadHelper.JoinableTaskFactory.RunAsync(async ()
-                 => Items = await DataService.GetItemsAsync(DEV_NEWS_FEED_URL)
-             );
+                 =>
+                 {
+                     Items.Clear();
+
+                     return Items = await DataService.GetItemsAsync(DEV_NEWS_FEED_URL);
+                 });
     }
 }

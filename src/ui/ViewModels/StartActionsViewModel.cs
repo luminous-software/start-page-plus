@@ -9,6 +9,8 @@ namespace StartPagePlus.UI.ViewModels
     {
         private const string HEADING = "Get Started";
 
+        private ObservableCollection<StartActionViewModel> items;
+
         public StartActionsViewModel(IStartActionDataService dataService)
         {
             DataService = dataService;
@@ -19,7 +21,11 @@ namespace StartPagePlus.UI.ViewModels
         }
         public IStartActionDataService DataService { get; }
 
-        public ObservableCollection<StartActionViewModel> Items { get; set; }
+        public ObservableCollection<StartActionViewModel> Items
+        {
+            get => items;
+            set => Set(ref items, value);
+        }
 
         private ObservableCollection<CommandViewModel> GetCommands()
             => new ObservableCollection<CommandViewModel>
