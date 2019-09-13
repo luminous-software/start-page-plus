@@ -74,6 +74,7 @@
     <Compile Include="Models\RecentItemProperties.cs" />
     <Compile Include="Models\RecentItemValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\NewsItemActionService.cs" />
     <Compile Include="Services\DateTimeService.cs" />
     <Compile Include="Services\NewsItemDataService.cs" />
