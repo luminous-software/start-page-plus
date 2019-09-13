@@ -9,6 +9,7 @@ namespace StartPagePlus.UI.ViewModels
     public class RecentItemsViewModel : ColumnViewModel
     {
         private const string HEADING = "Open a Recent Item";
+
         private ObservableCollection<RecentItemViewModel> items;
         private bool filtered;
 
@@ -20,8 +21,7 @@ namespace StartPagePlus.UI.ViewModels
             Commands = GetCommands();
             IsVisible = true;
 
-            MessengerInstance.Register<NotificationMessage<RecentItemViewModel>>(this,
-                (message) => ActionService.DoAction(message.Content));
+            MessengerInstance.Register<NotificationMessage<RecentItemViewModel>>(this, ExecuteAction);
         }
 
         public IRecentItemDataService DataService { get; }
@@ -61,6 +61,9 @@ namespace StartPagePlus.UI.ViewModels
             set => Set(ref filtered, value);
         }
 
+        private void ExecuteAction(NotificationMessage<RecentItemViewModel> message)
+            => ActionService.ExecuteAction(message.Content);
+
         private void ExecuteFilterItems()
             => Filtered = true;
 
@@ -69,7 +72,7 @@ namespace StartPagePlus.UI.ViewModels
 
         internal void ExecuteRefresh()
         {
-            Items = null;
+            Items.Clear();
             Items = DataService.GetItems();
         }
     }

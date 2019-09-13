@@ -131,7 +131,7 @@
 
                                     <Button x:Name="RecentItemPinButton"
                                         Width="16"
-                                        Margin="5,0,5,5"
+                                        Margin="3"
                                         Padding="0"
                                         Background="Transparent"
                                         BorderBrush="Transparent"
@@ -148,12 +148,12 @@
                                     </Button>
 
                                     <TextBlock
-                                        Margin="3"
+                                        Margin="3,5,3,2"
                                         FontFamily="Segoe WP Semilight"
-                                        FontSize="11"
+                                        FontSize="10"
                                         FontWeight="Regular"
                                         Foreground="{DynamicResource ItemDescriptionBrush}"
-                                        Text="{Binding Date, StringFormat='d MMM yyyy'}"
+                                        Text="{Binding Date, StringFormat='d-MM-yyy'}"
                                         />
                                 </StackPanel>
 

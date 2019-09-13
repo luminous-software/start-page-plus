@@ -4,6 +4,6 @@
 
     public interface IRecentItemActionService
     {
-        void DoAction(RecentItemViewModel currentViewModel);
+        void ExecuteAction(RecentItemViewModel currentViewModel);
     }
 }
