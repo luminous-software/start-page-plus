@@ -10,7 +10,7 @@ namespace StartPagePlus.UI.ViewModels
     {
         private const string HEADING = "Open a Recent Item";
 
-        private ObservableCollection<RecentItemViewModel> items;
+        private ObservableCollection<RecentItemViewModel> items = new ObservableCollection<RecentItemViewModel>();
         private bool filtered;
 
         public RecentItemsViewModel(IRecentItemDataService dataService, IRecentItemActionService actionService)
