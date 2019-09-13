@@ -56,7 +56,7 @@
 
     <DockPanel x:Name="LayoutRoot"
         Width="Auto"
-        Margin="15"
+        Margin="10,15,10,10"
         Background="Transparent"
         LastChildFill="True"
         >
@@ -73,6 +73,7 @@
         <TabControl
             Background="Transparent"
             ItemsSource="{Binding Models}"
+            SelectedIndex="0"
             >
             <TabControl.Resources>
                 <Style TargetType="TabItem">

@@ -49,7 +49,7 @@ namespace StartPagePlus.UI.Services
             }
             catch
             {
-                MessageBox.Show("Can't launch this url", "Extension Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Can't launch this url", Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
