@@ -2,57 +2,37 @@
     "docs": [
         {
             "location": "/",
-            "text": "Bring back Developer News!\n\n\n\n\n\n\n\n\n\n\n\n\nYou can download this extension \nfrom the Visual Studio Marketplace\n\n\n\n\nWhere's My Developer News?\n\u00b6\n\n\nWhen Visual Studio 2019 was released, many developers were dismayed to find that the \nStart Page\n had been completely\nreplaced by the new \nStart Window\n (a big \nmodal\n dialog, which had no room for \nDeveloper News\n).\n\n\nCommunity Outcry\n\u00b6\n\n\nThere was a \nhuge\n outpouring of disatification on the \nDeveloper Community forum\n that\nnot only had the \nStart Page\n been taken away (& \nDeveloper News\n with it), but we were left with \nno way to get \nDeveloper News\n\nin Visual Studio 2019 anymore.\n\n\nMicrosoft's Response\n\u00b6\n\n\nIncreduously, Microsoft's response was to simply add a watered-down version of the old \nDeveloper News\n to the\n\nright-hand column of the Visual Studio installer\n.\n\n\nBut nobody wants to have to open the installer just to view their morning developer news.\nThey want to see it as soon as they open Visual Studio, as they had done for years.\n\n\n\n\nForum Announcement\n\u00b6\n\n\nI \nwrote a post in the Developer Community Forum\n to announce that\n\"\nI've decided to write a little extension to add a tool window to display the missing Developer News,\neither as a stop-gap until MS decide to see sense, or to use instead for the future going forward if they don't\n\".\n\n\nStart Page Is Back (for now)\n\u00b6\n\n\nAnother developer, \nJan Ku\u010dera\n, released his \nStart Page on Startup\n\nextension to restore access to the \nVS 2017 Start Page\n. The page's code still existed in VS 2019,\nbut the page had been \"hidden\" by Microsoft.\n\n\nThe original \nDeveloper News\n feed was of course also restored, but it was broken and there was no UI for us to be able to \"fix\" it.\nHowever, after a few tweaks to the extension Jan had the feed up and running again.\n\n\nThe only problem is that Jan's extension relies on displaying the \nStart Page\n that has been \"hidden\" in VS 2019.\nThis page's code, as a \nMicrosoft employee reminded us\n, \"\nis subject to \nvanish at anytime\n\".\n\n\nDeveloper News Is Back!\n\u00b6\n\n\nThe \nDeveloper News\n extension adds a new \ndockable tool window\n to display the same developer news feed\nthat VS 2017's \nStart Page\n used to provide.\n\n\nHowever it doesn't actually rely on the RSS feed control that's embedded in VS 2019's hidden \nStart Page\n implementation.\nSo when Microsoft removes the code for the \nStart Page\n, and I do believe that they'll remove it at some point,\nany extensions that rely on that code will cease to function.\n\n\nUnless of course they decide to give us back the \nStart Page\n\nas so many of us have been asking for in \nStart Page: Please give it back!\n\n\nDeveloper News\n has been written \nfrom the ground up\n and will therefore \nnot\n be affected.\n\n\nTo open the new \nDeveloper News\n window:\n\n\n\n\nselect \nView\n | \nDeveloper News\n\n\n\n\n\n\nThe old \nDeveloper News\n feed is just the \nfirst\n developer-focused feed to be added to the new \nDeveloper News\n window,\nwith \nmore feeds to come\n in the near future (check out \nthe roadmap\n for more details).\n\n\nSupport the Project\n\u00b6\n\n\nIf \nExtensibility Logs\n has saved you time and hassle, please come back and show your support:\n\n\n\n\nyou could \nrate \nExtensibility Logs\n (only takes a couple of seconds)\n\n\nor \nreview \nExtensibility Logs\n (help others benefit from your experience)\n\n\nor \nshout me a coke\n (I don't drink coffee or beer lol)",
+            "text": "Bring back Start Page+!\n\n\n\n\n\n\n\n\n\n\n\n\nYou can download this extension \nfrom the Visual Studio Marketplace\n\n\n\n\nPlease understand that this is a \npreview release\n.\n\n\nWhile the features of the \nStart Tab\n are functional in this preview (I'm using it myself),\nthere are still some quirks that need to be ironed out, plus a number of missing features that still\nneed to be added.\nI just wanted to get this up to the marketplace as quickly as I could, so people can see it and\nstart to use it.\n\n\nFeedback is welcome!\n But please use the GitHub repo's \nIssues page\n to\nprovide it, \ndon't\n add your ideas and/or feeback to any blog post where you might have\ndiscovered \nStart Page+\n.\nI won't be able to address your feedback in those posts, as it's not fair to the OP to have their\npost highjacked.\n\n\nIf you want to know more about \nStart Page+\n the \nwebsite\n is where I'll\nadd information about \nknown issues\n, and a \nroadmap\n of what's coming.\nPlease \nconsult the website\n first before adding issues for \nnew features\n,\n\nfeature enhancements\n etc.\nIf you don't see your desired feature or enhancement mentioned on the website,\nthen by all means go ahead and add an issue for it.\nThe same thing goes for any \nbugs\n you might run across.\n\n\nThe \nFavorites Tab\n, \nCreate Tab\n, and \nNews Tab\n are \nstill being worked on\n.\n\n\nThe \nFavorites Tab\n will allow you to add \ncolumns\n and \ngroups\n to add your favorite\n\nsolutions\n, \nprojects\n, \nfolders\n etc, in a much more \nflexible way\n than just\n\npinned tabs\n.\nHopefully, after a while, you won't even need to use pinned tabs anymore.\n\n\nThe \nCreate Tab\n aims to provide a \ntree view-based\n replacement for VS 2019's hated new\n\nsearch-based\n \nCreate a New Project\n dialog, baked right into your start page.\n\n\nThe \nNews Tab\n will have some pre-populated RSS feeds of developer-centric blogs etc.\nPlus, in the future you'll be able to add your own RSS feeds to the tab as well.\nSort of like a mini RSS application embedded in your start page.\n\n\n\n\nBring Back Start Page!\n\u00b6\n\n\nWhen Visual Studio 2019 was released, many developers were dismayed to find that the \nStart Page\n had been completely\nreplaced by the new \nStart Window\n (a big \nmodal\n dialog window, with no room for \nDeveloper News\n).\n\n\n\n\nIntroducing Start Page+\n\u00b6\n\n\nSo many of you, in \nso many posts\n in the Developer forum, \npleaded\n for Microsoft to bring back the Visual Studio 2017\n\nStart Page\n, and unfortunately those please fell on deaf ears.\n\n\nWell, you asked and now \nStart Page+\n delivers!\n\n\nThe \nStart Page+\n extension adds a new \nStart Page\n that is a \ndockable tool window\n,\nnot a \nmodal\n window.\nIt's been written \nfrom the ground up\n, and doesn't rely on any of Visual Studio's \ninternal\n code.\nSo it can't be taken  away by Microsoft. And it's open source!\n\n\nTo open the new \nStart Page+\n window:\n\n\n\n\nmake sure Visual Studio's \nStart Window\n is disabled\n\n\n\n\nin \nTools\n | \nOptions\n | \nEnvironment\n | \nStartup\n select \nEmpty Environment\n\n\n\n\n\n\n\n\nselect \nView\n | \nStart Page+\n\n\n\n\n\n\n\n\nThe Start Page+ window is accessed from the \nView\n menu, because it makes sense.\nIt's also easy to remember because you think \"I want to \nview\n the start page\",\nyou don't think \"I want to \nfile\n the start page.\n\n\nThe Visual Studio 2010-2017's \nStart Page\n was always in the \nView\n menu,\nuntil Microsoft moved it to the \nFile\n menu, which never made any sense.\n\n\nSupport the Project\n\u00b6\n\n\nIf \nStart Page+\n has saved you time and hassle, please come back and show your support:\n\n\n\n\nyou could \nrate \nStart Page+\n (only takes a couple of seconds)\n\n\nor \nreview \nStart Page+\n (help others benefit from your experience)\n\n\nor \nshout me a coke\n (I don't drink coffee or beer lol)",
             "title": "Overview"
         },
         {
-            "location": "/#wheres-my-developer-news",
-            "text": "When Visual Studio 2019 was released, many developers were dismayed to find that the  Start Page  had been completely\nreplaced by the new  Start Window  (a big  modal  dialog, which had no room for  Developer News ).",
-            "title": "Where's My Developer News?"
+            "location": "/#bring-back-start-page",
+            "text": "When Visual Studio 2019 was released, many developers were dismayed to find that the  Start Page  had been completely\nreplaced by the new  Start Window  (a big  modal  dialog window, with no room for  Developer News ).",
+            "title": "Bring Back Start Page!"
         },
         {
-            "location": "/#community-outcry",
-            "text": "There was a  huge  outpouring of disatification on the  Developer Community forum  that\nnot only had the  Start Page  been taken away (&  Developer News  with it), but we were left with  no way to get  Developer News \nin Visual Studio 2019 anymore.",
-            "title": "Community Outcry"
-        },
-        {
-            "location": "/#microsofts-response",
-            "text": "Increduously, Microsoft's response was to simply add a watered-down version of the old  Developer News  to the right-hand column of the Visual Studio installer .  But nobody wants to have to open the installer just to view their morning developer news.\nThey want to see it as soon as they open Visual Studio, as they had done for years.",
-            "title": "Microsoft's Response"
-        },
-        {
-            "location": "/#forum-announcement",
-            "text": "I  wrote a post in the Developer Community Forum  to announce that\n\" I've decided to write a little extension to add a tool window to display the missing Developer News,\neither as a stop-gap until MS decide to see sense, or to use instead for the future going forward if they don't \".",
-            "title": "Forum Announcement"
-        },
-        {
-            "location": "/#start-page-is-back-for-now",
-            "text": "Another developer,  Jan Ku\u010dera , released his  Start Page on Startup \nextension to restore access to the  VS 2017 Start Page . The page's code still existed in VS 2019,\nbut the page had been \"hidden\" by Microsoft.  The original  Developer News  feed was of course also restored, but it was broken and there was no UI for us to be able to \"fix\" it.\nHowever, after a few tweaks to the extension Jan had the feed up and running again.  The only problem is that Jan's extension relies on displaying the  Start Page  that has been \"hidden\" in VS 2019.\nThis page's code, as a  Microsoft employee reminded us , \" is subject to  vanish at anytime \".",
-            "title": "Start Page Is Back (for now)"
-        },
-        {
-            "location": "/#developer-news-is-back",
-            "text": "The  Developer News  extension adds a new  dockable tool window  to display the same developer news feed\nthat VS 2017's  Start Page  used to provide.  However it doesn't actually rely on the RSS feed control that's embedded in VS 2019's hidden  Start Page  implementation.\nSo when Microsoft removes the code for the  Start Page , and I do believe that they'll remove it at some point,\nany extensions that rely on that code will cease to function.  Unless of course they decide to give us back the  Start Page \nas so many of us have been asking for in  Start Page: Please give it back!  Developer News  has been written  from the ground up  and will therefore  not  be affected.  To open the new  Developer News  window:   select  View  |  Developer News    The old  Developer News  feed is just the  first  developer-focused feed to be added to the new  Developer News  window,\nwith  more feeds to come  in the near future (check out  the roadmap  for more details).",
-            "title": "Developer News Is Back!"
+            "location": "/#introducing-start-page",
+            "text": "So many of you, in  so many posts  in the Developer forum,  pleaded  for Microsoft to bring back the Visual Studio 2017 Start Page , and unfortunately those please fell on deaf ears.  Well, you asked and now  Start Page+  delivers!  The  Start Page+  extension adds a new  Start Page  that is a  dockable tool window ,\nnot a  modal  window.\nIt's been written  from the ground up , and doesn't rely on any of Visual Studio's  internal  code.\nSo it can't be taken  away by Microsoft. And it's open source!  To open the new  Start Page+  window:   make sure Visual Studio's  Start Window  is disabled   in  Tools  |  Options  |  Environment  |  Startup  select  Empty Environment     select  View  |  Start Page+     The Start Page+ window is accessed from the  View  menu, because it makes sense.\nIt's also easy to remember because you think \"I want to  view  the start page\",\nyou don't think \"I want to  file  the start page.  The Visual Studio 2010-2017's  Start Page  was always in the  View  menu,\nuntil Microsoft moved it to the  File  menu, which never made any sense.",
+            "title": "Introducing Start Page+"
         },
         {
             "location": "/#support-the-project",
-            "text": "If  Extensibility Logs  has saved you time and hassle, please come back and show your support:   you could  rate  Extensibility Logs  (only takes a couple of seconds)  or  review  Extensibility Logs  (help others benefit from your experience)  or  shout me a coke  (I don't drink coffee or beer lol)",
+            "text": "If  Start Page+  has saved you time and hassle, please come back and show your support:   you could  rate  Start Page+  (only takes a couple of seconds)  or  review  Start Page+  (help others benefit from your experience)  or  shout me a coke  (I don't drink coffee or beer lol)",
             "title": "Support the Project"
         },
         {
             "location": "/getting-started/",
-            "text": "Getting Started\n\u00b6\n\n\nThere are three ways you can install \nDeveloper News\n:\n\n\n\n\nFrom Inside Visual Studio\n\n\nDownload and Install Manually\n\n\nFrom the \nsource code\n\n\n\n\nOption 1 - From Inside Visual Studio\n\u00b6\n\n\n\n\nIn Visual Studio open the \nExtensions\n dialog\n\n\nVS 2017: \nExtensions and Updates\n\n\nVS 2019: \nManage Extensions\n\n\nClick on the \nOnline\n tab\n\n\nType \ndeveloper news\n in the search box\n\n\nClick on \nDeveloper News\n in the list\n\n\nClick the \nDownload\n button\n\n\n\n\nOption 2 - Download and Install Manually\n\u00b6\n\n\n\n\nClick on this link to download from \nVisual Studio Marketplace website\n\n\nClick the \nDownload\n button, and select where to save it\n\n\nInstall the downloaded VSIX file, from wherever you saved it\n\n\n\n\nOption 3 - From the Source Code\n\u00b6\n\n\n\n\nFind the \nsource code\n on GitHub\n\n\nFork it or clone it\n\n\nCompile the solution\n\n\nInstall the compiled VSIX file",
+            "text": "Getting Started\n\u00b6\n\n\nThere are three ways you can install \nStart Page+\n:\n\n\n\n\nFrom Inside Visual Studio\n\n\nDownload and Install Manually\n\n\nFrom the \nsource code\n\n\n\n\nOption 1 - From Inside Visual Studio\n\u00b6\n\n\n\n\nIn Visual Studio open the \nExtensions\n dialog\n\n\nVS 2017: \nExtensions and Updates\n\n\nVS 2019: \nManage Extensions\n\n\nClick on the \nOnline\n tab\n\n\nType \nStart Page+\n in the search box\n\n\nClick on \nStart Page+\n in the list\n\n\nClick the \nDownload\n button\n\n\n\n\nOption 2 - Download and Install Manually\n\u00b6\n\n\n\n\nClick on this link to download from \nVisual Studio Marketplace website\n\n\nClick the \nDownload\n button, and select where to save it\n\n\nInstall the downloaded VSIX file, from wherever you saved it\n\n\n\n\nOption 3 - From the Source Code\n\u00b6\n\n\n\n\nFind the \nsource code\n on GitHub\n\n\nFork it or clone it\n\n\nCompile the solution\n\n\nInstall the compiled VSIX file\n\n\n\n\nView StartPage+\n\u00b6\n\n\nOnce StartPage+ is installed simply click on \nView\n | \nStartPage+",
             "title": "Getting Started"
         },
         {
             "location": "/getting-started/#getting-started",
-            "text": "There are three ways you can install  Developer News :   From Inside Visual Studio  Download and Install Manually  From the  source code",
+            "text": "There are three ways you can install  Start Page+ :   From Inside Visual Studio  Download and Install Manually  From the  source code",
             "title": "Getting Started"
         },
         {
             "location": "/getting-started/#option-1-from-inside-visual-studio",
-            "text": "In Visual Studio open the  Extensions  dialog  VS 2017:  Extensions and Updates  VS 2019:  Manage Extensions  Click on the  Online  tab  Type  developer news  in the search box  Click on  Developer News  in the list  Click the  Download  button",
+            "text": "In Visual Studio open the  Extensions  dialog  VS 2017:  Extensions and Updates  VS 2019:  Manage Extensions  Click on the  Online  tab  Type  Start Page+  in the search box  Click on  Start Page+  in the list  Click the  Download  button",
             "title": "Option 1 - From Inside Visual Studio"
         },
         {
@@ -66,13 +46,18 @@
             "title": "Option 3 - From the Source Code"
         },
         {
+            "location": "/getting-started/#view-startpage",
+            "text": "Once StartPage+ is installed simply click on  View  |  StartPage+",
+            "title": "View StartPage+"
+        },
+        {
             "location": "/features/",
-            "text": "To display the new \nDeveloper News\n window:\n\n\n\n\nclick \nView\n | \nDeveloper News\n\n\n\n\nDev News Feed\n\u00b6\n\n\nThe \nDev News\n feed is based on the feed from the Developer News control on the old VS 2017 startup page.\nIt's the first feed that has been added to the new \nDeveloper News\n window.\n\n\n\n\nOther Feeds\n\u00b6\n\n\nOther feeds will follow in the near future. Check out the \nRoadmap\n for more details.\n\n\nOptions\n\u00b6\n\n\n\n\nEnable 'Developer News'\n\u00b6\n\n\nThis setting allows the whole set of \nDeveloper News\n features to be turned off together.\n\n\nVersion Number\n\u00b6\n\n\nDisplays then version number of \nDeveloper News\n that's currently installed.\n\n\nEnable 'Open Links in VS'\n\u00b6\n\n\nThe default value is \ntrue\n, meaning that any item link that is clicked will be opened in a window\ninside of Visual Studio.\n\n\nA value of \nfalse\n will result in the link being opened in your default browser.",
+            "text": "To display the new \nStart Page+\n window:\n\n\n\n\nclick \nView\n | \nStart Page+\n\n\n\n\nDev News Feed\n\u00b6\n\n\nThe \nDev News\n feed is based on the feed from the Start Page+ control on the old VS 2017 startup page.\nIt's the first feed that has been added to the new \nStart Page+\n window.\n\n\n\n\nOther Feeds\n\u00b6\n\n\nOther feeds will follow in the near future. Check out the \nRoadmap\n for more details.\n\n\nOptions\n\u00b6\n\n\n\n\nEnable 'Start Page+'\n\u00b6\n\n\nThis setting allows the whole set of \nStart Page+\n features to be turned off together.\n\n\nVersion Number\n\u00b6\n\n\nDisplays then version number of \nStart Page+\n that's currently installed.\n\n\nEnable 'Open Links in VS'\n\u00b6\n\n\nThe default value is \ntrue\n, meaning that any item link that is clicked will be opened in a window\ninside of Visual Studio.\n\n\nA value of \nfalse\n will result in the link being opened in your default browser.",
             "title": "Features"
         },
         {
             "location": "/features/#dev-news-feed",
-            "text": "The  Dev News  feed is based on the feed from the Developer News control on the old VS 2017 startup page.\nIt's the first feed that has been added to the new  Developer News  window.",
+            "text": "The  Dev News  feed is based on the feed from the Start Page+ control on the old VS 2017 startup page.\nIt's the first feed that has been added to the new  Start Page+  window.",
             "title": "Dev News Feed"
         },
         {
@@ -86,13 +71,13 @@
             "title": "Options"
         },
         {
-            "location": "/features/#enable-developer-news",
-            "text": "This setting allows the whole set of  Developer News  features to be turned off together.",
-            "title": "Enable 'Developer News'"
+            "location": "/features/#enable-start-page",
+            "text": "This setting allows the whole set of  Start Page+  features to be turned off together.",
+            "title": "Enable 'Start Page+'"
         },
         {
             "location": "/features/#version-number",
-            "text": "Displays then version number of  Developer News  that's currently installed.",
+            "text": "Displays then version number of  Start Page+  that's currently installed.",
             "title": "Version Number"
         },
         {
@@ -102,7 +87,7 @@
         },
         {
             "location": "/changelog/",
-            "text": "Public Releases\n\u00b6\n\n\nv1.1 - 2019-07-01\n\u00b6\n\n\n\n\nadded option to open links in default browser\n\n\n\n\nv1.02 - 2019-06-07\n\u00b6\n\n\n\n\nfixed conflict with Extensibility Logs\n\n\n\n\nv1.01 - 2019-05-26\n\u00b6\n\n\n\n\nadded website documentation\n\n\n\n\nv1.0 - 2019-05-25\n\u00b6\n\n\n\n\ninitial release\n\n\nadded Start Page's Developer News feed\n\n\nadded documentation to GitHub & Marketplace\n\n\n\n\nInternal Releases\n\u00b6\n\n\nv0.1 - v0.9\n\u00b6\n\n\n\n\nadded bare tool window (View | Developer News)\n\n\nadded feed interface & feed item model\n\n\nadded 'RSS feed' service\n\n\nadded 'Dev News' feed (Start Page feed)\n\n\nadded feed styles\n\n\nadded 'IBrowserService' & 'BrowserService'\n\n\nadded 'Visual Studio Browser Service' (internal/external browser)\n\n\nadded 'Refresh' command\n\n\nadded 'View More News' command",
+            "text": "Public Releases\n\u00b6\n\n\nInternal Releases\n\u00b6\n\n\nv0.1 - v0.9\n\u00b6\n\n\n\n\nadded bare tool window (View | Start Page+)",
             "title": "Changelog"
         },
         {
@@ -111,48 +96,28 @@
             "title": "Public Releases"
         },
         {
-            "location": "/changelog/#v11-2019-07-01",
-            "text": "added option to open links in default browser",
-            "title": "v1.1 - 2019-07-01"
-        },
-        {
-            "location": "/changelog/#v102-2019-06-07",
-            "text": "fixed conflict with Extensibility Logs",
-            "title": "v1.02 - 2019-06-07"
-        },
-        {
-            "location": "/changelog/#v101-2019-05-26",
-            "text": "added website documentation",
-            "title": "v1.01 - 2019-05-26"
-        },
-        {
-            "location": "/changelog/#v10-2019-05-25",
-            "text": "initial release  added Start Page's Developer News feed  added documentation to GitHub & Marketplace",
-            "title": "v1.0 - 2019-05-25"
-        },
-        {
             "location": "/changelog/#internal-releases",
             "text": "",
             "title": "Internal Releases"
         },
         {
             "location": "/changelog/#v01-v09",
-            "text": "added bare tool window (View | Developer News)  added feed interface & feed item model  added 'RSS feed' service  added 'Dev News' feed (Start Page feed)  added feed styles  added 'IBrowserService' & 'BrowserService'  added 'Visual Studio Browser Service' (internal/external browser)  added 'Refresh' command  added 'View More News' command",
+            "text": "added bare tool window (View | Start Page+)",
             "title": "v0.1 - v0.9"
         },
         {
             "location": "/roadmap/",
-            "text": "Feature Ideas\n\u00b6\n\n\nThe list below is a list of \npotential\n \nfeatures\n or \nenhancements\n.\nThese might be entirely \nnew features\n or \nenhancements\n to existing features.\n\n\nThey may, or may not, end up being added into \nDeveloper News\n.\n\n\n\n\n Visual Studio Blog feed\n\n\n Visual Studio Twitter feed\n\n\n Azure DevOps Blog feed\n\n\n Auto-refresh\n\n\n\n\nTicked items are available in the lastest version of \nDeveloper News\n.\n\n\nContributions\n\u00b6\n\n\nIf you'd like to implement one of the \nfeature ideas\n,\nfeel free to \nopen an \nIssue\n on GitHub\n (with the same name as the feature),\nand we can start a discussion there.\n\n\nWe can then work toward developing a pull request,\nso the your feature can be incorporated into \nDeveloper News\n.\n\n\nDon't forget to check out the \nContribution Guidelines\n.\n\n\nBug Fixes\n\u00b6\n\n\nOnce bug fixes have been fully tested, they'll be included in the \nnext public release\n.\n\n\n\n\nThere are no bug fixes that need testing at the moment",
+            "text": "Feature Ideas\n\u00b6\n\n\nThe list below is a list of \npotential\n \nfeatures\n or \nenhancements\n.\nThese might be entirely \nnew features\n or \nenhancements\n to existing features.\n\n\nThey may, or may not, end up being added into \nStart Page+\n.\n\n\n\n\n Visual Studio Blog feed\n\n\n Visual Studio Twitter feed\n\n\n Azure DevOps Blog feed\n\n\n Auto-refresh\n\n\n\n\nTicked items are available in the lastest version of \nStart Page+\n.\n\n\nContributions\n\u00b6\n\n\nIf you'd like to implement one of the \nfeature ideas\n,\nfeel free to \nopen an \nIssue\n on GitHub\n (with the same name as the feature),\nand we can start a discussion there.\n\n\nWe can then work toward developing a pull request,\nso the your feature can be incorporated into \nStart Page+\n.\n\n\nDon't forget to check out the \nContribution Guidelines\n.\n\n\nBug Fixes\n\u00b6\n\n\nOnce bug fixes have been fully tested, they'll be included in the \nnext public release\n.\n\n\n\n\nThere are no bug fixes that need testing at the moment",
             "title": "Roadmap"
         },
         {
             "location": "/roadmap/#feature-ideas",
-            "text": "The list below is a list of  potential   features  or  enhancements .\nThese might be entirely  new features  or  enhancements  to existing features.  They may, or may not, end up being added into  Developer News .    Visual Studio Blog feed   Visual Studio Twitter feed   Azure DevOps Blog feed   Auto-refresh   Ticked items are available in the lastest version of  Developer News .",
+            "text": "The list below is a list of  potential   features  or  enhancements .\nThese might be entirely  new features  or  enhancements  to existing features.  They may, or may not, end up being added into  Start Page+ .    Visual Studio Blog feed   Visual Studio Twitter feed   Azure DevOps Blog feed   Auto-refresh   Ticked items are available in the lastest version of  Start Page+ .",
             "title": "Feature Ideas"
         },
         {
             "location": "/roadmap/#contributions",
-            "text": "If you'd like to implement one of the  feature ideas ,\nfeel free to  open an  Issue  on GitHub  (with the same name as the feature),\nand we can start a discussion there.  We can then work toward developing a pull request,\nso the your feature can be incorporated into  Developer News .  Don't forget to check out the  Contribution Guidelines .",
+            "text": "If you'd like to implement one of the  feature ideas ,\nfeel free to  open an  Issue  on GitHub  (with the same name as the feature),\nand we can start a discussion there.  We can then work toward developing a pull request,\nso the your feature can be incorporated into  Start Page+ .  Don't forget to check out the  Contribution Guidelines .",
             "title": "Contributions"
         },
         {
