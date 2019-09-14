@@ -8,7 +8,7 @@ namespace StartPagePlus.UI.ViewModels
         {
 
             Name = "Start";
-            Title = "Hi User, what would you like to do today?";
+            Title = "Hi, what would you like to do today?";
             IsVisible = true;
             Columns = new ObservableCollection<ColumnViewModel>
             {
