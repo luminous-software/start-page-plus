@@ -125,6 +125,7 @@
                     <Button x:Name="CommandButton"
                         Command="{Binding Command}"
                         Content="{Binding Name}"
+                        IsEnabled="{Binding Enabled}"
                         Visibility="{Binding IsVisible, Converter={c:BoolToVisibilityConverter}}"
                         >
                         <Button.Template>
@@ -136,14 +137,18 @@
                                     Cursor="Hand"
                                     FontSize="14"
                                     FontWeight="Medium"
-                                    Foreground="{DynamicResource TextDarkBrush}"
+                                    Foreground="{DynamicResource CommandActiveBrush}"
                                     >
                                     <ContentPresenter/>
                                 </TextBlock>
 
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="Button.IsMouseOver" Value="true">
-                                        <Setter TargetName="text" Property="Foreground" Value="{DynamicResource MenuActiveBrush}"/>
+                                        <Setter TargetName="text" Property="Foreground" Value="{DynamicResource CommandMouseOverBrush}"/>
+                                    </Trigger>
+
+                                    <Trigger Property="Button.IsEnabled" Value="false">
+                                        <Setter TargetName="text" Property="FontWeight" Value="Normal"/>
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>

@@ -10,5 +10,7 @@ namespace StartPagePlus.UI.ViewModels
         public ICommand Command { get; set; }
 
         public bool IsVisible { get; set; } = true;
+
+        public bool Enabled { get; set; } = true;
     }
 }

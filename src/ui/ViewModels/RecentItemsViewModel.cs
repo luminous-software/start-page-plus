@@ -37,21 +37,24 @@ namespace StartPagePlus.UI.ViewModels
         private ObservableCollection<CommandViewModel> GetCommands()
             => new ObservableCollection<CommandViewModel>
             {
-                new CommandViewModel
-                {
-                    Name = "Filter Items",
-                    Command = new RelayCommand(ExecuteFilterItems, !Filtered)
-                },
-                new CommandViewModel
-                {
-                    Name = "Remove Filter",
-                    Command = new RelayCommand(ExecuteRemoveFilter, Filtered),
-                    IsVisible = false
-                },
+                //new CommandViewModel
+                //{
+                //    Name = "Filter Items",
+                //    Command = new RelayCommand(ExecuteFilterItems, !Filtered),
+                //    Enabled = false
+                //},
+                //new CommandViewModel
+                //{
+                //    Name = "Remove Filter",
+                //    Command = new RelayCommand(ExecuteRemoveFilter, Filtered),
+                //    IsVisible = false,
+                //    Enabled=false
+                //},
                 new CommandViewModel
                 {
                     Name = "Refresh",
-                    Command = new RelayCommand(ExecuteRefresh, true)
+                    Command = new RelayCommand(ExecuteRefresh, true),
+                    Enabled=true
                 }
             };
 

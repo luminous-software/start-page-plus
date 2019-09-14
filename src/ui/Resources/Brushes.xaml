@@ -67,9 +67,21 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
         />
 
-    <!--  Items  -->
     <SolidColorBrush x:Key="FilterBackgroundBrushBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
         />
 
+    <!--  Commands  -->
+
+    <SolidColorBrush x:Key="CommandActiveBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="CommandInactiveBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="CommandMouseOverBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
+        />
 </ResourceDictionary>

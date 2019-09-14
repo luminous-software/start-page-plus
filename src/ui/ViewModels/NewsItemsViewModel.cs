@@ -41,15 +41,17 @@ namespace StartPagePlus.UI.ViewModels
         private ObservableCollection<CommandViewModel> GetCommands()
             => new ObservableCollection<CommandViewModel>
             {
-                new CommandViewModel
-                {
-                    Name = "More News",
-                    Command = new RelayCommand(ExecuteMoreNews, true)
-                },
+                //new CommandViewModel
+                //{
+                //    Name = "More News",
+                //    Command = new RelayCommand(ExecuteMoreNews, true),
+                //    Enabled =false
+                //},
                 new CommandViewModel
                 {
                     Name = "Refresh",
-                    Command = new RelayCommand(ExecuteRefresh, true)
+                    Command = new RelayCommand(ExecuteRefresh, true),
+                    Enabled =true
                 }
             };
 
