@@ -3,11 +3,103 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28714.193
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPagePlus", "src\vsix\StartPagePlus.csproj", "{2CA9BF85-C519-4C4A-8ACF-E2168A260238}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPagePlus.Core", "src\core\StartPagePlus.Core.csproj", "{37C10221-0383-41E0-8C01-F06CA16B9D82}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPagePlus.Options", "src\options\StartPagePlus.Options.csproj", "{D1EAAD10-2832-42DE-B8E7-EBA03AF83BCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPagePlus.Core", "src\core\StartPagePlus.Core.csproj", "{37C10221-0383-41E0-8C01-F06CA16B9D82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPagePlus", "src\vsix\StartPagePlus.csproj", "{2CA9BF85-C519-4C4A-8ACF-E2168A260238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPagePlus.UI", "src\ui\StartPagePlus.UI.csproj", "{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{014BE8B5-B6C3-4256-A7AE-E78D43D07203}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		commands.json = commands.json
+		src\vsix\Properties\GlobalSuppressions.cs = src\vsix\Properties\GlobalSuppressions.cs
+		gulpfile.js = gulpfile.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. version", "3. version", "{6CA98A40-9ACF-43A6-A937-6A2FFEA55016}"
+	ProjectSection(SolutionItems) = preProject
+		package.json = package.json
+		src\vsix\source.extension.vsixmanifest = src\vsix\source.extension.vsixmanifest
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs-source", "docs-source", "{1E0BD415-DA83-4B83-91F3-BF29FF7D423F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{3AF3C1CE-0B9D-4B2F-A9EE-00B7A7414906}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.github\CONTRIBUTING.md = .github\CONTRIBUTING.md
+		.github\ISSUE_TEMPLATE.md = .github\ISSUE_TEMPLATE.md
+		LICENSE = LICENSE
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. initial", "0. initial", "{8A6F448D-3822-4DAC-942D-00274F1DD568}"
+	ProjectSection(SolutionItems) = preProject
+		docs-source\getting-started.md = docs-source\getting-started.md
+		LICENSE = LICENSE
+		mkdocs.yml = mkdocs.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. changes", "2. changes", "{2C4A9B8A-C4DE-4854-A698-CB4D465BAF0A}"
+	ProjectSection(SolutionItems) = preProject
+		docs-source\changelog.md = docs-source\changelog.md
+		docs-source\features.md = docs-source\features.md
+		docs-source\roadmap.md = docs-source\roadmap.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. main", "1. main", "{99A9DF34-83E3-432D-8BD3-A8DEA7732660}"
+	ProjectSection(SolutionItems) = preProject
+		.notes.md = .notes.md
+		docs-source\index.md = docs-source\index.md
+		docs-source\marketplace.md = docs-source\marketplace.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartPagePlus.Tests", "src\tests\StartPagePlus.Tests.csproj", "{20408910-F7C0-4B37-A230-30AB3B7814DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "art", "art", "{2A516AFD-D80F-4AAB-9DDD-42E6557C1313}"
+	ProjectSection(SolutionItems) = preProject
+		art\1366434.jpg = art\1366434.jpg
+		art\2019-07-01_00FF.png = art\2019-07-01_00FF.png
+		art\2019-07-10_ThisWeek.png = art\2019-07-10_ThisWeek.png
+		art\2019-07-17_18-42_VS2019PrivateRegistry.png = art\2019-07-17_18-42_VS2019PrivateRegistry.png
+		art\2019-07-17_1_StartPage.png = art\2019-07-17_1_StartPage.png
+		art\2019-07-17_2_StartWindow.png = art\2019-07-17_2_StartWindow.png
+		art\2019-07-17_3_FileMenu.png = art\2019-07-17_3_FileMenu.png
+		art\2019-07-17_4_CodeContainers.offline.png = art\2019-07-17_4_CodeContainers.offline.png
+		art\ClassicCreateNewProject.jpg = art\ClassicCreateNewProject.jpg
+		art\clone-or-checkout-code.jpg = art\clone-or-checkout-code.jpg
+		art\CodeContainers.Offline.json = art\CodeContainers.Offline.json
+		art\Create a New Project Dialog.png = art\Create a New Project Dialog.png
+		art\lss-vsip.png = art\lss-vsip.png
+		art\lss.png = art\lss.png
+		art\new-project.png = art\new-project.png
+		art\old-vs-new-start-page.png = art\old-vs-new-start-page.png
+		art\Recent_VS2015.png = art\Recent_VS2015.png
+		art\RecentFiles_Options.png = art\RecentFiles_Options.png
+		art\RecerntProjects_ContextMenu.png = art\RecerntProjects_ContextMenu.png
+		art\SearchRecentProjects.gif = art\SearchRecentProjects.gif
+		art\ss5.png = art\ss5.png
+		art\start-window-preview-1-pc.png = art\start-window-preview-1-pc.png
+		art\start-window.jpg = art\start-window.jpg
+		art\StartPage-2015.png = art\StartPage-2015.png
+		art\StartPage-2017-with-favorites.png = art\StartPage-2017-with-favorites.png
+		art\StartPage-2017.png = art\StartPage-2017.png
+		art\startup-options.png = art\startup-options.png
+		art\StartWindow-2019-reimagined-new.png = art\StartWindow-2019-reimagined-new.png
+		art\StartWindow-2019-reimagined-pinned.png = art\StartWindow-2019-reimagined-pinned.png
+		art\StartWindow-2019.png = art\StartWindow-2019.png
+		art\turn-off-start-window.png = art\turn-off-start-window.png
+		art\visual-studio-2013-start-page-.png = art\visual-studio-2013-start-page-.png
+		art\visual-studio-2017-start-page-recent.png = art\visual-studio-2017-start-page-recent.png
+		art\visual-studio-2017-start-page.png = art\visual-studio-2017-start-page.png
+		art\VS2017PrivateRegistry.png = art\VS2017PrivateRegistry.png
+		art\vs4mac-start.png = art\vs4mac-start.png
+		art\vsip.png = art\vsip.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,21 +107,37 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2CA9BF85-C519-4C4A-8ACF-E2168A260238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CA9BF85-C519-4C4A-8ACF-E2168A260238}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CA9BF85-C519-4C4A-8ACF-E2168A260238}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CA9BF85-C519-4C4A-8ACF-E2168A260238}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D1EAAD10-2832-42DE-B8E7-EBA03AF83BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D1EAAD10-2832-42DE-B8E7-EBA03AF83BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D1EAAD10-2832-42DE-B8E7-EBA03AF83BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D1EAAD10-2832-42DE-B8E7-EBA03AF83BCD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{37C10221-0383-41E0-8C01-F06CA16B9D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{37C10221-0383-41E0-8C01-F06CA16B9D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37C10221-0383-41E0-8C01-F06CA16B9D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37C10221-0383-41E0-8C01-F06CA16B9D82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EAAD10-2832-42DE-B8E7-EBA03AF83BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EAAD10-2832-42DE-B8E7-EBA03AF83BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EAAD10-2832-42DE-B8E7-EBA03AF83BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EAAD10-2832-42DE-B8E7-EBA03AF83BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CA9BF85-C519-4C4A-8ACF-E2168A260238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA9BF85-C519-4C4A-8ACF-E2168A260238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA9BF85-C519-4C4A-8ACF-E2168A260238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA9BF85-C519-4C4A-8ACF-E2168A260238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20408910-F7C0-4B37-A230-30AB3B7814DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20408910-F7C0-4B37-A230-30AB3B7814DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20408910-F7C0-4B37-A230-30AB3B7814DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20408910-F7C0-4B37-A230-30AB3B7814DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CA98A40-9ACF-43A6-A937-6A2FFEA55016} = {1E0BD415-DA83-4B83-91F3-BF29FF7D423F}
+		{1E0BD415-DA83-4B83-91F3-BF29FF7D423F} = {014BE8B5-B6C3-4256-A7AE-E78D43D07203}
+		{3AF3C1CE-0B9D-4B2F-A9EE-00B7A7414906} = {014BE8B5-B6C3-4256-A7AE-E78D43D07203}
+		{8A6F448D-3822-4DAC-942D-00274F1DD568} = {1E0BD415-DA83-4B83-91F3-BF29FF7D423F}
+		{2C4A9B8A-C4DE-4854-A698-CB4D465BAF0A} = {1E0BD415-DA83-4B83-91F3-BF29FF7D423F}
+		{99A9DF34-83E3-432D-8BD3-A8DEA7732660} = {1E0BD415-DA83-4B83-91F3-BF29FF7D423F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5815276C-715F-4D15-B8FC-01D0B77A7644}

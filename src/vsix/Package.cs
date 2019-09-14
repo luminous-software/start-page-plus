@@ -12,10 +12,10 @@ namespace StartPagePlus
     /// </summary>
     internal sealed partial class PackageGuids
     {
-        public const string PackageString = "d260ddba-7a30-4094-a145-23a778a11d04";
+        public const string PackageString = "863d9c86-c92d-4ce0-87c6-087e3a0b6cbf";
         public static Guid Package = new Guid(PackageString);
 
-        public const string PackageCommandSetString = "bd83d0a2-ec30-4f7a-a13e-ddf411cd63fd";
+        public const string PackageCommandSetString = "915ab04f-9aa8-4d24-b06b-bb1524e3c7bf";
         public static Guid PackageCommandSet = new Guid(PackageCommandSetString);
     }
     /// <summary>
@@ -24,6 +24,7 @@ namespace StartPagePlus
     internal sealed partial class PackageIds
     {
         public const int PackageGroup = 0xB000;
-        public const int PackageOptionsCommand = 0x0215;
+        public const int ViewStartPagePlus = 0x0210;
+        public const int StartPagePlusOptions = 0x0215;
     }
 }

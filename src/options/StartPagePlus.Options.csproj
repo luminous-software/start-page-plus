@@ -33,15 +33,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
     <PackageReference Include="Luminous.Code.VisualStudio">
-      <Version>1.4.0</Version>
+      <Version>1.2.0.2</Version>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="16.0.200" ExcludeAssets="runtime">
-      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="15.9.3" ExcludeAssets="runtime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\vsix\Properties\GlobalSuppressions.cs">
+      <Link>Properties\GlobalSuppressions.cs</Link>
+    </Compile>
     <Compile Include="..\vsix\source.extension.cs">
       <Link>Properties\source.extension.cs</Link>
     </Compile>
@@ -55,7 +55,7 @@
   <ItemGroup>
     <ProjectReference Include="..\core\StartPagePlus.Core.csproj">
       <Project>{37c10221-0383-41e0-8c01-f06ca16b9d82}</Project>
-      <Name>ExtensibilitySolutionTemplate.Core</Name>
+      <Name>StartPagePlus.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

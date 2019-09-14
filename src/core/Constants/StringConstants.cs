@@ -1,4 +1,4 @@
-﻿namespace StartPagePlus.Core
+﻿namespace StartPagePlus.Core.Constants
 {
     public static class StringConstants
 

@@ -1,0 +1,87 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
+    >
+    <!--  Menu  -->
+
+    <SolidColorBrush x:Key="MenuActiveBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="MenuInactiveBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AutoHideTabMouseOverTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="MenuBackgroundBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowBackgroundKey}}"
+        />
+
+    <!--  Content  -->
+
+    <SolidColorBrush x:Key="ContentBackgroundBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AccentDarkKey}}"
+        />
+
+    <SolidColorBrush x:Key="TextLightBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="TextDarkBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
+    <!--  Columns  -->
+
+    <SolidColorBrush x:Key="ColumnBorderBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="ColumnBackgroundBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AccentLightKey}}"
+        />
+
+    <SolidColorBrush x:Key="ColumnHeadingBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="TitleBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
+        />
+
+    <!--  Items  -->
+
+    <SolidColorBrush x:Key="ItemGroupNameBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="ItemNameBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="ItemDescriptionBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="ItemDateBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="FilterBackgroundBrushBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
+    <!--  Commands  -->
+
+    <SolidColorBrush x:Key="CommandActiveBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="CommandInactiveBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
+        />
+
+    <SolidColorBrush x:Key="CommandMouseOverBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
+        />
+</ResourceDictionary>

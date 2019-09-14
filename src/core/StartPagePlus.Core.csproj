@@ -36,11 +36,23 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\vsix\Properties\GlobalSuppressions.cs">
+      <Link>Properties\GlobalSuppressions.cs</Link>
+    </Compile>
     <Compile Include="..\vsix\source.extension.cs">
       <Link>Properties\source.extension.cs</Link>
     </Compile>
     <Compile Include="Constants\StringConstants.cs" />
+    <Compile Include="Extensions\DateExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Interfaces\IDataItem.cs" />
+    <Compile Include="Interfaces\IDataService.cs" />
+    <Compile Include="Interfaces\IDateTimeService.cs" />
+    <Compile Include="Interfaces\IDialogService.cs" />
+    <Compile Include="Models\FeedItem.cs" />
+    <Compile Include="Models\NewsItemFeedItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings\StringExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
