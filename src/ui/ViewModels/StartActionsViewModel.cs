@@ -33,7 +33,8 @@ namespace StartPagePlus.UI.ViewModels
                 new CommandViewModel
                 {
                     Name = "Continue With No Code",
-                    Command = new RelayCommand(ExecuteContinue, true)
+                    Command = new RelayCommand(ExecuteContinue, true),
+                    Enabled = false
                 }
             };
 
