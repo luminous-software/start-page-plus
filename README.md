@@ -16,7 +16,7 @@
 [paypal-badge]: https://img.shields.io/badge/donate-paypal-green.svg?style=flat-square
 [paypal-url]: https://www.paypal.me/yannduran/10
 
-You can download this extension [from the Visual Studio Marketplace][marketplace-url]
+You can download this extension [from the Visual Studio Marketplace][marketplace-url].
 
 [marketplace-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus
 
@@ -25,36 +25,39 @@ You can download this extension [from the Visual Studio Marketplace][marketplace
 ## Bring Back Start Page!
 
 When Visual Studio 2019 was released, many developers were dismayed to find that the _Start Page_ had been completely
-replaced by the new _Start Window_ (a big **modal** dialog, which had no room for _Start Page+_).
+replaced by the new _Start Window_ (a big **modal** dialog window, with no room for _Developer News_).
 
-### Community Outcry
+![Start Window](docs-source/assets/images/start-window-dark.png)
 
+## Introducing Start Page+
 
-[developer-community-forum-url]: https://developercommunity.visualstudio.com/idea/399833/bring-back-the-start-page-plus-on-startup.html
+So many of you, in **so many posts** in the Developer forum, **pleaded** for Microsoft to bring back the Visual Studio 2017
+_Start Page_, and unfortunately those please fell on deaf ears.
 
-### Microsoft's Response
-
-[microsoft-announcement-url]: https://developercommunity.visualstudio.com/comments/469066/view.html
-
-### Forum Announcement
-
-
-[my-announcement-url]: https://developercommunity.visualstudio.com/comments/513534/view.html
-
-
-## Start Page+ Is Here!
+Well, you asked and now _Start Page+_ delivers!
 
 The [Start Page+][start-page-plus-url] extension adds a new *Start Page* that is a **dockable tool window**,
 not a **modal** window.
-
-_Start Page+_ has been written **from the ground up**.
+It's been written **from the ground up**, and doesn't rely on any of Visual Studio's *internal* code.
+So it can't be taken  away by Microsoft. And it's open source!
 
 To open the new _Start Page+_ window:
 
+- make sure Visual Studio's *Start Window* is disabled
+  - in **Tools** | **Options** | **Environment** | **Startup** select _Empty Environment_
+
+    ![Startup Options](docs-source/assets/images/startup-options.png)
+
 - select **View** | **Start Page+**
 
-![Start Page+](docs-source/assets/images/start-page-plus.png)
+  ![Start Page+](docs-source/assets/images/start-page-plus.png)
 
+The Start Page+ window is accessed from the **View** menu, because it makes sense.
+It's also easy to remember because you think "I want to **view** the start page",
+you don't think "I want to **file** the start page.
+
+The Visual Studio 2010-2017's _Start Page_ was always in the **View** menu,
+until Microsoft moved it to the **File** menu, which never made any sense.
 
 [start-page-plus-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus
 [roadmap-url]: https://luminous-software.solutions/start-page-plus/roadmap

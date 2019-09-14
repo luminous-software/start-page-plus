@@ -32,3 +32,7 @@ There are three ways you can install *Start Page+*:
 4. Install the compiled VSIX file
 
 [source-code-url]: https://github.com/luminous-software/start-page-plus
+
+## View StartPage+
+
+Once StartPage+ is installed simply click on `View` | `StartPage+`

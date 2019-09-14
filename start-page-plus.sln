@@ -52,7 +52,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. changes", "2. changes", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. main", "1. main", "{99A9DF34-83E3-432D-8BD3-A8DEA7732660}"
 	ProjectSection(SolutionItems) = preProject
-		.image-paths.txt = .image-paths.txt
+		.notes.md = .notes.md
 		docs-source\index.md = docs-source\index.md
 		docs-source\marketplace.md = docs-source\marketplace.md
 		README.md = README.md
