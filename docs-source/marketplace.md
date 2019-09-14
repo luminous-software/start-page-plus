@@ -64,8 +64,10 @@ replaced by the new _Start Window_ (a big **modal** dialog window, with no room 
 
 ## Introducing Start Page+
 
-So many of you, in **so many posts** in the Developer forum, **pleaded** for Microsoft to bring back the Visual Studio 2017
-_Start Page_, and unfortunately those please fell on deaf ears.
+So many of you, in **so many posts** in the [Developer Community forum][developer-community-forum-url], **pleaded** for Microsoft to bring back the Visual Studio 2017
+_Start Page_, and unfortunately those pleas fell on deaf ears.
+
+[developer-community-forum-url]: https://developercommunity.visualstudio.com/search.html?f=&type=question+OR+problem+OR+idea&type=question+OR+problem+OR+idea&c=&redirect=search%2Fsearch&sort=relevance&q=start+page
 
 Well, you asked and now _Start Page+_ delivers!
 
