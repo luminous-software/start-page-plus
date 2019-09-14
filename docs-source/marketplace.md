@@ -14,6 +14,47 @@ You can download this extension [from the Visual Studio Marketplace][marketplace
 
 ---
 
+Please understand that this is a **preview release**.
+
+While the features of the **_Start Tab_** are functional in this preview (I'm using it myself),
+there are still some quirks that need to be ironed out, plus a number of missing features that still
+need to be added.
+I just wanted to get this up to the marketplace as quickly as I could, so people can see it and
+start to use it.
+
+**Feedback is welcome!** But please use the GitHub repo's [Issues page][github-issues-page] to
+provide it, **don't** add your ideas and/or feeback to any blog post where you might have
+discovered _Start Page+_.
+I won't be able to address your feedback in those posts, as it's not fair to the OP to have their
+post highjacked.
+
+If you want to know more about _Start Page+_ the [website][start-page-plus-website] is where I'll
+add information about _known issues_, and a _roadmap_ of what's coming.
+Please **consult the website** first before adding issues for **new features**,
+**feature enhancements** etc.
+If you don't see your desired feature or enhancement mentioned on the website,
+then by all means go ahead and add an issue for it.
+The same thing goes for any **bugs** you might run across.
+
+The _Favorites Tab_, _Create Tab_, and _News Tab_ are **still being worked on**.
+
+The **_Favorites Tab_** will allow you to add _columns_ and _groups_ to add your favorite
+**solutions**, **projects**, **folders** etc, in a much more **flexible way** than just
+_pinned tabs_.
+Hopefully, after a while, you won't even need to use pinned tabs anymore.
+
+The **_Create Tab_** aims to provide a **tree view-based** replacement for VS 2019's hated new
+**search-based** _Create a New Project_ dialog, baked right into your start page.
+
+The **_News Tab_** will have some pre-populated RSS feeds of developer-centric blogs etc.
+Plus, in the future you'll be able to add your own RSS feeds to the tab as well.
+Sort of like a mini RSS application embedded in your start page.
+
+[github-issues-page]: https://github.com/luminous-software/start-page-plus/issues
+[start-page-plus-website]: https://luminous-software.solutions/start-page-plus
+
+---
+
 ## Bring Back Start Page!
 
 When Visual Studio 2019 was released, many developers were dismayed to find that the _Start Page_ had been completely
