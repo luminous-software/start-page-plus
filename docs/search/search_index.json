@@ -52,18 +52,8 @@
         },
         {
             "location": "/features/",
-            "text": "To display the new \nStart Page+\n window:\n\n\n\n\nclick \nView\n | \nStart Page+\n\n\n\n\nDev News Feed\n\u00b6\n\n\nThe \nDev News\n feed is based on the feed from the Start Page+ control on the old VS 2017 startup page.\nIt's the first feed that has been added to the new \nStart Page+\n window.\n\n\n\n\nOther Feeds\n\u00b6\n\n\nOther feeds will follow in the near future. Check out the \nRoadmap\n for more details.\n\n\nOptions\n\u00b6\n\n\n\n\nEnable 'Start Page+'\n\u00b6\n\n\nThis setting allows the whole set of \nStart Page+\n features to be turned off together.\n\n\nVersion Number\n\u00b6\n\n\nDisplays then version number of \nStart Page+\n that's currently installed.\n\n\nEnable 'Open Links in VS'\n\u00b6\n\n\nThe default value is \ntrue\n, meaning that any item link that is clicked will be opened in a window\ninside of Visual Studio.\n\n\nA value of \nfalse\n will result in the link being opened in your default browser.",
+            "text": "To display the new \nStart Page+\n window:\n\n\n\n\nclick \nView\n | \nStart Page+\n\n\n\n\nOptions\n\u00b6\n\n\n\n\nEnable 'Start Page+'\n\u00b6\n\n\nThis setting allows the whole set of \nStart Page+\n features to be turned off together.\n\n\nVersion Number\n\u00b6\n\n\nDisplays then version number of \nStart Page+\n that's currently installed.\n\n\nEnable 'Open Links in VS'\n\u00b6\n\n\nThe default value is \ntrue\n, meaning that any item link that is clicked will be opened in a window\ninside of Visual Studio.\n\n\nA value of \nfalse\n will result in the link being opened in your default browser.",
             "title": "Features"
-        },
-        {
-            "location": "/features/#dev-news-feed",
-            "text": "The  Dev News  feed is based on the feed from the Start Page+ control on the old VS 2017 startup page.\nIt's the first feed that has been added to the new  Start Page+  window.",
-            "title": "Dev News Feed"
-        },
-        {
-            "location": "/features/#other-feeds",
-            "text": "Other feeds will follow in the near future. Check out the  Roadmap  for more details.",
-            "title": "Other Feeds"
         },
         {
             "location": "/features/#options",
