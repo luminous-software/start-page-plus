@@ -94,7 +94,7 @@ To open the new _Start Page+_ window:
 
   ![Start Page+](assets/images/start-page-plus.png)
 
-The Start Page+ window is accessed from the **View** menu, because it makes sense.
+The _Start Page+_ window is accessed from the **View** menu, because it makes sense.
 It's also easy to remember because you think "I want to **view** the start page",
 you don't think "I want to **file** the start page.
 

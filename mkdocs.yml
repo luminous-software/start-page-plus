@@ -38,6 +38,7 @@ pages:
     - Features: 'features.md'
     - Changelog: 'changelog.md'
     - Roadmap: 'roadmap.md'
+    - Known Issues: 'known-issues.md'
 
 # customisation
 extra:

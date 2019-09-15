@@ -60,7 +60,7 @@ Sort of like a mini RSS application embedded in your start page.
 When Visual Studio 2019 was released, many developers were dismayed to find that the _Start Page_ had been completely
 replaced by the new _Start Window_ (a big **modal** dialog window, with no room for _Developer News_).
 
-![Start Window](https://github.com/luminous-software/extension-name/raw/master/docs/assets/images/start-window-dark.png)
+![Start Window](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/start-window-dark.png)
 
 ## Introducing Start Page+
 
@@ -81,13 +81,13 @@ To open the new _Start Page+_ window:
 - make sure Visual Studio's *Start Window* is disabled
   - in **Tools** | **Options** | **Environment** | **Startup** select _Empty Environment_
 
-    ![Startup Options](https://github.com/luminous-software/extension-name/raw/master/docs/assets/images/startup-options.png)
+    ![Startup Options](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/startup-options.png)
 
 - select **View** | **Start Page+**
 
-  ![Start Page+](https://github.com/luminous-software/extension-name/raw/master/docs/assets/images/start-page-plus.png)
+  ![Start Page+](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/start-page-plus.png)
 
-The Start Page+ window is accessed from the **View** menu, because it makes sense.
+The _Start Page+_ window is accessed from the **View** menu, because it makes sense.
 It's also easy to remember because you think "I want to **view** the start page",
 you don't think "I want to **file** the start page.
 
