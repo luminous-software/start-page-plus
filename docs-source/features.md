@@ -2,19 +2,6 @@ To display the new *Start Page+* window:
 
 - click **View** | **Start Page+**
 
-## Dev News Feed
-
-The _Dev News_ feed is based on the feed from the Start Page+ control on the old VS 2017 startup page.
-It's the first feed that has been added to the new _Start Page+_ window.
-
-![Dev News](assets/images/dev-news.png)
-
-## Other Feeds
-
-Other feeds will follow in the near future. Check out the [Roadmap][roadmap-url] for more details.
-
-[roadmap-url]: https://luminous-software.solutions/start-page-plus/roadmap
-
 ## Options
 
 ![General Options](assets/images/general-options.png)
