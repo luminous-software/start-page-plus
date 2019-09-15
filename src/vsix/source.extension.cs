@@ -7,11 +7,11 @@ namespace StartPagePlus
 {
     internal sealed partial class Vsix
     {
-        public const string Id = "3E9E5D1B-8919-4240-8660-C9AD234891BB";
+        public const string Id = "2FD598B1-4BEC-420A-8E7A-1B99FF1181B5";
         public const string Name = "Start Page+";
         public const string Description = @"Bring back Start Page! (a document tab, NOT a modal window)";
         public const string Language = "en-US";
-        public const string Version = "0.11.1";
+        public const string Version = "0.12.1";
         public const string Author = "Yann Duran";
         public const string Tags = "Start Page+, start-page-plus, StartPagePlus, start page, start-page, startpage, luminous, yannduran, yd";
     }
