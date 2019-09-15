@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Bring back Start Page+!\n\n\n\n\n\n\n\n\n\n\n\n\nYou can download this extension \nfrom the Visual Studio Marketplace\n\n\n\n\nPlease understand that this is a \npreview release\n.\n\n\nWhile the features of the \nStart Tab\n are functional in this preview (I'm using it myself),\nthere are still some quirks that need to be ironed out, plus a number of missing features that still\nneed to be added.\nI just wanted to get this up to the marketplace as quickly as I could, so people can see it and\nstart to use it.\n\n\nFeedback is welcome!\n But please use the GitHub repo's \nIssues page\n to\nprovide it, \ndon't\n add your ideas and/or feeback to any blog post where you might have\ndiscovered \nStart Page+\n.\nI won't be able to address your feedback in those posts, as it's not fair to the OP to have their\npost highjacked.\n\n\nIf you want to know more about \nStart Page+\n the \nwebsite\n is where I'll\nadd information about \nknown issues\n, and a \nroadmap\n of what's coming.\nPlease \nconsult the website\n first before adding issues for \nnew features\n,\n\nfeature enhancements\n etc.\nIf you don't see your desired feature or enhancement mentioned on the website,\nthen by all means go ahead and add an issue for it.\nThe same thing goes for any \nbugs\n you might run across.\n\n\nThe \nFavorites Tab\n, \nCreate Tab\n, and \nNews Tab\n are \nstill being worked on\n.\n\n\nThe \nFavorites Tab\n will allow you to add \ncolumns\n and \ngroups\n to add your favorite\n\nsolutions\n, \nprojects\n, \nfolders\n etc, in a much more \nflexible way\n than just\n\npinned tabs\n.\nHopefully, after a while, you won't even need to use pinned tabs anymore.\n\n\nThe \nCreate Tab\n aims to provide a \ntree view-based\n replacement for VS 2019's hated new\n\nsearch-based\n \nCreate a New Project\n dialog, baked right into your start page.\n\n\nThe \nNews Tab\n will have some pre-populated RSS feeds of developer-centric blogs etc.\nPlus, in the future you'll be able to add your own RSS feeds to the tab as well.\nSort of like a mini RSS application embedded in your start page.\n\n\n\n\nBring Back Start Page!\n\u00b6\n\n\nWhen Visual Studio 2019 was released, many developers were dismayed to find that the \nStart Page\n\nhad been completely replaced by the new \nStart Window\n (a big \nmodal\n dialog window, with no room\nfor \nDeveloper News\n).\n\n\n\n\nIntroducing Start Page+\n\u00b6\n\n\nSo many of you, in \nso many posts\n in the \nDeveloper Community forum\n, \npleaded\n for Microsoft to bring back the Visual Studio 2017\n\nStart Page\n, and unfortunately those pleas fell on deaf ears.\n\n\nWell, you asked and now \nStart Page+\n delivers!\n\n\nThe \nStart Page+\n extension adds a new \nStart Page\n that is a \ndockable tool window\n,\nnot a \nmodal\n window.\nIt's been written \nfrom the ground up\n, and doesn't rely on any of Visual Studio's \ninternal\n code.\nSo it can't be taken  away by Microsoft. And it's open source!\n\n\nTo open the new \nStart Page+\n window:\n\n\n\n\nmake sure Visual Studio's \nStart Window\n is disabled\n\n\n\n\nin \nTools\n | \nOptions\n | \nEnvironment\n | \nStartup\n select \nEmpty Environment\n\n\n\n\n\n\n\n\nselect \nView\n | \nStart Page+\n\n\n\n\n\n\n\n\nThe \nStart Page+\n window is accessed from the \nView\n menu, because it makes sense.\nIt's also easy to remember because you think \"I want to \nview\n the start page\",\nyou don't think \"I want to \nfile\n the start page.\n\n\nThe Visual Studio 2010-2017's \nStart Page\n was always in the \nView\n menu,\nuntil Microsoft moved it to the \nFile\n menu, which never made any sense.\n\n\nSupport the Project\n\u00b6\n\n\nIf \nStart Page+\n has saved you time and hassle, please come back and show your support:\n\n\n\n\nyou could \nrate \nStart Page+\n (only takes a couple of seconds)\n\n\nor \nreview \nStart Page+\n (help others benefit from your experience)\n\n\nor \nshout me a coke\n (I don't drink coffee or beer lol)",
+            "text": "Bring back Start Page+!\n\n\n\n\n\n\n\n\n\n\n\n\nYou can download this extension \nfrom the Visual Studio Marketplace\n\n\n\n\nPlease understand that this is a \npreview release\n.\n\n\nWhile the features of the \nStart Tab\n are functional in this preview (I'm using it myself),\nthere are still some quirks that need to be ironed out, plus a number of missing features that still\nneed to be added.\nI just wanted to get this up to the marketplace as quickly as I could, so people can see it and\nstart to use it.\n\n\nFeedback is welcome!\n But please use the GitHub repo's \nIssues page\n to\nprovide it, \ndon't\n add your ideas and/or feeback to any blog post where you might have\ndiscovered \nStart Page+\n.\nI won't be able to address your feedback in those posts, as it's not fair to the OP to have their\npost highjacked.\n\n\nIf you want to know more about \nStart Page+\n the \nwebsite\n is where I'll\nadd information about \nknown issues\n, and a \nroadmap\n of what's coming.\nPlease \nconsult the website\n first before adding issues for \nnew features\n,\n\nfeature enhancements\n etc.\nIf you don't see your desired feature or enhancement mentioned on the website,\nthen by all means go ahead and add an issue for it.\nThe same thing goes for any \nbugs\n you might run across.\n\n\nThe \nFavorites Tab\n, \nCreate Tab\n, and \nNews Tab\n are \nstill being worked on\n.\n\n\nThe \nFavorites Tab\n will allow you to add \ncolumns\n and \ngroups\n to add your favorite\n\nsolutions\n, \nprojects\n, \nfolders\n etc, in a much more \nflexible way\n than just\n\npinned tabs\n.\nHopefully, after a while, you won't even need to use pinned tabs anymore.\n\n\nThe \nCreate Tab\n aims to provide a \ntree view-based\n replacement for VS 2019's hated new\n\nsearch-based\n \nCreate a New Project\n dialog, baked right into your start page.\n\n\nThe \nNews Tab\n will have some pre-populated RSS feeds of developer-centric blogs etc.\nPlus, in the future you'll be able to add your own RSS feeds to the tab as well.\nSort of like a mini RSS application embedded in your start page.\n\n\n\n\nBring Back Start Page!\n\u00b6\n\n\nWhen Visual Studio 2019 was released, many developers were dismayed to find that the \nStart Page\n\nhad been completely replaced by the new \nStart Window\n (a big \nmodal\n dialog window, with no room\nfor \nDeveloper News\n).\n\n\n\n\nIntroducing Start Page+\n\u00b6\n\n\nSo many of you, in \nso many posts\n in the \nDeveloper Community forum\n, \npleaded\n for Microsoft to bring back the Visual Studio 2017\n\nStart Page\n, and unfortunately those pleas fell on deaf ears.\n\n\nWell, you asked and now \nStart Page+\n delivers!\n\n\nThe \nStart Page+\n extension adds a new \nStart Page\n that is a \ndockable tool window\n,\nnot a \nmodal\n window.\nIt's been written \nfrom the ground up\n, and doesn't rely on any of Visual Studio's \ninternal\n code.\nSo it can't be taken  away by Microsoft. And it's open source!\n\n\nTo open the new \nStart Page+\n window:\n\n\n\n\nmake sure Visual Studio's \nStart Window\n is disabled\n\n\n\n\nin \nTools\n | \nOptions\n | \nEnvironment\n | \nStartup\n select \nEmpty Environment\n\n\n\n\n\n\n\n\nselect \nView\n | \nStart Page+\n\n\n\n\n\n\n\n\nThe Start Page+ window is accessed from the \nView\n menu, because it makes sense.\nIt's also easy to remember because you think \"I want to \nview\n the start page\",\nyou don't think \"I want to \nfile\n the start page.\n\n\nThe Visual Studio 2010-2017's \nStart Page\n was always in the \nView\n menu,\nuntil Microsoft moved it to the \nFile\n menu, which never made any sense.\n\n\nSupport the Project\n\u00b6\n\n\nIf \nStart Page+\n has saved you time and hassle, please come back and show your support:\n\n\n\n\nyou could \nrate \nStart Page+\n (only takes a couple of seconds)\n\n\nor \nreview \nStart Page+\n (help others benefit from your experience)\n\n\nor \nshout me a coke\n (I don't drink coffee or beer lol)",
             "title": "Overview"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "location": "/#introducing-start-page",
-            "text": "So many of you, in  so many posts  in the  Developer Community forum ,  pleaded  for Microsoft to bring back the Visual Studio 2017 Start Page , and unfortunately those pleas fell on deaf ears.  Well, you asked and now  Start Page+  delivers!  The  Start Page+  extension adds a new  Start Page  that is a  dockable tool window ,\nnot a  modal  window.\nIt's been written  from the ground up , and doesn't rely on any of Visual Studio's  internal  code.\nSo it can't be taken  away by Microsoft. And it's open source!  To open the new  Start Page+  window:   make sure Visual Studio's  Start Window  is disabled   in  Tools  |  Options  |  Environment  |  Startup  select  Empty Environment     select  View  |  Start Page+     The  Start Page+  window is accessed from the  View  menu, because it makes sense.\nIt's also easy to remember because you think \"I want to  view  the start page\",\nyou don't think \"I want to  file  the start page.  The Visual Studio 2010-2017's  Start Page  was always in the  View  menu,\nuntil Microsoft moved it to the  File  menu, which never made any sense.",
+            "text": "So many of you, in  so many posts  in the  Developer Community forum ,  pleaded  for Microsoft to bring back the Visual Studio 2017 Start Page , and unfortunately those pleas fell on deaf ears.  Well, you asked and now  Start Page+  delivers!  The  Start Page+  extension adds a new  Start Page  that is a  dockable tool window ,\nnot a  modal  window.\nIt's been written  from the ground up , and doesn't rely on any of Visual Studio's  internal  code.\nSo it can't be taken  away by Microsoft. And it's open source!  To open the new  Start Page+  window:   make sure Visual Studio's  Start Window  is disabled   in  Tools  |  Options  |  Environment  |  Startup  select  Empty Environment     select  View  |  Start Page+     The Start Page+ window is accessed from the  View  menu, because it makes sense.\nIt's also easy to remember because you think \"I want to  view  the start page\",\nyou don't think \"I want to  file  the start page.  The Visual Studio 2010-2017's  Start Page  was always in the  View  menu,\nuntil Microsoft moved it to the  File  menu, which never made any sense.",
             "title": "Introducing Start Page+"
         },
         {
@@ -52,12 +52,32 @@
         },
         {
             "location": "/features/",
-            "text": "To display the new \nStart Page+\n window:\n\n\n\n\nclick \nView\n | \nStart Page+\n\n\n\n\n(more in-depth documentation is still being worked on)",
+            "text": "To display the new \nStart Page+\n window:\n\n\n\n\nclick \nView\n | \nStart Page+\n\n\n\n\nOptions\n\u00b6\n\n\n\n\nEnable 'Start Page+'\n\u00b6\n\n\nThis setting allows the whole set of \nStart Page+\n features to be turned off together.\n\n\nVersion Number\n\u00b6\n\n\nDisplays then version number of \nStart Page+\n that's currently installed.\n\n\nEnable 'Open Links in VS'\n\u00b6\n\n\nThe default value is \ntrue\n, meaning that any item link that is clicked will be opened in a window\ninside of Visual Studio.\n\n\nA value of \nfalse\n will result in the link being opened in your default browser.",
             "title": "Features"
         },
         {
+            "location": "/features/#options",
+            "text": "",
+            "title": "Options"
+        },
+        {
+            "location": "/features/#enable-start-page",
+            "text": "This setting allows the whole set of  Start Page+  features to be turned off together.",
+            "title": "Enable 'Start Page+'"
+        },
+        {
+            "location": "/features/#version-number",
+            "text": "Displays then version number of  Start Page+  that's currently installed.",
+            "title": "Version Number"
+        },
+        {
+            "location": "/features/#enable-open-links-in-vs",
+            "text": "The default value is  true , meaning that any item link that is clicked will be opened in a window\ninside of Visual Studio.  A value of  false  will result in the link being opened in your default browser.",
+            "title": "Enable 'Open Links in VS'"
+        },
+        {
             "location": "/changelog/",
-            "text": "Public Releases\n\u00b6\n\n\nv0.12.1 - 2019-09-15\n\u00b6\n\n\n\n\nPreview 1\n\n\nadded functional 'Start' tab\n\n\n\n\nInternal Releases\n\u00b6\n\n\nv0.1 - v0.10\n\u00b6\n\n\n\n\nadded bare tool window (View | Start Page+)",
+            "text": "Public Releases\n\u00b6\n\n\nInternal Releases\n\u00b6\n\n\nv0.1 - v0.9\n\u00b6\n\n\n\n\nadded bare tool window (View | Start Page+)",
             "title": "Changelog"
         },
         {
@@ -66,19 +86,14 @@
             "title": "Public Releases"
         },
         {
-            "location": "/changelog/#v0121-2019-09-15",
-            "text": "Preview 1  added functional 'Start' tab",
-            "title": "v0.12.1 - 2019-09-15"
-        },
-        {
             "location": "/changelog/#internal-releases",
             "text": "",
             "title": "Internal Releases"
         },
         {
-            "location": "/changelog/#v01-v010",
+            "location": "/changelog/#v01-v09",
             "text": "added bare tool window (View | Start Page+)",
-            "title": "v0.1 - v0.10"
+            "title": "v0.1 - v0.9"
         },
         {
             "location": "/roadmap/",
@@ -99,16 +114,6 @@
             "location": "/roadmap/#bug-fixes",
             "text": "Once bug fixes have been fully tested, they'll be included in the  next public release .   There are no bug fixes that need testing at the moment",
             "title": "Bug Fixes"
-        },
-        {
-            "location": "/known-issues/",
-            "text": "Incorrect Behavior\n\u00b6\n\n\nThis will be where I'll list any features that have quirks that need to ber worked out.",
-            "title": "Known Issues"
-        },
-        {
-            "location": "/known-issues/#incorrect-behavior",
-            "text": "This will be where I'll list any features that have quirks that need to ber worked out.",
-            "title": "Incorrect Behavior"
         }
     ]
 }
