@@ -1,23 +1,21 @@
 ﻿using GalaSoft.MvvmLight;
-using Luminous.Code.VisualStudio.Packages;
 
 namespace StartPagePlus.UI.ViewModels
 {
-    using System.Collections.ObjectModel;
-    using Options.Pages;
+    using Observables;
 
     public class ColumnViewModel : ViewModelBase
     {
-        private static GeneralDialogPage generalOptions;
+        private bool isVisible = true;
 
         public string Heading { get; set; }
 
-        public bool IsVisible { get; set; }
+        public bool IsVisible
+        {
+            get => isVisible;
+            set => Set(ref isVisible, value);
+        }
 
-        public static GeneralDialogPage GeneralOptions
-            => generalOptions ?? (generalOptions = AsyncPackageBase.GetDialogPage<GeneralDialogPage>());
-
-        public ObservableCollection<CommandViewModel> Commands { get; set; }
-
+        public ObservableCommandList Commands { get; set; }
     }
 }
