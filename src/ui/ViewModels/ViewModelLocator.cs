@@ -27,13 +27,14 @@ namespace StartPagePlus.UI.ViewModels
 
             container.Register<IRecentItemDataService, RecentItemDataService>();
             container.Register<IRecentItemActionService, RecentItemActionService>();
+            container.Register<IRecentItemCommandService, RecentItemCommandService>();
 
             container.Register<IStartActionDataService, StartActionDataService>();
+            container.Register<IStartActionCommandService, StartActionCommandService>();
 
             container.Register<INewsItemDataService, NewsItemDataService>();
             container.Register<INewsItemActionService, NewsItemActionService>();
-
-
+            container.Register<INewsItemCommandService, NewsItemCommandService>();
         }
 
         private void RegisterViewModels(SimpleIoc container)
