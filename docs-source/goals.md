@@ -49,7 +49,7 @@ I've tried to capture the pain points, features, requests, feedback etc that hav
 [*Pratik Nadagouda [MSFT]*](https://developercommunity.visualstudio.com/users/29414/02b8ac8a-4fc4-6f74-a445-14bad59e8c57.html)
 
 - [Bring back the 'Developer News' on startup](https://developercommunity.visualstudio.com/idea/399833/bring-back-the-developer-news-on-startup.html) -
-[*Steven Rasmussen*](https://developercommunity.visualstudio.com/users/54667/5de3db14-d040-6184-b69d-f44778f17fbd.html) Dec 05 2018
+[*Steven Rasmussen*](https://developercommunity.visualstudio.com/users/54667/5de3db14-d040-6184-b69d-f44778f17fbd.html) *Dec 05 2018*
 
 - *[Start window no longer show projects grouped by time interval](https://developercommunity.visualstudio.com/idea/443553/start-window-no-longer-show-projects-grouped-by-ti.html)
 
@@ -61,7 +61,7 @@ I've tried to capture the pain points, features, requests, feedback etc that hav
 
 - https://developercommunity.visualstudio.com/content/idea/477071/vs2019-allow-start-page-at-startup.html
 
-## Comments
+## Start Page+
 
 - "*Hi Yann, that looks fabulous. If it can be smoothly integrated into VS2019 then it will be a winner and I'll use it for sure!* " - [*Greg Keogh*](https://developercommunity.visualstudio.com/users/144315/8362ccc1-c1be-42b7-8f5d-140e7991dd87.html)
 
@@ -71,7 +71,11 @@ I've tried to capture the pain points, features, requests, feedback etc that hav
 
 - "*Hi Yann, So far looks great.*" - 
 [Pew Pew](https://developercommunity.visualstudio.com/users/45966/5e5fd24e-ea48-4eca-939e-1359dcd807ad.html)
+
+## Developer News
+
 - "*View | Developer News sounds perfect to me :-)*" -
 [Eric Harmon](https://developercommunity.visualstudio.com/users/2521/458c5ba8-ba60-4841-b3bc-978ac1e8cd5b.html)
+
 - "*I agree that "View -> Developer News" feels more intuitive than going to the File menu*" -
 [Ken Ross [MSFT]](https://developercommunity.visualstudio.com/users/145472/a436d348-6f1c-6d0f-937a-a9f3b19f46e1.html)
