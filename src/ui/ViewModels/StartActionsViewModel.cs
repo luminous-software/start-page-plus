@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using GalaSoft.MvvmLight.Command;
 
 namespace StartPagePlus.UI.ViewModels
 {
@@ -9,17 +8,23 @@ namespace StartPagePlus.UI.ViewModels
     {
         private const string HEADING = "Get Started";
 
-        private ObservableCollection<StartActionViewModel> items;
+        private ObservableCollection<StartActionViewModel> items = new ObservableCollection<StartActionViewModel>();
 
-        public StartActionsViewModel(IStartActionDataService dataService)
+        public StartActionsViewModel(IStartActionDataService dataService, IStartActionCommandService commandService)
         {
             DataService = dataService;
+            CommandService = commandService;
+
             Heading = HEADING;
-            Items = DataService.GetItems();
-            Commands = GetCommands();
             IsVisible = true;
+
+            GetCommands();
+            Refresh();
         }
+
         public IStartActionDataService DataService { get; }
+
+        public IStartActionCommandService CommandService { get; }
 
         public ObservableCollection<StartActionViewModel> Items
         {
@@ -27,18 +32,16 @@ namespace StartPagePlus.UI.ViewModels
             set => Set(ref items, value);
         }
 
-        private ObservableCollection<CommandViewModel> GetCommands()
-            => new ObservableCollection<CommandViewModel>
-            {
-                new CommandViewModel
-                {
-                    Name = "Continue With No Code",
-                    Command = new RelayCommand(ExecuteContinue, true),
-                    Enabled = false
-                }
-            };
+        private void GetCommands()
+            => Commands = CommandService.GetCommands(/*Continue,*/ Refresh);
 
-        private void ExecuteContinue()
+        private void Continue()
         { }
+
+        private void Refresh()
+        {
+            Items.Clear();
+            Items = DataService.GetItems();
+        }
     }
 }

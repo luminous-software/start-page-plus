@@ -12,14 +12,27 @@ namespace StartPagePlus.UI.Views
         {
             InitializeComponent();
 
-            var mainViewModel = ViewModelLocator.MainViewModel;
-
             MainViewModel.RegistryRoot = registryRoot;
-            DataContext = mainViewModel;
 
+            DataContext = ViewModelLocator.MainViewModel;
         }
 
         protected override void OnInitialized(EventArgs e)
             => base.OnInitialized(e);
+
+        //private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    var tabControl = sender as TabControl;
+        //    var selectedViewModel = tabControl?.SelectedContent;
+
+        //    if (selectedViewModel is RecentItemsViewModel recentItems)
+        //    {
+        //        var filterText = recentItems.FindName("FilterText") as TextBox;
+
+        //        Keyboard.Focus(filterText);
+        //    }
+
+        //    e.Handled = true;
+        //}
     }
 }

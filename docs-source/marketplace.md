@@ -102,13 +102,14 @@ until Microsoft moved it to the **File** menu, which never made any sense.
 
 You can read more about _Start Page+_ on its website:
 
-[Overview][website-url] **|** [Getting Started][getting-started-url] **|** [Features][features-url] **|** [Changelog][changelog-url] **|** [Roadmap][roadmap-url]
+[Overview][website-url] **|** [Getting Started][getting-started-url] **|** [Features][features-url] **|** [Changelog][changelog-url] **|** [Roadmap][roadmap-url] **|** [Known Issues][known-issues-url]
 
 [website-url]: https://luminous-software.solutions/start-page-plus
 [getting-started-url]: https://luminous-software.solutions/start-page-plus/getting-started
 [features-url]: https://luminous-software.solutions/start-page-plus/features
 [changelog-url]: https://luminous-software.solutions/start-page-plus/changelog
 [roadmap-url]: https://luminous-software.solutions/start-page-plus/roadmap
+[known-issues-url]: https://luminous-software.solutions/start-page-plus/known-issues
 
 ## Support the Project
 

@@ -35,6 +35,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
@@ -54,6 +55,7 @@
     <Compile Include="Constants\GuidConstants.cs" />
     <Compile Include="Converters\BoolToPinConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\CommandsToVisibleCountString.cs" />
     <Compile Include="Converters\ConverterMarkupExtension.cs" />
     <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
     <Compile Include="Converters\DummyConverter.cs" />
@@ -65,11 +67,17 @@
     <Compile Include="Enums\RecentItemType.cs" />
     <Compile Include="Enums\RecentItemTypes.cs" />
     <Compile Include="Interfaces\INewsItemActionService.cs" />
+    <Compile Include="Interfaces\INewsItemCommandService.cs" />
     <Compile Include="Interfaces\INewsItemDataService.cs" />
     <Compile Include="Interfaces\IRecentItemActionService.cs" />
+    <Compile Include="Interfaces\IRecentItemCommandService.cs" />
     <Compile Include="Interfaces\IRecentItemDataService.cs" />
+    <Compile Include="Interfaces\IStartActionCommandService.cs" />
     <Compile Include="Interfaces\IStartActionDataService.cs" />
     <Compile Include="Interfaces\IStartAction.cs" />
+    <Compile Include="Observables\ObservableCommandList.cs" />
+    <Compile Include="Observables\ObservableList.cs" />
+    <Compile Include="Observables\ObservedCollection.cs" />
     <Compile Include="Models\RecentItem.cs" />
     <Compile Include="Models\RecentItemProperties.cs" />
     <Compile Include="Models\RecentItemValue.cs" />
@@ -77,9 +85,12 @@
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Services\NewsItemActionService.cs" />
     <Compile Include="Services\DateTimeService.cs" />
+    <Compile Include="Services\NewsItemCommandService.cs" />
     <Compile Include="Services\NewsItemDataService.cs" />
     <Compile Include="Services\RecentItemActionService.cs" />
+    <Compile Include="Services\RecentItemCommandService.cs" />
     <Compile Include="Services\RecentItemDataService.cs" />
+    <Compile Include="Services\StartActionCommandService.cs" />
     <Compile Include="Services\StartActionDataService.cs" />
     <Compile Include="StartPagePlusWindow.cs" />
     <Compile Include="ViewModels\ColumnViewModel.cs" />
