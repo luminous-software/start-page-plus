@@ -12,7 +12,7 @@ namespace StartPagePlus.UI.Views
 
             var viewModel = ViewModelLocator.RecentItemsViewModel;
 
-            viewModel.ExecuteRefresh();
+            viewModel.Refresh();
 
             DataContext = viewModel;
 

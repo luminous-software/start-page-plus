@@ -60,22 +60,21 @@
                 Text="{Binding Heading}"
                 />
 
-            <TextBox x:Name="Filter"
+            <TextBox x:Name="FilterText"
                 Margin="10,0,10,6"
-                Background="Transparent"
+                Background="{DynamicResource FilterBackgroundBrush}"
                 DockPanel.Dock="Top"
                 FontSize="14"
                 Foreground="{DynamicResource ColumnHeadingBrush}"
-                Text="{Binding Filter}"
+                Text="{Binding Filter, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
                 Visibility="{Binding Filtered, Converter={c:BoolToVisibilityConverter}}"
                 />
 
             <ItemsControl x:Name="Commands"
                 Style="{StaticResource ColumnCommandsStyle}"
                 />
-
             <ListView x:Name="RecentItemsListView"
-                ItemContainerStyle="{StaticResource ColumnCommandContainerStyle}"
+                ItemContainerStyle="{StaticResource ColumnListItemContainerStyle}"
                 ItemsSource="{Binding Source={StaticResource GroupedItems}}"
                 Style="{StaticResource ColumnListStyle}"
                 >
