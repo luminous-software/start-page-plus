@@ -67,8 +67,8 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
         />
 
-    <SolidColorBrush x:Key="FilterBackgroundBrushBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+    <SolidColorBrush x:Key="FilterBackgroundBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AccentDarkKey}}"
         />
 
     <!--  Commands  -->
