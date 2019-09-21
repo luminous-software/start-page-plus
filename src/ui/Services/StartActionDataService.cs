@@ -5,19 +5,22 @@ namespace StartPagePlus.UI.Services
     using Interfaces;
     using ViewModels;
 
+
     public class StartActionDataService : IStartActionDataService
     {
-        public StartActionDataService()
-        { }
+        public StartActionDataService(IVisualStudioService vsService) => VsService = vsService;
+
+        public IVisualStudioService VsService { get; }
 
         public ObservableCollection<StartActionViewModel> GetItems()
         {
             var items = new ObservableCollection<StartActionViewModel>
             {
-                new GetCodeViewModel(),
-                new OpenFolderViewModel(),
-                new OpenProjectViewModel(),
-                new CreateProjectViewModel()
+                new GetCodeViewModel(VsService),
+                new OpenFolderViewModel(VsService),
+                new OpenProjectViewModel(VsService),
+                new CreateProjectViewModel(VsService),
+                new ContinueWithoutCodeViewModel(VsService)
             };
 
             return items;

@@ -2,9 +2,11 @@
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Interfaces;
+
     public class OpenFolderViewModel : StartActionViewModel
     {
-        public OpenFolderViewModel()
+        public OpenFolderViewModel(IVisualStudioService vsService) : base(vsService)
         {
             Moniker = KnownMonikers.OpenFolder;
             Name = "Open a local folder";
@@ -12,6 +14,6 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         protected override void ExecuteClick()
-            => Dte?.ExecuteCommand("File.OpenFolder");
+            => VisualStudioService.ExecuteCommand("File.OpenFolder");
     }
 }

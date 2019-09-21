@@ -9,20 +9,14 @@ namespace StartPagePlus.UI.Services
 
     public class StartActionCommandService : IStartActionCommandService
     {
-        public ObservableCommandList GetCommands(/*Action continueWithNoCode,*/ Action refresh)
+        public ObservableCommandList GetCommands(Action openWebsite)
             => new ObservableCommandList
             {
-                //new CommandViewModel
-                //{
-                //    Name = "Continue With No Code",
-                //    Command = new RelayCommand(continueWithNoCode, true),
-                //    IsVisible = true
-                //},
                 new CommandViewModel
                 {
-                    Name = "Refresh",
-                    Command = new RelayCommand(refresh, true),
-                    IsVisible = false
+                    Name = $"{Vsix.Name} v{Vsix.Version}",
+                    Command = new RelayCommand(openWebsite, true),
+                    IsVisible = true
                 }
             };
     }
