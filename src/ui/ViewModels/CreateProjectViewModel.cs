@@ -2,9 +2,11 @@
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Interfaces;
+
     public class CreateProjectViewModel : StartActionViewModel
     {
-        public CreateProjectViewModel()
+        public CreateProjectViewModel(IVisualStudioService vsService) : base(vsService)
         {
             Moniker = KnownMonikers.AddDocumentGroup;
             Name = "Create a new project";
@@ -12,6 +14,6 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         protected override void ExecuteClick()
-            => Dte?.ExecuteCommand("File.NewProject");
+            => VisualStudioService.ExecuteCommand("File.NewProject");
     }
 }

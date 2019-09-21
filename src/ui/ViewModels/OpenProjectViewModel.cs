@@ -2,9 +2,11 @@
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Interfaces;
+
     public class OpenProjectViewModel : StartActionViewModel
     {
-        public OpenProjectViewModel()
+        public OpenProjectViewModel(IVisualStudioService vsService) : base(vsService)
         {
             Moniker = KnownMonikers.OpenDocumentGroup;
             Name = "Open a project or solution";
@@ -12,6 +14,6 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         protected override void ExecuteClick()
-            => Dte?.ExecuteCommand("File.OpenProject");
+            => VisualStudioService.ExecuteCommand("File.OpenProject");
     }
 }
