@@ -21,12 +21,12 @@ namespace StartPagePlus.UI.Views
 
             //https://joshsmithonwpf.wordpress.com/2007/06/12/searching-for-items-in-a-listbox/
 
-            var view = CollectionViewSource.GetDefaultView(viewModel.Items);
+            var view = (ListCollectionView)CollectionViewSource.GetDefaultView(viewModel.Items);
 
-            view.GroupDescriptions.Add(new PropertyGroupDescription { PropertyName = "PeriodType" });
+            view.GroupDescriptions.Add(new PropertyGroupDescription("PeriodType"));
 
-            view.SortDescriptions.Add(new SortDescription { PropertyName = "PeriodType", Direction = ListSortDirection.Ascending });
-            view.SortDescriptions.Add(new SortDescription { PropertyName = "Date", Direction = ListSortDirection.Descending });
+            view.SortDescriptions.Add(new SortDescription("PeriodType", ListSortDirection.Ascending));
+            view.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Descending));
 
             var filterText = "";
 

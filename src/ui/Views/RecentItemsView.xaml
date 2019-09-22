@@ -28,7 +28,6 @@
 
     <Border Style="{StaticResource ColumnStyle}">
         <DockPanel x:Name="LayoutRoot"
-            FocusManager.FocusedElement="{Binding FilterTextBox}"
             LastChildFill="true"
             >
             <TextBlock x:Name="Heading"
@@ -52,6 +51,7 @@
                 />
 
             <ListView x:Name="RecentItemsListView"
+                FocusManager.FocusedElement="{Binding FilterTextBox}"
                 ItemContainerStyle="{StaticResource ColumnListItemContainerStyle}"
                 ItemsSource="{Binding Items}"
                 Style="{StaticResource ColumnListStyle}"
