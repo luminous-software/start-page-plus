@@ -28,7 +28,7 @@
 
     <Border Style="{StaticResource ColumnStyle}">
         <DockPanel x:Name="LayoutRoot"
-            FocusManager.FocusedElement="{Binding FilterText}"
+            FocusManager.FocusedElement="{Binding FilterTextBox}"
             LastChildFill="true"
             >
             <TextBlock x:Name="Heading"
@@ -37,13 +37,13 @@
                 Text="{Binding Heading}"
                 />
 
-            <TextBox x:Name="FilterText"
+            <TextBox x:Name="FilterTextBox"
                 Margin="10,0,10,6"
                 Background="{DynamicResource FilterBackgroundBrush}"
                 DockPanel.Dock="Top"
                 FontSize="14"
                 Foreground="{DynamicResource ColumnHeadingBrush}"
-                Text="{Binding Filter, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
+                Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
                 Visibility="{Binding Filtered, Converter={c:BoolToVisibilityConverter}}"
                 />
 

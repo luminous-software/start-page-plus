@@ -1,9 +1,10 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace StartPagePlus.UI.Views
 {
-    using System.Windows.Data;
     using ViewModels;
 
     public partial class RecentItemsView : UserControl
@@ -27,14 +28,32 @@ namespace StartPagePlus.UI.Views
             view.SortDescriptions.Add(new SortDescription { PropertyName = "PeriodType", Direction = ListSortDirection.Ascending });
             view.SortDescriptions.Add(new SortDescription { PropertyName = "Date", Direction = ListSortDirection.Descending });
 
-            new TextSearchFilter(view, FilterText);
+            var filterText = "";
 
-            RecentItemsListView.SelectionChanged += (sender, e) =>
+            view.Filter = (object obj) =>
             {
-                var listView = (ListView)sender;
+                if (string.IsNullOrEmpty(filterText))
+                    return true;
 
-                listView.SelectedItem = null;
+                var item = obj as RecentItemViewModel;
+                var name = item?.Name;
+
+                if (string.IsNullOrEmpty(name))
+                    return false;
+
+                var index = name.IndexOf(filterText, 0, StringComparison.InvariantCultureIgnoreCase);
+
+                return (index > -1);
             };
+
+            FilterTextBox.TextChanged += (object sender, TextChangedEventArgs e) =>
+            {
+                filterText = FilterTextBox.Text;
+                view.Refresh();
+            };
+
+            RecentItemsListView.SelectionChanged += (sender, e)
+                => RecentItemsListView.SelectedItem = null;
         }
     }
 }
