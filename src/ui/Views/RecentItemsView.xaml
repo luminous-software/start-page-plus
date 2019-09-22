@@ -23,35 +23,12 @@
             <utilities:BrushToColorConverter x:Key="BrushToColorConverter"/>
 
             <!--  https://stackoverflow.com/questions/3894195/wpf-collectionviewsource-grouping  -->
-
-            <CollectionViewSource x:Key="GroupedItems"
-                Source="{Binding Items}"
-                >
-                <CollectionViewSource.SortDescriptions>
-                    <!--  this will sort groups  -->
-                    <scm:SortDescription
-                        Direction="Ascending"
-                        PropertyName="PeriodType"
-                        />
-
-                    <!--  this will sort items  -->
-                    <scm:SortDescription
-                        Direction="Descending"
-                        PropertyName="Date"
-                        />
-                </CollectionViewSource.SortDescriptions>
-
-                <CollectionViewSource.GroupDescriptions>
-                    <dat:PropertyGroupDescription x:Name="GroupByPeriodType"
-                        PropertyName="PeriodType"
-                        />
-                </CollectionViewSource.GroupDescriptions>
-            </CollectionViewSource>
         </ResourceDictionary>
     </UserControl.Resources>
 
     <Border Style="{StaticResource ColumnStyle}">
         <DockPanel x:Name="LayoutRoot"
+            FocusManager.FocusedElement="{Binding FilterText}"
             LastChildFill="true"
             >
             <TextBlock x:Name="Heading"
@@ -73,9 +50,10 @@
             <ItemsControl x:Name="Commands"
                 Style="{StaticResource ColumnCommandsStyle}"
                 />
+
             <ListView x:Name="RecentItemsListView"
                 ItemContainerStyle="{StaticResource ColumnListItemContainerStyle}"
-                ItemsSource="{Binding Source={StaticResource GroupedItems}}"
+                ItemsSource="{Binding Items}"
                 Style="{StaticResource ColumnListStyle}"
                 >
                 <ListView.GroupStyle>
