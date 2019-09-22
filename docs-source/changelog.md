@@ -1,5 +1,9 @@
 ## Public Releases
 
+### v0.12.2
+- Preview 2
+- added filtering to Recent Items
+
 ### v0.12.1 - 2019-09-15
 - Preview 1
 - added functional 'Start' tab

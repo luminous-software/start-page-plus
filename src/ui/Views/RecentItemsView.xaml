@@ -23,30 +23,6 @@
             <utilities:BrushToColorConverter x:Key="BrushToColorConverter"/>
 
             <!--  https://stackoverflow.com/questions/3894195/wpf-collectionviewsource-grouping  -->
-
-            <CollectionViewSource x:Key="GroupedItems"
-                Source="{Binding Items}"
-                >
-                <CollectionViewSource.SortDescriptions>
-                    <!--  this will sort groups  -->
-                    <scm:SortDescription
-                        Direction="Ascending"
-                        PropertyName="PeriodType"
-                        />
-
-                    <!--  this will sort items  -->
-                    <scm:SortDescription
-                        Direction="Descending"
-                        PropertyName="Date"
-                        />
-                </CollectionViewSource.SortDescriptions>
-
-                <CollectionViewSource.GroupDescriptions>
-                    <dat:PropertyGroupDescription x:Name="GroupByPeriodType"
-                        PropertyName="PeriodType"
-                        />
-                </CollectionViewSource.GroupDescriptions>
-            </CollectionViewSource>
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -60,22 +36,24 @@
                 Text="{Binding Heading}"
                 />
 
-            <TextBox x:Name="FilterText"
+            <TextBox x:Name="FilterTextBox"
                 Margin="10,0,10,6"
                 Background="{DynamicResource FilterBackgroundBrush}"
                 DockPanel.Dock="Top"
                 FontSize="14"
                 Foreground="{DynamicResource ColumnHeadingBrush}"
-                Text="{Binding Filter, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
+                Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
                 Visibility="{Binding Filtered, Converter={c:BoolToVisibilityConverter}}"
                 />
 
             <ItemsControl x:Name="Commands"
                 Style="{StaticResource ColumnCommandsStyle}"
                 />
+
             <ListView x:Name="RecentItemsListView"
+                FocusManager.FocusedElement="{Binding FilterTextBox}"
                 ItemContainerStyle="{StaticResource ColumnListItemContainerStyle}"
-                ItemsSource="{Binding Source={StaticResource GroupedItems}}"
+                ItemsSource="{Binding Items}"
                 Style="{StaticResource ColumnListStyle}"
                 >
                 <ListView.GroupStyle>
