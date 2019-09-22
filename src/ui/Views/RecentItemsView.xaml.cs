@@ -18,6 +18,8 @@ namespace StartPagePlus.UI.Views
 
             DataContext = viewModel;
 
+            //https://joshsmithonwpf.wordpress.com/2007/06/12/searching-for-items-in-a-listbox/
+
             var view = CollectionViewSource.GetDefaultView(viewModel.Items);
 
             view.GroupDescriptions.Add(new PropertyGroupDescription { PropertyName = "PeriodType" });
