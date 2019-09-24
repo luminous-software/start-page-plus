@@ -1,6 +1,6 @@
 ## Public Releases
 
-### v0.12.2
+### v0.13.2
 - Preview 2
 - added filtering to Recent Items
 - added clear filter button
