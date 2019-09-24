@@ -3,8 +3,10 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:c="clr-namespace:StartPagePlus.UI.Converters"
+    xmlns:catalog="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.ImageCatalog"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:dat="clr-namespace:System.Windows.Data;assembly=PresentationFramework"
+    xmlns:grid="clr-namespace:StartPagePlus.UI.AttachedProperties.Grids"
     xmlns:imaging="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.Imaging"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
@@ -36,15 +38,38 @@
                 Text="{Binding Heading}"
                 />
 
-            <TextBox x:Name="FilterTextBox"
+            <Grid
                 Margin="10,0,10,6"
-                Background="{DynamicResource FilterBackgroundBrush}"
                 DockPanel.Dock="Top"
-                FontSize="14"
-                Foreground="{DynamicResource ColumnHeadingBrush}"
-                Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
-                Visibility="{Binding Filtered, Converter={c:BoolToVisibilityConverter}}"
-                />
+                >
+                <TextBox x:Name="FilterTextBox"
+                    Grid.Column="0"
+                    Background="{DynamicResource FilterBackgroundBrush}"
+                    FontSize="14"
+                    Foreground="{DynamicResource ColumnHeadingBrush}"
+                    Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
+                    Visibility="{Binding Filtered, Converter={c:BoolToVisibilityConverter}}"
+                    />
+
+                <Button x:Name="ClearFilterText"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Background="{Binding Background, ElementName=FilterTextBox}"
+                    Click="ClearFilterText_Click"
+                    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                    >
+                    <imaging:CrispImage x:Name="ClearFilterImage"
+                        Width="16"
+                        Height="16"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Moniker="{x:Static catalog:KnownMonikers.Close}"
+                        Stretch="Fill"
+                        />
+                </Button>
+            </Grid>
 
             <ItemsControl x:Name="Commands"
                 Style="{StaticResource ColumnCommandsStyle}"

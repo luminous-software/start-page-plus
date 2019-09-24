@@ -3,6 +3,7 @@
 ### v0.12.2
 - Preview 2
 - added filtering to Recent Items
+- added clear filter button
 
 ### v0.12.1 - 2019-09-15
 - Preview 1
