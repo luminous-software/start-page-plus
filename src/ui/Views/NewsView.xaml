@@ -19,15 +19,26 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Border
-        Margin="10"
-        Style="{StaticResource ColumnStyle}"
-        >
-        <DockPanel LastChildFill="True">
-            <Button
-                Background="Transparent"
-                Content="News View"
-                />
-        </DockPanel>
-    </Border>
+    <StackPanel>
+        <TextBlock
+            Margin="10,10,10,0"
+            FontSize="24"
+            FontWeight="Light"
+            Foreground="{DynamicResource TitleBrush}"
+            Text="The 'News' tab will have pre-populated developer-centric RSS feeds"
+            />
+        <TextBlock
+            Margin="10,10,10,0"
+            FontFamily="Consolas"
+            FontSize="14"
+            FontStyle="Italic"
+            FontWeight="Normal"
+            Foreground="{DynamicResource TitleBrush}"
+            >
+            <Run Text="    *  feed like the Visual Studio blog and twitter feed"/> <LineBreak/>
+            <Run Text="    *  popular blogs from developers like Mads Kristensen"/> <LineBreak/>
+            <Run Text="    *  in the future you'll be able to add your own RSS feeds"/> <LineBreak/>
+            <Run Text="    *  like a mini RSS application embedded in your start page"/> <LineBreak/>
+        </TextBlock>
+    </StackPanel>
 </UserControl>

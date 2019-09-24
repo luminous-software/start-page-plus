@@ -19,15 +19,25 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Border
-        Margin="10"
-        Style="{StaticResource ColumnStyle}"
-        >
-        <DockPanel LastChildFill="True">
-            <Button
-                Background="Transparent"
-                Content="Create View"
-                />
-        </DockPanel>
-    </Border>
+    <StackPanel>
+        <TextBlock
+            Margin="10,10,10,0"
+            FontSize="24"
+            FontWeight="Light"
+            Foreground="{DynamicResource TitleBrush}"
+            Text="The 'Create' tab will give a better option for creating projects"
+            />
+        <TextBlock
+            Margin="10,10,10,0"
+            FontFamily="Consolas"
+            FontSize="14"
+            FontStyle="Italic"
+            FontWeight="Normal"
+            Foreground="{DynamicResource TitleBrush}"
+            >
+            <Run Text="    *  select a project type from a tree view (like in all previous versions of VS)"/> <LineBreak/>
+            <Run Text="    *  offers a replacement for VS 2019's hated search-based 'Create a New Project' dialog"/> <LineBreak/>
+            <Run Text="    *  baked right into your start page (not a modal dialog)"/> <LineBreak/>
+        </TextBlock>
+    </StackPanel>
 </UserControl>
