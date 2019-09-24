@@ -47,6 +47,7 @@
                     Background="{DynamicResource FilterBackgroundBrush}"
                     FontSize="14"
                     Foreground="{DynamicResource ColumnHeadingBrush}"
+                    IsTabStop="true"
                     Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
                     Visibility="{Binding Filtered, Converter={c:BoolToVisibilityConverter}}"
                     />
@@ -58,6 +59,7 @@
                     VerticalContentAlignment="Center"
                     Background="{Binding Background, ElementName=FilterTextBox}"
                     Click="ClearFilterText_Click"
+                    IsTabStop="false"
                     Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
                     >
                     <imaging:CrispImage x:Name="ClearFilterImage"
