@@ -49,7 +49,6 @@
                     Foreground="{DynamicResource ColumnHeadingBrush}"
                     IsTabStop="true"
                     Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
-                    Visibility="{Binding Filtered, Converter={c:BoolToVisibilityConverter}}"
                     />
 
                 <Button x:Name="ClearFilterText"
@@ -126,8 +125,6 @@
                                     DockPanel.Dock="Left"
                                     Moniker="{Binding Moniker}"
                                     />
-                                <!--  Moniker="{Binding ItemType, Converter={c:RecentItemTypeToImageMonikerConverter}}"  -->
-
                                 <StackPanel x:Name="RecentItemCommandContainer"
                                     DockPanel.Dock="Right"
                                     Orientation="Vertical"
