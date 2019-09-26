@@ -10,6 +10,7 @@
     d:DesignWidth="800"
     Background="{DynamicResource ContentBackgroundBrush}"
     mc:Ignorable="d"
+    IsTabStop="False"
     >
     <UserControl.Resources>
         <ResourceDictionary>
@@ -54,15 +55,15 @@
 
             <ItemsControl.Resources>
                 <DataTemplate DataType="{x:Type vm:RecentItemsViewModel}">
-                    <v:RecentItemsView/>
+                    <v:RecentItemsView IsTabStop="False"/>
                 </DataTemplate>
 
                 <DataTemplate DataType="{x:Type vm:StartActionsViewModel}">
-                    <v:StartActionsView/>
+                    <v:StartActionsView IsTabStop="False"/>
                 </DataTemplate>
 
                 <DataTemplate DataType="{x:Type vm:NewsItemsViewModel}">
-                    <v:NewsItemsView/>
+                    <v:NewsItemsView IsTabStop="False"/>
                 </DataTemplate>
             </ItemsControl.Resources>
         </ItemsControl>
