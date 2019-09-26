@@ -32,10 +32,10 @@ namespace StartPagePlus.UI.Services
             var items = new ObservableCollection<RecentItemViewModel>();
 
             using (var regKey = MainViewModel.RegistryRoot
-                .OpenSubKey(ROOT)
-                .OpenSubKey(METADATA)
-                .OpenSubKey(BASELINES)
-                .OpenSubKey(CODE_CONTAINERS)
+                ?.OpenSubKey(ROOT)
+                ?.OpenSubKey(METADATA)
+                ?.OpenSubKey(BASELINES)
+                ?.OpenSubKey(CODE_CONTAINERS)
                 )
             {
                 try
@@ -44,7 +44,13 @@ namespace StartPagePlus.UI.Services
                     {
                         return items;
                     }
-                    var offline = ((string)regKey.GetValue(OFFLINE)).Substring(1);
+
+                    var offline = ((string)regKey.GetValue(OFFLINE))?.Substring(1);
+                    if (offline == null)
+                    {
+                        return items;
+                    }
+
                     var results = JArray.Parse(offline).ToObject<List<RecentItem>>();
                     var today = DateTimeService.Today.Date;
 
