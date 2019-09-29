@@ -40,11 +40,13 @@ namespace StartPagePlus.UI.Services
             {
                 try
                 {
-                    if (regKey == null)
-                    {
+                    if (regKey is null)
                         return items;
-                    }
+
                     var offline = ((string)regKey.GetValue(OFFLINE)).Substring(1);
+                    if (offline is null)
+                        return items;
+
                     var results = JArray.Parse(offline).ToObject<List<RecentItem>>();
                     var today = DateTimeService.Today.Date;
 
@@ -64,6 +66,4 @@ namespace StartPagePlus.UI.Services
             return items;
         }
     }
-
-
 }
