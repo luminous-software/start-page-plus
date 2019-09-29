@@ -4,7 +4,9 @@
 - Preview 2
 - added filtering to Recent Items
 - added clear filter button
-- fixed icon bug	
+- fixed wrong icon
+- fixed unreadable color combinations (thanks to @sevanmarc)
+- fixed NRE when there are no 'recent items'  (thanks to @sevanmarc)
 
 ### v0.12.1 - 2019-09-15
 - Preview 1
