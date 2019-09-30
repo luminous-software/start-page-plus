@@ -6,13 +6,15 @@ using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.Converters
 {
+    using MarkupExtensions;
+
     // usage:
     // xmlns:c="clr-namespace:StartPagePlus.UI.Converters"
 
     //<Image Moniker="{Binding Pinned, Converter={c:BoolToPinConverter Reverse=false}">
 
     [ValueConversion(typeof(bool), typeof(ImageMoniker))]
-    public class BoolToPinMonikerConverter : ConverterMarkupExtension
+    public class BoolToPinMonikerConverter : ValueConverterMarkupExtension
     {
         public bool Reverse { get; set; }
 

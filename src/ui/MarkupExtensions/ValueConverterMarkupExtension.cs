@@ -3,13 +3,14 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Markup;
 
-namespace StartPagePlus.UI.Converters
+namespace StartPagePlus.UI.MarkupExtensions
 {
-    //https://www.broculos.net/2014/04/wpf-how-to-use-converters-without.html
+    // http://putridparrot.com/blog/markupextension/
+    // https://www.broculos.net/2014/04/wpf-how-to-use-converters-without.html
 
-    public abstract class ConverterMarkupExtension : MarkupExtension, IValueConverter
+    public abstract class ValueConverterMarkupExtension : MarkupExtension, IValueConverter
     {
-        public ConverterMarkupExtension()
+        public ValueConverterMarkupExtension()
         { }
 
         public override object ProvideValue(IServiceProvider serviceProvider)

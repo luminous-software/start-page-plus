@@ -10,10 +10,11 @@ using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.Converters
 {
-    using StartPagePlus.UI.Enums;
+    using Enums;
+    using MarkupExtensions;
 
     [ValueConversion(typeof(RecentItemType), typeof(ImageMoniker))]
-    public class RecentItemTypeToImageMonikerConverter : ConverterMarkupExtension
+    public class RecentItemTypeToImageMonikerConverter : ValueConverterMarkupExtension
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
             => (value is RecentItemType itemType)

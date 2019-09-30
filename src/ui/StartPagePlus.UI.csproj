@@ -55,12 +55,13 @@
     <Compile Include="Constants\GuidConstants.cs" />
     <Compile Include="Converters\BoolToPinConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
-    <Compile Include="Converters\CommandsToVisibleCountString.cs" />
-    <Compile Include="Converters\ConverterMarkupExtension.cs" />
+    <Compile Include="MarkupExtensions\MultValueConverterMarkupExtension.cs" />
+    <Compile Include="MarkupExtensions\ValueConverterMarkupExtension.cs" />
     <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
     <Compile Include="Converters\DummyConverter.cs" />
     <Compile Include="Converters\EnumToStringConverter.cs" />
     <Compile Include="Converters\RecentItemTypeToMonikerConverter.cs" />
+    <Compile Include="Converters\TextToVisibilityConverter.cs" />
     <Compile Include="Enums\PeriodTypes.cs" />
     <Compile Include="Enums\PeriodType.cs" />
     <Compile Include="Dates\DatesMethods.cs" />
