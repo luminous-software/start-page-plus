@@ -68,11 +68,11 @@ To open the new _Start Page+_ window:
 - make sure Visual Studio's *Start Window* is disabled
     - in **Tools** | **Options** | **Environment** | **Startup** select _Empty Environment_
 
-    ![Startup Options](https://github.com/luminous-software/extension-name/raw/master/docs/assets/images/startup-options.png)
+    ![Startup Options](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/startup-options.png)
 
 - click on **View** | **Start Page+**
 
-  ![Start Page+](https://github.com/luminous-software/extension-name/raw/master/docs/assets/images/start-page-plus.png)
+  ![Start Page+](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/start-page-plus.png)
 
 The _Start Page+_ window is accessed from the **View** menu, because it makes sense.
 It's also easy to remember because you think "I want to **view** the start page",
