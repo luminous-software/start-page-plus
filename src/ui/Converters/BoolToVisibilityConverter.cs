@@ -5,6 +5,8 @@ using System.Windows.Data;
 
 namespace StartPagePlus.UI.Converters
 {
+    using MarkupExtensions;
+
     //http://putridparrot.com/blog/markupextension/
     //https://www.broculos.net/2014/04/wpf-how-to-use-converters-without.html
 
@@ -12,7 +14,7 @@ namespace StartPagePlus.UI.Converters
     //<Button Content="Cancel" Visibility="{Binding IsCancelVisible, Converter={c:BooleanToVisibilityConverter WhenFalse=Hidden Reverse=false}}">
 
     [ValueConversion(typeof(bool), typeof(Visibility))]
-    public class BoolToVisibilityConverter : ConverterMarkupExtension
+    public class BoolToVisibilityConverter : ValueConverterMarkupExtension
     {
         public Visibility WhenFalse { get; set; } = Visibility.Collapsed;
 

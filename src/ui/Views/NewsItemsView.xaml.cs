@@ -10,7 +10,7 @@ namespace StartPagePlus.UI.Views
         {
             var viewModel = ViewModelLocator.NewsItemsViewModel;
 
-            viewModel.ExecuteRefresh();
+            //viewModel.ExecuteRefresh();
 
             InitializeComponent();
 

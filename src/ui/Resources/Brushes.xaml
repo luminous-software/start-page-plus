@@ -42,7 +42,7 @@
         />
 
     <SolidColorBrush x:Key="ColumnHeadingBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextHeadingSelectedKey}}"
         />
 
     <SolidColorBrush x:Key="TitleBrush"
@@ -56,32 +56,32 @@
         />
 
     <SolidColorBrush x:Key="ItemNameBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextHeadingKey}}"
         />
 
     <SolidColorBrush x:Key="ItemDescriptionBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextBodyUnselectedKey}}"
         />
 
     <SolidColorBrush x:Key="ItemDateBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
         />
 
-    <SolidColorBrush x:Key="FilterBackgroundBrushBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+    <SolidColorBrush x:Key="FilterBackgroundBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.AccentDarkKey}}"
         />
 
     <!--  Commands  -->
 
     <SolidColorBrush x:Key="CommandActiveBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextHeadingKey}}"
         />
 
     <SolidColorBrush x:Key="CommandInactiveBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTextKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextBodyUnselectedKey}}"
         />
 
     <SolidColorBrush x:Key="CommandMouseOverBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextHeadingSelectedKey}}"
         />
 </ResourceDictionary>

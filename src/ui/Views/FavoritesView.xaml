@@ -19,16 +19,37 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Border
-        Margin="10"
-        Style="{StaticResource ColumnStyle}"
-        >
-        <DockPanel LastChildFill="True">
-            <Button
-                DockPanel.Dock="Top"
-                Content="Favorites View"
-                Background="Transparent"
-                />
-        </DockPanel>
-    </Border>
+    <StackPanel>
+        <TextBlock
+            Margin="10,10,10,0"
+            FontSize="24"
+            FontWeight="Light"
+            Foreground="{DynamicResource TitleBrush}"
+            Text="The 'Favorites' tab will allow you to add columns, groups, and items"
+            />
+        <TextBlock
+            Margin="10,10,10,0"
+            FontFamily="Consolas"
+            FontSize="16"
+            FontWeight="Normal"
+            Foreground="{DynamicResource TitleBrush}"
+            >
+            <Run Text="    1.  First you add a 'column'"/> <LineBreak/>
+            <Run Text="    2.  Then add a 'group' to the column (with a heading)"/> <LineBreak/>
+            <Run Text="    3.  Then you add 'items' to the group"/> <LineBreak/>
+            <Run Text="    4.  Simply add more 'columns', 'groups' and 'items' as required"/>
+        </TextBlock>
+        <TextBlock
+            Margin="10,10,10,0"
+            FontFamily="Consolas"
+            FontSize="14"
+            FontStyle="Italic"
+            FontWeight="Normal"
+            Foreground="{DynamicResource TitleBrush}"
+            >
+            <Run Text="    *  a much more flexible arrangement than just 'pinned' items"/> <LineBreak/>
+            <Run Text="    *  you won't even need to pin your items on the 'Start' tab anymore"/> <LineBreak/>
+            <Run Text="    *  the 'Recent Items' list (on the 'Start' tab) will only need to contain recent items"/> <LineBreak/>
+        </TextBlock>
+    </StackPanel>
 </UserControl>

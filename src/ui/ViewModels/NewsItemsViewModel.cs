@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using GalaSoft.MvvmLight.Command;
 using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.ViewModels
@@ -15,14 +14,17 @@ namespace StartPagePlus.UI.ViewModels
 
         private ObservableCollection<NewsItemViewModel> items = new ObservableCollection<NewsItemViewModel>();
 
-        public NewsItemsViewModel(INewsItemDataService dataService, INewsItemActionService actionService)
+        public NewsItemsViewModel(INewsItemDataService dataService, INewsItemActionService actionService, INewsItemCommandService commandService)
         {
             DataService = dataService;
             ActionService = actionService;
+            CommandService = commandService;
+
             Heading = HEADING;
-            ExecuteRefresh();
-            Commands = GetCommands();
             IsVisible = true;
+
+            GetCommands();
+            Refresh();
 
             MessengerInstance.Register<NotificationMessage<NewsItemViewModel>>(this,
                 (message) => ActionService.DoAction(message.Content));
@@ -32,33 +34,21 @@ namespace StartPagePlus.UI.ViewModels
 
         public INewsItemActionService ActionService { get; }
 
+        public INewsItemCommandService CommandService { get; }
+
         public ObservableCollection<NewsItemViewModel> Items
         {
             get => items;
             set => Set(ref items, value);
         }
 
-        private ObservableCollection<CommandViewModel> GetCommands()
-            => new ObservableCollection<CommandViewModel>
-            {
-                //new CommandViewModel
-                //{
-                //    Name = "More News",
-                //    Command = new RelayCommand(ExecuteMoreNews, true),
-                //    Enabled =false
-                //},
-                new CommandViewModel
-                {
-                    Name = "Refresh",
-                    Command = new RelayCommand(ExecuteRefresh, true),
-                    Enabled =true
-                }
-            };
+        private void GetCommands()
+            => Commands = CommandService.GetCommands(/*MoreNews,*/ Refresh);
 
-        private void ExecuteMoreNews()
+        private void MoreNews()
         { }
 
-        public void ExecuteRefresh()
+        public void Refresh()
              => ThreadHelper.JoinableTaskFactory.RunAsync(async ()
                  =>
                  {

@@ -28,11 +28,12 @@
                 />
 
             <ItemsControl x:Name="Commands"
+                DockPanel.Dock="Bottom"
                 Style="{StaticResource ColumnCommandsStyle}"
                 />
 
             <ListView x:Name="NewsItemsListView"
-                ItemContainerStyle="{StaticResource ColumnCommandContainerStyle}"
+                ItemContainerStyle="{StaticResource ColumnListItemContainerStyle}"
                 ItemsSource="{Binding Items}"
                 Style="{StaticResource ColumnListStyle}"
                 >

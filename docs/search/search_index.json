@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Bring back Start Page+!\n\n\n\n\n\n\n\n\n\n\n\n\nYou can download this extension \nfrom the Visual Studio Marketplace\n\n\n\n\nPlease understand that this is a \npreview release\n.\n\n\nWhile the features of the \nStart Tab\n are functional in this preview (I'm using it myself),\nthere are still some quirks that need to be ironed out, plus a number of missing features that still\nneed to be added.\nI just wanted to get this up to the marketplace as quickly as I could, so people can see it and\nstart to use it.\n\n\nFeedback is welcome!\n But please use the GitHub repo's \nIssues page\n to\nprovide it, \ndon't\n add your ideas and/or feeback to any blog post where you might have\ndiscovered \nStart Page+\n.\nI won't be able to address your feedback in those posts, as it's not fair to the OP to have their\npost highjacked.\n\n\nIf you want to know more about \nStart Page+\n the \nwebsite\n is where I'll\nadd information about \nknown issues\n, and a \nroadmap\n of what's coming.\nPlease \nconsult the website\n first before adding issues for \nnew features\n,\n\nfeature enhancements\n etc.\nIf you don't see your desired feature or enhancement mentioned on the website,\nthen by all means go ahead and add an issue for it.\nThe same thing goes for any \nbugs\n you might run across.\n\n\nThe \nFavorites Tab\n, \nCreate Tab\n, and \nNews Tab\n are \nstill being worked on\n.\n\n\nThe \nFavorites Tab\n will allow you to add \ncolumns\n and \ngroups\n to add your favorite\n\nsolutions\n, \nprojects\n, \nfolders\n etc, in a much more \nflexible way\n than just\n\npinned tabs\n.\nHopefully, after a while, you won't even need to use pinned tabs anymore.\n\n\nThe \nCreate Tab\n aims to provide a \ntree view-based\n replacement for VS 2019's hated new\n\nsearch-based\n \nCreate a New Project\n dialog, baked right into your start page.\n\n\nThe \nNews Tab\n will have some pre-populated RSS feeds of developer-centric blogs etc.\nPlus, in the future you'll be able to add your own RSS feeds to the tab as well.\nSort of like a mini RSS application embedded in your start page.\n\n\n\n\nBring Back Start Page!\n\u00b6\n\n\nWhen Visual Studio 2019 was released, many developers were dismayed to find that the \nStart Page\n\nhad been completely replaced by the new \nStart Window\n (a big \nmodal\n dialog window, with no room\nfor \nDeveloper News\n).\n\n\n\n\nIntroducing Start Page+\n\u00b6\n\n\nSo many of you, in \nso many posts\n in the \nDeveloper Community forum\n, \npleaded\n for Microsoft to bring back the Visual Studio 2017\n\nStart Page\n, and unfortunately those pleas fell on deaf ears.\n\n\nWell, you asked and now \nStart Page+\n delivers!\n\n\nThe \nStart Page+\n extension adds a new \nStart Page\n that is a \ndockable tool window\n,\nnot a \nmodal\n window.\nIt's been written \nfrom the ground up\n, and doesn't rely on any of Visual Studio's \ninternal\n code.\nSo it can't be taken  away by Microsoft. And it's open source!\n\n\nTo open the new \nStart Page+\n window:\n\n\n\n\nmake sure Visual Studio's \nStart Window\n is disabled\n\n\n\n\nin \nTools\n | \nOptions\n | \nEnvironment\n | \nStartup\n select \nEmpty Environment\n\n\n\n\n\n\n\n\nselect \nView\n | \nStart Page+\n\n\n\n\n\n\n\n\nThe Start Page+ window is accessed from the \nView\n menu, because it makes sense.\nIt's also easy to remember because you think \"I want to \nview\n the start page\",\nyou don't think \"I want to \nfile\n the start page.\n\n\nThe Visual Studio 2010-2017's \nStart Page\n was always in the \nView\n menu,\nuntil Microsoft moved it to the \nFile\n menu, which never made any sense.\n\n\nSupport the Project\n\u00b6\n\n\nIf \nStart Page+\n has saved you time and hassle, please come back and show your support:\n\n\n\n\nyou could \nrate \nStart Page+\n (only takes a couple of seconds)\n\n\nor \nreview \nStart Page+\n (help others benefit from your experience)\n\n\nor \nshout me a coke\n (I don't drink coffee or beer lol)",
+            "text": "Bring back Start Page+!\n\n\n\n\n\n\n\n\n\n\n\n\nYou can download this extension \nfrom the Visual Studio Marketplace\n\n\n\n\nPlease understand that this is a \npreview release\n.\n\n\nWhile the features of the \nStart Tab\n are \nfunctional\n in this preview (I'm using it myself),\nthere are still some quirks that need to be ironed out, plus a number of missing features that still\nneed to be added.\nI just wanted to get this up to the marketplace as quickly as I could, so people can see it and\nstart to use it.\n\n\nFeedback is welcome\n, however \ndon't\n add your ideas and/or feeback to any forum post where you might have\ndiscovered \nStart Page+\n, please use the \nGitHub Issues\n page.\nI won't be able to address your feedback in any forum posts, as it's not fair to people to have posts highjacked.\n\n\nPlease consult the \nRoadmap\n page, or the \nGitHub Issues\n page\n\nbefore\n you add an issue for new features, feature enhancements etc.\nIf you don't see your desired feature or enhancement mentioned on the website,\nthen by all means go ahead and add an issue for it.\n\n\nPlease consult the \nStart Page+\n website's \nKnown Issues\n page,\nor the \nGitHub Issues\n page before adding issues for any bugs you may have discovered.\nDuplicate \nissues\n just waste everyone's time.\n\n\nThe \nFavorites\n tab, the \nCreate\n tab, and the \nNews\n tab are \nstill being worked on\n.\n\n\n\n\nBring Back Start Page!\n\u00b6\n\n\nWhen Visual Studio 2019 was released, many developers were dismayed to find that the \nStart Page\n\nhad been completely replaced by the new \nStart Window\n (a big \nmodal\n dialog window, with no room\nfor \nDeveloper News\n).\n\n\n\n\nIntroducing Start Page+\n\u00b6\n\n\nSo many of you, in \nso many posts\n in the \nDeveloper Community forum\n, \npleaded\n for Microsoft to bring back the Visual Studio 2017\n\nStart Page\n, and unfortunately those pleas have fallen on deaf ears.\n\n\nWell, you asked and now \nStart Page+\n delivers!\n\n\nThe \nStart Page+\n extension adds a new start page that is a \ndockable tool window\n,\nnot a \nmodal window\n.\nIt's been written \nfrom the ground up\n, and doesn't rely on any of Visual Studio's \ninternal\n code.\nSo it can't be taken  away by Microsoft. And it's open source!\n\n\nTo open the new \nStart Page+\n window:\n\n\n\n\n\n\nmake sure Visual Studio's \nStart Window\n is disabled\n\n\n\n\nin \nTools\n | \nOptions\n | \nEnvironment\n | \nStartup\n select \nEmpty Environment\n\n\n\n\n\n\n\n\n\n\nclick on \nView\n | \nStart Page+\n\n\n\n\n\n\n\n\nThe \nStart Page+\n window is accessed from the \nView\n menu, because it makes sense.\nIt's also easy to remember because you think \"I want to \nview\n the start page\",\nyou don't think \"I want to \nfile\n the start page.\n\n\nThe Visual Studio 2010-2017's \nStart Page\n was always in the \nView\n menu,\nuntil Microsoft moved it to the \nFile\n menu in later versions of VS 2017, and then permanently in VS 2019,\nwhich never really made \nany\n sense.\n\n\nSupport the Project\n\u00b6\n\n\nIf \nStart Page+\n has saved you time and hassle, please come back and show your support:\n\n\n\n\nyou could \nrate \nStart Page+\n (only takes a couple of seconds)\n\n\nor \nreview \nStart Page+\n (help others benefit from your experience)\n\n\nor \nshout me a coke\n (I don't drink coffee or beer lol)",
             "title": "Overview"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "location": "/#introducing-start-page",
-            "text": "So many of you, in  so many posts  in the  Developer Community forum ,  pleaded  for Microsoft to bring back the Visual Studio 2017 Start Page , and unfortunately those pleas fell on deaf ears.  Well, you asked and now  Start Page+  delivers!  The  Start Page+  extension adds a new  Start Page  that is a  dockable tool window ,\nnot a  modal  window.\nIt's been written  from the ground up , and doesn't rely on any of Visual Studio's  internal  code.\nSo it can't be taken  away by Microsoft. And it's open source!  To open the new  Start Page+  window:   make sure Visual Studio's  Start Window  is disabled   in  Tools  |  Options  |  Environment  |  Startup  select  Empty Environment     select  View  |  Start Page+     The Start Page+ window is accessed from the  View  menu, because it makes sense.\nIt's also easy to remember because you think \"I want to  view  the start page\",\nyou don't think \"I want to  file  the start page.  The Visual Studio 2010-2017's  Start Page  was always in the  View  menu,\nuntil Microsoft moved it to the  File  menu, which never made any sense.",
+            "text": "So many of you, in  so many posts  in the  Developer Community forum ,  pleaded  for Microsoft to bring back the Visual Studio 2017 Start Page , and unfortunately those pleas have fallen on deaf ears.  Well, you asked and now  Start Page+  delivers!  The  Start Page+  extension adds a new start page that is a  dockable tool window ,\nnot a  modal window .\nIt's been written  from the ground up , and doesn't rely on any of Visual Studio's  internal  code.\nSo it can't be taken  away by Microsoft. And it's open source!  To open the new  Start Page+  window:    make sure Visual Studio's  Start Window  is disabled   in  Tools  |  Options  |  Environment  |  Startup  select  Empty Environment      click on  View  |  Start Page+     The  Start Page+  window is accessed from the  View  menu, because it makes sense.\nIt's also easy to remember because you think \"I want to  view  the start page\",\nyou don't think \"I want to  file  the start page.  The Visual Studio 2010-2017's  Start Page  was always in the  View  menu,\nuntil Microsoft moved it to the  File  menu in later versions of VS 2017, and then permanently in VS 2019,\nwhich never really made  any  sense.",
             "title": "Introducing Start Page+"
         },
         {
@@ -22,7 +22,7 @@
         },
         {
             "location": "/getting-started/",
-            "text": "Getting Started\n\u00b6\n\n\nThere are three ways you can install \nStart Page+\n:\n\n\n\n\nFrom Inside Visual Studio\n\n\nDownload and Install Manually\n\n\nFrom the \nsource code\n\n\n\n\nOption 1 - From Inside Visual Studio\n\u00b6\n\n\n\n\nIn Visual Studio open the \nExtensions\n dialog\n\n\nVS 2017: \nExtensions and Updates\n\n\nVS 2019: \nManage Extensions\n\n\nClick on the \nOnline\n tab\n\n\nType \nStart Page+\n in the search box\n\n\nClick on \nStart Page+\n in the list\n\n\nClick the \nDownload\n button\n\n\n\n\nOption 2 - Download and Install Manually\n\u00b6\n\n\n\n\nClick on this link to download from \nVisual Studio Marketplace website\n\n\nClick the \nDownload\n button, and select where to save it\n\n\nInstall the downloaded VSIX file, from wherever you saved it\n\n\n\n\nOption 3 - From the Source Code\n\u00b6\n\n\n\n\nFind the \nsource code\n on GitHub\n\n\nFork it or clone it\n\n\nCompile the solution\n\n\nInstall the compiled VSIX file\n\n\n\n\nView StartPage+\n\u00b6\n\n\nOnce StartPage+ is installed simply click on \nView\n | \nStartPage+",
+            "text": "Getting Started\n\u00b6\n\n\nThere are three ways you can install \nStart Page+\n:\n\n\n\n\nFrom Inside Visual Studio\n\n\nDownload and Install Manually\n\n\nFrom the \nsource code\n\n\n\n\nOption 1 - From Inside Visual Studio\n\u00b6\n\n\n\n\nIn Visual Studio open the \nExtensions\n dialog\n\n\nVS 2017: \nExtensions and Updates\n\n\nVS 2019: \nManage Extensions\n\n\nClick on the \nOnline\n tab\n\n\nType \nStart Page+\n in the search box\n\n\nClick on \nStart Page+\n in the list\n\n\nClick the \nDownload\n button\n\n\n\n\nOption 2 - Download and Install Manually\n\u00b6\n\n\n\n\nClick on this link to download from \nVisual Studio Marketplace website\n\n\nClick the \nDownload\n button, and select where to save it\n\n\nInstall the downloaded VSIX file, from wherever you saved it\n\n\n\n\nOption 3 - From the Source Code\n\u00b6\n\n\n\n\nFind the \nsource code\n on GitHub\n\n\nFork it or clone it\n\n\nCompile the solution\n\n\nInstall the compiled VSIX file\n\n\n\n\nView StartPage+\n\u00b6\n\n\nOnce StartPage+ is installed simply click on \nView\n | \nStartPage+_",
             "title": "Getting Started"
         },
         {
@@ -47,13 +47,28 @@
         },
         {
             "location": "/getting-started/#view-startpage",
-            "text": "Once StartPage+ is installed simply click on  View  |  StartPage+",
+            "text": "Once StartPage+ is installed simply click on  View  |  StartPage+_",
             "title": "View StartPage+"
         },
         {
             "location": "/features/",
-            "text": "To display the new \nStart Page+\n window:\n\n\n\n\nclick \nView\n | \nStart Page+\n\n\n\n\nOptions\n\u00b6\n\n\n\n\nEnable 'Start Page+'\n\u00b6\n\n\nThis setting allows the whole set of \nStart Page+\n features to be turned off together.\n\n\nVersion Number\n\u00b6\n\n\nDisplays then version number of \nStart Page+\n that's currently installed.\n\n\nEnable 'Open Links in VS'\n\u00b6\n\n\nThe default value is \ntrue\n, meaning that any item link that is clicked will be opened in a window\ninside of Visual Studio.\n\n\nA value of \nfalse\n will result in the link being opened in your default browser.",
+            "text": "To display the new \nStart Page+\n window:\n\n\n\n\nclick \nView\n | \nStart Page+\n\n\n\n\nRecent Items\n\u00b6\n\n\nThe \nRecent Items\n list brings back the ability to filter the list of recent items, and the grouping by timeframe\nthat we had in VS 2017.\n\n\n\n\nStart Actions\n\u00b6\n\n\nThe \nStart Actions\n list gives new users a simplified way to get to their code, the same as in VS 2019's\n\nStart Window\n.\n\n\nIt also has a handy, but non-intrusive way to see what version of \nStart Page+\n is currently installed.\nClicking on the link will open the StartPage+ website's changelog page, so you can easily see what has changed in\nthe new version.\n\n\n\n\nDeveloper News\n\u00b6\n\n\nThe \nDeveloper News\n feed brings back VS 2017's handy list of Microsoft developer-related news items that was removed from\nVS 2019.\nI don't know how many times I've seen something that interests me that I might have missed if I hadn't seen it on my\nstart page.\n\n\nBy default the items open right in VS itself, rather than switching to the default browser.\nPersonally, I prefer having to switch applications as little as possible.\nWhen I'm working in Visual Studio, I prefer to stay in Visual Studio, and not have my attention derailed by having\nto switch to a different application, and then back again to Visual Studio.\n\n\nHowever, for those people who prefer links to be opened in their default browser,\nthere's an option to change Start Page+'s behavior to do just that.\n\n\n\n\nOptions\n\u00b6\n\n\n\n\nEnable 'Start Page+'\n\u00b6\n\n\nThis setting allows \nStart Page+\n to be \nturned off\n, without having to uninstall the \nStart Page+\n extension,\nwhich would require you to exit \nall\n instances of Visual Studio, wait while the \nVSIX installer\n does its thing,\nthen open Visual Studio again.\n\n\nIf you're worried about the \nStart Page+\n extension still using resources, once you enable this setting,\nthe \nView\n | \nStart Page+\n and the \nTools\n | \nStart Page+ Options\n menu items will no longer be available,\nso the extension will have no need to be loaded.\n\n\nHowever, instances of any tool window are never \ndestroyed\n when they're \nclosed\n, so until you close Visual Studio there will\nbe some remaining resources being used. But the next time you start Visual Studio, there'll be no way to open\nthe \nStart Page+\n window, so the extension will not need to be loaded.\n\n\nVersion Number\n\u00b6\n\n\nThis setting simply displays the version number of \nStart Page+\n that's currently installed.\n\n\nEnable 'Open Links in VS'\n\u00b6\n\n\nWhen this setting is set to \ntrue\n, any clicked item that opens a web page will be opened in a browser window\n\ninside\n of Visual Studio.\n\n\nWhen set to \nfalse\n, clicked items that open a web page will be opened in your default browser.",
             "title": "Features"
+        },
+        {
+            "location": "/features/#recent-items",
+            "text": "The  Recent Items  list brings back the ability to filter the list of recent items, and the grouping by timeframe\nthat we had in VS 2017.",
+            "title": "Recent Items"
+        },
+        {
+            "location": "/features/#start-actions",
+            "text": "The  Start Actions  list gives new users a simplified way to get to their code, the same as in VS 2019's Start Window .  It also has a handy, but non-intrusive way to see what version of  Start Page+  is currently installed.\nClicking on the link will open the StartPage+ website's changelog page, so you can easily see what has changed in\nthe new version.",
+            "title": "Start Actions"
+        },
+        {
+            "location": "/features/#developer-news",
+            "text": "The  Developer News  feed brings back VS 2017's handy list of Microsoft developer-related news items that was removed from\nVS 2019.\nI don't know how many times I've seen something that interests me that I might have missed if I hadn't seen it on my\nstart page.  By default the items open right in VS itself, rather than switching to the default browser.\nPersonally, I prefer having to switch applications as little as possible.\nWhen I'm working in Visual Studio, I prefer to stay in Visual Studio, and not have my attention derailed by having\nto switch to a different application, and then back again to Visual Studio.  However, for those people who prefer links to be opened in their default browser,\nthere's an option to change Start Page+'s behavior to do just that.",
+            "title": "Developer News"
         },
         {
             "location": "/features/#options",
@@ -62,28 +77,38 @@
         },
         {
             "location": "/features/#enable-start-page",
-            "text": "This setting allows the whole set of  Start Page+  features to be turned off together.",
+            "text": "This setting allows  Start Page+  to be  turned off , without having to uninstall the  Start Page+  extension,\nwhich would require you to exit  all  instances of Visual Studio, wait while the  VSIX installer  does its thing,\nthen open Visual Studio again.  If you're worried about the  Start Page+  extension still using resources, once you enable this setting,\nthe  View  |  Start Page+  and the  Tools  |  Start Page+ Options  menu items will no longer be available,\nso the extension will have no need to be loaded.  However, instances of any tool window are never  destroyed  when they're  closed , so until you close Visual Studio there will\nbe some remaining resources being used. But the next time you start Visual Studio, there'll be no way to open\nthe  Start Page+  window, so the extension will not need to be loaded.",
             "title": "Enable 'Start Page+'"
         },
         {
             "location": "/features/#version-number",
-            "text": "Displays then version number of  Start Page+  that's currently installed.",
+            "text": "This setting simply displays the version number of  Start Page+  that's currently installed.",
             "title": "Version Number"
         },
         {
             "location": "/features/#enable-open-links-in-vs",
-            "text": "The default value is  true , meaning that any item link that is clicked will be opened in a window\ninside of Visual Studio.  A value of  false  will result in the link being opened in your default browser.",
+            "text": "When this setting is set to  true , any clicked item that opens a web page will be opened in a browser window inside  of Visual Studio.  When set to  false , clicked items that open a web page will be opened in your default browser.",
             "title": "Enable 'Open Links in VS'"
         },
         {
             "location": "/changelog/",
-            "text": "Public Releases\n\u00b6\n\n\nInternal Releases\n\u00b6\n\n\nv0.1 - v0.9\n\u00b6\n\n\n\n\nadded bare tool window (View | Start Page+)",
+            "text": "Preview Releases\n\u00b6\n\n\nFor a list of known issues go to the \nKnown Issues\n\npage on the \nStart Page+\n website.\n\n\nv0.13.2 - 2019-09-30\n\u00b6\n\n\n\n\nPreview 2\n\n\nadded filtering to \nRecent Items\n\n\nadded \nclear filter\n button\n\n\nadded descriptions to tabs that have yet to be implemented\n\n\nadded easy-to-find, but non-intrusive version number to \nStart Actions\n\n\nclicking on the links opens the Start Page+ website's changelog page\n\n\n\n\n\n\nfixed unreadable color combinations in the \nBlue\n theme (\nGitHub Issue \n#2\n)\n\n\nthanks to \n@MagicAndre1981\n, \n@sevanmarc\n\n\n\n\n\n\nfixed missing prerequisites for VS 2017 (\nGitHub Issue \n#8\n)\n\n\nfixed wrong icon (\nGitHub Issue \n#11\n)\n\n\nfixed NRE when there are no 'recent items' (\nGitHub Issue \n#12\n)\n\n\nthanks to \n@MagicAndre1981\n, \n@sevanmarc\n\n\n\n\n\n\n\n\n\n\n\n\nv0.12.1 - 2019-09-15\n\u00b6\n\n\n\n\nPreview 1\n\n\nimplemented basic \nRecent Items\n\n\nimplemented \nStart Actions\n\n\nimplemented \nDeveloper News\n\n\n\n\n\n\n\n\nInternal Releases\n\u00b6\n\n\nv0.1 - v0.11\n\u00b6\n\n\n\n\nadded \nStartPagePlusWindow\n (tool window)\n\n\nadded \nMainView\n\n\nadded \nStartView\n\n\nadded \nRecentItemsView\n\n\nadded \nStartActionsView\n\n\nadded \nNewsItemsView\n\n\n\n\n\n\nadded temporary \nFavoritesView\n\n\nadded temporary \nCreateView\n\n\nadded temporary \nNewsView\n\n\nadded \nGeneralOptions\n page\n\n\nadded \nView\n | \nStart Page+\n\n\nadded \nTools\n | \nOptions",
             "title": "Changelog"
         },
         {
-            "location": "/changelog/#public-releases",
-            "text": "",
-            "title": "Public Releases"
+            "location": "/changelog/#preview-releases",
+            "text": "For a list of known issues go to the  Known Issues \npage on the  Start Page+  website.",
+            "title": "Preview Releases"
+        },
+        {
+            "location": "/changelog/#v0132-2019-09-30",
+            "text": "Preview 2  added filtering to  Recent Items  added  clear filter  button  added descriptions to tabs that have yet to be implemented  added easy-to-find, but non-intrusive version number to  Start Actions  clicking on the links opens the Start Page+ website's changelog page    fixed unreadable color combinations in the  Blue  theme ( GitHub Issue  #2 )  thanks to  @MagicAndre1981 ,  @sevanmarc    fixed missing prerequisites for VS 2017 ( GitHub Issue  #8 )  fixed wrong icon ( GitHub Issue  #11 )  fixed NRE when there are no 'recent items' ( GitHub Issue  #12 )  thanks to  @MagicAndre1981 ,  @sevanmarc",
+            "title": "v0.13.2 - 2019-09-30"
+        },
+        {
+            "location": "/changelog/#v0121-2019-09-15",
+            "text": "Preview 1  implemented basic  Recent Items  implemented  Start Actions  implemented  Developer News",
+            "title": "v0.12.1 - 2019-09-15"
         },
         {
             "location": "/changelog/#internal-releases",
@@ -91,18 +116,18 @@
             "title": "Internal Releases"
         },
         {
-            "location": "/changelog/#v01-v09",
-            "text": "added bare tool window (View | Start Page+)",
-            "title": "v0.1 - v0.9"
+            "location": "/changelog/#v01-v011",
+            "text": "added  StartPagePlusWindow  (tool window)  added  MainView  added  StartView  added  RecentItemsView  added  StartActionsView  added  NewsItemsView    added temporary  FavoritesView  added temporary  CreateView  added temporary  NewsView  added  GeneralOptions  page  added  View  |  Start Page+  added  Tools  |  Options",
+            "title": "v0.1 - v0.11"
         },
         {
             "location": "/roadmap/",
-            "text": "Feature Ideas\n\u00b6\n\n\nThe list below is a list of \npotential\n \nfeatures\n or \nenhancements\n.\nThese might be entirely \nnew features\n or \nenhancements\n to existing features.\n\n\nThey may, or may not, end up being added into \nStart Page+\n.\n\n\n\n\n Visual Studio Blog feed\n\n\n Visual Studio Twitter feed\n\n\n Azure DevOps Blog feed\n\n\n Auto-refresh\n\n\n\n\nTicked items are available in the lastest version of \nStart Page+\n.\n\n\nContributions\n\u00b6\n\n\nIf you'd like to implement one of the \nfeature ideas\n,\nfeel free to \nopen an \nIssue\n on GitHub\n (with the same name as the feature),\nand we can start a discussion there.\n\n\nWe can then work toward developing a pull request,\nso the your feature can be incorporated into \nStart Page+\n.\n\n\nDon't forget to check out the \nContribution Guidelines\n.\n\n\nBug Fixes\n\u00b6\n\n\nOnce bug fixes have been fully tested, they'll be included in the \nnext public release\n.\n\n\n\n\nThere are no bug fixes that need testing at the moment",
+            "text": "Feature Ideas\n\u00b6\n\n\nThe list below is a list of \npotential\n \nfeatures\n or \nenhancements\n.\nThese might be entirely \nnew features\n or \nenhancements\n to existing features.\n\n\nThey may, or may not, end up being added into \nStart Page+\n.\n\n\n\n\n Visual Studio Blog feed\n\n\n Visual Studio Twitter feed\n\n\n Azure DevOps Blog feed\n\n\n Auto-refresh\n\n\n\n\nAny ticked items are available in the lastest version of \nStart Page+\n.\n\n\nContributions\n\u00b6\n\n\nIf you'd like to implement one of the \nfeature ideas\n,\nfeel free to \nopen an \nIssue\n on GitHub\n (with the same name as the feature),\nand we can start a discussion there.\n\n\nWe can then work toward developing a pull request,\nso the your feature can be incorporated into \nStart Page+\n.\n\n\nDon't forget to check out the \nContribution Guidelines\n.\n\n\nBug Fixes\n\u00b6\n\n\nOnce bug fixes have been fully tested, they'll be included in the \nnext public release\n.\n\n\n\n\nThere are no bug fixes that need testing at the moment",
             "title": "Roadmap"
         },
         {
             "location": "/roadmap/#feature-ideas",
-            "text": "The list below is a list of  potential   features  or  enhancements .\nThese might be entirely  new features  or  enhancements  to existing features.  They may, or may not, end up being added into  Start Page+ .    Visual Studio Blog feed   Visual Studio Twitter feed   Azure DevOps Blog feed   Auto-refresh   Ticked items are available in the lastest version of  Start Page+ .",
+            "text": "The list below is a list of  potential   features  or  enhancements .\nThese might be entirely  new features  or  enhancements  to existing features.  They may, or may not, end up being added into  Start Page+ .    Visual Studio Blog feed   Visual Studio Twitter feed   Azure DevOps Blog feed   Auto-refresh   Any ticked items are available in the lastest version of  Start Page+ .",
             "title": "Feature Ideas"
         },
         {
@@ -114,6 +139,26 @@
             "location": "/roadmap/#bug-fixes",
             "text": "Once bug fixes have been fully tested, they'll be included in the  next public release .   There are no bug fixes that need testing at the moment",
             "title": "Bug Fixes"
+        },
+        {
+            "location": "/known-issues/",
+            "text": "General\n\u00b6\n\n\n\n\nStart Page+\n \nmay\n not open if you also have \nDeveloper News\n installed\n\n\nGitHub Issue \n#3\n (not conclusive)\n\n\n\n\n\n\nStart Page+\n doesn't open at startup unless you've already opened it, and left it open when you close VS\n\n\nGitHub Issue \n#4\n\n\n\n\n\n\n\n\nRecent Items\n\u00b6\n\n\n\n\nif you click on the \nRefresh\n button, the timeframes disappear\n\n\nGitHub Issue \n#5\n\n\na workaround is to click on another tab, then click on the \nStart\n tab again\n\n\n\n\n\n\nyou can't start typing in the filter box without clicking in it first\n\n\nGitHub Issue \n#6\n\n\n\n\n\n\n\n\nInternationalisation\n\u00b6\n\n\n\n\nthe only language currently available is EN-US (\nGitHub Issue \n#7\n)",
+            "title": "Known Issues"
+        },
+        {
+            "location": "/known-issues/#general",
+            "text": "Start Page+   may  not open if you also have  Developer News  installed  GitHub Issue  #3  (not conclusive)    Start Page+  doesn't open at startup unless you've already opened it, and left it open when you close VS  GitHub Issue  #4",
+            "title": "General"
+        },
+        {
+            "location": "/known-issues/#recent-items",
+            "text": "if you click on the  Refresh  button, the timeframes disappear  GitHub Issue  #5  a workaround is to click on another tab, then click on the  Start  tab again    you can't start typing in the filter box without clicking in it first  GitHub Issue  #6",
+            "title": "Recent Items"
+        },
+        {
+            "location": "/known-issues/#internationalisation",
+            "text": "the only language currently available is EN-US ( GitHub Issue  #7 )",
+            "title": "Internationalisation"
         }
     ]
 }

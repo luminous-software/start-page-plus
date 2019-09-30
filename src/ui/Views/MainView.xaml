@@ -70,11 +70,13 @@
             Visibility="{Binding IsVisible, Converter={c:BoolToVisibilityConverter}}"
             />
 
-        <TabControl
+        <TabControl x:Name="MainTabs"
             Background="Transparent"
-            ItemsSource="{Binding Models}"
+            IsTabStop="False"
+            ItemsSource="{Binding Tabs}"
             SelectedIndex="0"
             >
+            <!--  SelectionChanged="TabControl_SelectionChanged"  -->
             <TabControl.Resources>
                 <Style TargetType="TabItem">
                     <Setter Property="FontSize" Value="26"/>

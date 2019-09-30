@@ -1,19 +1,19 @@
 ﻿using System.Windows.Input;
-using EnvDTE;
-using EnvDTE80;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Microsoft.VisualStudio.Imaging.Interop;
-using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Interfaces;
+
     public abstract class StartActionViewModel : ViewModelBase
     {
-        private static DTE2 dte;
-
-        public StartActionViewModel()
-            => ClickCommand = new RelayCommand(ExecuteClick, true);
+        public StartActionViewModel(IVisualStudioService vsService)
+        {
+            ClickCommand = new RelayCommand(ExecuteClick, true);
+            VisualStudioService = vsService;
+        }
 
         public ImageMoniker Moniker { get; set; }
 
@@ -23,9 +23,9 @@ namespace StartPagePlus.UI.ViewModels
 
         public bool IsVisible { get; set; }
 
-        protected DTE2 Dte = dte ?? (dte = Package.GetGlobalService(typeof(_DTE)) as DTE2);
-
         public ICommand ClickCommand { get; set; }
+
+        public IVisualStudioService VisualStudioService { get; }
 
         protected virtual void ExecuteClick()
         { }

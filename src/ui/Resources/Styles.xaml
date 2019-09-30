@@ -102,6 +102,13 @@
         </Setter>
     </Style>
 
+    <Style x:Key="ColumnListItemContainerStyle"
+        TargetType="ListViewItem"
+        >
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="Cursor" Value="Hand"/>
+    </Style>
+
     <!--  https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377  -->
 
     <!--  Commands  -->
@@ -119,6 +126,7 @@
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
+
         <Setter Property="ItemTemplate">
             <Setter.Value>
                 <DataTemplate>

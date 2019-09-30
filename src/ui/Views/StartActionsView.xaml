@@ -28,6 +28,7 @@
                 />
 
             <ItemsControl x:Name="Commands"
+                DockPanel.Dock="Bottom"
                 Style="{StaticResource ColumnCommandsStyle}"
                 />
 

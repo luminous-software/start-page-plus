@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using GalaSoft.MvvmLight.Command;
 
 namespace StartPagePlus.UI.ViewModels
 {
@@ -8,37 +7,44 @@ namespace StartPagePlus.UI.ViewModels
     public class StartActionsViewModel : ColumnViewModel
     {
         private const string HEADING = "Get Started";
+        private const string CHANGELOG_URL = "https://luminous-software.solutions/start-page-plus/change-log";
+        private readonly bool internalBrowser = true;
+        private ObservableCollection<StartActionViewModel> items = new ObservableCollection<StartActionViewModel>();
 
-        private ObservableCollection<StartActionViewModel> items;
-
-        public StartActionsViewModel(IStartActionDataService dataService)
+        public StartActionsViewModel(IStartActionDataService dataService, IStartActionCommandService commandService, IVisualStudioService vsService)
         {
             DataService = dataService;
+            CommandService = commandService;
+            VisualStudioService = vsService;
             Heading = HEADING;
-            Items = DataService.GetItems();
-            Commands = GetCommands();
             IsVisible = true;
+            GetCommands();
+            Refresh();
         }
+
         public IStartActionDataService DataService { get; }
 
+        public IStartActionCommandService CommandService { get; }
+        public IVisualStudioService VisualStudioService { get; }
         public ObservableCollection<StartActionViewModel> Items
         {
             get => items;
             set => Set(ref items, value);
         }
 
-        private ObservableCollection<CommandViewModel> GetCommands()
-            => new ObservableCollection<CommandViewModel>
-            {
-                new CommandViewModel
-                {
-                    Name = "Continue With No Code",
-                    Command = new RelayCommand(ExecuteContinue, true),
-                    Enabled = false
-                }
-            };
+        private void GetCommands()
+            => Commands = CommandService.GetCommands(/*Continue, Refresh*/OpenWebsite);
 
-        private void ExecuteContinue()
+        private void Continue()
         { }
+
+        private void OpenWebsite()
+            => VisualStudioService.NavigateTo(CHANGELOG_URL, internalBrowser);
+
+        private void Refresh()
+        {
+            Items.Clear();
+            Items = DataService.GetItems();
+        }
     }
 }
