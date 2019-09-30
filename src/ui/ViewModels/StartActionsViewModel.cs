@@ -7,7 +7,7 @@ namespace StartPagePlus.UI.ViewModels
     public class StartActionsViewModel : ColumnViewModel
     {
         private const string HEADING = "Get Started";
-        private const string CHANGELOG_URL = "https://luminous-software.solutions/start-page-plus/change-log";
+        private const string CHANGELOG_URL = "https://luminous-software.solutions/start-page-plus/changelog";
         private readonly bool internalBrowser = true;
         private ObservableCollection<StartActionViewModel> items = new ObservableCollection<StartActionViewModel>();
 
