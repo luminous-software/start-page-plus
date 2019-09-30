@@ -38,7 +38,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{3AF3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. initial", "0. initial", "{8A6F448D-3822-4DAC-942D-00274F1DD568}"
 	ProjectSection(SolutionItems) = preProject
-		docs-source\getting-started.md = docs-source\getting-started.md
+		.notes.md = .notes.md
 		LICENSE = LICENSE
 		mkdocs.yml = mkdocs.yml
 	EndProjectSection
@@ -53,7 +53,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. changes", "2. changes", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. main", "1. main", "{99A9DF34-83E3-432D-8BD3-A8DEA7732660}"
 	ProjectSection(SolutionItems) = preProject
-		.notes.md = .notes.md
+		docs-source\getting-started.md = docs-source\getting-started.md
 		docs-source\index.md = docs-source\index.md
 		docs-source\marketplace.md = docs-source\marketplace.md
 		README.md = README.md

@@ -29,7 +29,7 @@ theme:
         text: 'Ubuntu'
         code: 'Ubuntu Mono'
     logo:
-        icon: 'lightbulb_outline'
+        icon: 'home'
 
 # layout
 pages:

@@ -26,7 +26,7 @@
 
       <Button guid="PackageCommandSet" id="StartPagePlusOptions" type="Button" priority="0x00FF">
         <Parent guid="guidSHLMainMenu" id="IDG_VS_TOOLS_OPTIONS" />
-        <Icon guid="ImageCatalogGuid" id="ConditionalRuleIfThen" />
+        <Icon guid="ImageCatalogGuid" id="Home" />
         <CommandFlag>IconIsMoniker</CommandFlag>
         <CommandFlag>DynamicVisibility</CommandFlag>
         <Strings>

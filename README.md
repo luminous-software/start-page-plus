@@ -24,42 +24,29 @@ You can download this extension [from the Visual Studio Marketplace][marketplace
 
 Please understand that this is a **preview release**.
 
-While the features of the **_Start Tab_** are functional in this preview (I'm using it myself),
+While the features of the _Start Tab_ are _functional_ in this preview (I'm using it myself),
 there are still some quirks that need to be ironed out, plus a number of missing features that still
 need to be added.
 I just wanted to get this up to the marketplace as quickly as I could, so people can see it and
 start to use it.
 
-**Feedback is welcome!** But please use the GitHub repo's [Issues page][github-issues-page] to
-provide it, **don't** add your ideas and/or feeback to any blog post where you might have
-discovered _Start Page+_.
-I won't be able to address your feedback in those posts, as it's not fair to the OP to have their
-post highjacked.
+**Feedback is welcome**, however **don't** add your ideas and/or feeback to any forum post where you might have
+discovered _Start Page+_, please use the [GitHub Issues][github-issues-url] page.
+I won't be able to address your feedback in any forum posts, as it's not fair to people to have posts highjacked.
 
-If you want to know more about _Start Page+_ the [website][start-page-plus-website] is where I'll
-add information about _known issues_, and a _roadmap_ of what's coming.
-Please **consult the website** first before adding issues for **new features**,
-**feature enhancements** etc.
+Please consult the [Roadmap][roadmap-url] page, or the [GitHub Issues][github-issues-url] page
+**before** you add an issue for new features, feature enhancements etc.
 If you don't see your desired feature or enhancement mentioned on the website,
 then by all means go ahead and add an issue for it.
-The same thing goes for any **bugs** you might run across.
 
-The _Favorites Tab_, _Create Tab_, and _News Tab_ are **still being worked on**.
+Please consult the _Start Page+_ website's [Known Issues][website-url] page,
+or the [GitHub Issues][github-issues-url] page before adding issues for any bugs you may have discovered.
+Duplicate _issues_ just waste everyone's time.
 
-The **_Favorites Tab_** will allow you to add _columns_ and _groups_ to add your favorite
-**solutions**, **projects**, **folders** etc, in a much more **flexible way** than just
-_pinned tabs_.
-Hopefully, after a while, you won't even need to use pinned tabs anymore.
+The _Favorites_ tab, the _Create_ tab, and the _News_ tab are **still being worked on**.
 
-The **_Create Tab_** aims to provide a **tree view-based** replacement for VS 2019's hated new
-**search-based** _Create a New Project_ dialog, baked right into your start page.
-
-The **_News Tab_** will have some pre-populated RSS feeds of developer-centric blogs etc.
-Plus, in the future you'll be able to add your own RSS feeds to the tab as well.
-Sort of like a mini RSS application embedded in your start page.
-
-[github-issues-page]: https://github.com/luminous-software/start-page-plus/issues
-[start-page-plus-website]: https://luminous-software.solutions/start-page-plus
+[github-issues-url]: https://github.com/luminous-software/start-page-plus/issues
+[website-url]: https://luminous-software.solutions/start-page-plus
 
 ---
 
@@ -73,25 +60,25 @@ replaced by the new _Start Window_ (a big **modal** dialog window, with no room 
 ## Introducing Start Page+
 
 So many of you, in **so many posts** in the [Developer Community forum][developer-community-forum-url], **pleaded** for Microsoft to bring back the Visual Studio 2017
-_Start Page_, and unfortunately those pleas fell on deaf ears.
+_Start Page_, and unfortunately those pleas have fallen on deaf ears.
 
 [developer-community-forum-url]: https://developercommunity.visualstudio.com/search.html?f=&type=question+OR+problem+OR+idea&type=question+OR+problem+OR+idea&c=&redirect=search%2Fsearch&sort=relevance&q=start+page
 
 Well, you asked and now _Start Page+_ delivers!
 
-The [Start Page+][start-page-plus-url] extension adds a new *Start Page* that is a **dockable tool window**,
-not a **modal** window.
+The [Start Page+][start-page-plus-url] extension adds a new start page that is a **dockable tool window**,
+not a **modal window**.
 It's been written **from the ground up**, and doesn't rely on any of Visual Studio's *internal* code.
 So it can't be taken  away by Microsoft. And it's open source!
 
 To open the new _Start Page+_ window:
 
 - make sure Visual Studio's *Start Window* is disabled
-  - in **Tools** | **Options** | **Environment** | **Startup** select _Empty Environment_
+    - in **Tools** | **Options** | **Environment** | **Startup** select _Empty Environment_
 
     ![Startup Options](docs-source/assets/images/startup-options.png)
 
-- select **View** | **Start Page+**
+- click on **View** | **Start Page+**
 
   ![Start Page+](docs-source/assets/images/start-page-plus.png)
 
@@ -100,7 +87,8 @@ It's also easy to remember because you think "I want to **view** the start page"
 you don't think "I want to **file** the start page.
 
 The Visual Studio 2010-2017's _Start Page_ was always in the **View** menu,
-until Microsoft moved it to the **File** menu, which never made any sense.
+until Microsoft moved it to the **File** menu in later versions of VS 2017, and then permanently in VS 2019,
+which never really made **any** sense.
 
 [start-page-plus-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus
 [roadmap-url]: https://luminous-software.solutions/start-page-plus/roadmap

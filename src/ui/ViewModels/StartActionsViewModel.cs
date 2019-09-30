@@ -7,7 +7,7 @@ namespace StartPagePlus.UI.ViewModels
     public class StartActionsViewModel : ColumnViewModel
     {
         private const string HEADING = "Get Started";
-        private const string START_PAGE_PLUS_URL = "https://luminous-software.solutions/start-page-plus";
+        private const string CHANGELOG_URL = "https://luminous-software.solutions/start-page-plus/change-log";
         private readonly bool internalBrowser = true;
         private ObservableCollection<StartActionViewModel> items = new ObservableCollection<StartActionViewModel>();
 
@@ -39,7 +39,7 @@ namespace StartPagePlus.UI.ViewModels
         { }
 
         private void OpenWebsite()
-            => VisualStudioService.NavigateTo(START_PAGE_PLUS_URL, internalBrowser);
+            => VisualStudioService.NavigateTo(CHANGELOG_URL, internalBrowser);
 
         private void Refresh()
         {

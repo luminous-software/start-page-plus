@@ -35,4 +35,4 @@ There are three ways you can install *Start Page+*:
 
 ## View StartPage+
 
-Once StartPage+ is installed simply click on `View` | `StartPage+`
+Once StartPage+ is installed simply click on _View_ | _StartPage+__
