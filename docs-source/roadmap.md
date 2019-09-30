@@ -10,7 +10,7 @@ They may, or may not, end up being added into _Start Page+_.
 - [ ] Azure DevOps Blog feed
 - [ ] Auto-refresh
 
-Ticked items are available in the lastest version of _Start Page+_.
+Any ticked items are available in the lastest version of _Start Page+_.
 
 ## Contributions
 
