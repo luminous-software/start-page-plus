@@ -12,11 +12,11 @@ page on the [Start Page+][start-page-plus-url] website.
     - added *clear filter* button
     - added descriptions to tabs that have yet to be implemented
     - added easy-to-find, but non-intrusive version number to *Start Actions*
-        - clicking on the links opens the Start Page+ website's changelog page
-    - fixed unreadable color combinations in the *Blue* theme ([GitHub Issue #2][github-issue-2])
+        - clicking on the link opens the *Start Page+* website's changelog page
+    - improved unreadable color combinations in the *Blue* theme ([GitHub Issue #2][github-issue-2])
         - thanks to [@MagicAndre1981][MagicAndre1981], [@sevanmarc][sevanmarc]
     - fixed missing prerequisites for VS 2017 ([GitHub Issue #8][github-issue-8])
-    - fixed wrong icon ([GitHub Issue #11][github-issue-11])
+    - fixed wrong icon shown in _View_ | _Start Page+_ ([GitHub Issue #11][github-issue-11])
     - fixed NRE when there are no 'recent items' ([GitHub Issue #12][github-issue-12])
         - thanks to [@MagicAndre1981][MagicAndre1981], [@sevanmarc][sevanmarc]
 
