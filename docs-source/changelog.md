@@ -6,7 +6,13 @@ page on the [Start Page+][start-page-plus-url] website.
 [start-page-plus-url]: https://luminous-software.solutions/start-page-plus
 [known-issues-url]: https://luminous-software.solutions/start-page-plus/known-issues
 
+### v0.14.3 - 2019-10-02
+
+  - Preview 3
+    - implemented a new & improved, more consistent color scheme (hopefully)
+
 ### v0.13.2 - 2019-09-30
+
 - Preview 2
     - added filtering to *Recent Items*
     - added *clear filter* button
@@ -29,7 +35,8 @@ page on the [Start Page+][start-page-plus-url] website.
 
 
 ### v0.12.1 - 2019-09-15
-- Preview 1
+
+  - Preview 1
     - implemented basic *Recent Items*
     - implemented *Start Actions*
     - implemented *Developer News*
@@ -37,15 +44,16 @@ page on the [Start Page+][start-page-plus-url] website.
 ## Internal Releases
 
 ### v0.1 - v0.11
-- added `StartPagePlusWindow` (tool window)
-- added `MainView`
-- added `StartView`
-	- added `RecentItemsView`
+
+  - added `StartPagePlusWindow` (tool window)
+  - added `MainView`
+  - added `StartView`
+ 	- added `RecentItemsView`
 	- added `StartActionsView`
 	- added `NewsItemsView`
-- added temporary `FavoritesView`
-- added temporary `CreateView`
-- added temporary `NewsView`
-- added `GeneralOptions` page
-- added *View* | *Start Page+*
-- added *Tools* | *Options*
+  - added temporary `FavoritesView`
+  - added temporary `CreateView`
+  - added temporary `NewsView`
+  - added `GeneralOptions` page
+  - added *View* | *Start Page+*
+  - added *Tools* | *Options*

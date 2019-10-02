@@ -72,8 +72,6 @@ To open the new _Start Page+_ window:
 
 - click on **View** | **Start Page+**
 
-  ![Start Page+](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/start-page-plus.png)
-
 The _Start Page+_ window is accessed from the **View** menu, because it makes sense.
 It's also easy to remember because you think "I want to **view** the start page",
 you don't think "I want to **file** the start page.
@@ -85,6 +83,46 @@ which never really made **any** sense.
 [start-page-plus-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus
 [roadmap-url]: https://luminous-software.solutions/start-page-plus/roadmap
 [give-back-start-page-url]: https://developercommunity.visualstudio.com/idea/434456/start-page-please-give-it-back.html
+
+## Theme Samples
+
+This is what Start Page+ currently looks like in the *Blue (VS 2019)*, *Blue (VS 2017)*, *Dark*, and *Light* themes.
+  ![Start Page+](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/start-page-plus.png)
+
+### Blue (VS 2019) Theme
+
+![Blue 2019](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/blue-2019.png)
+
+### Blue (VS 2017) Theme
+
+![Blue 2017](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/blue-2017.png)
+
+### Dark Theme
+
+![Dark](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/dark.png)
+
+### Light Theme
+
+![Light](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/.png)
+
+Other themes from the [Color Theme Editor for VS 2019][color-theme-editor-url] should also look good too,
+such as the *Purple* and *Tan* themes below.
+
+[color-theme-editor-url]: https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2019ColorThemeEditor
+
+### Purple Theme
+
+![Purple](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/.png)
+
+### Tan Theme
+
+![Tan](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/tan.png)
+
+And finally, this is my customised *Dark* theme, that I call *Dark Purple*.
+
+### Dark Purple (custom theme)
+
+![Dark Purple](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/dark-purple.png)
 
 ## More Information
 
