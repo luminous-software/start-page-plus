@@ -46,7 +46,7 @@
                     Grid.Column="0"
                     Background="{DynamicResource FilterBackgroundBrush}"
                     FontSize="14"
-                    Foreground="{DynamicResource ColumnHeadingBrush}"
+                    Foreground="{DynamicResource FilterForegroundBrush}"
                     IsTabStop="true"
                     Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
                     />
@@ -91,9 +91,9 @@
                                         <ControlTemplate TargetType="{x:Type GroupItem}">
                                             <StackPanel>
                                                 <TextBlock
-                                                    Margin="5,1"
+                                                    Margin="5,5,5,2"
                                                     HorizontalAlignment="Left"
-                                                    FontSize="12"
+                                                    FontSize="14"
                                                     FontWeight="Medium"
                                                     Foreground="{DynamicResource ItemGroupNameBrush}"
                                                     Text="{Binding Path=Name, Converter={c:PeriodTypeToNameConverter}}"
