@@ -5,10 +5,10 @@ These might be entirely **new features** or **enhancements** to existing feature
 
 They may, or may not, end up being added into _Start Page+_.
 
-- [ ] Visual Studio Blog feed
-- [ ] Visual Studio Twitter feed
-- [ ] Azure DevOps Blog feed
-- [ ] Auto-refresh
+  - [ ] Visual Studio Blog feed
+  - [ ] Visual Studio Twitter feed
+  - [ ] Azure DevOps Blog feed
+  - [ ] Auto-refresh
 
 Any ticked items are available in the lastest version of _Start Page+_.
 

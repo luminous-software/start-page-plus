@@ -79,8 +79,6 @@ To open the new _Start Page+_ window:
 
 - click on **View** | **Start Page+**
 
-  ![Start Page+](assets/images/start-page-plus.png)
-
 The _Start Page+_ window is accessed from the **View** menu, because it makes sense.
 It's also easy to remember because you think "I want to **view** the start page",
 you don't think "I want to **file** the start page.
@@ -92,6 +90,45 @@ which never really made **any** sense.
 [start-page-plus-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus
 [roadmap-url]: https://luminous-software.solutions/start-page-plus/roadmap
 [give-back-start-page-url]: https://developercommunity.visualstudio.com/idea/434456/start-page-please-give-it-back.html
+
+## Theme Samples
+
+This is what Start Page+ currently looks like in the *Blue (VS 2019)*, *Blue (VS 2017)*, *Dark*, and *Light* themes.
+
+### Blue (VS 2019) Theme
+
+![Blue 2019](assets/images/blue-2019.png)
+
+### Blue (VS 2017) Theme
+
+![Blue 2017](assets/images/blue-2017.png)
+
+### Dark Theme
+
+![Dark](assets/images/dark.png)
+
+### Light Theme
+
+![Light](assets/images/light.png)
+
+Other themes from the [Color Theme Editor for VS 2019][color-theme-editor-url] should also look good too,
+such as the *Purple* and *Tan* themes below.
+
+[color-theme-editor-url]: https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2019ColorThemeEditor
+
+### Purple Theme
+
+![Purple](assets/images/purple.png)
+
+### Tan Theme
+
+![Tan](assets/images/tan.png)
+
+And finally, this is my customised *Dark* theme, that I call *Dark Purple*.
+
+### Dark Purple (custom theme)
+
+![Dark Purple](assets/images/dark-purple.png)
 
 ## Support the Project
 
