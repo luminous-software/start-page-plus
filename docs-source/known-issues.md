@@ -1,27 +1,44 @@
 ## General
 
-- *Start Page+* **may** not open if you also have [Developer News][developer-news-url] installed
-    - [GitHub Issue #3][github-issue-3] (not conclusive)
-- *Start Page+* doesn't open at startup unless you've already opened it, and left it open when you close VS
+  - *Start Page+* **may** not open if you also have [Developer News][developer-news-url] installed
+  - [GitHub Issue #3][github-issue-3] (not conclusive)
+    - *Start Page+* doesn't open at startup unless you've already opened it, and left it open when you close VS
     - [GitHub Issue #4][github-issue-4]
 
 ## Recent Items
 
-- if you click on the *Refresh* button, the timeframes disappear
+  - if you click on the *Refresh* button, the timeframes disappear
     - [GitHub Issue #5][github-issue-5]
     - a workaround is to click on another tab, then click on the *Start* tab again
-- you can't start typing in the filter box without clicking in it first
+  - you can't start typing in the filter box without clicking in it first
     - [GitHub Issue #6][github-issue-6]
+  - there's no way to *pin* and *unpin* items
+    - [GitHub Issue #21][github-issue-21]
+  - images have the wrong background color in some themes
+    - [GitHub Issue #22][github-issue-22]
+  - a project with spaces in the name throws an error when opening it
+    - [GitHub Issue #23][github-issue-23]
+  - dates have a fixed AU/UK format in the Recent Items list
+    - [GitHub Issue #24][github-issue-24]
 
 [developer-news-url]: https://luminous-software.solutions/developer-news
 [github-issue-3]: https://github.com/luminous-software/start-page-plus/issues/3
 [github-issue-4]: https://github.com/luminous-software/start-page-plus/issues/4
 [github-issue-5]: https://github.com/luminous-software/start-page-plus/issues/5
 [github-issue-6]: https://github.com/luminous-software/start-page-plus/issues/6
+[github-issue-21]: https://github.com/luminous-software/start-page-plus/issues21
+[github-issue-22]: https://github.com/luminous-software/start-page-plus/issues22
+[github-issue-23]: https://github.com/luminous-software/start-page-plus/issues23
+[github-issue-24]: https://github.com/luminous-software/start-page-plus/issues24
+
+## Start Actions
+
+  - images have the wrong background color in some themes
+    - [GitHub Issue #22][github-issue-22]
+
 
 ## Internationalisation
 
-- the only language currently available is EN-US ([GitHub Issue #7][github-issue-7])
+  - the only language currently available is EN-US ([GitHub Issue #7][github-issue-7])
 
 [github-issue-7]: https://github.com/luminous-software/start-page-plus/issues/7
-

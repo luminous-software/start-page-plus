@@ -13,7 +13,7 @@ page on the [Start Page+][start-page-plus-url] website.
 
 ### v0.13.2 - 2019-09-30
 
-- Preview 2
+  - Preview 2
     - added filtering to *Recent Items*
     - added *clear filter* button
     - added descriptions to tabs that have yet to be implemented
