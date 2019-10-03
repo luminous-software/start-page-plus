@@ -59,6 +59,7 @@
         Margin="10,15,10,10"
         Background="Transparent"
         LastChildFill="True"
+               MaxWidth="1175"
         >
         <TextBlock x:Name="Company"
             Height="50"
