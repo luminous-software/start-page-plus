@@ -1,16 +1,27 @@
 ## General
 
   - *Start Page+* **may** not open if you also have [Developer News][developer-news-url] installed
-  - [GitHub Issue #3][github-issue-3] (not conclusive)
-    - *Start Page+* doesn't open at startup unless you've already opened it, and left it open when you close VS
+    - if you want to use *Start Page+*, you probably don't need *Developer News* anyway
+    - [GitHub Issue #3][github-issue-3] (not conclusive)
+  - window doesn't open at startup
+    - unless you've already opened it, and left it open when you close VS
     - [GitHub Issue #4][github-issue-4]
+  - window is not docked on first ever use (squashed into a small rectangle top-left)
+    - [GitHub Issue #14][github-issue-14]
+  - window doesn't close when a solution is opened
+    - [GitHub Issue #18][github-issue-18]
+
+[github-issue-3]: https://github.com/luminous-software/start-page-plus/issues/3
+[github-issue-4]: https://github.com/luminous-software/start-page-plus/issues/4
+[github-issue-14]: https://github.com/luminous-software/start-page-plus/issues/14
+[github-issue-18]: https://github.com/luminous-software/start-page-plus/issues/18
 
 ## Recent Items
 
-  - if you click on the *Refresh* button, the timeframes disappear
+  - *Timeframes* disappear when *Refresh* is clicked
     - [GitHub Issue #5][github-issue-5]
     - a workaround is to click on another tab, then click on the *Start* tab again
-  - you can't start typing in the filter box without clicking in it first
+  - can't start typing in the filter box without clicking in it first
     - [GitHub Issue #6][github-issue-6]
   - there's no way to *pin* and *unpin* items
     - [GitHub Issue #21][github-issue-21]
@@ -20,16 +31,17 @@
     - [GitHub Issue #23][github-issue-23]
   - dates have a fixed AU/UK format in the Recent Items list
     - [GitHub Issue #24][github-issue-24]
+  - only *Folder*, *Solution*, and *C# Project* currently have icons
+    - [GitHub Issue #26][github-issue-26]
 
 [developer-news-url]: https://luminous-software.solutions/developer-news
-[github-issue-3]: https://github.com/luminous-software/start-page-plus/issues/3
-[github-issue-4]: https://github.com/luminous-software/start-page-plus/issues/4
 [github-issue-5]: https://github.com/luminous-software/start-page-plus/issues/5
 [github-issue-6]: https://github.com/luminous-software/start-page-plus/issues/6
 [github-issue-21]: https://github.com/luminous-software/start-page-plus/issues21
 [github-issue-22]: https://github.com/luminous-software/start-page-plus/issues22
 [github-issue-23]: https://github.com/luminous-software/start-page-plus/issues23
 [github-issue-24]: https://github.com/luminous-software/start-page-plus/issues24
+[github-issue-26]: https://github.com/luminous-software/start-page-plus/issues26
 
 ## Start Actions
 
@@ -39,6 +51,7 @@
 
 ## Internationalisation
 
-  - the only language currently available is EN-US ([GitHub Issue #7][github-issue-7])
+  - the only language currently available is *EN-US*
+    - [GitHub Issue #7][github-issue-7]
 
 [github-issue-7]: https://github.com/luminous-software/start-page-plus/issues/7
