@@ -6,6 +6,13 @@ page on the [Start Page+][start-page-plus-url] website.
 [start-page-plus-url]: https://luminous-software.solutions/start-page-plus
 [known-issues-url]: https://luminous-software.solutions/start-page-plus/known-issues
 
+### v0.15.4 - 2019-10-??
+
+  - Preview 4
+    - fixed projects with space in the name not opening [(GHI #23)][github-issue-23]
+
+[github-issue-23]: https://github.com/luminous-software/start-page-plus/issues/23
+
 ### v0.14.3 - 2019-10-02
 
   - Preview 3
