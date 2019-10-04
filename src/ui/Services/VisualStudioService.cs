@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Diagnostics;
 using EnvDTE;
 using EnvDTE80;
 using Luminous.Code.VisualStudio.Packages;
@@ -12,18 +13,25 @@ namespace StartPagePlus.UI.Services
 
     public class VisualStudioService : IVisualStudioService
     {
-        private static readonly DTE2 dte;
+        private const string VERB_OPEN = "Open";
+        private const string FILE_OPEN_FOLDER = "File.OpenFolder";
+        private const string FILE_OPEN_PROJECT = "File.OpenProject";
+        private const string FILE_NEW_PROJECT = "File.NewProject";
+        private const string FILE_CLONE_OR_CHECKOUT_CODE = "File.Cloneorcheckoutcode";
         private const uint FORCE_NEW_WINDOW = (uint)__VSWBNAVIGATEFLAGS.VSNWB_ForceNew;
+
+        private static readonly DTE2 dte;
         private IVsWebBrowsingService browsingService;
-        private Diagnostics.ProcessStartInfo startInfo;
+        private ProcessStartInfo startInfo;
+
         protected static DTE2 Dte = dte ?? (dte = Package.GetGlobalService(typeof(_DTE)) as DTE2);
 
-        private Diagnostics.ProcessStartInfo StartInfo
+        private ProcessStartInfo StartInfo
             => startInfo
                 ?? (startInfo = new Diagnostics.ProcessStartInfo
                 {
                     UseShellExecute = true,
-                    Verb = "Open"
+                    Verb = VERB_OPEN
                 });
 
         private IVsWebBrowsingService BrowsingService
@@ -32,10 +40,13 @@ namespace StartPagePlus.UI.Services
         public void ExecuteCommand(string action)
             => Dte.ExecuteCommand(action);
 
+        public void ExecuteCommand(string action, string args= null)
+            => Dte.ExecuteCommand(action, args);
+
         public void ShowMessage(string message)
             => MessageBox.Show(message, Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Information);
 
-        public void NavigateTo(string url, bool internalBrowser)
+        public void OpenWebPage(string url, bool internalBrowser)
         {
             try
             {
@@ -56,5 +67,24 @@ namespace StartPagePlus.UI.Services
                 MessageBox.Show("Can't launch this url", Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        public void OpenFolder(string path = "")
+            => Dte?.ExecuteCommand(FILE_OPEN_FOLDER, path);
+
+        //public void OpenSolution(string path = null)
+        //{
+        //    ThreadHelper.ThrowIfNotOnUIThread();
+
+        //    Dte?.Solution.Open(path);
+        //}
+
+        public void OpenProject(string path = "")
+            => Dte?.ExecuteCommand(FILE_OPEN_PROJECT, path);
+
+        public void CreateNewProject()
+            => ExecuteCommand(FILE_NEW_PROJECT);
+
+        public void CloneOrCheckoutCode()
+            => ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
     }
 }

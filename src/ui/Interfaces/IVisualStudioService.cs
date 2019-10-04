@@ -2,10 +2,20 @@
 {
     public interface IVisualStudioService
     {
-        void ExecuteCommand(string Action);
+        void ExecuteCommand(string action, string path);
 
         void ShowMessage(string message);
 
-        void NavigateTo(string url, bool internalBrowser);
+        void OpenWebPage(string url, bool internalBrowser);
+
+        void OpenFolder(string path = "");
+
+        //void OpenSolution(string path = null);
+
+        void OpenProject(string path = "");
+
+        void CreateNewProject();
+
+        void CloneOrCheckoutCode();
     }
 }

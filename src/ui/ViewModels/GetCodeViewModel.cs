@@ -15,6 +15,6 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         protected override void ExecuteClick()
-            => VisualStudioService.ExecuteCommand("File.Cloneorcheckoutcode");
+            => VisualStudioService.CloneOrCheckoutCode();
     }
 }

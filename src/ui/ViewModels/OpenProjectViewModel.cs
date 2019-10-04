@@ -14,6 +14,6 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         protected override void ExecuteClick()
-            => VisualStudioService.ExecuteCommand("File.OpenProject");
+            => VisualStudioService.OpenProject();
     }
 }

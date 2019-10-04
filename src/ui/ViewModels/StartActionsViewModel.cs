@@ -39,7 +39,7 @@ namespace StartPagePlus.UI.ViewModels
         { }
 
         private void OpenWebsite()
-            => VisualStudioService.NavigateTo(CHANGELOG_URL, internalBrowser);
+            => VisualStudioService.OpenWebPage(CHANGELOG_URL, internalBrowser);
 
         private void Refresh()
         {

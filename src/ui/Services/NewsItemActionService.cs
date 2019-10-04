@@ -15,7 +15,7 @@
         {
             var url = currentViewModel.Link;
 
-            VisualStudioService.NavigateTo(url, internalBrowser);
+            VisualStudioService.OpenWebPage(url, internalBrowser);
         }
     }
 }
