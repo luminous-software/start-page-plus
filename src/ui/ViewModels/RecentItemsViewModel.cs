@@ -40,31 +40,11 @@ namespace StartPagePlus.UI.ViewModels
             set => Set(ref items, value);
         }
 
-        //public bool Filtered
-        //{
-        //    get => filtered;
-        //    set => Set(ref filtered, value);
-        //}
-
         private void ActionCallback(NotificationMessage<RecentItemViewModel> message)
             => ActionService.ExecuteAction(message.Content);
 
         private void GetCommands()
             => Commands = CommandService.GetCommands(/*ShowFilter, RemoveFilter,*/ Refresh);
-
-        //private void ShowFilter()
-        //{
-        //    Filtered = true;
-        //    Commands[0].IsVisible = false;
-        //    Commands[1].IsVisible = true;
-        //}
-
-        //private void RemoveFilter()
-        //{
-        //    Filtered = false;
-        //    Commands[1].IsVisible = false;
-        //    Commands[0].IsVisible = true;
-        //}
 
         public void Refresh()
         {
