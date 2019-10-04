@@ -48,7 +48,7 @@ namespace StartPagePlus.UI.ViewModels
 
         public void Refresh()
         {
-            Items.Clear();
+            //Items.Clear();
             Items = DataService.GetItems();
         }
     }

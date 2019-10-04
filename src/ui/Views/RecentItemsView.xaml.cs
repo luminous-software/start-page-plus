@@ -2,62 +2,88 @@
 using System.ComponentModel;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows;
+using Luminous.Code.Extensions.ExceptionExtensions;
 
 namespace StartPagePlus.UI.Views
 {
+    using Core.StringExtensions;
     using ViewModels;
 
     public partial class RecentItemsView : UserControl
     {
-
         public RecentItemsView()
         {
             InitializeComponent();
 
-            var viewModel = ViewModelLocator.RecentItemsViewModel;
-
-            viewModel.Refresh();
-
-            DataContext = viewModel;
-
-            var view = (ListCollectionView)CollectionViewSource.GetDefaultView(viewModel.Items);
-
-            view.GroupDescriptions.Add(new PropertyGroupDescription("PeriodType"));
-
-            view.SortDescriptions.Add(new SortDescription("PeriodType", ListSortDirection.Ascending));
-            view.SortDescriptions.Add(new SortDescription("Date", ListSortDirection.Descending));
-
-            //https://joshsmithonwpf.wordpress.com/2007/06/12/searching-for-items-in-a-listbox/
-
-            view.Filter = (object obj) =>
+            try
             {
-                //var filterText = "";
+                var viewModel = ViewModelLocator.RecentItemsViewModel;
 
-                if (string.IsNullOrEmpty(FilterTextBox.Text))
-                    return true;
+                viewModel.Refresh();
 
-                var item = obj as RecentItemViewModel;
-                var name = item?.Name;
+                DataContext = viewModel;
 
-                if (string.IsNullOrEmpty(name))
-                    return false;
+                var view = (ListCollectionView)CollectionViewSource.GetDefaultView(viewModel.Items);
 
-                var index = name.IndexOf(FilterTextBox.Text, 0, StringComparison.InvariantCultureIgnoreCase);
+                using (view.DeferRefresh())
+                {
+                    AddGrouping(view);
+                    AddSorting(view);
+                    AddFilter(view);
+                }
 
-                return (index > -1);
-            };
+                RefreshViewWhenFilterChanges(view);
+                EnsureClickedItemDoesNotRemainSelected();
 
-            FilterTextBox.TextChanged += (object sender, TextChangedEventArgs e) =>
+            }
+            catch (Exception ex)
             {
-                //filterText = FilterTextBox.Text;
-                view.Refresh();
-            };
 
-            RecentItemsListView.SelectionChanged += (sender, e)
-                => RecentItemsListView.SelectedItem = null;
+                MessageBox.Show(ex.ExtendedMessage());
+            }
         }
 
-        private void ClearFilterText_Click(object sender, System.Windows.RoutedEventArgs e)
+        private static void AddGrouping(ListCollectionView view)
+        {
+            view.IsLiveGrouping = true;
+            view.GroupDescriptions.Add(new PropertyGroupDescription(nameof(RecentItemViewModel.PeriodType)));
+        }
+
+        private static void AddSorting(ListCollectionView view)
+        {
+            view.IsLiveSorting = true;
+            view.SortDescriptions.Add(new SortDescription(nameof(RecentItemViewModel.PeriodType), ListSortDirection.Ascending));
+            view.SortDescriptions.Add(new SortDescription(nameof(RecentItemViewModel.Date), ListSortDirection.Descending));
+        }
+
+        // https://joshsmithonwpf.wordpress.com/2007/06/12/searching-for-items-in-a-listbox/
+
+        private void AddFilter(ListCollectionView view)
+            => view.Filter = (object obj)
+            =>
+               {
+                   if (string.IsNullOrEmpty(FilterTextBox.Text))
+                       return true;
+
+                   if (!(obj is RecentItemViewModel item))
+                       return false;
+
+                   var name = item.Name;
+
+                   return string.IsNullOrEmpty(name)
+                       ? false
+                       : name.MatchesFilter(FilterTextBox.Text);
+               };
+
+        private void RefreshViewWhenFilterChanges(ListCollectionView view) => FilterTextBox.TextChanged += (object sender, TextChangedEventArgs e)
+            => view.Refresh();
+
+        private void EnsureClickedItemDoesNotRemainSelected()
+            => RecentItemsListView.SelectionChanged += (sender, e)
+                => RecentItemsListView.SelectedItem = null;
+
+        private void ClearFilterText_Click(object sender, RoutedEventArgs e)
         {
             FilterTextBox.Text = "";
             FilterTextBox.Focus();
