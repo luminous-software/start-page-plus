@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace StartPagePlus.Core.Strings
+namespace StartPagePlus.Core.StringExtensions
 {
     public static class StringExtensions
     {
@@ -17,5 +17,13 @@ namespace StartPagePlus.Core.Strings
 
             return words;
         }
+
+        public static bool MatchesFilter(this string instance, string filter, StringComparison comparison = StringComparison.InvariantCultureIgnoreCase)
+        {
+            var index = instance.IndexOf(filter, 0, comparison);
+
+            return (index > -1);
+        }
+
     }
 }
