@@ -52,7 +52,7 @@
     <Compile Include="Models\FeedItem.cs" />
     <Compile Include="Models\NewsItemFeedItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strings\StringExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

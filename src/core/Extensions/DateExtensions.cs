@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Luminous.Code.Extensions.DateExtensions
+namespace Luminous.Code.Extensions.Dates
 {
     public static class DateExtensions
     {

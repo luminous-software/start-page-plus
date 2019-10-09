@@ -33,8 +33,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <PackageReference Include="Luminous.Code.Core">
+      <Version>1.4.2</Version>
+    </PackageReference>
     <PackageReference Include="Luminous.Code.VisualStudio">
-      <Version>1.2.0.2</Version>
+      <Version>1.4.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="15.9.3" ExcludeAssets="runtime" />
   </ItemGroup>

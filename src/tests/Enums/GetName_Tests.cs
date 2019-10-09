@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Luminous.Code.Tests.Enums
 {
-    using StartPagePlus.Core.Extensions.EnumExtensions;
+    using StartPagePlus.Core.Extensions.Enums;
 
     public class GetName_Tests
     {

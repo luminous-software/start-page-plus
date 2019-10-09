@@ -4,10 +4,10 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows;
 using Luminous.Code.Extensions.ExceptionExtensions;
+using Luminous.Code.Extensions.Strings;
 
 namespace StartPagePlus.UI.Views
 {
-    using Core.StringExtensions;
     using ViewModels;
 
     public partial class RecentItemsView : UserControl

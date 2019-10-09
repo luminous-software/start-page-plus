@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace StartPagePlus.Core.StringExtensions
+namespace Luminous.Code.Extensions.Strings
 {
     public static class StringExtensions
     {
@@ -24,6 +24,5 @@ namespace StartPagePlus.Core.StringExtensions
 
             return (index > -1);
         }
-
     }
 }
