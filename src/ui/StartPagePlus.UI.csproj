@@ -64,7 +64,7 @@
     <Compile Include="Converters\TextToVisibilityConverter.cs" />
     <Compile Include="Enums\PeriodTypes.cs" />
     <Compile Include="Enums\PeriodType.cs" />
-    <Compile Include="Dates\DatesMethods.cs" />
+    <Compile Include="Dates\DateMethods.cs" />
     <Compile Include="Enums\RecentItemType.cs" />
     <Compile Include="Enums\RecentItemTypes.cs" />
     <Compile Include="Interfaces\INewsItemActionService.cs" />
