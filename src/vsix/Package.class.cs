@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Threading;
+using EnvDTE;
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Luminous.Code.VisualStudio.Commands;
 using Luminous.Code.VisualStudio.Packages;
@@ -43,7 +44,41 @@ namespace StartPagePlus
             await ViewStartPagePlus.InstantiateAsync(this);
             await StartPagePlusOptions.InstantiateAsync(this);
 
-            //await JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
+            this.SolutionEvents = Dte.Events.SolutionEvents;
+            SolutionEvents.Opened += OnSolutionOpened;
+            SolutionEvents.AfterClosing += SolutionEventsOnAfterClosing;
+        }
+
+        public EnvDTE.SolutionEvents SolutionEvents { get; set; }
+
+        private bool _isExiting;
+
+        private async void OnSolutionOpened()
+        {
+            if (GeneralOptions.AutomaticallyCloseOnSolutionOpen)
+            {
+                var toolWindow = await Instance.FindToolWindowAsync(typeof(StartPagePlusWindow), 0, false, Instance.DisposalToken);
+                JoinableTaskFactory.Run(async delegate
+                {
+                    await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
+                    var windowPane = toolWindow.GetIVsWindowPane() as StartPagePlusWindow;
+                    (windowPane?.Frame as IVsWindowFrame)?.Hide();
+                });
+            }
+        }
+
+        private async void SolutionEventsOnAfterClosing()
+        {
+            if (GeneralOptions.AutomaticallyCloseOnSolutionOpen)
+            {
+                var toolWindow = await Instance.FindToolWindowAsync(typeof(StartPagePlusWindow), 0, false, Instance.DisposalToken);
+                JoinableTaskFactory.Run(async delegate
+                {
+                    await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();
+                    var windowPane = toolWindow.GetIVsWindowPane() as StartPagePlusWindow;
+                    (windowPane?.Frame as IVsWindowFrame)?.ShowNoActivate();
+                });
+            }
         }
 
         protected override async Tasks.Task<object> InitializeToolWindowAsync(Type toolWindowType, int id, CancellationToken cancellationToken)

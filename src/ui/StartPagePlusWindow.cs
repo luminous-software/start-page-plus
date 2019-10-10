@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Windows;
 using Microsoft.VisualStudio.Imaging;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.Win32;
@@ -16,7 +17,7 @@ namespace StartPagePlus.UI
         {
             Caption = Vsix.Name;
             BitmapImageMoniker = KnownMonikers.Home;
-            Content = new MainView(registryRoot);
+            var mainView = (MainView) ( Content = new MainView(registryRoot));
         }
     }
 }

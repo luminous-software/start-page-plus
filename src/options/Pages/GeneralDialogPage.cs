@@ -32,5 +32,10 @@ namespace StartPagePlus.Options.Pages
         [DisplayName(Enable + Space + Quote + Constants.PageConstants.EnableStartPagePlusOptions + Quote)]
         [Description("Determines if a button to open" + Space + Quote + PackageName + Quote + Space + "options is added to the" + Space + Quote + "Tools" + Quote + Space + "Menu")]
         public bool EnableStartPagePlusOptions { get; set; } = true;
+
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + Quote + Constants.PageConstants.AutoCloseOnSolutionOpen + Quote)]
+        [Description("Determines whether to automatically close StartPage+ when a solution opens and open StartPage+ when the solution is closed")]
+        public bool AutomaticallyCloseOnSolutionOpen { get; set; } = true;
     }
 }
