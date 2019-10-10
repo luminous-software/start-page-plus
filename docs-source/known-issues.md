@@ -8,13 +8,13 @@
     - [GitHub Issue #4][github-issue-4]
   - window is not docked on first ever use (squashed into a small rectangle top-left)
     - [GitHub Issue #14][github-issue-14]
-  - window doesn't close when a solution is opened
-    - [GitHub Issue #18][github-issue-18]
+  - window doesn't close when a solution is opened, or open when a solution is closed
+    - [GitHub Issue #29][github-issue-29]
 
 [github-issue-3]: https://github.com/luminous-software/start-page-plus/issues/3
 [github-issue-4]: https://github.com/luminous-software/start-page-plus/issues/4
 [github-issue-14]: https://github.com/luminous-software/start-page-plus/issues/14
-[github-issue-18]: https://github.com/luminous-software/start-page-plus/issues/18
+[github-issue-29]: https://github.com/luminous-software/start-page-plus/issues/29
 
 ## Recent Items
 
