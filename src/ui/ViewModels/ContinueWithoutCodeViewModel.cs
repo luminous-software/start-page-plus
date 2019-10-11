@@ -10,7 +10,7 @@ namespace StartPagePlus.UI.ViewModels
         {
             Moniker = KnownMonikers.GoToNext;
             Name = "Continue without code";
-            Description = "Close this page, and continue witout code";
+            Description = "Close this page, and continue without code";
         }
 
         protected override void ExecuteClick()
