@@ -25,7 +25,8 @@ namespace StartPagePlus
     [Guid(PackageString)]
 
     [ProvideOptionPage(typeof(GeneralDialogPage), Name, General, 0, 0, supportsAutomation: true)]
-    [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "E13EEDEF-B531-4afe-9725-28A69FA4F896", MultiInstances = false)]
+    //[ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "E13EEDEF-B531-4afe-9725-28A69FA4F896", MultiInstances = false)]
+    [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
 
     public sealed class PackageClass : AsyncPackageBase
     {
