@@ -154,7 +154,7 @@
                                         FontSize="10"
                                         FontWeight="Regular"
                                         Foreground="{DynamicResource ItemDescriptionBrush}"
-                                        Text="{Binding Date, StringFormat='d-MM-yyy'}"
+                                        Text="{Binding Date, Converter={c:DateToStringConverter Format=d}}"
                                         />
                                 </StackPanel>
 
