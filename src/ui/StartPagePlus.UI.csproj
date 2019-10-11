@@ -54,6 +54,7 @@
     <Compile Include="AttachedProperties\Grids\Props.cs" />
     <Compile Include="Constants\GuidConstants.cs" />
     <Compile Include="Converters\BoolToPinConverter.cs" />
+    <Compile Include="Converters\DateToStringConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="MarkupExtensions\MultValueConverterMarkupExtension.cs" />
     <Compile Include="MarkupExtensions\ValueConverterMarkupExtension.cs" />
