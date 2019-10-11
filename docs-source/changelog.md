@@ -9,9 +9,11 @@ page on the [Start Page+][start-page-plus-url] website.
 ### v0.15.4 - 2019-10-??
 
   - Preview 4
-    - fixed projects with space in the name not opening [(GHI #23)][github-issue-23]
+    - fixed 'Projects with space in the name not opening' [(GHI #23)][github-issue-23]
+    - fixed 'Dates have a fixed AU/UK format in the Recent Items list' [(GHI #24)][github-issue-24]
 
 [github-issue-23]: https://github.com/luminous-software/start-page-plus/issues/23
+[github-issue-24]: https://github.com/luminous-software/start-page-plus/issues/24
 
 ### v0.14.3 - 2019-10-02
 
@@ -28,9 +30,9 @@ page on the [Start Page+][start-page-plus-url] website.
         - clicking on the link opens the *Start Page+* website's changelog page
     - improved unreadable color combinations in the *Blue* theme ([GitHub Issue #2][github-issue-2])
         - thanks to [@MagicAndre1981][MagicAndre1981], [@sevanmarc][sevanmarc]
-    - fixed missing prerequisites for VS 2017 ([GitHub Issue #8][github-issue-8])
-    - fixed wrong icon shown in _View_ | _Start Page+_ ([GitHub Issue #11][github-issue-11])
-    - fixed NRE when there are no 'recent items' ([GitHub Issue #12][github-issue-12])
+    - fixed 'Missing prerequisites for VS 2017' ([GitHub Issue #8][github-issue-8])
+    - fixed 'Wrong icon shown in _View_ | _Start Page+_' ([GitHub Issue #11][github-issue-11])
+    - fixed 'NRE when there are no _recent items_' ([GitHub Issue #12][github-issue-12])
         - thanks to [@MagicAndre1981][MagicAndre1981], [@sevanmarc][sevanmarc]
 
 [github-issue-2]: https://github.com/luminous-software/start-page-plus/issues/2

@@ -27,8 +27,6 @@
     - [GitHub Issue #21][github-issue-21]
   - images have the wrong background color in some themes
     - [GitHub Issue #22][github-issue-22]
-  - dates have a fixed AU/UK format in the Recent Items list
-    - [GitHub Issue #24][github-issue-24]
   - only *Folder*, *Solution*, and *C# Project* currently have icons
     - [GitHub Issue #26][github-issue-26]
 
@@ -37,7 +35,6 @@
 [github-issue-6]: https://github.com/luminous-software/start-page-plus/issues/6
 [github-issue-21]: https://github.com/luminous-software/start-page-plus/issues21
 [github-issue-22]: https://github.com/luminous-software/start-page-plus/issues22
-[github-issue-24]: https://github.com/luminous-software/start-page-plus/issues24
 [github-issue-26]: https://github.com/luminous-software/start-page-plus/issues26
 
 ## Start Actions

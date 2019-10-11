@@ -43,6 +43,7 @@
       <Link>Properties\source.extension.cs</Link>
     </Compile>
     <Compile Include="Constants\StringConstants.cs" />
+    <Compile Include="DateMethods.cs" />
     <Compile Include="Extensions\DateExtensions.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Interfaces\IDataItem.cs" />
@@ -53,6 +54,11 @@
     <Compile Include="Models\NewsItemFeedItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.SDK">
+      <Version>16.0.202</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

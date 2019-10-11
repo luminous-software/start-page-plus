@@ -43,6 +43,7 @@
       <Link>Properties\source.extension.cs</Link>
     </Compile>
     <Compile Include="Converters\RecentItemTypeConverter_Tests.cs" />
+    <Compile Include="Dates\DateToString_Tests.cs" />
     <Compile Include="Enums\CalculateRecentItemType_Tests.cs" />
     <Compile Include="Enums\PeriodTypeToString_Tests.cs" />
     <Compile Include="Enums\CalculatePeriodType_Tests.cs" />
