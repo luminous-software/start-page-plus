@@ -6,8 +6,6 @@
   - window doesn't open at startup
     - unless you've already opened it, and left it open when you close VS
     - [GitHub Issue #4][github-issue-4]
-  - window is not docked on first ever use (squashed into a small rectangle top-left)
-    - [GitHub Issue #14][github-issue-14]
   - window doesn't close when a solution is opened, or open when a solution is closed
     - [GitHub Issue #29][github-issue-29]
 
