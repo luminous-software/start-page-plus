@@ -56,6 +56,9 @@
     <Compile Include="Extensions\StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis">
+      <Version>3.3.1</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK">
       <Version>15.9.3</Version>
     </PackageReference>

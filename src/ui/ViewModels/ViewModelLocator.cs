@@ -19,6 +19,35 @@ namespace StartPagePlus.UI.ViewModels
             RegisterViewModels(container);
         }
 
+        public static MainViewModel MainViewModel
+            => ServiceLocator.Current.GetInstance<MainViewModel>();
+
+        public static StartViewModel StartViewModel
+            => ServiceLocator.Current.GetInstance<StartViewModel>();
+
+        public static RecentItemsViewModel RecentItemsViewModel
+            => ServiceLocator.Current.GetInstance<RecentItemsViewModel>();
+
+        public static StartActionsViewModel StartActionsViewModel
+            => ServiceLocator.Current.GetInstance<StartActionsViewModel>();
+
+        public static NewsItemsViewModel NewsItemsViewModel
+            => ServiceLocator.Current.GetInstance<NewsItemsViewModel>();
+
+        public static FavoritesViewModel FavoritesViewModel
+            => ServiceLocator.Current.GetInstance<FavoritesViewModel>();
+
+        public static CreateViewModel CreateViewModel
+            => ServiceLocator.Current.GetInstance<CreateViewModel>();
+
+        public static NewsViewModel NewsViewModel
+            => ServiceLocator.Current.GetInstance<NewsViewModel>();
+
+        public static void Initialise()
+        {
+
+        }
+
         private void RegisterServices(SimpleIoc container)
         {
             container.Register<IDialogService, DialogService>();
@@ -53,29 +82,5 @@ namespace StartPagePlus.UI.ViewModels
 
             container.Register<MainViewModel>();
         }
-
-        public static MainViewModel MainViewModel
-            => ServiceLocator.Current.GetInstance<MainViewModel>();
-
-        public static StartViewModel StartViewModel
-            => ServiceLocator.Current.GetInstance<StartViewModel>();
-
-        public static RecentItemsViewModel RecentItemsViewModel
-            => ServiceLocator.Current.GetInstance<RecentItemsViewModel>();
-
-        public static StartActionsViewModel StartActionsViewModel
-            => ServiceLocator.Current.GetInstance<StartActionsViewModel>();
-
-        public static NewsItemsViewModel NewsItemsViewModel
-            => ServiceLocator.Current.GetInstance<NewsItemsViewModel>();
-
-        public static FavoritesViewModel FavoritesViewModel
-            => ServiceLocator.Current.GetInstance<FavoritesViewModel>();
-
-        public static CreateViewModel CreateViewModel
-            => ServiceLocator.Current.GetInstance<CreateViewModel>();
-
-        public static NewsViewModel NewsViewModel
-            => ServiceLocator.Current.GetInstance<NewsViewModel>();
     }
 }
