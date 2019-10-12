@@ -31,13 +31,14 @@ namespace StartPagePlus.UI.Services
 
             var items = new ObservableCollection<RecentItemViewModel>();
 
-            using (var regKey = MainViewModel.RegistryRoot
-                .OpenSubKey(ROOT)
-                .OpenSubKey(METADATA)
-                .OpenSubKey(BASELINES)
-                .OpenSubKey(CODE_CONTAINERS)
-                )
+            try
             {
+                using var regKey = MainViewModel.RegistryRoot
+                    .OpenSubKey(ROOT)
+                    .OpenSubKey(METADATA)
+                    .OpenSubKey(BASELINES)
+                    .OpenSubKey(CODE_CONTAINERS);
+
                 try
                 {
                     if (regKey is null)
@@ -56,14 +57,20 @@ namespace StartPagePlus.UI.Services
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ExtendedMessage());
+                    return items;
                 }
                 finally
                 {
                     regKey?.Close();
                 }
-            }
 
-            return items;
+                return items;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ExtendedMessage());
+                return items;
+            }
         }
     }
 }
