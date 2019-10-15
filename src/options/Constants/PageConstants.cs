@@ -19,5 +19,6 @@
         public const string PackageVersion = "Version Number";
         public const string OpenLinksInVS = "Open Links in VS";
         public const string EnableStartPagePlusOptions = "Start Page+ Options";
+        public const string AutoCloseOnSolutionOpen = "Automatically close Start Page+ when solution opens, show when solution closes";
     }
 }
