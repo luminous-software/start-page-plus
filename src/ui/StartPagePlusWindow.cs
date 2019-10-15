@@ -17,7 +17,7 @@ namespace StartPagePlus.UI
         {
             Caption = Vsix.Name;
             BitmapImageMoniker = KnownMonikers.Home;
-            var mainView = (MainView) ( Content = new MainView(registryRoot));
+            (MainView) ( Content = new MainView(registryRoot));
         }
     }
 }
