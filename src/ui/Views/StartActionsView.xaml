@@ -6,6 +6,7 @@
     xmlns:grid="clr-namespace:StartPagePlus.UI.AttachedProperties.Grids"
     xmlns:imaging="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.Imaging"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.15.0"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d"
@@ -19,7 +20,10 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Border Style="{StaticResource ColumnStyle}">
+    <Border
+        ui:ImageThemingUtilities.ImageBackgroundColor="{Binding Background.Color, RelativeSource={RelativeSource Self}}"
+        Style="{StaticResource ColumnStyle}"
+        >
         <DockPanel LastChildFill="true">
             <TextBlock x:Name="Heading"
                 DockPanel.Dock="Top"
@@ -54,8 +58,8 @@
                             Command="{Binding ClickCommand}"
                             Style="{StaticResource ColumnListItemStyle}"
                             >
-
                             <Grid grid:Props.ColumnWidths="Auto,*">
+
                                 <imaging:CrispImage
                                     Name="StartActionImage"
                                     Grid.Column="0"
