@@ -14,9 +14,11 @@ page on the [Start Page+][start-page-plus-url] website.
     - fixed 'PackageClass did not load correctly (VS 2017)' [(GHI #8)][github-issue-8]
     - fixed 'Projects with space in the name not opening' [(GHI #23)][github-issue-23]
     - fixed 'Dates have a fixed AU/UK format in the Recent Items list' [(GHI #24)][github-issue-24]
+    - fixed 'Images in StartView have the wrong background color in some themes' [(GHI #22)][github-issue-22]
 
 [github-issue-8]: https://github.com/luminous-software/start-page-plus/issues/8
 [github-issue-14]: https://github.com/luminous-software/start-page-plus/issues/14
+[github-issue-22]: https://github.com/luminous-software/start-page-plus/issues/22
 [github-issue-23]: https://github.com/luminous-software/start-page-plus/issues/23
 [github-issue-24]: https://github.com/luminous-software/start-page-plus/issues/24
 
