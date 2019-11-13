@@ -55,7 +55,7 @@ namespace Luminous.Code.Tests.Enums
 
             var result = value.CalculateRecentItemType();
 
-            result.Should().Be(RecentItemType.CsProject);
+            result.Should().Be(RecentItemType.CSharpProject);
         }
 
         [Fact]

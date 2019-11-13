@@ -35,7 +35,7 @@ namespace StartPagePlus.UI.Tests.Enums
         [Fact]
         public void RecentItemTypeCsProject_Returns_CSProjectNode()
         {
-            var result = RecentItemType.CsProject.ToImageMoniker();
+            var result = RecentItemType.CSharpProject.ToImageMoniker();
 
             result.Should().Be(KnownMonikers.CSProjectNode);
         }

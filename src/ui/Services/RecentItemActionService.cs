@@ -40,7 +40,7 @@ namespace StartPagePlus.UI.Services
                     //VsService.OpenSolution(path);
                     //break;
 
-                    case RecentItemType.CsProject:
+                    case RecentItemType.CSharpProject:
                         VsService.ExecuteCommand("File.OpenProject", SafePath(path));
                         break;
 
