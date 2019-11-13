@@ -5,6 +5,20 @@
         Unknown = 0,
         Folder,
         Solution,
-        CsProject,
+
+        CPlusPlusProject,
+        CPlusPlusSharedProject,
+        CSharpProject,
+        CSharpSharedProject,
+        DatabaseProject,
+        FSharpProject,
+        JavascriptProject,
+        JavascriptSharedProject,
+        //NodeJsProject,
+        PythonProject,
+        SharedProject,
+        TypeScriptProject,
+        VisualBasicProject,
+        VisualBasicSharedProject,
     }
 }
