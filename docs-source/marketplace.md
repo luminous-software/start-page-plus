@@ -87,7 +87,6 @@ which never really made **any** sense.
 ## Theme Samples
 
 This is what Start Page+ currently looks like in the *Blue (VS 2019)*, *Blue (VS 2017)*, *Dark*, and *Light* themes.
-  ![Start Page+](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/start-page-plus.png)
 
 ### Blue (VS 2019) Theme
 
@@ -103,7 +102,7 @@ This is what Start Page+ currently looks like in the *Blue (VS 2019)*, *Blue (VS
 
 ### Light Theme
 
-![Light](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/.png)
+![Light](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/light.png)
 
 Other themes from the [Color Theme Editor for VS 2019][color-theme-editor-url] should also look good too,
 such as the *Purple* and *Tan* themes below.
@@ -112,7 +111,7 @@ such as the *Purple* and *Tan* themes below.
 
 ### Purple Theme
 
-![Purple](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/.png)
+![Purple](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/purple.png)
 
 ### Tan Theme
 
