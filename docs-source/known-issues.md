@@ -14,14 +14,11 @@
 
 ## Recent Items
 
-  - *Timeframes* disappear when *Refresh* is clicked ([GitHub Issue #5][github-issue-5])
-    - a workaround is to click on another tab, then click on the *Start* tab again
   - can't start typing in the filter box without clicking in it first ([GitHub Issue #6][github-issue-6])
   - there's no way to *pin* and *unpin* items ([GitHub Issue #21][github-issue-21])
   - only *Folder*, *Solution*, and *C# Project* currently have icons ([GitHub Issue #26][github-issue-26])
 
 [developer-news-url]: https://luminous-software.solutions/developer-news
-[github-issue-5]: https://github.com/luminous-software/start-page-plus/issues/5
 [github-issue-6]: https://github.com/luminous-software/start-page-plus/issues/6
 [github-issue-21]: https://github.com/luminous-software/start-page-plus/issues21
 [github-issue-22]: https://github.com/luminous-software/start-page-plus/issues22
