@@ -1,8 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows;
+
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Luminous.Code.Extensions.Strings;
 
@@ -20,7 +21,7 @@ namespace StartPagePlus.UI.Views
             {
                 var viewModel = ViewModelLocator.RecentItemsViewModel;
 
-                viewModel.Refresh();
+                //viewModel.Refresh();
 
                 DataContext = viewModel;
 
@@ -76,8 +77,9 @@ namespace StartPagePlus.UI.Views
                        : name.MatchesFilter(FilterTextBox.Text);
                };
 
-        private void RefreshViewWhenFilterChanges(ListCollectionView view) => FilterTextBox.TextChanged += (object sender, TextChangedEventArgs e)
-            => view.Refresh();
+        private void RefreshViewWhenFilterChanges(ListCollectionView view)
+            => FilterTextBox.TextChanged += (object sender, TextChangedEventArgs e)
+                => view.Refresh();
 
         private void EnsureClickedItemDoesNotRemainSelected()
             => RecentItemsListView.SelectionChanged += (sender, e)
