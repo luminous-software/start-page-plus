@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+
 using GalaSoft.MvvmLight.Messaging;
 
 namespace StartPagePlus.UI.ViewModels
@@ -10,7 +11,6 @@ namespace StartPagePlus.UI.ViewModels
         private const string HEADING = "Open a Recent Item";
 
         private ObservableCollection<RecentItemViewModel> items = new ObservableCollection<RecentItemViewModel>();
-        //private readonly bool filtered = true;
 
         public RecentItemsViewModel(IRecentItemDataService dataService, IRecentItemActionService actionService, IRecentItemCommandService commandService)
             : base()
@@ -23,9 +23,9 @@ namespace StartPagePlus.UI.ViewModels
             IsVisible = true;
 
             GetCommands();
-            // refresh needs to be done in the view's code-behind
+            Refresh();
 
-            MessengerInstance.Register<NotificationMessage<RecentItemViewModel>>(this, ActionCallback);
+            MessengerInstance.Register<NotificationMessage<RecentItemViewModel>>(this, ExecuteAction);
         }
 
         public IRecentItemDataService DataService { get; }
@@ -40,16 +40,22 @@ namespace StartPagePlus.UI.ViewModels
             set => Set(ref items, value);
         }
 
-        private void ActionCallback(NotificationMessage<RecentItemViewModel> message)
+        private void ExecuteAction(NotificationMessage<RecentItemViewModel> message)
             => ActionService.ExecuteAction(message.Content);
 
         private void GetCommands()
-            => Commands = CommandService.GetCommands(/*ShowFilter, RemoveFilter,*/ Refresh);
+            => Commands = CommandService.GetCommands(Refresh);
 
         public void Refresh()
         {
-            //Items.Clear();
-            Items = DataService.GetItems();
+            var items = DataService.GetItems();
+
+            Items.Clear();
+
+            foreach (var item in items)
+            {
+                Items.Add(item);
+            }
         }
     }
 }
