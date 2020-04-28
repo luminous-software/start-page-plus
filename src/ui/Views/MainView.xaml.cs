@@ -19,7 +19,7 @@ namespace StartPagePlus.UI.Views
 
             DataContext = ViewModelLocator.MainViewModel;
 
-            LayoutRoot.MaxWidth = SettingsOptions.Instance.MaxWidth;
+            LayoutRoot.MaxWidth = SettingOptions.Instance.MaxWidth;
         }
 
         protected override void OnInitialized(EventArgs e)

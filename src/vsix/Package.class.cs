@@ -21,7 +21,6 @@ namespace StartPagePlus
     using UI;
     using UI.ViewModels;
 
-    using static Core.Constants.StringConstants;
     using static PackageGuids;
     using static Vsix;
 
@@ -30,8 +29,8 @@ namespace StartPagePlus
     [InstalledProductRegistration(Name, Description, Version)]
     [Guid(PackageString)]
 
-    [ProvideOptionPage(typeof(DialogPageProvider.General), Name, nameof(General), 0, 0, supportsAutomation: true)]
-    [ProvideOptionPage(typeof(DialogPageProvider.Settings), Name, Settings, 0, 0, supportsAutomation: true)]
+    [ProvideOptionPage(typeof(DialogPageProvider.General), Name, nameof(DialogPageProvider.General), 0, 0, supportsAutomation: true)]
+    [ProvideOptionPage(typeof(DialogPageProvider.Settings), Name, nameof(DialogPageProvider.Settings), 0, 0, supportsAutomation: true)]
     [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
 
     public sealed class PackageClass : AsyncPackageBase

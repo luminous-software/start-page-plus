@@ -6,7 +6,7 @@ namespace StartPagePlus.Options.Models
 {
     using static Constants.PageConstants;
 
-    public class SettingsOptions : BaseOptionModel<SettingsOptions>
+    public class SettingOptions : BaseOptionModel<SettingOptions>
     {
         [Category(Settings)]
         [DisplayName(Constants.PageConstants.MaxWidth)]
