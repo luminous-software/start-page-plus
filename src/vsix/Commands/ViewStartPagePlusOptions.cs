@@ -7,6 +7,7 @@ using Tasks = System.Threading.Tasks;
 
 namespace StartPagePlus.Commands
 {
+    using Options.Models;
     using Options.Pages;
 
     internal sealed class StartPagePlusOptions : StartPagePlusCommand
@@ -19,7 +20,7 @@ namespace StartPagePlus.Commands
             => await InstantiateAsync(new StartPagePlusOptions(package));
 
         protected override bool CanExecute
-          => base.CanExecute && PackageClass.GeneralOptions.EnableStartPagePlusOptions;
+          => base.CanExecute && FeatureOptions.Instance.EnableStartPagePlusOptions;
 
         protected override void OnExecute(OleMenuCommand command)
             => ExecuteCommand()

@@ -1,7 +1,8 @@
-﻿namespace StartPagePlus.Commands
+﻿using Luminous.Code.VisualStudio.Commands;
+using Luminous.Code.VisualStudio.Packages;
+namespace StartPagePlus.Commands
 {
-    using Luminous.Code.VisualStudio.Commands;
-    using Luminous.Code.VisualStudio.Packages;
+    using Options.Models;
 
     internal abstract class StartPagePlusCommand : AsyncDynamicCommand
     {
@@ -9,6 +10,6 @@
         { }
 
         protected override bool CanExecute
-           => base.CanExecute && PackageClass.GeneralOptions.EnableStartPagePlus;
+           => base.CanExecute && GeneralOptions.Instance.EnableStartPagePlus;
     }
 }

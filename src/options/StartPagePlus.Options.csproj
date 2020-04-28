@@ -61,9 +61,6 @@
     <Compile Include="Pages\DialogPageProvider.cs" />
     <Compile Include="Constants\OptionsGuids.cs" />
     <Compile Include="Models\SettingOptions.cs" />
-    <Compile Include="Pages\GeneralDialogPage.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,14 @@
 ﻿using Luminous.Code.VisualStudio.Commands;
 using Luminous.Code.VisualStudio.Packages;
+
 using Microsoft.VisualStudio.Shell;
+
 using Tasks = System.Threading.Tasks;
 
 namespace StartPagePlus.Commands
 {
+    using Options.Models;
+
     using UI;
 
     internal sealed class ViewStartPagePlus : StartPagePlusCommand
@@ -17,7 +21,7 @@ namespace StartPagePlus.Commands
             => await InstantiateAsync(new ViewStartPagePlus(package));
 
         protected override bool CanExecute
-          => base.CanExecute && PackageClass.GeneralOptions.EnableStartPagePlus;
+          => base.CanExecute && GeneralOptions.Instance.EnableStartPagePlus;
 
         protected override void OnExecute(OleMenuCommand command)
             => ExecuteCommand()
