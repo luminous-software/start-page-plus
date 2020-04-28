@@ -1,6 +1,8 @@
 ﻿using Luminous.Code.VisualStudio.Commands;
 using Luminous.Code.VisualStudio.Packages;
+
 using Microsoft.VisualStudio.Shell;
+
 using Tasks = System.Threading.Tasks;
 
 namespace StartPagePlus.Commands
@@ -24,6 +26,6 @@ namespace StartPagePlus.Commands
                 .ShowProblem();
 
         private CommandResult ExecuteCommand()
-            => Package?.ShowOptionsPage<GeneralDialogPage>();
+            => Package?.ShowOptionsPage<DialogPageProvider.General>();
     }
 }

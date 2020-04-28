@@ -17,5 +17,8 @@ namespace StartPagePlus.Options.Pages
 
         [Guid(SettingPageGuidString)]
         public class Settings : BaseOptionPage<SettingOptions> { }
+
+        [Guid(FeaturePageGuidString)]
+        public class Features : BaseOptionPage<FeatureOptions> { }
     }
 }

@@ -9,12 +9,12 @@ namespace StartPagePlus.Options.Models
 
     public class GeneralOptions : BaseOptionModel<GeneralOptions>
     {
-        [Category(H1 + PackageName)]
+        [Category(General)]
         [DisplayName(Enable + Space + Quote + PackageName + Quote)]
         [Description("Allows the whole set of '" + PackageName + "' features to be turned off together")]
         public bool EnableStartPagePlus { get; set; } = true;
 
-        [Category(H1 + PackageName)]
+        [Category(General)]
         [DisplayName(Constants.PageConstants.PackageVersion)]
         [Description("Installed '" + PackageName + "' version")]
         public string PackageVersion { get; } = Vsix.Version;
