@@ -1,16 +1,12 @@
 ﻿using System.ComponentModel;
-using System.Runtime.InteropServices;
+
 using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.Options.Pages
 {
-    using static Constants.OptionsGuids;
     using static Constants.PageConstants;
     using static Core.Constants.StringConstants;
 
-    [ClassInterface(ClassInterfaceType.AutoDual)]
-    [ComVisible(true)]
-    [Guid(GeneralDialogPageString)]
     public class GeneralDialogPage : DialogPage
     {
         [Category(H1 + PackageName)]

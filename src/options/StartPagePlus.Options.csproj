@@ -53,6 +53,7 @@
     </Compile>
     <Compile Include="Constants\PageConstants.cs" />
     <Compile Include="Models\BaseOptionModel.cs" />
+    <Compile Include="Models\GeneralOptions.cs" />
     <Compile Include="Pages\BaseOptionPage.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -12,6 +12,9 @@ namespace StartPagePlus.Options.Pages
     // A provider for custom DialogPage implementations
     public class DialogPageProvider
     {
+        [Guid(GeneralPageGuidString)]
+        public class General : BaseOptionPage<GeneralOptions> { }
+
         [Guid(SettingsPageGuidString)]
         public class Settings : BaseOptionPage<SettingsOptions> { }
     }

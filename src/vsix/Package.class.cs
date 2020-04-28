@@ -30,7 +30,7 @@ namespace StartPagePlus
     [InstalledProductRegistration(Name, Description, Version)]
     [Guid(PackageString)]
 
-    [ProvideOptionPage(typeof(GeneralDialogPage), Name, General, 0, 0, supportsAutomation: true)]
+    [ProvideOptionPage(typeof(DialogPageProvider.General), Name, nameof(General), 0, 0, supportsAutomation: true)]
     [ProvideOptionPage(typeof(DialogPageProvider.Settings), Name, Settings, 0, 0, supportsAutomation: true)]
     [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
 
