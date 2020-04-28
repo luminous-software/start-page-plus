@@ -1,20 +1,26 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using System.Threading;
+
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Luminous.Code.VisualStudio.Commands;
 using Luminous.Code.VisualStudio.Packages;
+
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+
 using Tasks = System.Threading.Tasks;
 
 namespace StartPagePlus
 {
     using Commands;
+
     using Options.Pages;
+
     using UI;
     using UI.ViewModels;
+
     using static Core.Constants.StringConstants;
     using static PackageGuids;
     using static Vsix;
@@ -25,7 +31,7 @@ namespace StartPagePlus
     [Guid(PackageString)]
 
     [ProvideOptionPage(typeof(GeneralDialogPage), Name, General, 0, 0, supportsAutomation: true)]
-    //[ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "E13EEDEF-B531-4afe-9725-28A69FA4F896", MultiInstances = false)]
+    [ProvideOptionPage(typeof(DialogPageProvider.Settings), Name, Settings, 0, 0, supportsAutomation: true)]
     [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
 
     public sealed class PackageClass : AsyncPackageBase

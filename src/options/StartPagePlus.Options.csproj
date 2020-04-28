@@ -52,10 +52,16 @@
       <Link>Properties\source.extension.cs</Link>
     </Compile>
     <Compile Include="Constants\PageConstants.cs" />
+    <Compile Include="Models\BaseOptionModel.cs" />
+    <Compile Include="Pages\BaseOptionPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\DialogPageProvider.cs" />
+    <Compile Include="Constants\OptionsGuids.cs" />
+    <Compile Include="Models\SettingsOptions.cs" />
     <Compile Include="Pages\GeneralDialogPage.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Constants\OptionsGuids.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
