@@ -1,224 +1,223 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-    <PropertyGroup>
-        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}</ProjectGuid>
-        <OutputType>Library</OutputType>
-        <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>StartPagePlus.UI</RootNamespace>
-        <AssemblyName>StartPagePlus.UI</AssemblyName>
-        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-        <FileAlignment>512</FileAlignment>
-        <Deterministic>true</Deterministic>
-    </PropertyGroup>
-    <PropertyGroup>
-        <LangVersion>8.0</LangVersion>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-        <DebugSymbols>true</DebugSymbols>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <OutputPath>bin\Debug\</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-        <DebugType>pdbonly</DebugType>
-        <Optimize>true</Optimize>
-        <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
-        <ErrorReport>prompt</ErrorReport>
-        <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <ItemGroup>
-        <Reference Include="PresentationCore" />
-        <Reference Include="PresentationFramework" />
-        <Reference Include="System" />
-        <Reference Include="System.Data" />
-        <Reference Include="System.Data.Linq" />
-        <Reference Include="System.Drawing" />
-        <Reference Include="System.ServiceModel" />
-        <Reference Include="System.Web" />
-        <Reference Include="System.Windows.Forms" />
-        <Reference Include="System.Xaml" />
-        <Reference Include="System.Xml" />
-        <Reference Include="WindowsBase" />
-    </ItemGroup>
-    <ItemGroup>
-        <Compile Include="..\vsix\Properties\GlobalSuppressions.cs">
-            <Link>Properties\GlobalSuppressions.cs</Link>
-        </Compile>
-        <Compile Include="..\vsix\source.extension.cs">
-            <Link>Properties\source.extension.cs</Link>
-        </Compile>
-        <Compile Include="AttachedProperties\Grids\Props.cs" />
-        <Compile Include="Constants\GuidConstants.cs" />
-        <Compile Include="Converters\BoolToPinConverter.cs" />
-        <Compile Include="Converters\DateToStringConverter.cs" />
-        <Compile Include="Converters\BoolToVisibilityConverter.cs" />
-        <Compile Include="MarkupExtensions\MultValueConverterMarkupExtension.cs" />
-        <Compile Include="MarkupExtensions\ValueConverterMarkupExtension.cs" />
-        <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
-        <Compile Include="Converters\DummyConverter.cs" />
-        <Compile Include="Converters\EnumToStringConverter.cs" />
-        <Compile Include="Converters\RecentItemTypeToMonikerConverter.cs" />
-        <Compile Include="Converters\TextToVisibilityConverter.cs" />
-        <Compile Include="Enums\PeriodTypes.cs" />
-        <Compile Include="Enums\PeriodType.cs" />
-        <Compile Include="Dates\DateMethods.cs" />
-        <Compile Include="Enums\RecentItemType.cs" />
-        <Compile Include="Enums\RecentItemTypes.cs" />
-        <Compile Include="Interfaces\INewsItemActionService.cs" />
-        <Compile Include="Interfaces\INewsItemCommandService.cs" />
-        <Compile Include="Interfaces\INewsItemDataService.cs" />
-        <Compile Include="Interfaces\IRecentItemActionService.cs" />
-        <Compile Include="Interfaces\IRecentItemCommandService.cs" />
-        <Compile Include="Interfaces\IRecentItemDataService.cs" />
-        <Compile Include="Interfaces\IStartActionCommandService.cs" />
-        <Compile Include="Interfaces\IStartActionDataService.cs" />
-        <Compile Include="Interfaces\IStartAction.cs" />
-        <Compile Include="Observables\ObservableCommandList.cs" />
-        <Compile Include="Observables\ObservableList.cs" />
-        <Compile Include="Observables\ObservedCollection.cs" />
-        <Compile Include="Models\RecentItem.cs" />
-        <Compile Include="Models\RecentItemProperties.cs" />
-        <Compile Include="Models\RecentItemValue.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Services\DialogService.cs" />
-        <Compile Include="Interfaces\IVisualStudioService.cs" />
-        <Compile Include="Services\NewsItemActionService.cs" />
-        <Compile Include="Services\DateTimeService.cs" />
-        <Compile Include="Services\NewsItemCommandService.cs" />
-        <Compile Include="Services\NewsItemDataService.cs" />
-        <Compile Include="Services\RecentItemActionService.cs" />
-        <Compile Include="Services\RecentItemCommandService.cs" />
-        <Compile Include="Services\RecentItemDataService.cs" />
-        <Compile Include="Services\StartActionCommandService.cs" />
-        <Compile Include="Services\StartActionDataService.cs" />
-        <Compile Include="StartPagePlusWindow.cs" />
-        <Compile Include="ViewModels\ColumnViewModel.cs" />
-        <Compile Include="Services\VisualStudioService.cs" />
-        <Compile Include="ViewModels\ContinueWithoutCodeViewModel.cs" />
-        <Compile Include="ViewModels\OpenFolderViewModel.cs" />
-        <Compile Include="ViewModels\OpenProjectViewModel.cs" />
-        <Compile Include="ViewModels\CreateProjectViewModel.cs" />
-        <Compile Include="ViewModels\RecentItemViewModel.cs" />
-        <Compile Include="ViewModels\NewsItemViewModel.cs" />
-        <Compile Include="ViewModels\StartActionViewModel.cs" />
-        <Compile Include="ViewModels\NewsItemsViewModel.cs" />
-        <Compile Include="ViewModels\NewsViewModel.cs" />
-        <Compile Include="ViewModels\CreateViewModel.cs" />
-        <Compile Include="ViewModels\MainViewModel.cs" />
-        <Compile Include="ViewModels\FavoritesViewModel.cs" />
-        <Compile Include="ViewModels\RecentItemsViewModel.cs" />
-        <Compile Include="ViewModels\StartActionsViewModel.cs" />
-        <Compile Include="ViewModels\GetCodeViewModel.cs" />
-        <Compile Include="ViewModels\StartViewModel.cs" />
-        <Compile Include="ViewModels\CommandViewModel.cs" />
-        <Compile Include="ViewModels\TabViewModel.cs" />
-        <Compile Include="ViewModels\ViewModelLocator.cs" />
-        <Compile Include="Views\CreateView.xaml.cs">
-            <DependentUpon>CreateView.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Views\FavoritesView.xaml.cs">
-            <DependentUpon>FavoritesView.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Views\MainView.xaml.cs">
-            <DependentUpon>MainView.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Views\NewsView.xaml.cs">
-            <DependentUpon>NewsView.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Views\NewsItemsView.xaml.cs">
-            <DependentUpon>NewsItemsView.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Views\StartActionsView.xaml.cs">
-            <DependentUpon>StartActionsView.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Views\RecentItemsView.xaml.cs">
-            <DependentUpon>RecentItemsView.xaml</DependentUpon>
-        </Compile>
-        <Compile Include="Views\StartView.xaml.cs">
-            <DependentUpon>StartView.xaml</DependentUpon>
-            <SubType>Code</SubType>
-        </Compile>
-    </ItemGroup>
-    <ItemGroup>
-        <PackageReference Include="Luminous.Code.Core">
-            <Version>1.4.2</Version>
-        </PackageReference>
-        <PackageReference Include="Luminous.Code.VisualStudio">
-            <Version>1.4.2</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.CodeAnalysis">
-            <Version>3.3.1</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.VisualStudio.SDK">
-            <Version>15.9.3</Version>
-        </PackageReference>
-        <PackageReference Include="MvvmLightLibs">
-            <Version>5.4.1.1</Version>
-        </PackageReference>
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\core\StartPagePlus.Core.csproj">
-            <Project>{37c10221-0383-41e0-8c01-f06ca16b9d82}</Project>
-            <Name>StartPagePlus.Core</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\options\StartPagePlus.Options.csproj">
-            <Project>{d1eaad10-2832-42de-b8e7-eba03af83bcd}</Project>
-            <Name>StartPagePlus.Options</Name>
-        </ProjectReference>
-    </ItemGroup>
-    <ItemGroup>
-        <Page Include="Resources\Styles.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Page Include="Resources\Brushes.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Page Include="Resources\Images.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Page Include="Views\CreateView.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="Views\FavoritesView.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="Views\MainView.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Page Include="Views\NewsView.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="Views\NewsItemsView.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Page Include="Views\StartActionsView.xaml">
-            <Generator>MSBuild:Compile</Generator>
-            <SubType>Designer</SubType>
-        </Page>
-        <Page Include="Views\RecentItemsView.xaml">
-            <SubType>Designer</SubType>
-            <Generator>MSBuild:Compile</Generator>
-        </Page>
-        <Page Include="Views\StartView.xaml">
-            <SubType>Designer</SubType>
-            <Generator>XamlIntelliSenseFileGenerator</Generator>
-        </Page>
-    </ItemGroup>
-    <ItemGroup />
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C32A223-6DBB-4892-B5AB-0FA19BAB5DC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StartPagePlus.UI</RootNamespace>
+    <AssemblyName>StartPagePlus.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\vsix\Properties\GlobalSuppressions.cs">
+      <Link>Properties\GlobalSuppressions.cs</Link>
+    </Compile>
+    <Compile Include="..\vsix\source.extension.cs">
+      <Link>Properties\source.extension.cs</Link>
+    </Compile>
+    <Compile Include="AttachedProperties\Grids\Props.cs" />
+    <Compile Include="Constants\GuidConstants.cs" />
+    <Compile Include="Converters\BoolToPinConverter.cs" />
+    <Compile Include="Converters\DateToStringConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="MarkupExtensions\MultValueConverterMarkupExtension.cs" />
+    <Compile Include="MarkupExtensions\ValueConverterMarkupExtension.cs" />
+    <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
+    <Compile Include="Converters\DummyConverter.cs" />
+    <Compile Include="Converters\EnumToStringConverter.cs" />
+    <Compile Include="Converters\RecentItemTypeToMonikerConverter.cs" />
+    <Compile Include="Converters\TextToVisibilityConverter.cs" />
+    <Compile Include="Enums\PeriodTypes.cs" />
+    <Compile Include="Enums\PeriodType.cs" />
+    <Compile Include="Dates\DateMethods.cs" />
+    <Compile Include="Enums\RecentItemType.cs" />
+    <Compile Include="Enums\RecentItemTypes.cs" />
+    <Compile Include="Interfaces\INewsItemActionService.cs" />
+    <Compile Include="Interfaces\INewsItemCommandService.cs" />
+    <Compile Include="Interfaces\INewsItemDataService.cs" />
+    <Compile Include="Interfaces\IRecentItemActionService.cs" />
+    <Compile Include="Interfaces\IRecentItemCommandService.cs" />
+    <Compile Include="Interfaces\IRecentItemDataService.cs" />
+    <Compile Include="Interfaces\IStartActionCommandService.cs" />
+    <Compile Include="Interfaces\IStartActionDataService.cs" />
+    <Compile Include="Interfaces\IStartAction.cs" />
+    <Compile Include="Observables\ObservableCommandList.cs" />
+    <Compile Include="Observables\ObservableList.cs" />
+    <Compile Include="Observables\ObservedCollection.cs" />
+    <Compile Include="Models\RecentItem.cs" />
+    <Compile Include="Models\RecentItemProperties.cs" />
+    <Compile Include="Models\RecentItemValue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DialogService.cs" />
+    <Compile Include="Interfaces\IVisualStudioService.cs" />
+    <Compile Include="Services\NewsItemActionService.cs" />
+    <Compile Include="Services\DateTimeService.cs" />
+    <Compile Include="Services\NewsItemCommandService.cs" />
+    <Compile Include="Services\NewsItemDataService.cs" />
+    <Compile Include="Services\RecentItemActionService.cs" />
+    <Compile Include="Services\RecentItemCommandService.cs" />
+    <Compile Include="Services\RecentItemDataService.cs" />
+    <Compile Include="Services\StartActionCommandService.cs" />
+    <Compile Include="Services\StartActionDataService.cs" />
+    <Compile Include="StartPagePlusWindow.cs" />
+    <Compile Include="ViewModels\ColumnViewModel.cs" />
+    <Compile Include="Services\VisualStudioService.cs" />
+    <Compile Include="ViewModels\OpenFolderViewModel.cs" />
+    <Compile Include="ViewModels\OpenProjectViewModel.cs" />
+    <Compile Include="ViewModels\CreateProjectViewModel.cs" />
+    <Compile Include="ViewModels\RecentItemViewModel.cs" />
+    <Compile Include="ViewModels\NewsItemViewModel.cs" />
+    <Compile Include="ViewModels\StartActionViewModel.cs" />
+    <Compile Include="ViewModels\NewsItemsViewModel.cs" />
+    <Compile Include="ViewModels\NewsViewModel.cs" />
+    <Compile Include="ViewModels\CreateViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\FavoritesViewModel.cs" />
+    <Compile Include="ViewModels\RecentItemsViewModel.cs" />
+    <Compile Include="ViewModels\StartActionsViewModel.cs" />
+    <Compile Include="ViewModels\GetCodeViewModel.cs" />
+    <Compile Include="ViewModels\StartViewModel.cs" />
+    <Compile Include="ViewModels\CommandViewModel.cs" />
+    <Compile Include="ViewModels\TabViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="Views\CreateView.xaml.cs">
+      <DependentUpon>CreateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FavoritesView.xaml.cs">
+      <DependentUpon>FavoritesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsView.xaml.cs">
+      <DependentUpon>NewsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewsItemsView.xaml.cs">
+      <DependentUpon>NewsItemsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartActionsView.xaml.cs">
+      <DependentUpon>StartActionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecentItemsView.xaml.cs">
+      <DependentUpon>RecentItemsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartView.xaml.cs">
+      <DependentUpon>StartView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Luminous.Code.Core">
+      <Version>1.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="Luminous.Code.VisualStudio">
+      <Version>1.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis">
+      <Version>3.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.SDK">
+      <Version>15.9.3</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmLightLibs">
+      <Version>5.4.1.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\core\StartPagePlus.Core.csproj">
+      <Project>{37c10221-0383-41e0-8c01-f06ca16b9d82}</Project>
+      <Name>StartPagePlus.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\options\StartPagePlus.Options.csproj">
+      <Project>{d1eaad10-2832-42de-b8e7-eba03af83bcd}</Project>
+      <Name>StartPagePlus.Options</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Images.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FavoritesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NewsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewsItemsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\StartActionsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RecentItemsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
