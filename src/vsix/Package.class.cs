@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Threading;
 
@@ -28,6 +29,7 @@ namespace StartPagePlus
 
     [InstalledProductRegistration(Name, Description, Version)]
     [Guid(PackageString)]
+    [DisplayName("Start Page+")]
 
     [ProvideOptionPage(typeof(DialogPageProvider.General), Name, nameof(DialogPageProvider.General), 0, 0, supportsAutomation: true)]
     [ProvideOptionPage(typeof(DialogPageProvider.Features), Name, nameof(DialogPageProvider.Features), 0, 0, supportsAutomation: true)]
