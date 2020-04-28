@@ -39,9 +39,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. initial", "0. initial", "{8A6F448D-3822-4DAC-942D-00274F1DD568}"
 	ProjectSection(SolutionItems) = preProject
 		.notes.md = .notes.md
-		docs-source\assets\images\general-options.png = docs-source\assets\images\general-options.png
 		LICENSE = LICENSE
 		mkdocs.yml = mkdocs.yml
+		docs-source\assets\images\options-features.png = docs-source\assets\images\options-features.png
+		docs-source\assets\images\options-general.png = docs-source\assets\images\options-general.png
+		docs-source\assets\images\options-settings.png = docs-source\assets\images\options-settings.png
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. changes", "2. changes", "{2C4A9B8A-C4DE-4854-A698-CB4D465BAF0A}"

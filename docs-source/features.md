@@ -37,9 +37,9 @@ there's an option to change Start Page+'s behavior to do just that.
 
 ![Developer News](assets/images/developer-news.png)
 
-## Options
+## General Options
 
-![General Options](assets/images/general-options.png)
+![General Options](assets/images/options-general.png)
 
 ### Enable 'Start Page+'
 
@@ -59,9 +59,27 @@ the _Start Page+_ window, so the extension will not need to be loaded.
 
 This setting simply displays the version number of _Start Page+_ that's currently installed.
 
+## Feature Options
+
+![Feature Options](assets/images/options-features.png)
+
 ### Enable 'Open Links in VS'
 
 When this setting is set to `true`, any clicked item that opens a web page will be opened in a browser window
 **inside** of Visual Studio.
 
 When set to `false`, clicked items that open a web page will be opened in your default browser.
+
+### Enable 'Start Page+ Options'
+
+When this setting is set to `true` a 'Start Page+ Options' command is added to the `Tools` | `Options` menu.
+
+## Setting Options
+
+![Feature Options](assets/images/options-settings.png)
+
+### Max Width
+
+The default value of 1175 should be fine for everyone, regardless of your monitor resolution.
+However if you'd like the contents of the _Start Page+_ window to be wider or narrower,
+this setting will allow you to set it to whatever you prefer.
