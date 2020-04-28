@@ -39,6 +39,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. initial", "0. initial", "{8A6F448D-3822-4DAC-942D-00274F1DD568}"
 	ProjectSection(SolutionItems) = preProject
 		.notes.md = .notes.md
+		docs-source\assets\images\general-options.png = docs-source\assets\images\general-options.png
 		LICENSE = LICENSE
 		mkdocs.yml = mkdocs.yml
 	EndProjectSection

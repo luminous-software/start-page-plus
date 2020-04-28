@@ -11,6 +11,6 @@ namespace StartPagePlus.Options.Models
         [Category(Settings)]
         [DisplayName(Constants.PageConstants.MaxWidth)]
         [Description("Sets the max width of the window's contents")]
-        public int MaxWidth { get; } = 1175;
+        public int MaxWidth { get; set; } = 1175;
     }
 }

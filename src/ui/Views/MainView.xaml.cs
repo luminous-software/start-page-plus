@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Windows.Controls;
+
 using Microsoft.Win32;
 
 namespace StartPagePlus.UI.Views
 {
+    using Options.Models;
+
     using ViewModels;
 
     public partial class MainView : UserControl
@@ -15,6 +18,8 @@ namespace StartPagePlus.UI.Views
             MainViewModel.RegistryRoot = registryRoot;
 
             DataContext = ViewModelLocator.MainViewModel;
+
+            LayoutRoot.MaxWidth = SettingsOptions.Instance.MaxWidth;
         }
 
         protected override void OnInitialized(EventArgs e)
