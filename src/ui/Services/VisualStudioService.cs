@@ -1,15 +1,26 @@
-﻿using System.Windows;
-using System.Diagnostics;
+﻿using System.Diagnostics;
+using System.Windows;
+
 using EnvDTE;
+
 using EnvDTE80;
+
+using Luminous.Code.Extensions.ExceptionExtensions;
 using Luminous.Code.VisualStudio.Packages;
+
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+
 using Diagnostics = System.Diagnostics;
 
 namespace StartPagePlus.UI.Services
 {
+    using System;
+    using System.Security.Principal;
+
     using Interfaces;
+
+    using Microsoft.VisualStudio;
 
     public class VisualStudioService : IVisualStudioService
     {
@@ -20,31 +31,39 @@ namespace StartPagePlus.UI.Services
         private const string FILE_CLONE_OR_CHECKOUT_CODE = "File.Cloneorcheckoutcode";
         private const uint FORCE_NEW_WINDOW = (uint)__VSWBNAVIGATEFLAGS.VSNWB_ForceNew;
 
-        private static readonly DTE2 dte;
-        private IVsWebBrowsingService browsingService;
-        private ProcessStartInfo startInfo;
-
-        protected static DTE2 Dte = dte ?? (dte = Package.GetGlobalService(typeof(_DTE)) as DTE2);
+        public VisualStudioService()
+        { }
 
         private ProcessStartInfo StartInfo
-            => startInfo
-                ?? (startInfo = new Diagnostics.ProcessStartInfo
-                {
-                    UseShellExecute = true,
-                    Verb = VERB_OPEN
-                });
+            => new Diagnostics.ProcessStartInfo
+            {
+                UseShellExecute = true,
+                Verb = VERB_OPEN
+            };
 
         private IVsWebBrowsingService BrowsingService
-            => browsingService ?? (browsingService = AsyncPackageBase.GetGlobalService<SVsWebBrowsingService, IVsWebBrowsingService>());
+            => AsyncPackageBase.GetGlobalService<SVsWebBrowsingService, IVsWebBrowsingService>();
+
+        private static DTE2 Dte
+            => AsyncPackageBase.GetGlobalService<_DTE, DTE2>();
+
+        private IVsShell3 VsShell3
+            => AsyncPackageBase.GetGlobalService<SVsShell, IVsShell3>();
+
+        private IVsShell4 VsShell4
+            => AsyncPackageBase.GetGlobalService<SVsShell, IVsShell4>();
 
         public void ExecuteCommand(string action)
             => Dte.ExecuteCommand(action);
 
-        public void ExecuteCommand(string action, string args= null)
+        public void ExecuteCommand(string action, string args = null)
             => Dte.ExecuteCommand(action, args);
 
         public void ShowMessage(string message)
             => MessageBox.Show(message, Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Information);
+
+        public bool Confirmed(string message)
+            => (MessageBox.Show(message, Vsix.Name, MessageBoxButton.OKCancel, MessageBoxImage.Information) == MessageBoxResult.OK);
 
         public void OpenWebPage(string url, bool internalBrowser)
         {
@@ -86,5 +105,102 @@ namespace StartPagePlus.UI.Services
 
         public void CloneOrCheckoutCode()
             => ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
+
+        public void RestartVisualStudio(bool confirm = true, bool elevated = false)
+        {
+            try
+            {
+                if (IsRunningElevated)
+                {
+                    if (!Confirmed("Visual Studio is currently running as Administrator. To return to running normally Visual Studio will need to close"))
+                    {
+                        return;
+                    }
+
+                    CloseVisualStudio();
+                }
+
+                if (confirm && !RestartConfirmed(elevated))
+                    return;
+
+                switch (elevated)
+                {
+                    case true:
+                        RestartElevated();
+                        break;
+
+                    case false:
+                        RestartNormal();
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowMessage(ex.ExtendedMessage());
+            }
+        }
+
+        private void CloseVisualStudio()
+            => Dte.Quit();
+
+        private bool RestartConfirmed(bool elevated)
+        {
+            var suffix = (elevated) ? " as Administrator" : "";
+
+            return Confirmed($"You're about to restart Visual Studio{suffix}");
+        }
+
+        private string RestartNormal()
+        {
+            const uint mode = (uint)__VSRESTARTTYPE.RESTART_Normal;
+
+            return Restart(mode);
+        }
+
+        private string RestartElevated()
+        {
+            const uint mode = (uint)__VSRESTARTTYPE.RESTART_Elevated;
+
+            return Restart(mode);
+        }
+
+        private string Restart(uint mode)
+        {
+            try
+            {
+                return ErrorHandler.Failed(VsShell4.Restart(mode))
+                    ? "Unable to restart Visual Studio"
+                    : "";
+            }
+            catch (Exception ex)
+            {
+                return ex.ExtendedMessage();
+            }
+        }
+
+        private bool IsRunningElevated
+        {
+            get
+            {
+                VsShell3.IsRunningElevated(out var elevated);
+
+                return elevated;
+            }
+        }
+
+        private bool CurrentProcessIsElevated_()
+        {
+            using (var identity = WindowsIdentity.GetCurrent())
+            {
+                if (identity != null)
+                {
+                    var principal = new WindowsPrincipal(identity);
+
+                    return principal.IsInRole(WindowsBuiltInRole.Administrator);
+                }
+            }
+
+            return false;
+        }
     }
 }

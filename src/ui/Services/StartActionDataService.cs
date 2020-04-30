@@ -21,6 +21,8 @@ namespace StartPagePlus.UI.Services
                 new OpenFolderViewModel(VsService),
                 new OpenProjectViewModel(VsService),
                 new CreateProjectViewModel(VsService),
+                new RestartNormalViewModel(VsService),
+                new RestartElevatedViewModel(VsService),
             };
 
             return items;
