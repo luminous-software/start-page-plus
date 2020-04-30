@@ -63,10 +63,11 @@
                                 <imaging:CrispImage
                                     Name="StartActionImage"
                                     Grid.Column="0"
-                                    Width="40"
-                                    Height="40"
-                                    Margin="5,0,0,0"
+                                    Width="{Binding ImageSize}"
+                                    Height="{Binding ImageSize}"
+                                    Margin="{Binding Margin}"
                                     VerticalAlignment="Top"
+                                    HorizontalAlignment="Right"
                                     Moniker="{Binding Moniker}"
                                     />
 
@@ -74,6 +75,7 @@
                                     Grid.Column="1"
                                     Margin="10,0,0,0"
                                     Orientation="Vertical"
+                                    HorizontalAlignment="Left"
                                     >
                                     <TextBlock x:Name="StartActionName"
                                         Margin="0"

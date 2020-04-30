@@ -6,6 +6,8 @@
 
         void ShowMessage(string message);
 
+        bool Confirmed(string message);
+
         void OpenWebPage(string url, bool internalBrowser);
 
         void OpenFolder(string path = "");
@@ -17,5 +19,7 @@
         void CreateNewProject();
 
         void CloneOrCheckoutCode();
+
+        void RestartVisualStudio(bool confirm = true, bool elevated = false);
     }
 }

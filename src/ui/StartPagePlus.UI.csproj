@@ -104,8 +104,10 @@
     <Compile Include="ViewModels\OpenFolderViewModel.cs" />
     <Compile Include="ViewModels\OpenProjectViewModel.cs" />
     <Compile Include="ViewModels\CreateProjectViewModel.cs" />
+    <Compile Include="ViewModels\RestartNormalViewModel.cs" />
     <Compile Include="ViewModels\RecentItemViewModel.cs" />
     <Compile Include="ViewModels\NewsItemViewModel.cs" />
+    <Compile Include="ViewModels\RestartElevatedViewModel.cs" />
     <Compile Include="ViewModels\StartActionViewModel.cs" />
     <Compile Include="ViewModels\NewsItemsViewModel.cs" />
     <Compile Include="ViewModels\NewsViewModel.cs" />
