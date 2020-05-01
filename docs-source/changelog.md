@@ -6,22 +6,32 @@ page on the [Start Page+][start-page-plus-url] website.
 [start-page-plus-url]: https://luminous-software.solutions/start-page-plus
 [known-issues-url]: https://luminous-software.solutions/start-page-plus/known-issues
 
-### v1.0 - 2020-04-28
+### v1.0 - 2020-04-30
 
-- added a 'MaxWidth' setting
-- added an 'Options' command to open Tools | Options | General in one click
-  - fixed 'Window is not docked on first ever use ([GitHub Issue #14][github-issue-14])
+- added an * Start Page+ Options* command to open `Tools` | `Options` | `General` in one click
+  - found in `Tools` | `Options`
+- fixed 'Recent Item Timeframes Disappear When Refresh is Clicked' [(GHI #5)][github-issue-5]
+- fixed 'PackageClass did not load correctly' (VS 2017) [(GHI #8)][github-issue-8]
+- fixed 'Window is not docked on first ever use' ([GitHub Issue #14][github-issue-14])
   - hopefully this does fix this issue, it did when I tested it
-- fixed 'PackageClass did not load correctly (VS 2017)' [(GHI #8)][github-issue-8]
+- removed *Continue Without Code* from *Start* tab [(GHI #19)][github-issue-19]
+- added *Restart Visual Studio* options to *Start* tab [(GHI #20)][github-issue-20]
+- fixed 'Images in *Start* tab have the wrong background color in some themes' [(GHI #22)][github-issue-22]
 - fixed 'Projects with space in the name not opening' [(GHI #23)][github-issue-23]
 - fixed 'Dates have a fixed AU/UK format in the Recent Items list' [(GHI #24)][github-issue-24]
-- fixed 'Images in StartView have the wrong background color in some themes' [(GHI #22)][github-issue-22]
+- fixed 'Only *Folder*, *Solution*, and *C# Project* currently have icons in *Recent Items*' [(GHI #26)][github-issue-26]
+- replaced fixed width (1175) with a *Max Width* setting [(GHI #32)][github-issue-32]
 
+[github-issue-5]: https://github.com/luminous-software/start-page-plus/issues/5
 [github-issue-8]: https://github.com/luminous-software/start-page-plus/issues/8
 [github-issue-14]: https://github.com/luminous-software/start-page-plus/issues/14
+[github-issue-19]: https://github.com/luminous-software/start-page-plus/issues/19
+[github-issue-20]: https://github.com/luminous-software/start-page-plus/issues/20
 [github-issue-22]: https://github.com/luminous-software/start-page-plus/issues/22
 [github-issue-23]: https://github.com/luminous-software/start-page-plus/issues/23
 [github-issue-24]: https://github.com/luminous-software/start-page-plus/issues/24
+[github-issue-26]: https://github.com/luminous-software/start-page-plus/issues/26
+[github-issue-32]: https://github.com/luminous-software/start-page-plus/issues/32
 
 ### v0.14.3 - 2019-10-02
 
