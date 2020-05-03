@@ -5,7 +5,6 @@ using Microsoft.Win32;
 
 namespace StartPagePlus.UI.Views
 {
-    using Options.Models;
 
     using ViewModels;
 
@@ -18,8 +17,6 @@ namespace StartPagePlus.UI.Views
             MainViewModel.RegistryRoot = registryRoot;
 
             DataContext = ViewModelLocator.MainViewModel;
-
-            LayoutRoot.MaxWidth = SettingOptions.Instance.MaxWidth;
         }
 
         protected override void OnInitialized(EventArgs e)
