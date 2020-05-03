@@ -77,16 +77,18 @@ namespace StartPagePlus
             {
                 Instance.JoinableTaskFactory.RunAsync(async delegate
                 {
-                    var window = await Instance.ShowToolWindowAsync(typeof(T), 0, true, cancellationToken);
-                    if ((null == window) || (null == window.Frame))
+                    using (var window = await Instance.ShowToolWindowAsync(typeof(T), 0, true, cancellationToken))
                     {
-                        throw new NotSupportedException("Cannot create tool window");
+                        if ((null == window) || (null == window.Frame))
+                        {
+                            throw new NotSupportedException("Cannot create tool window");
+                        }
+
+                        await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
+
+                        var windowFrame = (IVsWindowFrame)window.Frame;
+                        ErrorHandler.ThrowOnFailure(windowFrame.Show());
                     }
-
-                    await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
-
-                    var windowFrame = (IVsWindowFrame)window.Frame;
-                    ErrorHandler.ThrowOnFailure(windowFrame.Show());
                 });
 
                 return new SuccessResult();
@@ -103,16 +105,18 @@ namespace StartPagePlus
             {
                 Instance.JoinableTaskFactory.RunAsync(async delegate
                 {
-                    var window = await Instance.ShowToolWindowAsync(type, 0, true, Instance.DisposalToken);
-                    if ((null == window) || (null == window.Frame))
+                    using (var window = await Instance.ShowToolWindowAsync(type, 0, true, Instance.DisposalToken))
                     {
-                        throw new NotSupportedException("Cannot create tool window");
+                        if ((null == window) || (null == window.Frame))
+                        {
+                            throw new NotSupportedException("Cannot create tool window");
+                        }
+
+                        await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
+
+                        var windowFrame = (IVsWindowFrame)window.Frame;
+                        ErrorHandler.ThrowOnFailure(windowFrame.Show());
                     }
-
-                    await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
-
-                    var windowFrame = (IVsWindowFrame)window.Frame;
-                    ErrorHandler.ThrowOnFailure(windowFrame.Show());
                 });
 
                 return new SuccessResult();
