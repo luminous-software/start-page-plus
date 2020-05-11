@@ -1,8 +1,11 @@
 ﻿
 using System;
 using System.Windows;
+
 using Luminous.Code.Extensions.StringExtensions;
+
 using static System.Environment;
+
 using Button = System.Windows.MessageBoxButton;
 using Icon = System.Windows.MessageBoxImage;
 using Result = System.Windows.MessageBoxResult;

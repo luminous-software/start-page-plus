@@ -25,13 +25,14 @@
 
             <utilities:BrushToColorConverter x:Key="BrushToColorConverter"/>
 
-            <!--  https://stackoverflow.com/questions/3894195/wpf-collectionviewsource-grouping  -->
+            <!-- https://stackoverflow.com/questions/3894195/wpf-collectionviewsource-grouping -->
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Border 
+    <Border
         ui:ImageThemingUtilities.ImageBackgroundColor="{Binding Background.Color, RelativeSource={RelativeSource Self}}"
-        Style="{StaticResource ColumnStyle}">
+        Style="{StaticResource ColumnStyle}"
+        >
         <DockPanel x:Name="LayoutRoot"
             LastChildFill="true"
             >
@@ -52,7 +53,7 @@
                     Foreground="{DynamicResource FilterForegroundBrush}"
                     IsTabStop="true"
                     />
-                <!--  Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"  -->
+                <!-- Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" -->
 
                 <Button x:Name="ClearFilterText"
                     Grid.Column="1"
@@ -79,7 +80,7 @@
                 Style="{StaticResource ColumnCommandsStyle}"
                 />
 
-            <!--  FocusManager.FocusedElement="{Binding FilterTextBox}"  -->
+            <!-- FocusManager.FocusedElement="{Binding FilterTextBox}" -->
             <ListView x:Name="RecentItemsListView"
                 ItemContainerStyle="{StaticResource ColumnListItemContainerStyle}"
                 ItemsSource="{Binding Items}"

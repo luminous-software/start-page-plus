@@ -12,12 +12,13 @@ namespace StartPagePlus.UI.ViewModels
 
         private ObservableCollection<RecentItemViewModel> items = new ObservableCollection<RecentItemViewModel>();
 
-        public RecentItemsViewModel(IRecentItemDataService dataService, IRecentItemActionService actionService, IRecentItemCommandService commandService)
+        public RecentItemsViewModel(IRecentItemDataService dataService, IRecentItemActionService actionService, IRecentItemCommandService commandService, IItemService itemService)
             : base()
         {
             DataService = dataService;
             ActionService = actionService;
             CommandService = commandService;
+            ItemService = itemService;
 
             Heading = HEADING;
             IsVisible = true;
@@ -27,6 +28,8 @@ namespace StartPagePlus.UI.ViewModels
 
             MessengerInstance.Register<NotificationMessage<RecentItemViewModel>>(this, ExecuteAction);
         }
+
+        public IItemService ItemService { get; }
 
         public IRecentItemDataService DataService { get; }
 

@@ -1,10 +1,11 @@
-﻿using CommonServiceLocator;
-using GalaSoft.MvvmLight.Ioc;
+﻿using GalaSoft.MvvmLight.Ioc;
 
 namespace StartPagePlus.UI.ViewModels
 {
     using Core.Interfaces;
+
     using Interfaces;   //TODO: why are these interfaces not in Core.Interfaces?
+
     using Services;
 
     public class ViewModelLocator
@@ -13,35 +14,33 @@ namespace StartPagePlus.UI.ViewModels
         {
             var container = SimpleIoc.Default;
 
-            ServiceLocator.SetLocatorProvider(() => container);
-
             RegisterServices(container);
             RegisterViewModels(container);
         }
 
         public static MainViewModel MainViewModel
-            => ServiceLocator.Current.GetInstance<MainViewModel>();
+            => SimpleIoc.Default.GetInstance<MainViewModel>();
 
         public static StartViewModel StartViewModel
-            => ServiceLocator.Current.GetInstance<StartViewModel>();
+            => SimpleIoc.Default.GetInstance<StartViewModel>();
 
         public static RecentItemsViewModel RecentItemsViewModel
-            => ServiceLocator.Current.GetInstance<RecentItemsViewModel>();
+            => SimpleIoc.Default.GetInstance<RecentItemsViewModel>();
 
         public static StartActionsViewModel StartActionsViewModel
-            => ServiceLocator.Current.GetInstance<StartActionsViewModel>();
+            => SimpleIoc.Default.GetInstance<StartActionsViewModel>();
 
         public static NewsItemsViewModel NewsItemsViewModel
-            => ServiceLocator.Current.GetInstance<NewsItemsViewModel>();
+            => SimpleIoc.Default.GetInstance<NewsItemsViewModel>();
 
         public static FavoritesViewModel FavoritesViewModel
-            => ServiceLocator.Current.GetInstance<FavoritesViewModel>();
+            => SimpleIoc.Default.GetInstance<FavoritesViewModel>();
 
         public static CreateViewModel CreateViewModel
-            => ServiceLocator.Current.GetInstance<CreateViewModel>();
+            => SimpleIoc.Default.GetInstance<CreateViewModel>();
 
         public static NewsViewModel NewsViewModel
-            => ServiceLocator.Current.GetInstance<NewsViewModel>();
+            => SimpleIoc.Default.GetInstance<NewsViewModel>();
 
         public static void Initialise()
         {
@@ -54,6 +53,8 @@ namespace StartPagePlus.UI.ViewModels
             container.Register<IVisualStudioService, VisualStudioService>();
 
             container.Register<IDateTimeService, DateTimeService>();
+
+            container.Register<IItemService, RecentItemService>();
 
             container.Register<IRecentItemDataService, RecentItemDataService>();
             container.Register<IRecentItemActionService, RecentItemActionService>();
