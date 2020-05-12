@@ -1,12 +1,13 @@
-﻿using System.Windows;
-
-using EnvDTE;
+﻿using System;
+using System.Security.Principal;
+using System.Windows;
 
 using EnvDTE80;
 
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Luminous.Code.VisualStudio.Packages;
 
+using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
@@ -14,12 +15,9 @@ using Diagnostics = System.Diagnostics;
 
 namespace StartPagePlus.UI.Services
 {
-    using System;
-    using System.Security.Principal;
+    using Core.Services;
 
     using Interfaces;
-
-    using Microsoft.VisualStudio;
 
     public class VisualStudioService : IVisualStudioService
     {
@@ -37,13 +35,13 @@ namespace StartPagePlus.UI.Services
             => AsyncPackageBase.GetGlobalService<SVsWebBrowsingService, IVsWebBrowsingService>();
 
         private static DTE2 Dte
-            => AsyncPackageBase.GetGlobalService<_DTE, DTE2>();
+            => GlobalServices.DTE2;
 
         private IVsShell3 VsShell3
-            => AsyncPackageBase.GetGlobalService<SVsShell, IVsShell3>();
+            => GlobalServices.VsShell3;
 
         private IVsShell4 VsShell4
-            => AsyncPackageBase.GetGlobalService<SVsShell, IVsShell4>();
+            => GlobalServices.VsShell4;
 
         public void ExecuteCommand(string action)
             => Dte.ExecuteCommand(action);
