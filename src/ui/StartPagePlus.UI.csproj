@@ -81,6 +81,7 @@
     <Compile Include="Interfaces\IStartActionCommandService.cs" />
     <Compile Include="Interfaces\IStartActionDataService.cs" />
     <Compile Include="Interfaces\IStartAction.cs" />
+    <Compile Include="Messages\RecentItemClickMessage.cs" />
     <Compile Include="Observables\ObservableCommandList.cs" />
     <Compile Include="Observables\ObservableContextCommandList.cs" />
     <Compile Include="Observables\ObservableList.cs" />
@@ -227,8 +228,6 @@
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Messages\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

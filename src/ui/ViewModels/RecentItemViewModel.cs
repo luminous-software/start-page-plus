@@ -3,13 +3,14 @@ using System.Windows.Input;
 
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
+
+using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.ViewModels
 {
     using Enums;
 
-    using Microsoft.VisualStudio.Imaging.Interop;
+    using Messages;
 
     public class RecentItemViewModel : ViewModelBase
     {
@@ -35,6 +36,6 @@ namespace StartPagePlus.UI.ViewModels
         public ICommand ClickCommand { get; set; }
 
         private void ExecuteClick()
-            => MessengerInstance.Send(new NotificationMessage<RecentItemViewModel>(this, Path));
+            => MessengerInstance.Send(new RecentItemClickMessage(this, Path));
     }
 }

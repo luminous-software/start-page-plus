@@ -10,7 +10,7 @@ namespace StartPagePlus.UI.Services
 {
     using Enums;
 
-    using UI.Interfaces;
+    using Interfaces;
 
     using ViewModels;
 

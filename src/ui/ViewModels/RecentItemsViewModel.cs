@@ -2,7 +2,6 @@
 using System.Windows.Controls;
 
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
 
 namespace StartPagePlus.UI.ViewModels
 {
@@ -10,6 +9,8 @@ namespace StartPagePlus.UI.ViewModels
     using Core.Interfaces;
 
     using Interfaces;
+
+    using Messages;
 
     public class RecentItemsViewModel : ColumnViewModel
     {
@@ -38,7 +39,7 @@ namespace StartPagePlus.UI.ViewModels
             GetCommands();
             Refresh();
 
-            MessengerInstance.Register<NotificationMessage<RecentItemViewModel>>(this, ExecuteAction);
+            MessengerInstance.Register<RecentItemClickMessage>(this, ExecuteAction);
         }
 
         public IItemService ItemService { get; }
@@ -97,7 +98,7 @@ namespace StartPagePlus.UI.ViewModels
         private void GetContextCommands()
             => ContextCommands = CommandService.GetContextCommands(CanRemoveItem, RemoveItem, CanPinItem, PinItem, CanUnpinItem, UnpinItem, CanCopyItemPath, CopyItemPath);
 
-        private void ExecuteAction(NotificationMessage<RecentItemViewModel> message)
+        private void ExecuteAction(RecentItemClickMessage message)
             => ActionService.ExecuteAction(message.Content);
 
         //TODO: can these Func<bool>'s be changed to just bool now?
