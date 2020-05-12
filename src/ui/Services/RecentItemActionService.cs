@@ -21,7 +21,7 @@ namespace StartPagePlus.UI.Services
         public RecentItemActionService(IVisualStudioService vsService)
             => VsService = vsService;
 
-        public IVisualStudioService VsService { get; private set; }
+        public IVisualStudioService VsService { get; }
 
         public void ExecuteAction(RecentItemViewModel viewModel)
         {
@@ -30,14 +30,14 @@ namespace StartPagePlus.UI.Services
                 ThreadHelper.ThrowIfNotOnUIThread();
                 Assumes.Present(VsService);
 
-                var path = viewModel.Path;
+                var path = SafePath(viewModel.Path);
                 //var folder = Path.GetDirectoryName(path);
                 var itemType = viewModel.ItemType;
 
                 switch (itemType)
                 {
                     case RecentItemType.Folder:
-                        VsService.ExecuteCommand("File.OpenFolder", SafePath(path));
+                        VsService.ExecuteCommand("File.OpenFolder", path);
                         break;
 
                     case RecentItemType.Solution:
@@ -45,11 +45,11 @@ namespace StartPagePlus.UI.Services
                     //break;
 
                     case RecentItemType.CSharpProject:
-                        VsService.ExecuteCommand("File.OpenProject", SafePath(path));
+                        VsService.ExecuteCommand("File.OpenProject", path);
                         break;
 
                     default:
-                        MessageBox.Show($"Unhandled item type:'{itemType}'", Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Information);
+                        VsService.ShowMessage($"Unhandled item type:'{itemType}'");
                         break;
                 }
             }
@@ -60,6 +60,8 @@ namespace StartPagePlus.UI.Services
         }
 
         private string SafePath(string path)
-            => path.Contains(" ") ? string.Format(SURROUND_WITH_QUOTES, path) : path;
+            => path.Contains(" ")
+                ? string.Format(SURROUND_WITH_QUOTES, path)
+                : path;
     }
 }
