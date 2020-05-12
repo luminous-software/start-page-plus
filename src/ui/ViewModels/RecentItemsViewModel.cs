@@ -11,6 +11,7 @@ namespace StartPagePlus.UI.ViewModels
         private const string HEADING = "Open a Recent Item";
 
         private ObservableCollection<RecentItemViewModel> items = new ObservableCollection<RecentItemViewModel>();
+        private RecentItemViewModel _selectedItem;
 
         public RecentItemsViewModel(IRecentItemDataService dataService, IRecentItemActionService actionService, IRecentItemCommandService commandService, IItemService itemService)
             : base()
@@ -43,6 +44,12 @@ namespace StartPagePlus.UI.ViewModels
             set => Set(ref items, value);
         }
 
+        public RecentItemViewModel SelectedItem
+        {
+            get => _selectedItem;
+            set => Set(ref _selectedItem, value, nameof(SelectedItem));
+        }
+
         private void ExecuteAction(NotificationMessage<RecentItemViewModel> message)
             => ActionService.ExecuteAction(message.Content);
 
@@ -59,6 +66,8 @@ namespace StartPagePlus.UI.ViewModels
             {
                 Items.Add(item);
             }
+
+            SelectedItem = null;
         }
     }
 }
