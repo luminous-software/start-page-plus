@@ -35,7 +35,7 @@ namespace StartPagePlus.UI.Views
                 }
 
                 RefreshViewWhenFilterChanges(view);
-                EnsureClickedItemDoesNotRemainSelected();
+                //EnsureClickedItemDoesNotRemainSelected();
 
             }
             catch (Exception ex)
@@ -81,9 +81,9 @@ namespace StartPagePlus.UI.Views
             => FilterTextBox.TextChanged += (object sender, TextChangedEventArgs e)
                 => view.Refresh();
 
-        private void EnsureClickedItemDoesNotRemainSelected()
-            => RecentItemsListView.SelectionChanged += (sender, e)
-                => RecentItemsListView.SelectedItem = null;
+        //private void EnsureClickedItemDoesNotRemainSelected()
+        //    => RecentItemsListView.SelectionChanged += (sender, e)
+        //        => RecentItemsListView.SelectedItem = null;
 
         private void ClearFilterText_Click(object sender, RoutedEventArgs e)
         {
