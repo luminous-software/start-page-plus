@@ -75,23 +75,7 @@ namespace StartPagePlus
         {
             try
             {
-                Instance.JoinableTaskFactory.RunAsync(async delegate
-                {
-                    using (var window = await Instance.ShowToolWindowAsync(typeof(T), 0, true, cancellationToken))
-                    {
-                        if ((null == window) || (null == window.Frame))
-                        {
-                            throw new NotSupportedException("Cannot create tool window");
-                        }
-
-                        await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
-
-                        var windowFrame = (IVsWindowFrame)window.Frame;
-                        ErrorHandler.ThrowOnFailure(windowFrame.Show());
-                    }
-                });
-
-                return new SuccessResult();
+                return ShowToolWindow(typeof(T), problem);
             }
             catch (Exception ex)
             {
