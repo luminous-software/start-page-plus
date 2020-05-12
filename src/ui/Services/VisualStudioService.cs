@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Windows;
+﻿using System.Windows;
 
 using EnvDTE;
 
@@ -33,13 +32,6 @@ namespace StartPagePlus.UI.Services
 
         public VisualStudioService()
         { }
-
-        private ProcessStartInfo StartInfo
-            => new Diagnostics.ProcessStartInfo
-            {
-                UseShellExecute = true,
-                Verb = VERB_OPEN
-            };
 
         private IVsWebBrowsingService BrowsingService
             => AsyncPackageBase.GetGlobalService<SVsWebBrowsingService, IVsWebBrowsingService>();
@@ -77,8 +69,12 @@ namespace StartPagePlus.UI.Services
                 }
                 else
                 {
-                    StartInfo.FileName = url;
-                    Diagnostics.Process.Start(StartInfo);
+                    using (var proc = new Diagnostics.Process())
+                    {
+                        proc.StartInfo.FileName = url;
+                        proc.StartInfo.Verb = VERB_OPEN;
+                        proc.Start();
+                    }
                 }
             }
             catch

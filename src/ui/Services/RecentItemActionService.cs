@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Windows;
+
 using Luminous.Code.Extensions.ExceptionExtensions;
+
 using Microsoft;
 using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.Services
 {
     using Enums;
+
     using UI.Interfaces;
+
     using ViewModels;
 
     public class RecentItemActionService : IRecentItemActionService

@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
+
 using Luminous.Code.Extensions.ExceptionExtensions;
+
 using Newtonsoft.Json.Linq;
 
 namespace StartPagePlus.UI.Services
 {
     using Core.Interfaces;
+
     using Interfaces;
+
     using Models;
+
     using ViewModels;
 
     public class RecentItemDataService : IRecentItemDataService
@@ -33,37 +38,34 @@ namespace StartPagePlus.UI.Services
 
             try
             {
-                using var regKey = MainViewModel.RegistryRoot
-                    .OpenSubKey(ROOT)
-                    .OpenSubKey(METADATA)
-                    .OpenSubKey(BASELINES)
-                    .OpenSubKey(CODE_CONTAINERS);
-
-                try
+                var subKey = $"{ROOT}\\{METADATA}\\{BASELINES}\\{CODE_CONTAINERS}";
+                using (var regKey = MainViewModel.RegistryRoot.OpenSubKey(subKey))
                 {
-                    if (regKey is null)
+                    try
+                    {
+                        if (regKey is null)
+                            return items;
+
+                        var offline = ((string)regKey.GetValue(OFFLINE)).Substring(1);
+                        if (offline is null)
+                            return items;
+
+                        var results = JArray.Parse(offline).ToObject<List<RecentItem>>();
+                        var today = DateTimeService.Today.Date;
+
+                        results.ForEach((result)
+                            => items.Add(RecentItem.ToViewModel(result, today)));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ExtendedMessage());
                         return items;
-
-                    var offline = ((string)regKey.GetValue(OFFLINE)).Substring(1);
-                    if (offline is null)
-                        return items;
-
-                    var results = JArray.Parse(offline).ToObject<List<RecentItem>>();
-                    var today = DateTimeService.Today.Date;
-
-                    results.ForEach((result)
-                        => items.Add(RecentItem.ToViewModel(result, today)));
+                    }
+                    finally
+                    {
+                        regKey?.Close();
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ExtendedMessage());
-                    return items;
-                }
-                finally
-                {
-                    regKey?.Close();
-                }
-
                 return items;
             }
             catch (Exception ex)

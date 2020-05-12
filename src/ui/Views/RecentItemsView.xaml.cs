@@ -35,7 +35,7 @@ namespace StartPagePlus.UI.Views
                 }
 
                 RefreshViewWhenFilterChanges(view);
-                EnsureClickedItemDoesNotRemainSelected();
+                //EnsureClickedItemDoesNotRemainSelected();
 
             }
             catch (Exception ex)
@@ -63,27 +63,27 @@ namespace StartPagePlus.UI.Views
         private void AddFilter(ListCollectionView view)
             => view.Filter = (object obj)
             =>
-               {
-                   if (string.IsNullOrEmpty(FilterTextBox.Text))
-                       return true;
+            {
+                if (string.IsNullOrEmpty(FilterTextBox.Text))
+                    return true;
 
-                   if (!(obj is RecentItemViewModel item))
-                       return false;
+                if (!(obj is RecentItemViewModel item))
+                    return false;
 
-                   var name = item.Name;
+                var name = item.Name;
 
-                   return string.IsNullOrEmpty(name)
-                       ? false
-                       : name.MatchesFilter(FilterTextBox.Text);
-               };
+                return string.IsNullOrEmpty(name)
+                    ? false
+                    : name.MatchesFilter(FilterTextBox.Text);
+            };
 
         private void RefreshViewWhenFilterChanges(ListCollectionView view)
             => FilterTextBox.TextChanged += (object sender, TextChangedEventArgs e)
                 => view.Refresh();
 
-        private void EnsureClickedItemDoesNotRemainSelected()
-            => RecentItemsListView.SelectionChanged += (sender, e)
-                => RecentItemsListView.SelectedItem = null;
+        //private void EnsureClickedItemDoesNotRemainSelected()
+        //    => RecentItemsListView.SelectionChanged += (sender, e)
+        //        => RecentItemsListView.SelectedItem = null;
 
         private void ClearFilterText_Click(object sender, RoutedEventArgs e)
         {
