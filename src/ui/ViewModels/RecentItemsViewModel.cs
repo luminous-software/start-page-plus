@@ -17,13 +17,13 @@ namespace StartPagePlus.UI.ViewModels
         private const string HEADING = "Open a Recent Item";
 
         private ObservableCollection<RecentItemViewModel> items = new ObservableCollection<RecentItemViewModel>();
-        private RecentItemViewModel _selectedItem;
+        private RecentItemViewModel selectedItem;
 
         public RecentItemsViewModel(
             IRecentItemDataService dataService,
             IRecentItemActionService actionService,
             IRecentItemCommandService commandService,
-            IItemService itemService,
+            IRecentItemService itemService,
             IDialogService dialogService)
             : base()
         {
@@ -42,7 +42,7 @@ namespace StartPagePlus.UI.ViewModels
             MessengerInstance.Register<RecentItemClickMessage>(this, ExecuteAction);
         }
 
-        public IItemService ItemService { get; }
+        public IRecentItemService ItemService { get; }
 
         public IRecentItemActionService ActionService { get; }
 
@@ -60,8 +60,8 @@ namespace StartPagePlus.UI.ViewModels
 
         public RecentItemViewModel SelectedItem
         {
-            get => _selectedItem;
-            set => Set(ref _selectedItem, value, nameof(SelectedItem));
+            get => selectedItem;
+            set => Set(ref selectedItem, value, nameof(SelectedItem));
         }
 
         //public void OnContextMenuClosing(object sender, ContextMenuEventArgs e)
@@ -132,6 +132,8 @@ namespace StartPagePlus.UI.ViewModels
 
         private void PinItem()
         {
+            //SelectedItem.Pinned = true;
+            //SelectedItem.ClickCommand.Execute(null);
             if (!ItemService.PinItem(SelectedItem))
             {
                 DialogService.ShowMessage($"Unable to pin '{SelectedItem?.Name}'", Vsix.Name);

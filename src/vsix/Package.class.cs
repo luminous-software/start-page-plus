@@ -56,6 +56,7 @@ namespace StartPagePlus
 
             // any potentially expensive work, preferably done on a background thread where possible
 
+            // ApplicationRegistryRoot;
             return UserRegistryRoot; // this is passed to the tool window constructor
         }
 

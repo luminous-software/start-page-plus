@@ -5,13 +5,18 @@ using System.Windows;
 
 using Luminous.Code.Extensions.ExceptionExtensions;
 
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace StartPagePlus.UI.Services
 {
     using Core.Interfaces;
 
+    using Extensions;
+
     using Interfaces;
+
+    using Microsoft.Win32;
 
     using Models;
 
@@ -26,53 +31,94 @@ namespace StartPagePlus.UI.Services
         private const string OFFLINE = "Offline";
 
         public IDateTimeService DateTimeService { get; }
+        public IDialogService DialogService { get; }
 
-        public RecentItemDataService(IDateTimeService dateTimeService)
-            => DateTimeService = dateTimeService;
+        public RecentItemDataService(IDateTimeService dateTimeService, IDialogService dialogService)
+        {
+            DateTimeService = dateTimeService;
+            DialogService = dialogService;
+        }
 
+        private string CodeContainersKey
+            => $"{ROOT}\\{METADATA}\\{BASELINES}\\{CODE_CONTAINERS}";
+
+        public List<RecentItem> GetRecentItems()
+        {
+            var items = new List<RecentItem>();
+
+            using (var regKey = MainViewModel.RegistryRoot.OpenSubKey(CodeContainersKey))
+            {
+                try
+                {
+                    if (regKey is null)
+                        return items;
+
+                    var value = ((string)regKey.GetValue(OFFLINE)).Substring(1);
+                    if (value is null)
+                        return items;
+
+                    items = JArray.Parse(value).ToObject<List<RecentItem>>();
+                }
+                catch (Exception ex)
+                {
+                    DialogService.ShowError(ex);
+                }
+                finally
+                {
+                    regKey?.Close();
+                }
+
+                return items;
+            }
+        }
+
+        public bool UpdateRecentItems(List<RecentItem> items)
+        {
+            using (var regKey = MainViewModel.RegistryRoot.OpenSubKey(CodeContainersKey, true))
+            {
+                try
+                {
+                    if (regKey is null)
+                        return false;
+
+                    var recentItems = JsonConvert.SerializeObject(items);
+                    var value = $"1{recentItems}";
+
+                    regKey.SetValue(OFFLINE, value, RegistryValueKind.String);
+                }
+                catch (Exception ex)
+                {
+                    DialogService.ShowError(ex);
+                    return false;
+                }
+                finally
+                {
+                    regKey?.Close();
+                }
+
+                return true;
+            }
+        }
 
         public ObservableCollection<RecentItemViewModel> GetItems()
         {
 
             var items = new ObservableCollection<RecentItemViewModel>();
+            var recentItems = GetRecentItems();
 
             try
             {
-                var subKey = $"{ROOT}\\{METADATA}\\{BASELINES}\\{CODE_CONTAINERS}";
-                using (var regKey = MainViewModel.RegistryRoot.OpenSubKey(subKey))
-                {
-                    try
-                    {
-                        if (regKey is null)
-                            return items;
+                var today = DateTimeService.Today.Date;
 
-                        var offline = ((string)regKey.GetValue(OFFLINE)).Substring(1);
-                        if (offline is null)
-                            return items;
-
-                        var results = JArray.Parse(offline).ToObject<List<RecentItem>>();
-                        var today = DateTimeService.Today.Date;
-
-                        results.ForEach((result)
-                            => items.Add(RecentItem.ToViewModel(result, today)));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ExtendedMessage());
-                        return items;
-                    }
-                    finally
-                    {
-                        regKey?.Close();
-                    }
-                }
-                return items;
+                recentItems.ForEach((recentItem)
+                    => items.Add(recentItem.ToViewModel(today)));
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ExtendedMessage());
-                return items;
             }
+
+            return items;
         }
     }
 }

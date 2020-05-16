@@ -59,7 +59,7 @@
     <Compile Include="Converters\BoolToPinConverter.cs" />
     <Compile Include="Converters\DateToStringConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
-    <Compile Include="Interfaces\IItemService.cs" />
+    <Compile Include="Interfaces\IRecentItemService.cs" />
     <Compile Include="MarkupExtensions\MultValueConverterMarkupExtension.cs" />
     <Compile Include="MarkupExtensions\ValueConverterMarkupExtension.cs" />
     <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
@@ -82,6 +82,7 @@
     <Compile Include="Interfaces\IStartActionDataService.cs" />
     <Compile Include="Interfaces\IStartAction.cs" />
     <Compile Include="Messages\RecentItemClickMessage.cs" />
+    <Compile Include="Extensions\RecentItemExtensions.cs" />
     <Compile Include="Observables\ObservableCommandList.cs" />
     <Compile Include="Observables\ObservableContextCommandList.cs" />
     <Compile Include="Observables\ObservableList.cs" />
