@@ -9,14 +9,30 @@ that we had in VS 2017.
 
 ![Recent Items](assets/images/recent-items.png)
 
+### Pin/Unpin Items
+
+Right-click an unpinned item in the *Recent Items* list, and select *Pin item* to pin it. 
+Right-click on a pinned item in the *Recent Items* list, and select *Unpin item** to unpin it.
+
+### Remove Items
+
+Right-click any item in the *Recent Items* list, and select *Remove item* to remove it. 
+
 ## Start Actions
 
 The *Start Actions* list gives new users a simplified way to get to their code, the same as in VS 2019's
 *Start Window*.
 
+- clone or checkout code
+- open a local folder
+- open a project or solution
+- create a new project
+- restart Visual Studio
+- restart Visual Studio as Administrator
+
 It also has a handy, but non-intrusive way to see what version of *Start Page+* is currently installed.
-Clicking on the link will open the StartPage+ website's changelog page, so you can easily see what has changed in
-the new version.
+Clicking on the link will open the *change log* page, 
+so you can easily see what's changed in the new version.
 
 ![Start Actions](assets/images/start-actions.png)
 
