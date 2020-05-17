@@ -8,6 +8,6 @@ namespace StartPagePlus.UI.Interfaces
 
     public interface INewsItemDataService
     {
-        Task<ObservableCollection<NewsItemViewModel>> GetItemsAsync(string url);
+        Task<ObservableCollection<NewsItemViewModel>> GetItemsAsync(string url, int itemsToDisplay);
     }
 }
