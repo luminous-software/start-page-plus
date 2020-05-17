@@ -4,6 +4,10 @@ namespace StartPagePlus.UI.ViewModels
 {
     using Interfaces;
 
+    using Luminous.Code.VisualStudio.Packages;
+
+    using StartPagePlus.Options.Pages;
+
     public class StartActionsViewModel : ColumnViewModel
     {
         private const string HEADING = "Get Started";
@@ -25,7 +29,9 @@ namespace StartPagePlus.UI.ViewModels
         public IStartActionDataService DataService { get; }
 
         public IStartActionCommandService CommandService { get; }
+
         public IVisualStudioService VisualStudioService { get; }
+
         public ObservableCollection<StartActionViewModel> Items
         {
             get => items;
@@ -33,13 +39,13 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         private void GetCommands()
-            => Commands = CommandService.GetCommands(/*Continue, Refresh*/OpenWebsite);
-
-        private void Continue()
-        { }
+            => Commands = CommandService.GetCommands(OpenWebsite, OpenSettings);
 
         private void OpenWebsite()
             => VisualStudioService.OpenWebPage(CHANGELOG_URL, internalBrowser);
+
+        private void OpenSettings()
+            => AsyncPackageBase.Instance.ShowOptionsPage<DialogPageProvider.General>();
 
         private void Refresh()
         {

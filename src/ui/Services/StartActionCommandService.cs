@@ -1,15 +1,18 @@
 ﻿using System;
+
 using GalaSoft.MvvmLight.Command;
 
 namespace StartPagePlus.UI.Services
 {
     using Interfaces;
+
     using Observables;
+
     using ViewModels;
 
     public class StartActionCommandService : IStartActionCommandService
     {
-        public ObservableCommandList GetCommands(Action openWebsite)
+        public ObservableCommandList GetCommands(Action openWebsite, Action openSettings)
             => new ObservableCommandList
             {
                 new CommandViewModel
@@ -17,7 +20,13 @@ namespace StartPagePlus.UI.Services
                     Name = $"{Vsix.Name} v{Vsix.Version}",
                     Command = new RelayCommand(openWebsite, true),
                     IsVisible = true
-                }
+                },
+                new CommandViewModel
+                {
+                    Name = "Settings",
+                    Command = new RelayCommand(openSettings, true),
+                    IsVisible = true
+                },
             };
     }
 }
