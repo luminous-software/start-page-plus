@@ -9,7 +9,7 @@ namespace StartPagePlus.UI.Interfaces
 
     public interface IRecentItemDataService
     {
-        ObservableCollection<RecentItemViewModel> GetItems();
+        ObservableCollection<RecentItemViewModel> GetItems(int itemsToDisplay);
 
         List<RecentItem> GetRecentItems();
         bool UpdateRecentItems(List<RecentItem> recentItems);

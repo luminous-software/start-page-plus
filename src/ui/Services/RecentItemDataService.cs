@@ -5,18 +5,20 @@ using System.Windows;
 
 using Luminous.Code.Extensions.ExceptionExtensions;
 
+using Microsoft.Win32;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace StartPagePlus.UI.Services
 {
+    using System.Linq;
+
     using Core.Interfaces;
 
     using Extensions;
 
     using Interfaces;
-
-    using Microsoft.Win32;
 
     using Models;
 
@@ -100,7 +102,7 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public ObservableCollection<RecentItemViewModel> GetItems()
+        public ObservableCollection<RecentItemViewModel> GetItems(int itemsToDisplay)
         {
 
             var items = new ObservableCollection<RecentItemViewModel>();
@@ -110,8 +112,11 @@ namespace StartPagePlus.UI.Services
             {
                 var today = DateTimeService.Today.Date;
 
-                recentItems.ForEach((recentItem)
-                    => items.Add(recentItem.ToViewModel(today)));
+                recentItems
+                    .Take(itemsToDisplay)
+                    .ToList()
+                    .ForEach((recentItem)
+                        => items.Add(recentItem.ToViewModel(today)));
             }
             catch (Exception ex)
             {
