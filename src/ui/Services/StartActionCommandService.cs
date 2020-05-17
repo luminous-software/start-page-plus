@@ -12,13 +12,13 @@ namespace StartPagePlus.UI.Services
 
     public class StartActionCommandService : IStartActionCommandService
     {
-        public ObservableCommandList GetCommands(Action openWebsite, Action openSettings)
+        public ObservableCommandList GetCommands(Action openChangelog, Action openSettings)
             => new ObservableCommandList
             {
                 new CommandViewModel
                 {
-                    Name = $"{Vsix.Name} v{Vsix.Version}",
-                    Command = new RelayCommand(openWebsite, true),
+                    Name = "Changelog",
+                    Command = new RelayCommand(openChangelog, true),
                     IsVisible = true
                 },
                 new CommandViewModel

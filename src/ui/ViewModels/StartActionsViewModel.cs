@@ -39,9 +39,9 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         private void GetCommands()
-            => Commands = CommandService.GetCommands(OpenWebsite, OpenSettings);
+            => Commands = CommandService.GetCommands(OpenChangelog, OpenSettings);
 
-        private void OpenWebsite()
+        private void OpenChangelog()
             => VisualStudioService.OpenWebPage(CHANGELOG_URL, internalBrowser);
 
         private void OpenSettings()
