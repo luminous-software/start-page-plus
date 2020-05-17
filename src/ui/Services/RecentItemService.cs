@@ -20,7 +20,24 @@ namespace StartPagePlus.UI.Services
 
         public IDialogService DialogService { get; }
 
-        public bool RemoveItem(RecentItemViewModel viewModel) { return true; }
+        public bool RemoveItem(RecentItemViewModel viewModel)
+        {
+            try
+            {
+                var recentItems = DataService.GetRecentItems();
+                var itemToRemove = recentItems.FirstOrDefault(x => x.Key == viewModel.Path);
+
+                recentItems.Remove(itemToRemove);
+
+                DataService.UpdateRecentItems(recentItems);
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+            }
+
+            return true;
+        }
 
         public bool PinItem(RecentItemViewModel viewModel)
         {
