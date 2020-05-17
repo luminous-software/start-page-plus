@@ -2,9 +2,7 @@
 using System;
 using System.Windows;
 
-using Luminous.Code.Extensions.StringExtensions;
-
-using static System.Environment;
+using Luminous.Code.Extensions.ExceptionExtensions;
 
 using Button = System.Windows.MessageBoxButton;
 using Icon = System.Windows.MessageBoxImage;
@@ -16,50 +14,43 @@ namespace StartPagePlus.UI.Services
 
     public class DialogService : IDialogService
     {
-        public void ShowMessage(string message, string title, string buttonText)
-            => MessageBox.Show(message, title);
+        public Result ShowMessage(string message, string title = null, Button button = Button.OK, Icon icon = Icon.None)
+            => MessageBox.Show(message, title ?? Vsix.Name, button, icon);
 
-        public void ShowError(string errorMessage, string title, string buttonText)
-        { }
+        public void ShowMessage(string message)
+            => ShowMessage(message, title: "Warning", button: Button.OK, icon: Icon.Exclamation);
 
-        public void ShowError(Exception error, string title, string buttonText)
-        { }
+        public void ShowExclamation(string message)
+            => ShowMessage(message, title: "Warning", button: Button.OK, icon: Icon.Exclamation);
 
-        private Result DisplayMessage(string title = null, string message = "", Button button = Button.OK, Icon icon = Icon.None)
-            => MessageBox.Show(message, title, button, icon);
+        public void ShowWarning(string error)
+            => ShowMessage(error, title: "Warning", button: Button.OK, icon: Icon.Warning);
 
-        private bool DisplayQuestion(string title = null, string messageText = null, string questionText = "")
-        {
-            var message = messageText.JoinWith(questionText, separator: NewLine + NewLine);
+        public void ShowError(string error)
+            => ShowMessage(error, title: "Error", button: Button.OK, icon: Icon.Error);
 
-            return (DisplayMessage(title: title ?? "Question", message: message,
-                button: Button.YesNo, icon: Icon.Question) == Result.Yes);
-        }
+        public void ShowError(Exception error, bool extendedMessage = true)
+            => ShowError(extendedMessage ? error.ExtendedMessage() : error.Message);
 
-        private bool DisplayConfirm(string title = null, string messageText = null, string questionText = "")
-        {
-            var message = messageText.JoinWith(questionText, separator: NewLine + NewLine);
+        public Result ShowConfirm(string question, string title = null, Button button = Button.YesNo)
+            => ShowMessage(question, title: title ?? "Please Confirm", button, icon: Icon.Question);
 
-            return (DisplayMessage(title: title ?? "Please Confirm", message: message,
-                button: Button.YesNoCancel, icon: Icon.Warning) == Result.Yes);
-        }
+        public bool Confirmed(string question)
+            => (ShowConfirm(question) == Result.Yes);
 
-        //public Task ShowError(string message, string title, string buttonText, Action afterHideCallback)
+        //public Task ShowErrorAsync(string message, string title, string buttonText, Action afterHideCallback)
         //    => throw new NotImplementedException();
 
-        //public Task ShowError(Exception error, string title, string buttonText, Action afterHideCallback)
+        //public Task ShowErrorAsync(Exception error, string title, string buttonText, Action afterHideCallback)
         //    => throw new NotImplementedException();
 
-        //public Task ShowMessage(string message, string title)
+        //public Task ShowMessageAsync(string message, string title)
         //    => throw new NotImplementedException();
 
-        //public Task ShowMessage(string message, string title, string buttonText, Action afterHideCallback)
+        //public Task ShowMessageAsync(string message, string title, string buttonText, Action afterHideCallback)
         //    => throw new NotImplementedException();
 
-        //public Task<bool> ShowMessage(string message, string title, string buttonConfirmText, string buttonCancelText, Action<bool> afterHideCallback)
-        //    => throw new NotImplementedException();
-
-        //public Task ShowMessageBox(string message, string title)
+        //public Task<bool> ShowMessageAsync(string message, string title, string buttonConfirmText, string buttonCancelText, Action<bool> afterHideCallback)
         //    => throw new NotImplementedException();
     }
 }

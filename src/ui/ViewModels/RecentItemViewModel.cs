@@ -14,8 +14,12 @@ namespace StartPagePlus.UI.ViewModels
 
     public class RecentItemViewModel : ViewModelBase
     {
-        public RecentItemViewModel()
-            => ClickCommand = new RelayCommand(ExecuteClick, true);
+        private bool pinned;
+        public RecentItemViewModel(/*IItemService itemService*/)
+        {
+            ClickCommand = new RelayCommand(ExecuteClick, true);
+            //ItemService = itemService;
+        }
 
         public string Name { get; set; }
 
@@ -31,9 +35,15 @@ namespace StartPagePlus.UI.ViewModels
 
         public ImageMoniker Moniker { get; set; }
 
-        public bool Pinned { get; set; }
+        public bool Pinned
+        {
+            get => pinned;
+            set => Set(ref pinned, value, nameof(Pinned));
+        }
 
-        public ICommand ClickCommand { get; set; }
+        //public IItemService ItemService { get; }
+
+        public ICommand ClickCommand { get; }
 
         private void ExecuteClick()
             => MessengerInstance.Send(new RecentItemClickMessage(this, Path));
