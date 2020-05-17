@@ -12,6 +12,8 @@ namespace StartPagePlus.UI.ViewModels
 
     using Messages;
 
+    using Options.Models;
+
     public class RecentItemsViewModel : ColumnViewModel
     {
         private const string HEADING = "Open a Recent Item";
@@ -155,7 +157,8 @@ namespace StartPagePlus.UI.ViewModels
 
         public void Refresh()
         {
-            var items = DataService.GetItems();
+            var itemsToDisplay = SettingOptions.Instance.RecentItemsToDisplay;
+            var items = DataService.GetItems(itemsToDisplay);
 
             Items.Clear();
 
