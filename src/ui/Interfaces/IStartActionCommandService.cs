@@ -6,6 +6,6 @@ namespace StartPagePlus.UI.Interfaces
 
     public interface IStartActionCommandService
     {
-        ObservableCommandList GetCommands(/*Action continueWithNoCode,*/ Action refresh);
+        ObservableCommandList GetCommands(Action openChangelog, Action openSettings);
     }
 }
