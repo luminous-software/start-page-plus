@@ -22,5 +22,6 @@
         public const string PackageVersion = "Version Number";
         public const string OpenLinksInVS = "Open Links in VS";
         public const string MaxWidth = "Max Width";
+        public const string RecentItemsToDisplay = "Recent Items To Display";
     }
 }
