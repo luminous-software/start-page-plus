@@ -11,12 +11,12 @@ that we had in VS 2017.
 
 ### Pin/Unpin Items
 
-Right-click an unpinned item in the *Recent Items* list, and select *Pin item* to pin it. 
+Right-click an unpinned item in the *Recent Items* list, and select *Pin item* to pin it.
 Right-click on a pinned item in the *Recent Items* list, and select *Unpin item** to unpin it.
 
 ### Remove Items
 
-Right-click any item in the *Recent Items* list, and select *Remove item* to remove it. 
+Right-click any item in the *Recent Items* list, and select *Remove item* to remove it.
 
 ## Start Actions
 
@@ -31,7 +31,7 @@ The *Start Actions* list gives new users a simplified way to get to their code, 
 - restart Visual Studio as Administrator
 
 It also has a handy, but non-intrusive way to see what version of *Start Page+* is currently installed.
-Clicking on the link will open the *change log* page, 
+Clicking on the link will open the *change log* page,
 so you can easily see what's changed in the new version.
 
 ![Start Actions](assets/images/start-actions.png)
@@ -98,4 +98,9 @@ When this setting is set to `true` a 'Start Page+ Options' command is added to t
 
 The default value of 1175 should be fine for everyone, regardless of your monitor resolution.
 However if you'd like the contents of the _Start Page+_ window to be wider or narrower,
-this setting will allow you to set it to whatever you prefer.
+
+### Number of Recent Items
+
+This setting will allow you to determine how many items are displayed in the *Recent Item* list.
+
+The default value is 50.
