@@ -1,24 +1,25 @@
-## Releases
-
 For a list of known issues go to the [Known Issues][known-issues-url]
 page on the [Start Page+][start-page-plus-url] website.
 
 [start-page-plus-url]: https://luminous-software.solutions/start-page-plus
 [known-issues-url]: https://luminous-software.solutions/start-page-plus/known-issues
 
+## Releases
+
 ### v1.0 - 2020-05-17
 
-- added
-  - the ability to **pin**/**unpin** items in the *Recent Items* list [(GHI #21)][github-issue-21]
-  - the ability to **remove** items from the *Recent Items* list [(GHI #35)][github-issue-35]
+#### Added
+  - ability to **pin**/**unpin** items in the *Recent Items* list [(GHI #21)][github-issue-21]
+  - ability to **remove** items from the *Recent Items* list [(GHI #35)][github-issue-35]
   - *Restart Visual Studio* options to *Start* tab [(GHI #20)][github-issue-20]
   - *Start Page+ Options* command to open `Tools` | `Options` | `General` in one click
     - found in `Tools` | `Options`
   - *Max Width* setting [(GHI #32)][github-issue-32]
     - replaces **fixed width** (1175)
-- removed
+  - *Number of Recent Items* setting
+#### Removed
   - *Continue Without Code* from *Start* tab [(GHI #19)][github-issue-19]
-- fixed
+#### Fixed
   - '*Recent Item Timeframes Disappear When Refresh is Clicked*' [(GHI #5)][github-issue-5]
   - '*PackageClass did not load correctly' (VS 2017)* [(GHI #8)][github-issue-8]
   - '*Window is not docked on first ever use*' ([GitHub Issue #14][github-issue-14])

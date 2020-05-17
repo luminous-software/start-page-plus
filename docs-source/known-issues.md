@@ -15,6 +15,7 @@
 ## Recent Items list
 
   - can't start typing in the filter box without clicking in it first ([GitHub Issue #6][github-issue-6])
+  - the first item is selected when the window first opens
 
 [developer-news-url]: https://luminous-software.solutions/developer-news
 [github-issue-6]: https://github.com/luminous-software/start-page-plus/issues/6
