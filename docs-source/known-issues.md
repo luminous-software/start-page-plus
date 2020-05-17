@@ -15,12 +15,9 @@
 ## Recent Items list
 
   - can't start typing in the filter box without clicking in it first ([GitHub Issue #6][github-issue-6])
-  - there's no way to *pin* and *unpin* items ([GitHub Issue #21][github-issue-21])
 
 [developer-news-url]: https://luminous-software.solutions/developer-news
 [github-issue-6]: https://github.com/luminous-software/start-page-plus/issues/6
-[github-issue-21]: https://github.com/luminous-software/start-page-plus/issues21
-[github-issue-22]: https://github.com/luminous-software/start-page-plus/issues22
 
 ## Internationalisation
 
