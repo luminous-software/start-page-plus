@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="2FD598B1-4BEC-420A-8E7A-1B99FF1181B5" Version="0.14.3.14" Language="en-US" Publisher="Yann Duran" />
+        <Identity Id="2FD598B1-4BEC-420A-8E7A-1B99FF1181B5" Version="0.14.3.15" Language="en-US" Publisher="Yann Duran" />
         <DisplayName>Start Page+</DisplayName>
         <Description xml:space="preserve">Bring back Start Page! (a document tab, NOT a modal window)</Description>
         <MoreInfo>https://luminous-software.solutions/start-page-plus/</MoreInfo>
