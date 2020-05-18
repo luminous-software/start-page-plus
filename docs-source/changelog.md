@@ -37,6 +37,7 @@ page on the [Start Page+][start-page-plus-url] website.
   - '*Projects with space in the name not opening*' [(GitHub Issue #23)][github-issue-23]
   - '*Dates have a fixed AU/UK format in the Recent Items list*' [(GitHub Issue #24)][github-issue-24]
   - '*Only Folder, Solution, and C# Project currently have icons in Recent Items*' [(GitHub Issue #26)][github-issue-26]
+  - _Start Page+_ is not respecting the _Open Links in VS_ option
 
 [github-issue-5]: https://github.com/luminous-software/start-page-plus/issues/5
 [github-issue-8]: https://github.com/luminous-software/start-page-plus/issues/8
