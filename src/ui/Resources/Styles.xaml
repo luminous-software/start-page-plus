@@ -7,9 +7,10 @@
         <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
-    <!--  Columns  -->
+    <!-- Columns -->
 
-    <Style x:Key="ColumnStyle"
+    <Style
+        x:Key="ColumnStyle"
         TargetType="Border"
         >
         <Setter Property="Margin" Value="0,10,10,10"/>
@@ -18,7 +19,8 @@
         <Setter Property="BorderThickness" Value="1"/>
     </Style>
 
-    <Style x:Key="ColumnHeadingStyle"
+    <Style
+        x:Key="ColumnHeadingStyle"
         TargetType="TextBlock"
         >
         <Setter Property="Margin" Value="10,10,10,5"/>
@@ -29,9 +31,10 @@
     </Style>
 
 
-    <!--  Items  -->
+    <!-- Items -->
 
-    <Style x:Key="ColumnListStyle"
+    <Style
+        x:Key="ColumnListStyle"
         TargetType="ListView"
         >
         <Setter Property="Margin" Value="10,0"/>
@@ -46,7 +49,8 @@
         <Setter Property="SelectionMode" Value="Single"/>
     </Style>
 
-    <Style x:Key="ColumnListItemStyle"
+    <Style
+        x:Key="ColumnListItemStyle"
         TargetType="Button"
         >
         <Setter Property="Template">
@@ -102,18 +106,20 @@
         </Setter>
     </Style>
 
-    <Style x:Key="ColumnListItemContainerStyle"
+    <Style
+        x:Key="ColumnListItemContainerStyle"
         TargetType="ListViewItem"
         >
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="Cursor" Value="Hand"/>
     </Style>
 
-    <!--  https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377  -->
+    <!-- https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377 -->
 
-    <!--  Commands  -->
+    <!-- Commands -->
 
-    <Style x:Key="ColumnCommandsStyle"
+    <Style
+        x:Key="ColumnCommandsStyle"
         TargetType="ItemsControl"
         >
         <Setter Property="Margin" Value="10,10,10,5"/>
@@ -133,7 +139,7 @@
                     <Button x:Name="CommandButton"
                         Command="{Binding Command}"
                         Content="{Binding Name}"
-                        IsEnabled="{Binding Enabled}"
+                        IsEnabled="{Binding IsEnabled}"
                         Visibility="{Binding IsVisible, Converter={c:BoolToVisibilityConverter}}"
                         >
                         <Button.Template>
@@ -167,7 +173,8 @@
         </Setter>
     </Style>
 
-    <Style x:Key="ColumnCommandContainerStyle"
+    <Style
+        x:Key="ColumnCommandContainerStyle"
         TargetType="ListViewItem"
         >
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>

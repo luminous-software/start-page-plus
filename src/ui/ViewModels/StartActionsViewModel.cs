@@ -1,18 +1,19 @@
 ﻿using System.Collections.ObjectModel;
 
+using Luminous.Code.VisualStudio.Packages;
+
 namespace StartPagePlus.UI.ViewModels
 {
     using Interfaces;
 
-    using Luminous.Code.VisualStudio.Packages;
-
-    using StartPagePlus.Options.Pages;
+    using Options.Models;
+    using Options.Pages;
 
     public class StartActionsViewModel : ColumnViewModel
     {
         private const string HEADING = "Get Started";
-        private const string CHANGELOG_URL = "https://luminous-software.solutions/start-page-plus/changelog";
-        private readonly bool internalBrowser = true;
+        private const string WEBSITE_URL = "https://luminous-software.solutions/start-page-plus";
+        private const string CHANGELOG_URL = WEBSITE_URL + "/changelog";
         private ObservableCollection<StartActionViewModel> items = new ObservableCollection<StartActionViewModel>();
 
         public StartActionsViewModel(IStartActionDataService dataService, IStartActionCommandService commandService, IVisualStudioService vsService)
@@ -38,13 +39,19 @@ namespace StartPagePlus.UI.ViewModels
             set => Set(ref items, value);
         }
 
+        private bool OpenLinksInVS
+            => FeatureOptions.Instance.OpenLinksInVS;
+
         private void GetCommands()
-            => Commands = CommandService.GetCommands(OpenChangelog, OpenSettings);
+            => Commands = CommandService.GetCommands(OpenChangelog, OpenWebsite, OpenOptions);
 
         private void OpenChangelog()
-            => VisualStudioService.OpenWebPage(CHANGELOG_URL, internalBrowser);
+            => VisualStudioService.OpenWebPage(CHANGELOG_URL, OpenLinksInVS);
 
-        private void OpenSettings()
+        private void OpenWebsite()
+            => VisualStudioService.OpenWebPage(WEBSITE_URL, OpenLinksInVS);
+
+        private void OpenOptions()
             => AsyncPackageBase.Instance.ShowOptionsPage<DialogPageProvider.General>();
 
         private void Refresh()
