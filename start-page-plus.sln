@@ -105,6 +105,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "art", "art", "{2A516AFD-D80
 		art\vsip.png = art\vsip.png
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{9793D8FE-695B-4112-A014-092FEDCD518F}"
+	ProjectSection(SolutionItems) = preProject
+		docs-source\assets\images\developer-news.png = docs-source\assets\images\developer-news.png
+		docs-source\assets\images\options-features.png = docs-source\assets\images\options-features.png
+		docs-source\assets\images\options-general.png = docs-source\assets\images\options-general.png
+		docs-source\assets\images\options-settings.png = docs-source\assets\images\options-settings.png
+		docs-source\assets\images\recent-items.png = docs-source\assets\images\recent-items.png
+		docs-source\assets\images\start-actions.png = docs-source\assets\images\start-actions.png
+		docs-source\assets\images\start-page-plus.png = docs-source\assets\images\start-page-plus.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -142,6 +153,7 @@ Global
 		{8A6F448D-3822-4DAC-942D-00274F1DD568} = {1E0BD415-DA83-4B83-91F3-BF29FF7D423F}
 		{2C4A9B8A-C4DE-4854-A698-CB4D465BAF0A} = {1E0BD415-DA83-4B83-91F3-BF29FF7D423F}
 		{99A9DF34-83E3-432D-8BD3-A8DEA7732660} = {1E0BD415-DA83-4B83-91F3-BF29FF7D423F}
+		{9793D8FE-695B-4112-A014-092FEDCD518F} = {2C4A9B8A-C4DE-4854-A698-CB4D465BAF0A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5815276C-715F-4D15-B8FC-01D0B77A7644}

@@ -99,8 +99,14 @@ When this setting is set to `true` a 'Start Page+ Options' command is added to t
 The default value of 1175 should be fine for everyone, regardless of your monitor resolution.
 However if you'd like the contents of the _Start Page+_ window to be wider or narrower,
 
-### Number of Recent Items
+### Recent Items to Display
 
 This setting will allow you to determine how many items are displayed in the *Recent Item* list.
 
 The default value is 50.
+
+### News Items to Display
+
+This setting will allow you to determine how many items are displayed in the *Developer News* list.
+
+The default value is 10.
