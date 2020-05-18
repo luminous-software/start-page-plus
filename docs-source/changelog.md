@@ -9,24 +9,34 @@ page on the [Start Page+][start-page-plus-url] website.
 ### v1.0 - 2020-05-17
 
 #### Added
-  - ability to **pin**/**unpin** items in the *Recent Items* list [(GHI #21)][github-issue-21]
-  - ability to **remove** items from the *Recent Items* list [(GHI #35)][github-issue-35]
-  - *Restart Visual Studio* options to *Start* tab [(GHI #20)][github-issue-20]
-  - *Start Page+ Options* command to open `Tools` | `Options` | `General` in one click
+  - the ability to **pin**/**unpin** items in the *Recent Items* list [(GitHub Issue #21)][github-issue-21]
+  - the ability to **remove** items from the *Recent Items* list [(GitHub Issue #35)][github-issue-35]
+  - a *Restart Visual Studio* option to *Get Started* column [(GitHub Issue #20)][github-issue-20]
+    - also *Restart Visual Studio as Administrator*
+  - a *Start Page+ Options* command to open `Tools` | `Options` | `Start Page+` | `General`
     - found in `Tools` | `Options`
-  - *Max Width* setting [(GHI #32)][github-issue-32]
-    - replaces **fixed width** (1175)
-  - *Number of Recent Items* setting
+  - a *Settings* button to centre column to open `Tools` | `Options` | `Start Page+` | `General`
+  - a *Max Width* setting [(GitHub Issue #32)][github-issue-32]
+    - replaces **fixed width** of 1175
+  - a *Number of Recent Items* setting
+  - a *Number of News Items* setting
+
 #### Removed
-  - *Continue Without Code* from *Start* tab [(GHI #19)][github-issue-19]
+  - the *Continue Without Code* items from the *Get Started* column [(GitHub Issue #19)][github-issue-19]
+
+#### Changed
+  - the text of *Changelog* button from the current installed version number to simply 'Changelog'
+    - opens the *Start Page+* website's *Changelog* page
+    - the currently installed version number can be found by clicking the new *Settings* button
+
 #### Fixed
-  - '*Recent Item Timeframes Disappear When Refresh is Clicked*' [(GHI #5)][github-issue-5]
-  - '*PackageClass did not load correctly' (VS 2017)* [(GHI #8)][github-issue-8]
+  - '*Recent Item Timeframes Disappear When Refresh is Clicked*' [(GitHub Issue #5)][github-issue-5]
+  - '*PackageClass did not load correctly' (VS 2017)* [(GitHub Issue #8)][github-issue-8]
   - '*Window is not docked on first ever use*' ([GitHub Issue #14][github-issue-14])
-  - '*Images in Start tab have the wrong background color in some themes*' [(GHI #22)][github-issue-22]
-  - '*Projects with space in the name not opening*' [(GHI #23)][github-issue-23]
-  - '*Dates have a fixed AU/UK format in the Recent Items list*' [(GHI #24)][github-issue-24]
-  - '*Only Folder, Solution, and C# Project currently have icons in Recent Items*' [(GHI #26)][github-issue-26]
+  - '*Images in Start tab have the wrong background color in some themes*' [(GitHub Issue #22)][github-issue-22]
+  - '*Projects with space in the name not opening*' [(GitHub Issue #23)][github-issue-23]
+  - '*Dates have a fixed AU/UK format in the Recent Items list*' [(GitHub Issue #24)][github-issue-24]
+  - '*Only Folder, Solution, and C# Project currently have icons in Recent Items*' [(GitHub Issue #26)][github-issue-26]
 
 [github-issue-5]: https://github.com/luminous-software/start-page-plus/issues/5
 [github-issue-8]: https://github.com/luminous-software/start-page-plus/issues/8

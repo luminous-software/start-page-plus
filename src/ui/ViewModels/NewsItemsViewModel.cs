@@ -1,11 +1,17 @@
 ﻿using System.Collections.ObjectModel;
+
+using GalaSoft.MvvmLight.Messaging;
+
 using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.ViewModels
 {
     using Core.Interfaces;
-    using GalaSoft.MvvmLight.Messaging;
+
+
     using Interfaces;
+
+    using Options.Models;
 
     public class NewsItemsViewModel : ColumnViewModel
     {
@@ -43,18 +49,16 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         private void GetCommands()
-            => Commands = CommandService.GetCommands(/*MoreNews,*/ Refresh);
-
-        private void MoreNews()
-        { }
+            => Commands = CommandService.GetCommands(Refresh);
 
         public void Refresh()
-             => ThreadHelper.JoinableTaskFactory.RunAsync(async ()
-                 =>
-                 {
-                     Items.Clear();
+        {
+            var itemsToDisplay = SettingOptions.Instance.NewsItemsToDisplay;
 
-                     return Items = await DataService.GetItemsAsync(DEV_NEWS_FEED_URL);
-                 });
+            Items.Clear();
+
+            ThreadHelper.JoinableTaskFactory.RunAsync(
+                async () => Items = await DataService.GetItemsAsync(DEV_NEWS_FEED_URL, itemsToDisplay));
+        }
     }
 }

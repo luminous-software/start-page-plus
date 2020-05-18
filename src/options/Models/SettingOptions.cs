@@ -14,6 +14,11 @@ namespace StartPagePlus.Options.Models
         public int MaxWidth { get; set; } = 1175;
 
         [Category(Settings)]
+        [DisplayName(Constants.PageConstants.NewsItemsToDisplay)]
+        [Description("Sets the number of items to display in the 'Developer News' list")]
+        public int NewsItemsToDisplay { get; set; } = 10;
+
+        [Category(Settings)]
         [DisplayName(Constants.PageConstants.RecentItemsToDisplay)]
         [Description("Sets the number of items to display in the 'Recent Items' list")]
         public int RecentItemsToDisplay { get; set; } = 50;
