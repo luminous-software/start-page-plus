@@ -104,6 +104,15 @@
                                                             Foreground="{DynamicResource ItemGroupNameBrush}"
                                                             Text="{Binding Path=Name, Converter={c:PeriodTypeToNameConverter}}"
                                                             />
+                                                        <TextBlock
+                                                            Margin="2,4,0,0"
+                                                            VerticalAlignment="Center"
+                                                            FontSize="14"
+                                                            FontStyle="Normal"
+                                                            FontWeight="Medium"
+                                                            Foreground="{DynamicResource ItemCountBrush}"
+                                                            Text="{Binding ItemCount, Converter={c:IntToPluralStringConverter}}"
+                                                            />
                                                     </StackPanel>
                                                 </Expander.Header>
 

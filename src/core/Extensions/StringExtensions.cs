@@ -24,5 +24,23 @@ namespace Luminous.Code.Extensions.Strings
 
             return (index > -1);
         }
+
+        public static string ToPlural(this string instance, int count)
+        {
+            if (string.IsNullOrEmpty(instance))
+                return "";
+
+            switch (count)
+            {
+                case 0:
+                    return $"{instance}s";
+
+                case 1:
+                    return instance;
+
+                default:
+                    return $"{instance}s";
+            }
+        }
     }
 }
