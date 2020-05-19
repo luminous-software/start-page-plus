@@ -59,7 +59,29 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextHeadingSelectedKey}}"
         />
 
+    <!-- Expanders -->
+
+    <SolidColorBrush
+        x:Key="ExpanderIconBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedHoverKey}}"
+        />
+
+    <SolidColorBrush
+        x:Key="ExpanderMouseOverBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedKey}}"
+        />
+
+    <SolidColorBrush
+        x:Key="ExpanderIsPressedBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedHoverKey}}"
+        />
+
     <!-- Items -->
+
+    <SolidColorBrush
+        x:Key="ItemCountBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedHoverKey}}"
+        />
 
     <SolidColorBrush
         x:Key="ItemGroupNameBrush"
@@ -89,11 +111,6 @@
     <SolidColorBrush
         x:Key="FilterBackgroundBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ScrollBarBackgroundKey}}"
-        />
-
-    <SolidColorBrush
-        x:Key="ItemCountBrush"
-        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedHoverKey}}"
         />
 
     <!-- Commands -->
