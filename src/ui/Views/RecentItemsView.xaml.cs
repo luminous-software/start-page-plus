@@ -21,12 +21,10 @@ namespace StartPagePlus.UI.Views
             {
                 var viewModel = ViewModelLocator.RecentItemsViewModel;
 
-                //viewModel.Refresh();
+                // viewModel.Refresh() not needed here, triggered by FilterTextBox.TextChanged
 
                 DataContext = viewModel;
 
-                // TODO: should this reference the ListView.ItemsSource?
-                //https://www.wpf-tutorial.com/listview-control/listview-grouping/
                 var view = (ListCollectionView)CollectionViewSource.GetDefaultView(viewModel.Items);
 
                 using (view.DeferRefresh())
@@ -37,8 +35,7 @@ namespace StartPagePlus.UI.Views
                 }
 
                 RefreshViewWhenFilterChanges(view);
-                //EnsureClickedItemDoesNotRemainSelected();
-
+                SetSelectedItemToNull();
             }
             catch (Exception ex)
             {
@@ -49,12 +46,14 @@ namespace StartPagePlus.UI.Views
 
         private static void AddGrouping(ListCollectionView view)
         {
+            view.GroupDescriptions.Clear();
             view.IsLiveGrouping = true;
             view.GroupDescriptions.Add(new PropertyGroupDescription(nameof(RecentItemViewModel.PeriodType)));
         }
 
         private static void AddSorting(ListCollectionView view)
         {
+            view.SortDescriptions.Clear();
             view.IsLiveSorting = true;
             view.SortDescriptions.Add(new SortDescription(nameof(RecentItemViewModel.PeriodType), ListSortDirection.Ascending));
             view.SortDescriptions.Add(new SortDescription(nameof(RecentItemViewModel.Date), ListSortDirection.Descending));
@@ -83,9 +82,9 @@ namespace StartPagePlus.UI.Views
             => FilterTextBox.TextChanged += (object sender, TextChangedEventArgs e)
                 => view.Refresh();
 
-        //private void EnsureClickedItemDoesNotRemainSelected()
-        //    => RecentItemsListView.SelectionChanged += (sender, e)
-        //        => RecentItemsListView.SelectedItem = null;
+        private void SetSelectedItemToNull()
+            => RecentItemsListView.Loaded += (sender, e)
+                => RecentItemsListView.SelectedItem = null;
 
         private void ClearFilterText_Click(object sender, RoutedEventArgs e)
         {
