@@ -54,7 +54,6 @@
                     Foreground="{DynamicResource FilterForegroundBrush}"
                     IsTabStop="true"
                     />
-                <!-- Text="{Binding FilterText, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" -->
 
                 <Button x:Name="ClearFilterText"
                     Grid.Column="1"
@@ -94,17 +93,22 @@
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="{x:Type GroupItem}">
-                                            <StackPanel>
-                                                <TextBlock
-                                                    Margin="5,5,5,2"
-                                                    HorizontalAlignment="Left"
-                                                    FontSize="14"
-                                                    FontWeight="Medium"
-                                                    Foreground="{DynamicResource ItemGroupNameBrush}"
-                                                    Text="{Binding Path=Name, Converter={c:PeriodTypeToNameConverter}}"
-                                                    />
+                                            <Expander IsExpanded="True">
+                                                <Expander.Header>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock
+                                                            Margin="5,5,5,2"
+                                                            HorizontalAlignment="Left"
+                                                            FontSize="15"
+                                                            FontWeight="Medium"
+                                                            Foreground="{DynamicResource ItemGroupNameBrush}"
+                                                            Text="{Binding Path=Name, Converter={c:PeriodTypeToNameConverter}}"
+                                                            />
+                                                    </StackPanel>
+                                                </Expander.Header>
+
                                                 <ItemsPresenter/>
-                                            </StackPanel>
+                                            </Expander>
                                         </ControlTemplate>
                                     </Setter.Value>
                                 </Setter>
