@@ -26,6 +26,94 @@
 
             <utilities:BrushToColorConverter x:Key="BrushToColorConverter"/>
 
+            <ControlTemplate
+                x:Key="SimpleExpanderButtonTemp"
+                TargetType="{x:Type ToggleButton}"
+                >
+                <Border x:Name="ExpanderButtonBorder"
+                    Padding="{TemplateBinding Padding}"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Rectangle
+                            Grid.ColumnSpan="2"
+                            Fill="Transparent"
+                            />
+                        <Path x:Name="Sign"
+                            Grid.Column="0"
+                            Width="10"
+                            Height="10"
+                            Margin="0,3,0,0"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Data="M 0,5 H 10 M 5,0 V 10 Z"
+                            RenderTransformOrigin="0.5,0.5"
+                            Stroke="{StaticResource ExpanderIconBrush}"
+                            StrokeThickness="2"
+                            >
+                            <Path.RenderTransform>
+                                <RotateTransform Angle="0"/>
+                            </Path.RenderTransform>
+                        </Path>
+
+                        <ContentPresenter x:Name="HeaderContent"
+                            Grid.Column="1"
+                            Margin="4,0,0,0"
+                            ContentSource="Content"
+                            />
+                    </Grid>
+                </Border>
+
+                <ControlTemplate.Triggers>
+                    <!-- Change the sign to minus when toggled -->
+                    <Trigger Property="IsChecked" Value="True">
+                        <Setter TargetName="Sign" Property="Data" Value="M 0,5 H 10 Z"/>
+                    </Trigger>
+
+                    <!-- MouseOver, Pressed behaviours -->
+                    <Trigger Property="IsMouseOver" Value="true">
+                        <Setter TargetName="Sign" Property="Stroke" Value="{StaticResource ExpanderMouseOverBrush}"/>
+                    </Trigger>
+
+                    <Trigger Property="IsPressed" Value="true">
+                        <Setter TargetName="Sign" Property="Stroke" Value="{StaticResource ExpanderIsPressedBrush}"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+            <ControlTemplate
+                x:Key="SimpleExpanderTemplate"
+                TargetType="{x:Type Expander}"
+                >
+                <DockPanel>
+                    <ToggleButton x:Name="ExpanderButton"
+                        Padding="1.5,0"
+                        Content="{TemplateBinding Header}"
+                        DockPanel.Dock="Top"
+                        IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}"
+                        OverridesDefaultStyle="True"
+                        Template="{StaticResource SimpleExpanderButtonTemp}"
+                        />
+                    <ContentPresenter x:Name="ExpanderContent"
+                        DockPanel.Dock="Bottom"
+                        Visibility="Collapsed"
+                        />
+                </DockPanel>
+
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsExpanded" Value="True">
+                        <Setter TargetName="ExpanderContent" Property="Visibility" Value="Visible"/>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
             <!-- https://stackoverflow.com/questions/3894195/wpf-collectionviewsource-grouping -->
         </ResourceDictionary>
     </UserControl.Resources>
@@ -93,7 +181,11 @@
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="{x:Type GroupItem}">
-                                            <Expander IsExpanded="True">
+                                            <Expander
+                                                IsExpanded="True"
+                                                OverridesDefaultStyle="True"
+                                                Template="{StaticResource SimpleExpanderTemplate}"
+                                                >
                                                 <Expander.Header>
                                                     <StackPanel Orientation="Horizontal">
                                                         <TextBlock
