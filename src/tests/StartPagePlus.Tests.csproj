@@ -43,6 +43,7 @@
       <Link>Properties\source.extension.cs</Link>
     </Compile>
     <Compile Include="Converters\RecentItemTypeConverter_Tests.cs" />
+    <Compile Include="Converters\IntoToPluralStringConverter_Tests.cs" />
     <Compile Include="Dates\DateToString_Tests.cs" />
     <Compile Include="Enums\CalculateRecentItemType_Tests.cs" />
     <Compile Include="Enums\PeriodTypeToString_Tests.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Dates\DaysAgo_Tests.cs" />
     <Compile Include="Dates\StartOfWeek_Tests.cs" />
     <Compile Include="Enums\GetName_Tests.cs" />
+    <Compile Include="Strings\ToPluralString_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Enums\RecentItemTypeToImageMoniker_Tests.cs" />
   </ItemGroup>
