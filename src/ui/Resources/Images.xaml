@@ -4,7 +4,8 @@
     xmlns:grid="clr-namespace:StartPage.UI.AttachedProperties.Grids"
     xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
     >
-    <Image x:Key="PinImage"
+    <Image
+        x:Key="PinImage"
         Source="/Resources/Pin.png"
         />
 </ResourceDictionary>
