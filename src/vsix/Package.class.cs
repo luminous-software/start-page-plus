@@ -65,7 +65,7 @@ namespace StartPagePlus
                 ? this
                 : null; //base.GetAsyncToolWindowFactory(toolWindowType);
 
-        //TODO: is GetToolWindowTitle REALLY necessary?
+        // TODO: is GetToolWindowTitle REALLY necessary?
         protected override string GetToolWindowTitle(Type toolWindowType, int id)
             => (toolWindowType == typeof(StartPagePlusWindow))
                 ? $"{Vsix.Name}"

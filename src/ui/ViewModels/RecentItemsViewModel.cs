@@ -103,8 +103,6 @@ namespace StartPagePlus.UI.ViewModels
         private void ExecuteAction(RecentItemClickMessage message)
             => ActionService.ExecuteAction(message.Content);
 
-        //TODO: can these Func<bool>'s be changed to just bool now?
-
         private bool CanCopyItemPath
             => (SelectedItem != null);
 
@@ -134,8 +132,6 @@ namespace StartPagePlus.UI.ViewModels
 
         private void PinItem()
         {
-            //SelectedItem.Pinned = true;
-            //SelectedItem.ClickCommand.Execute(null);
             if (!ItemService.PinItem(SelectedItem))
             {
                 DialogService.ShowMessage($"Unable to pin '{SelectedItem?.Name}'", Vsix.Name);

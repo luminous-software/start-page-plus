@@ -4,7 +4,7 @@ namespace StartPagePlus.UI.ViewModels
 {
     using Core.Interfaces;
 
-    using Interfaces;   //TODO: why are these interfaces not in Core.Interfaces?
+    using Interfaces;   // TODO: why are these interfaces not in Core.Interfaces?
 
     using Services;
 

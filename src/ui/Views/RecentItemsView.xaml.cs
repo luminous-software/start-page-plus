@@ -25,7 +25,7 @@ namespace StartPagePlus.UI.Views
 
                 DataContext = viewModel;
 
-                //TODO: should this refernce the ListView.ItemsSource?
+                // TODO: should this reference the ListView.ItemsSource?
                 //https://www.wpf-tutorial.com/listview-control/listview-grouping/
                 var view = (ListCollectionView)CollectionViewSource.GetDefaultView(viewModel.Items);
 
