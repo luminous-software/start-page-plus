@@ -21,7 +21,7 @@ namespace StartPagePlus.UI.Views
             {
                 var viewModel = ViewModelLocator.RecentItemsViewModel;
 
-                // viewModel.Refresh() not needed here, triggered by FilterTextBox.TextChanged
+                // viewModel.Refresh() not needed here, Refresh is call in viewmodel's constructor
 
                 DataContext = viewModel;
 
@@ -91,5 +91,11 @@ namespace StartPagePlus.UI.Views
             FilterTextBox.Text = "";
             FilterTextBox.Focus();
         }
+
+        private void OnExpanded(object sender, RoutedEventArgs e)
+            => RecentItemsListView.SelectedItem = null;
+
+        private void OnCollapsed(object sender, RoutedEventArgs e)
+            => RecentItemsListView.SelectedItem = null;
     }
 }
