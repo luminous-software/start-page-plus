@@ -15,11 +15,10 @@ namespace StartPagePlus.UI.ViewModels
     public class RecentItemViewModel : ViewModelBase
     {
         private bool pinned;
-        public RecentItemViewModel(/*IItemService itemService*/)
-        {
-            ClickCommand = new RelayCommand(ExecuteClick, true);
-            //ItemService = itemService;
-        }
+        public RecentItemViewModel()
+            => ClickCommand = new RelayCommand(ExecuteClick, true);
+
+        public ICommand ClickCommand { get; }
 
         public string Name { get; set; }
 
@@ -35,15 +34,11 @@ namespace StartPagePlus.UI.ViewModels
 
         public ImageMoniker Moniker { get; set; }
 
-        public bool Pinned
+        public bool Pinned    // TODO: can this be just an auto prop?
         {
             get => pinned;
             set => Set(ref pinned, value, nameof(Pinned));
         }
-
-        //public IItemService ItemService { get; }
-
-        public ICommand ClickCommand { get; }
 
         private void ExecuteClick()
             => MessengerInstance.Send(new RecentItemClickMessage(this, Path));

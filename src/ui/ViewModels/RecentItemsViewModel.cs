@@ -66,8 +66,8 @@ namespace StartPagePlus.UI.ViewModels
             set => Set(ref selectedItem, value, nameof(SelectedItem));
         }
 
-        //public void OnContextMenuClosing(object sender, ContextMenuEventArgs e)
-        //    => ContextCommands.Clear();
+        public void OnContextMenuClosing(object sender, ContextMenuEventArgs e)
+            => SelectedItem = null;
 
         public void OnContextMenuOpening(object sender, ContextMenuEventArgs e)
             => GetContextCommands();
