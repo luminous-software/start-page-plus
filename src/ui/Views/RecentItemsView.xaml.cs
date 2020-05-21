@@ -93,9 +93,12 @@ namespace StartPagePlus.UI.Views
         }
 
         private void OnExpanded(object sender, RoutedEventArgs e)
-            => RecentItemsListView.SelectedItem = null;
+            => FilterTextBox.Focus();
 
         private void OnCollapsed(object sender, RoutedEventArgs e)
-            => RecentItemsListView.SelectedItem = null;
+            => FilterTextBox.Focus();
+
+        private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+            => FilterTextBox.Focus();
     }
 }

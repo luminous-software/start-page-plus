@@ -175,6 +175,7 @@
                 IsTabStop="False"
                 ItemContainerStyle="{StaticResource ColumnListItemContainerStyle}"
                 ItemsSource="{Binding Items}"
+                SelectionChanged="OnSelectionChanged"
                 Style="{StaticResource ColumnListStyle}"
                 >
                 <ListView.GroupStyle>
@@ -186,6 +187,8 @@
                                     <Setter.Value>
                                         <ControlTemplate TargetType="{x:Type GroupItem}">
                                             <Expander
+                                                Collapsed="OnCollapsed"
+                                                Expanded="OnExpanded"
                                                 IsExpanded="True"
                                                 IsTabStop="False"
                                                 OverridesDefaultStyle="True"
