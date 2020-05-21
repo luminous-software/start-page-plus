@@ -66,11 +66,12 @@ namespace StartPagePlus.UI.ViewModels
             set => Set(ref selectedItem, value, nameof(SelectedItem));
         }
 
-        public void OnContextMenuClosing(object sender, ContextMenuEventArgs e)
-            => SelectedItem = null;
-
         public void OnContextMenuOpening(object sender, ContextMenuEventArgs e)
             => GetContextCommands();
+
+        // don't SelectedItem = null here, doing so causes the context menu to be empty
+        public void OnContextMenuClosing(object sender, ContextMenuEventArgs e)
+        { }
 
         protected override void RaiseCanExecuteChanged()
         {
