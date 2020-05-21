@@ -9,8 +9,8 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     Background="{DynamicResource ContentBackgroundBrush}"
-    mc:Ignorable="d"
     IsTabStop="False"
+    mc:Ignorable="d"
     >
     <UserControl.Resources>
         <ResourceDictionary>
@@ -20,7 +20,10 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <DockPanel LastChildFill="True">
+    <DockPanel x:Name="StartViewLayoutRoot"
+        LastChildFill="True"
+        >
+
         <TextBlock x:Name="Title"
             Height="34"
             Margin="10,10,10,0"
@@ -47,11 +50,6 @@
                         />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
-
-            <!--<ItemsControl.ItemContainerStyle>
-                <Style>
-                </Style>
-            </ItemsControl.ItemContainerStyle>-->
 
             <ItemsControl.Resources>
                 <DataTemplate DataType="{x:Type vm:RecentItemsViewModel}">

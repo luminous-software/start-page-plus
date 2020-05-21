@@ -6,6 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="450"
     d:DesignWidth="800"
+    IsTabStop="False"
     mc:Ignorable="d"
     >
     <UserControl.Resources>
@@ -33,6 +34,7 @@
                 />
 
             <ListView x:Name="NewsItemsListView"
+                IsTabStop="False"
                 ItemContainerStyle="{StaticResource ColumnListItemContainerStyle}"
                 ItemsSource="{Binding Items}"
                 Style="{StaticResource ColumnListStyle}"
@@ -41,6 +43,7 @@
                     <DataTemplate>
                         <Button
                             Command="{Binding ClickCommand}"
+                            IsTabStop="False"
                             Style="{StaticResource ColumnListItemStyle}"
                             >
                             <DockPanel x:Name="NewsItemContainer"

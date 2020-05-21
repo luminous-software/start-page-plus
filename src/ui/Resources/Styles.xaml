@@ -13,6 +13,7 @@
         x:Key="ColumnStyle"
         TargetType="Border"
         >
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="0,10,10,10"/>
         <Setter Property="Background" Value="{DynamicResource ColumnBackgroundBrush}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ColumnBorderBrush}"/>
@@ -47,12 +48,16 @@
         <Setter Property="SelectedIndex" Value="{Binding SelectedIndex, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
         <Setter Property="SelectedItem" Value="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
         <Setter Property="SelectionMode" Value="Single"/>
+        <Setter Property="IsTabStop" Value="False"/>
     </Style>
 
     <Style
         x:Key="ColumnListItemStyle"
         TargetType="Button"
         >
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -111,6 +116,7 @@
         TargetType="ListViewItem"
         >
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="IsTabStop" Value="False"/>
         <Setter Property="Cursor" Value="Hand"/>
     </Style>
 
@@ -125,6 +131,7 @@
         <Setter Property="Margin" Value="10,10,10,5"/>
         <Setter Property="DockPanel.Dock" Value="Bottom"/>
         <Setter Property="ItemsSource" Value="{Binding Commands}"/>
+        <Setter Property="IsTabStop" Value="False"/>
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
@@ -140,6 +147,7 @@
                         Command="{Binding Command}"
                         Content="{Binding Name}"
                         IsEnabled="{Binding IsEnabled}"
+                        IsTabStop="False"
                         Visibility="{Binding IsVisible, Converter={c:BoolToVisibilityConverter}}"
                         >
                         <Button.Template>
@@ -179,5 +187,6 @@
         >
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="IsTabStop" Value="False"/>
     </Style>
 </ResourceDictionary>

@@ -15,6 +15,7 @@
     xmlns:utilities="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Utilities"
     d:DesignHeight="450"
     d:DesignWidth="800"
+    IsTabStop="False"
     mc:Ignorable="d"
     >
     <UserControl.Resources>
@@ -27,7 +28,7 @@
             <utilities:BrushToColorConverter x:Key="BrushToColorConverter"/>
 
             <ControlTemplate
-                x:Key="SimpleExpanderButtonTemp"
+                x:Key="PlusMinusExpanderButtonTemplate"
                 TargetType="{x:Type ToggleButton}"
                 >
                 <Border x:Name="ExpanderButtonBorder"
@@ -89,7 +90,7 @@
             </ControlTemplate>
 
             <ControlTemplate
-                x:Key="SimpleExpanderTemplate"
+                x:Key="PlusMinusExpanderTemplate"
                 TargetType="{x:Type Expander}"
                 >
                 <DockPanel>
@@ -98,8 +99,9 @@
                         Content="{TemplateBinding Header}"
                         DockPanel.Dock="Top"
                         IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}"
+                        IsTabStop="False"
                         OverridesDefaultStyle="True"
-                        Template="{StaticResource SimpleExpanderButtonTemp}"
+                        Template="{StaticResource PlusMinusExpanderButtonTemplate}"
                         />
                     <ContentPresenter x:Name="ExpanderContent"
                         DockPanel.Dock="Bottom"
@@ -138,6 +140,7 @@
                 <TextBox x:Name="FilterTextBox"
                     Grid.Column="0"
                     Background="{DynamicResource FilterBackgroundBrush}"
+                    FocusManager.FocusedElement="{Binding ElementName=FilterTextBox}"
                     FontSize="14"
                     Foreground="{DynamicResource FilterForegroundBrush}"
                     IsTabStop="true"
@@ -150,7 +153,7 @@
                     VerticalContentAlignment="Center"
                     Background="{Binding Background, ElementName=FilterTextBox}"
                     Click="ClearFilterText_Click"
-                    IsTabStop="false"
+                    IsTabStop="False"
                     Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
                     >
                     <imaging:CrispImage x:Name="ClearFilterImage"
@@ -168,8 +171,8 @@
                 Style="{StaticResource ColumnCommandsStyle}"
                 />
 
-            <!-- FocusManager.FocusedElement="{Binding FilterTextBox}" -->
             <ListView x:Name="RecentItemsListView"
+                IsTabStop="False"
                 ItemContainerStyle="{StaticResource ColumnListItemContainerStyle}"
                 ItemsSource="{Binding Items}"
                 Style="{StaticResource ColumnListStyle}"
@@ -178,15 +181,15 @@
                     <GroupStyle>
                         <GroupStyle.ContainerStyle>
                             <Style TargetType="GroupItem">
+                                <Setter Property="IsTabStop" Value="False"/>
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="{x:Type GroupItem}">
                                             <Expander
-                                                Collapsed="OnCollapsed"
-                                                Expanded="OnExpanded"
                                                 IsExpanded="True"
+                                                IsTabStop="False"
                                                 OverridesDefaultStyle="True"
-                                                Template="{StaticResource SimpleExpanderTemplate}"
+                                                Template="{StaticResource PlusMinusExpanderTemplate}"
                                                 >
                                                 <Expander.Header>
                                                     <StackPanel Orientation="Horizontal">
@@ -224,6 +227,7 @@
                     <DataTemplate>
                         <Button
                             Command="{Binding ClickCommand}"
+                            IsTabStop="False"
                             Style="{StaticResource ColumnListItemStyle}"
                             >
                             <DockPanel x:Name="RecentItemContainer"
@@ -289,7 +293,6 @@
                                         TextWrapping="Wrap"
                                         />
                                 </StackPanel>
-
                             </DockPanel>
                         </Button>
                     </DataTemplate>

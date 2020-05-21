@@ -9,6 +9,7 @@
     xmlns:ui="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.15.0"
     d:DesignHeight="450"
     d:DesignWidth="800"
+    IsTabStop="False"
     mc:Ignorable="d"
     >
     <UserControl.Resources>
@@ -37,6 +38,7 @@
                 />
 
             <ListView x:Name="StartActionsListView"
+                IsTabStop="False"
                 ItemsSource="{Binding Items}"
                 Style="{StaticResource ColumnListStyle}"
                 >
@@ -46,36 +48,37 @@
                         <Setter Property="MinHeight" Value="70"/>
                         <Setter Property="Margin" Value="0,0,0,20"/>
                         <Setter Property="Padding" Value="5"/>
+                        <Setter Property="IsTabStop" Value="False"/>
                     </Style>
                 </ListView.ItemContainerStyle>
 
-                <!--  https://stackoverflow.com/questions/17188699/remove-the-mouse-over-effect-on-a-listview-in-wpf/17189210#17189210  -->
-                <!--  https://docs.microsoft.com/en-us/dotnet/framework/wpf/controls/listview-styles-and-templates#listviewitem-states  -->
+                <!-- https://stackoverflow.com/questions/17188699/remove-the-mouse-over-effect-on-a-listview-in-wpf/17189210#17189210 -->
+                <!-- https://docs.microsoft.com/en-us/dotnet/framework/wpf/controls/listview-styles-and-templates#listviewitem-states -->
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Button
                             Command="{Binding ClickCommand}"
+                            IsTabStop="False"
                             Style="{StaticResource ColumnListItemStyle}"
                             >
                             <Grid grid:Props.ColumnWidths="Auto,*">
-
                                 <imaging:CrispImage
                                     Name="StartActionImage"
                                     Grid.Column="0"
                                     Width="{Binding ImageSize}"
                                     Height="{Binding ImageSize}"
                                     Margin="{Binding Margin}"
-                                    VerticalAlignment="Top"
                                     HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
                                     Moniker="{Binding Moniker}"
                                     />
 
                                 <StackPanel x:Name="TextBlocks"
                                     Grid.Column="1"
                                     Margin="10,0,0,0"
-                                    Orientation="Vertical"
                                     HorizontalAlignment="Left"
+                                    Orientation="Vertical"
                                     >
                                     <TextBlock x:Name="StartActionName"
                                         Margin="0"
@@ -99,8 +102,6 @@
                                         Text="{Binding Description}"
                                         TextWrapping="Wrap"
                                         />
-
-                                    <!--  http://www.mobilemotion.eu/?p=1048&lang=en  -->
                                 </StackPanel>
                             </Grid>
                         </Button>
