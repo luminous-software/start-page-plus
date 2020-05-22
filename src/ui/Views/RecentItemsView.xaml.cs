@@ -29,7 +29,7 @@ namespace StartPagePlus.UI.Views
 
                 DataContext = viewModel;
 
-                var view = (ListCollectionView)CollectionViewSource.GetDefaultView(ViewModel.Items);
+                var view = (ListCollectionView)CollectionViewSource.GetDefaultView(viewModel.Items);
 
                 using (view.DeferRefresh())
                 {
