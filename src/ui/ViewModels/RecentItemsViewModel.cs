@@ -75,6 +75,7 @@ namespace StartPagePlus.UI.ViewModels
                 if (Set(ref refreshed, value, nameof(Refreshed)) && (value == true))
                 {
                     SelectedItem = null;
+                    MessengerInstance.Send(new RecentItemsRefreshedMessage());
                 }
             }
         }

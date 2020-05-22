@@ -4,11 +4,14 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 
+using GalaSoft.MvvmLight.Messaging;
+
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Luminous.Code.Extensions.Strings;
 
 namespace StartPagePlus.UI.Views
 {
+    using Messages;
 
     using ViewModels;
 
@@ -20,11 +23,11 @@ namespace StartPagePlus.UI.Views
 
             try
             {
-                ViewModel = ViewModelLocator.RecentItemsViewModel;
+                var viewModel = ViewModelLocator.RecentItemsViewModel;
 
                 // NOTE: Refresh is call in viewmodel's constructor
 
-                DataContext = ViewModel;
+                DataContext = viewModel;
 
                 var view = (ListCollectionView)CollectionViewSource.GetDefaultView(ViewModel.Items);
 
@@ -37,6 +40,8 @@ namespace StartPagePlus.UI.Views
 
                 RefreshViewWhenFilterChanges(view);
                 SetSelectedItemToNull();
+
+                Messenger.Default.Register<RecentItemsRefreshedMessage>(this, FocusFilterTextBox);
             }
             catch (Exception ex)
             {
@@ -44,8 +49,6 @@ namespace StartPagePlus.UI.Views
                 MessageBox.Show(ex.ExtendedMessage());
             }
         }
-
-        public RecentItemsViewModel ViewModel { get; set; }
 
         private static void AddGrouping(ListCollectionView view)
         {
