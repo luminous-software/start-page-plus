@@ -4,11 +4,15 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 
+using GalaSoft.MvvmLight.Messaging;
+
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Luminous.Code.Extensions.Strings;
 
 namespace StartPagePlus.UI.Views
 {
+    using Messages;
+
     using ViewModels;
 
     public partial class RecentItemsView : UserControl
@@ -21,11 +25,11 @@ namespace StartPagePlus.UI.Views
             {
                 var viewModel = ViewModelLocator.RecentItemsViewModel;
 
-                // viewModel.Refresh() not needed here, Refresh is call in viewmodel's constructor
+                // NOTE: Refresh is call in viewmodel's constructor
 
                 DataContext = viewModel;
 
-                var view = (ListCollectionView)CollectionViewSource.GetDefaultView(viewModel.Items);
+                var view = (ListCollectionView)CollectionViewSource.GetDefaultView(ViewModel.Items);
 
                 using (view.DeferRefresh())
                 {
@@ -36,6 +40,8 @@ namespace StartPagePlus.UI.Views
 
                 RefreshViewWhenFilterChanges(view);
                 SetSelectedItemToNull();
+
+                Messenger.Default.Register<RecentItemsRefreshedMessage>(this, FocusFilterTextBox);
             }
             catch (Exception ex)
             {
@@ -89,16 +95,19 @@ namespace StartPagePlus.UI.Views
         private void ClearFilterText_Click(object sender, RoutedEventArgs e)
         {
             FilterTextBox.Text = "";
-            FilterTextBox.Focus();
+            FocusFilterTextBox();
         }
 
-        private void OnExpanded(object sender, RoutedEventArgs e)
+        private void FocusFilterTextBox(object sender = null)
             => FilterTextBox.Focus();
+
+        private void OnExpanded(object sender, RoutedEventArgs e)
+            => FocusFilterTextBox();
 
         private void OnCollapsed(object sender, RoutedEventArgs e)
-            => FilterTextBox.Focus();
+            => FocusFilterTextBox();
 
         private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-            => FilterTextBox.Focus();
+            => FocusFilterTextBox();
     }
 }
