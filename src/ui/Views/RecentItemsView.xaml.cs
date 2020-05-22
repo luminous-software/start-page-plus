@@ -9,6 +9,7 @@ using Luminous.Code.Extensions.Strings;
 
 namespace StartPagePlus.UI.Views
 {
+
     using ViewModels;
 
     public partial class RecentItemsView : UserControl
@@ -19,13 +20,13 @@ namespace StartPagePlus.UI.Views
 
             try
             {
-                var viewModel = ViewModelLocator.RecentItemsViewModel;
+                ViewModel = ViewModelLocator.RecentItemsViewModel;
 
-                // viewModel.Refresh() not needed here, Refresh is call in viewmodel's constructor
+                // NOTE: Refresh is call in viewmodel's constructor
 
-                DataContext = viewModel;
+                DataContext = ViewModel;
 
-                var view = (ListCollectionView)CollectionViewSource.GetDefaultView(viewModel.Items);
+                var view = (ListCollectionView)CollectionViewSource.GetDefaultView(ViewModel.Items);
 
                 using (view.DeferRefresh())
                 {
@@ -43,6 +44,8 @@ namespace StartPagePlus.UI.Views
                 MessageBox.Show(ex.ExtendedMessage());
             }
         }
+
+        public RecentItemsViewModel ViewModel { get; set; }
 
         private static void AddGrouping(ListCollectionView view)
         {
@@ -89,16 +92,19 @@ namespace StartPagePlus.UI.Views
         private void ClearFilterText_Click(object sender, RoutedEventArgs e)
         {
             FilterTextBox.Text = "";
-            FilterTextBox.Focus();
+            FocusFilterTextBox();
         }
 
-        private void OnExpanded(object sender, RoutedEventArgs e)
+        private void FocusFilterTextBox(object sender = null)
             => FilterTextBox.Focus();
+
+        private void OnExpanded(object sender, RoutedEventArgs e)
+            => FocusFilterTextBox();
 
         private void OnCollapsed(object sender, RoutedEventArgs e)
-            => FilterTextBox.Focus();
+            => FocusFilterTextBox();
 
         private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-            => FilterTextBox.Focus();
+            => FocusFilterTextBox();
     }
 }
