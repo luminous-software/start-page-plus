@@ -20,6 +20,7 @@ namespace StartPagePlus.UI.ViewModels
 
         private ObservableCollection<RecentItemViewModel> items = new ObservableCollection<RecentItemViewModel>();
         private RecentItemViewModel selectedItem;
+        private bool refreshed;
 
         public RecentItemsViewModel(
             IRecentItemDataService dataService,
@@ -64,6 +65,18 @@ namespace StartPagePlus.UI.ViewModels
         {
             get => selectedItem;
             set => Set(ref selectedItem, value, nameof(SelectedItem));
+        }
+
+        public bool Refreshed
+        {
+            get => refreshed;
+            set
+            {
+                if (Set(ref refreshed, value, nameof(Refreshed)) && (value == true))
+                {
+                    SelectedItem = null;
+                }
+            }
         }
 
         public void OnContextMenuOpening(object sender, ContextMenuEventArgs e)
@@ -154,6 +167,8 @@ namespace StartPagePlus.UI.ViewModels
 
         public void Refresh()
         {
+            Refreshed = false;
+
             var itemsToDisplay = SettingOptions.Instance.RecentItemsToDisplay;
             var items = DataService.GetItems(itemsToDisplay);
 
@@ -164,7 +179,7 @@ namespace StartPagePlus.UI.ViewModels
                 Items.Add(item);
             }
 
-            SelectedItem = null;
+            Refreshed = true;
         }
     }
 }
