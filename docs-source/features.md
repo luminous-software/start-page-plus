@@ -4,10 +4,21 @@ To display the new *Start Page+* window:
 
 ## Recent Items
 
-The *Recent Items* list brings back the ability to filter the list of recent items, and the grouping by timeframe
-that we had in VS 2017.
+The *Recent Items* list brings back the ability to filter the list of recent items,
+and the grouping by timeframe that we had in VS 2017.
 
 ![Recent Items](assets/images/recent-items.png)
+
+### Filter List
+
+By typing a name, or a partial name, into the filter box above the list display just the items
+that match the filter.
+
+### Collapsible/Expandable Timeframe Groups
+
+Each timeframe group can be collapsed or expanded by clicking anywhere on the group name.
+This can come in handy if you want to view items that are currently not being displayed
+without having to scroll down.
 
 ### Pin/Unpin Items
 

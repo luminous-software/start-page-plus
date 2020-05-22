@@ -6,7 +6,7 @@ page on the [Start Page+][start-page-plus-url] website.
 
 ## Releases
 
-### v1.0 - 2020-05-17
+### v1.0 - 2020-05-22
 
 #### Added
   - the ability to **pin**/**unpin** items in the *Recent Items* list [(GitHub Issue #21)][github-issue-21]
@@ -15,22 +15,27 @@ page on the [Start Page+][start-page-plus-url] website.
     - also *Restart Visual Studio as Administrator*
   - a *Start Page+ Options* command to open `Tools` | `Options` | `Start Page+` | `General`
     - found in `Tools` | `Options`
-  - a *Settings* button to centre column to open `Tools` | `Options` | `Start Page+` | `General`
+  - a *Changelog* button to *Get Started* column to open the website's changelog page
+  - an *Options* button to *Get Started* column to open `Tools` | `Options` | `Start Page+` | `General`
   - a *Max Width* setting [(GitHub Issue #32)][github-issue-32]
     - replaces **fixed width** of 1175
   - a *Number of Recent Items* setting
   - a *Number of News Items* setting
+  - the ability to collapse/expand the group heading in the *Recent Items* list
+  - new options pages (*Features*, *Settings*)
 
 #### Removed
   - the *Continue Without Code* items from the *Get Started* column [(GitHub Issue #19)][github-issue-19]
 
 #### Changed
-  - the text of *Changelog* button from the current installed version number to simply 'Changelog'
-    - opens the *Start Page+* website's *Changelog* page
-    - the currently installed version number can be found by clicking the new *Settings* button
+  - the website page that clicking on the version number takes you to
+    - used to go to the *Changelog* page
+    - now goes to the website's *Overview* page
+  - the position of the date in the *Recent Items* list to give more spave for the file/folder path
 
 #### Fixed
   - '*Recent Item Timeframes Disappear When Refresh is Clicked*' [(GitHub Issue #5)][github-issue-5]
+  - '*Be able to start typing in the Recent Item Filter Box with out having to click in it first*' [(GitHub Issue #6)][github-issue-6]
   - '*PackageClass did not load correctly' (VS 2017)* [(GitHub Issue #8)][github-issue-8]
   - '*Window is not docked on first ever use*' ([GitHub Issue #14][github-issue-14])
   - '*Images in Start tab have the wrong background color in some themes*' [(GitHub Issue #22)][github-issue-22]
@@ -40,6 +45,7 @@ page on the [Start Page+][start-page-plus-url] website.
   - _Start Page+_ is not respecting the _Open Links in VS_ option
 
 [github-issue-5]: https://github.com/luminous-software/start-page-plus/issues/5
+[github-issue-6]: https://github.com/luminous-software/start-page-plus/issues/6
 [github-issue-8]: https://github.com/luminous-software/start-page-plus/issues/8
 [github-issue-14]: https://github.com/luminous-software/start-page-plus/issues/14
 [github-issue-19]: https://github.com/luminous-software/start-page-plus/issues/19
