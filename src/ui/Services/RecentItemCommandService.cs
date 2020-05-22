@@ -25,19 +25,12 @@ namespace StartPagePlus.UI.Services
             };
 
         public ObservableContextCommandList GetContextCommands(
-            bool canRemove, Action remove,
             bool canPin, Action pin,
             bool canUnpin, Action unpin,
+            bool canRemove, Action remove,
             bool canCopyPath, Action copyPath)
             => new ObservableContextCommandList
             {
-                new ContextCommandViewModel
-                {
-                    Name = "Remove item",
-                    Moniker = KnownMonikers.DeleteListItem,
-                    Command = new RelayCommand(remove, canRemove),
-                    IsVisible = canRemove,
-                },
                 new ContextCommandViewModel
                 {
                     Name = "Pin item",
@@ -51,6 +44,13 @@ namespace StartPagePlus.UI.Services
                     Moniker = KnownMonikers.Unpin,
                     Command = new RelayCommand(unpin, canUnpin),
                     IsVisible = canUnpin,
+                },
+                new ContextCommandViewModel
+                {
+                    Name = "Remove item",
+                    Moniker = KnownMonikers.DeleteListItem,
+                    Command = new RelayCommand(remove, canRemove),
+                    IsVisible = canRemove,
                 },
                 new ContextCommandViewModel
                 {

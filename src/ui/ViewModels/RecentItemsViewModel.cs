@@ -113,7 +113,11 @@ namespace StartPagePlus.UI.ViewModels
             => Commands = CommandService.GetCommands(Refresh);
 
         private void GetContextCommands()
-            => ContextCommands = CommandService.GetContextCommands(CanRemoveItem, RemoveItem, CanPinItem, PinItem, CanUnpinItem, UnpinItem, CanCopyItemPath, CopyItemPath);
+            => ContextCommands = CommandService.GetContextCommands(
+                CanPinItem, PinItem,
+                CanUnpinItem, UnpinItem,
+                CanRemoveItem, RemoveItem,
+                CanCopyItemPath, CopyItemPath);
 
         private void ExecuteAction(RecentItemClickMessage message)
             => ActionService.ExecuteAction(message.Content);
