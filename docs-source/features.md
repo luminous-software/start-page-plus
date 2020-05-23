@@ -105,19 +105,25 @@ When this setting is set to `true` a 'Start Page+ Options' command is added to t
 
 ![Feature Options](assets/images/options-settings.png)
 
+### Hide Recent Item Extensions
+
+This setting allows to either hide a project/solution's extension in the *Recent Items* list.
+
+
 ### Max Width
 
 The default value of 1175 should be fine for everyone, regardless of your monitor resolution.
 However if you'd like the contents of the _Start Page+_ window to be wider or narrower,
-
-### Recent Items to Display
-
-This setting will allow you to determine how many items are displayed in the *Recent Item* list.
-
-The default value is 50.
 
 ### News Items to Display
 
 This setting will allow you to determine how many items are displayed in the *Developer News* list.
 
 The default value is 10.
+
+### Recent Items to Display
+
+This setting will allow you to determine how many items are displayed in the *Recent Item* list.
+
+The default value is 50.
+The default value is `true`.
