@@ -1,24 +1,12 @@
 ## General
 
-  - *Start Page+* **may** not open if you also have [Developer News][developer-news-url] installed ([GitHub Issue #3][github-issue-3])
-    - if you want to use *Start Page+*, you probably don't need *Developer News* anyway
-    - (not conclusive)
-  - window doesn't open at startup ([GitHub Issue #4][github-issue-4])
-    - unless you've already opened it, and left it open when you close VS
   - window doesn't close when a solution is opened, or open when a solution is closed ([GitHub Issue #29][github-issue-29])
 
-[github-issue-3]: https://github.com/luminous-software/start-page-plus/issues/3
-[github-issue-4]: https://github.com/luminous-software/start-page-plus/issues/4
-[github-issue-14]: https://github.com/luminous-software/start-page-plus/issues/14
 [github-issue-29]: https://github.com/luminous-software/start-page-plus/issues/29
 
 ## Recent Items list
 
-  - can't start typing in the filter box without clicking in it first ([GitHub Issue #6][github-issue-6])
-  - the first item is selected when the window first opens
-
-[developer-news-url]: https://luminous-software.solutions/developer-news
-[github-issue-6]: https://github.com/luminous-software/start-page-plus/issues/6
+  - the list currently isn't in sync with Microsoft's *Start Window*
 
 ## Internationalisation
 

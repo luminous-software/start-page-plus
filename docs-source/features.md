@@ -9,16 +9,18 @@ and the grouping by timeframe that we had in VS 2017.
 
 ![Recent Items](assets/images/recent-items.png)
 
-### Filter List
+### Live Filtering
 
-By typing a name, or a partial name, into the filter box above the list display just the items
-that match the filter.
+Type a name, or a partial name, into the filter box above the list to display just the matching items
+as you type.
 
-### Collapsible/Expandable Timeframe Groups
+Click the X in the filter box to start again, or to go back to the full list of items.
+
+### Collapsible Timeframes
 
 Each timeframe group can be collapsed or expanded by clicking anywhere on the group name.
 This can come in handy if you want to view items that are currently not being displayed
-without having to scroll down.
+without having to scroll all the way down.
 
 ### Pin/Unpin Items
 
@@ -29,23 +31,73 @@ Right-click on a pinned item in the *Recent Items* list, and select *Unpin item*
 
 Right-click any item in the *Recent Items* list, and select *Remove item* to remove it.
 
+### Recent Items to Display
+
+You can decide how many items you want displayed in your *Recent Items* list,
+by clicking on the *Options* button, then clicking on the *Settings* page.
+
+### Refresh
+
+When you select the number of items to display, you'll need to click the *Refresh* button to see
+the change.
+It's also a quick way to expand all of the timeframe groups at once.
+
 ## Start Actions
 
 The *Start Actions* list gives new users a simplified way to get to their code, the same as in VS 2019's
-*Start Window*.
-
-- clone or checkout code
-- open a local folder
-- open a project or solution
-- create a new project
-- restart Visual Studio
-- restart Visual Studio as Administrator
-
-It also has a handy, but non-intrusive way to see what version of *Start Page+* is currently installed.
-Clicking on the link will open the *change log* page,
-so you can easily see what's changed in the new version.
+*Start Window*. Plus a few extras.
 
 ![Start Actions](assets/images/start-actions.png)
+
+### Clone or checkout code
+
+Quickly get code from an online repository by entering the repository location.
+You can also browse GitHub or Azure DevOps repositories from here,
+which will take you to the *Connect* dialog.
+
+### Open a local folder
+
+Open any folder on your local machine, or on a network share.
+Here *local* basically just means '*not in the cloud*'.
+
+### Open a project or solution
+
+A quick way to get to the *Open Project/Solution* dialog without having to use `File` | `Open` | `Project/Solution`.
+
+### Create a new project
+
+A quick way to get to the *New Project* dialog without having to use `File` | `New` | `Project`.
+
+### Restart Visual Studio
+
+Any time you need to restart Visual Studio you can do it from the *Start Page+* window in just one click.
+No need to close and re-open Visual Studio manually.
+
+### Restart Visual Studio as Administrator
+
+You can also restart Visual Studio as Administrator without having to you through the hassle of finding
+and right-clcking a Visual Studio shortcut etc.
+
+Note: if you launch Visual Studio as Administrator, you can't get back to a non-elevated session by
+clicking on *Restart Visual Studio*.
+There doesn't seem to be a programmatic way to force an elevated session to restart as a normal session.
+
+### Changelog Button
+
+With just a single-click you can see what's changed in the new version of *Start Page+*.
+
+### Version Number
+
+This is a subtle way of being able to see the version number of the currently installed version of
+*Start Page+*.
+
+Clicking on the version number will open the website's Overview page.
+On there you can see what the latest available version of *Start Page+* is at the top of the page.
+
+### Options Button
+
+Clicking on the *Options* button is a quick way to get to the *Start Page+* options page without
+having to use `Tools` | `Options` | `Start Page+`.
 
 ## Developer News
 
@@ -53,6 +105,10 @@ The *Developer News* feed brings back VS 2017's handy list of Microsoft develope
 VS 2019.
 I don't know how many times I've seen something that interests me that I might have missed if I hadn't seen it on my
 start page.
+
+![Developer News](assets/images/developer-news.png)
+
+### Open Links in VS or Browser
 
 By default the items open right in VS itself, rather than switching to the default browser.
 Personally, I prefer having to switch applications as little as possible.
@@ -62,7 +118,18 @@ to switch to a different application, and then back again to Visual Studio.
 However, for those people who prefer links to be opened in their default browser,
 there's an option to change Start Page+'s behavior to do just that.
 
-![Developer News](assets/images/developer-news.png)
+### News Items to Display
+
+You can decide how many news items you want displayed in your *Developer News* list,
+by clicking on the *Options* button, then clicking on the *Settings* page.
+
+## Refresh
+
+There is currently no auto-refresh for *Developer News*, so you'll have to click *Refresh* to
+check if you have the latest available news items from Microsoft.
+
+ALso, when you select the number of items to display, you'll need to click the *Refresh* button
+to see the change.
 
 ## General Options
 
@@ -107,7 +174,7 @@ When this setting is set to `true` a 'Start Page+ Options' command is added to t
 
 ### Hide Recent Item Extensions
 
-This setting allows to either hide a project/solution's extension in the *Recent Items* list.
+This setting allows to hide a project/solution's extension (.csproj, .sln) in the *Recent Items* list.
 
 
 ### Max Width

@@ -11,28 +11,36 @@ page on the [Start Page+][start-page-plus-url] website.
 #### Added
   - the ability to **pin**/**unpin** items in the *Recent Items* list [(GitHub Issue #21)][github-issue-21]
   - the ability to **remove** items from the *Recent Items* list [(GitHub Issue #35)][github-issue-35]
-  - a *Restart Visual Studio* option to *Get Started* column [(GitHub Issue #20)][github-issue-20]
-    - also *Restart Visual Studio as Administrator*
-  - a *Start Page+ Options* command to open `Tools` | `Options` | `Start Page+` | `General`
+  - a **Restart Visual Studio** option to *Get Started* column [(GitHub Issue #20)][github-issue-20]
+    - also **Restart Visual Studio as Administrator**
+  - a **Start Page+ Options** command to open `Tools` | `Options` | `Start Page+` | `General`
     - found in `Tools` | `Options`
-  - a *Changelog* button to *Get Started* column to open the website's changelog page
-  - an *Options* button to *Get Started* column to open `Tools` | `Options` | `Start Page+` | `General`
-  - a *Max Width* setting [(GitHub Issue #32)][github-issue-32]
-    - replaces **fixed width** of 1175
-  - a *Number of Recent Items* setting
-  - a *Number of News Items* setting
-  - the ability to collapse/expand the group heading in the *Recent Items* list
-  - new options pages (*Features*, *Settings*)
-  - a *Hide Extensions* setting to hide a project/solution's extension in *Recent Items* list
+  - a **Changelog** button to *Get Started* column to open the website's changelog page
+  - an **Options** button to *Get Started* column to open `Tools` | `Options` | `Start Page+` | `General`
+  - a **Max Width** setting [(GitHub Issue #32)][github-issue-32]
+    - replaces fixed width of 1175
+  - a **Recent Items to Display** setting
+  - a **News Items to Display** setting
+  - the ability to **collapse**/**expand** the group heading in the *Recent Items* list
+  - new options pages (**Features**, **Settings**)
+  - a **Hide Extensions** setting to hide a project/solution's extension in *Recent Items* list
+
+[github-issue-20]: https://github.com/luminous-software/start-page-plus/issues/20
+[github-issue-21]: https://github.com/luminous-software/start-page-plus/issues/21
+[github-issue-35]: https://github.com/luminous-software/start-page-plus/issues/35
+[github-issue-32]: https://github.com/luminous-software/start-page-plus/issues/32
 
 #### Removed
-  - the *Continue Without Code* items from the *Get Started* column [(GitHub Issue #19)][github-issue-19]
+  - the **Continue Without Code** item from the *Get Started* column [(GitHub Issue #19)][github-issue-19]
+
+[github-issue-19]: https://github.com/luminous-software/start-page-plus/issues/19
 
 #### Changed
   - the website page that clicking on the version number takes you to
     - used to go to the *Changelog* page
     - now goes to the website's *Overview* page
-  - the position of the date in the *Recent Items* list to give more spave for the file/folder path
+  - the position of the date in the *Recent Items* list to give more space for the
+project/solution/folder path
 
 #### Fixed
   - '*Recent Item Timeframes Disappear When Refresh is Clicked*' [(GitHub Issue #5)][github-issue-5]
@@ -43,21 +51,16 @@ page on the [Start Page+][start-page-plus-url] website.
   - '*Projects with space in the name not opening*' [(GitHub Issue #23)][github-issue-23]
   - '*Dates have a fixed AU/UK format in the Recent Items list*' [(GitHub Issue #24)][github-issue-24]
   - '*Only Folder, Solution, and C# Project currently have icons in Recent Items*' [(GitHub Issue #26)][github-issue-26]
-  - _Start Page+_ is not respecting the _Open Links in VS_ option
+  - *Start Page+* is not respecting the *Open Links in VS* option
 
 [github-issue-5]: https://github.com/luminous-software/start-page-plus/issues/5
 [github-issue-6]: https://github.com/luminous-software/start-page-plus/issues/6
 [github-issue-8]: https://github.com/luminous-software/start-page-plus/issues/8
 [github-issue-14]: https://github.com/luminous-software/start-page-plus/issues/14
-[github-issue-19]: https://github.com/luminous-software/start-page-plus/issues/19
-[github-issue-20]: https://github.com/luminous-software/start-page-plus/issues/20
-[github-issue-21]: https://github.com/luminous-software/start-page-plus/issues/21
 [github-issue-22]: https://github.com/luminous-software/start-page-plus/issues/22
 [github-issue-23]: https://github.com/luminous-software/start-page-plus/issues/23
 [github-issue-24]: https://github.com/luminous-software/start-page-plus/issues/24
 [github-issue-26]: https://github.com/luminous-software/start-page-plus/issues/26
-[github-issue-32]: https://github.com/luminous-software/start-page-plus/issues/32
-[github-issue-35]: https://github.com/luminous-software/start-page-plus/issues/35
 
 ## Preview Releases
 
