@@ -174,8 +174,10 @@ namespace StartPagePlus.UI.ViewModels
         {
             Refreshed = false;
 
-            var itemsToDisplay = SettingOptions.Instance.RecentItemsToDisplay;
-            var items = DataService.GetItems(itemsToDisplay);
+            var settingOptions = SettingOptions.Instance;
+            var itemsToDisplay = settingOptions.RecentItemsToDisplay;
+            var hideExtensions = settingOptions.HideRecentItemExtensions;
+            var items = DataService.GetItems(itemsToDisplay, hideExtensions);
 
             Items.Clear();
 
