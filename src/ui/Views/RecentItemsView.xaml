@@ -164,11 +164,11 @@
                                         >
                                         <Button x:Name="PinUnpinButton"
                                             Width="16"
-                                            Margin="3,3,0,3"
+                                            Margin="3"
                                             Padding="0"
                                             Background="Transparent"
                                             BorderBrush="Transparent"
-                                            Command="{Binding PinCommand}"
+                                            Command="{Binding PinOrUnpinItemCommand}"
                                             DockPanel.Dock="Right"
                                             >
                                             <imaging:CrispImage x:Name="RecentItemPinImage"
