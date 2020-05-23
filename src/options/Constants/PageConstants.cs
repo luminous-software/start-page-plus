@@ -21,6 +21,8 @@
         public const string EnableStartPagePlusOptions = "Start Page+ Options";
         public const string PackageVersion = "Version Number";
         public const string OpenLinksInVS = "Open Links in VS";
+
+        public const string HideRecentItemExtensions = "Hide Recent Item Extensions";
         public const string MaxWidth = "Max Width";
         public const string NewsItemsToDisplay = "News Items To Display";
         public const string RecentItemsToDisplay = "Recent Items To Display";
