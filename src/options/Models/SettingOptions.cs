@@ -9,6 +9,11 @@ namespace StartPagePlus.Options.Models
     public class SettingOptions : BaseOptionModel<SettingOptions>
     {
         [Category(Settings)]
+        [DisplayName(Constants.PageConstants.HideRecentItemExtensions)]
+        [Description("Hide a project/solution's extension in the 'Recent Items' list")]
+        public bool HideRecentItemExtensions { get; set; } = true;
+
+        [Category(Settings)]
         [DisplayName(Constants.PageConstants.MaxWidth)]
         [Description("Sets the max width of the window's contents")]
         public int MaxWidth { get; set; } = 1175;

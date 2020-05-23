@@ -102,7 +102,7 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public ObservableCollection<RecentItemViewModel> GetItems(int itemsToDisplay)
+        public ObservableCollection<RecentItemViewModel> GetItems(int itemsToDisplay, bool hideExtensions)
         {
 
             var items = new ObservableCollection<RecentItemViewModel>();
@@ -116,7 +116,7 @@ namespace StartPagePlus.UI.Services
                     .Take(itemsToDisplay)
                     .ToList()
                     .ForEach((recentItem)
-                        => items.Add(recentItem.ToViewModel(today)));
+                        => items.Add(recentItem.ToViewModel(today, hideExtensions)));
             }
             catch (Exception ex)
             {

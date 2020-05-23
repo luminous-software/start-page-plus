@@ -23,6 +23,7 @@ page on the [Start Page+][start-page-plus-url] website.
   - a *Number of News Items* setting
   - the ability to collapse/expand the group heading in the *Recent Items* list
   - new options pages (*Features*, *Settings*)
+  - a *Hide Extensions* setting to hide a project/solution's extension in *Recent Items* list
 
 #### Removed
   - the *Continue Without Code* items from the *Get Started* column [(GitHub Issue #19)][github-issue-19]
