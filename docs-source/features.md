@@ -25,7 +25,10 @@ without having to scroll all the way down.
 ### Pin/Unpin Items
 
 Right-click an unpinned item in the *Recent Items* list, and select *Pin item* to pin it.
+Or click on the icon to the right of the date.
+
 Right-click on a pinned item in the *Recent Items* list, and select *Unpin item** to unpin it.
+Or click on the icon to the right of the date.
 
 ### Remove Items
 

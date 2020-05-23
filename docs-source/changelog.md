@@ -24,6 +24,8 @@ page on the [Start Page+][start-page-plus-url] website.
   - the ability to **collapse**/**expand** the group heading in the *Recent Items* list
   - new options pages (**Features**, **Settings**)
   - a **Hide Extensions** setting to hide a project/solution's extension in *Recent Items* list
+  - a functional **Pin** button to *Recent Items*
+  - an **Unpin** button to *Recent Items*
 
 [github-issue-20]: https://github.com/luminous-software/start-page-plus/issues/20
 [github-issue-21]: https://github.com/luminous-software/start-page-plus/issues/21
