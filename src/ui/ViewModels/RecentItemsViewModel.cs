@@ -42,7 +42,7 @@ namespace StartPagePlus.UI.ViewModels
             GetCommands();
             Refresh();
 
-            MessengerInstance.Register<RecentItemClickMessage>(this, SelectItem);
+            MessengerInstance.Register<RecentItemSelectedMessage>(this, SelectItem);
             MessengerInstance.Register<RecentItemPinnedOrUnpinnedMessage>(this, (pinned) => PinOrUnpinItem(pinned));
         }
 
@@ -119,7 +119,7 @@ namespace StartPagePlus.UI.ViewModels
                 CanRemoveItem, RemoveItem,
                 CanCopyItemPath, CopyItemPath);
 
-        private void SelectItem(RecentItemClickMessage message)
+        private void SelectItem(RecentItemSelectedMessage message)
             => ActionService.ExecuteAction(message.Content);
 
         private void PinOrUnpinItem(RecentItemPinnedOrUnpinnedMessage message)
