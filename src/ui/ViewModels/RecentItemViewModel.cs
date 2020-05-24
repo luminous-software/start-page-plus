@@ -41,7 +41,7 @@ namespace StartPagePlus.UI.ViewModels
         public bool Pinned { get; set; }
 
         private void SelectItem()
-            => MessengerInstance.Send(new RecentItemSelectedMessage(this, Path));
+            => MessengerInstance.Send(new RecentItemSelectedMessage(this));
 
         private void PinOrUnpinItem()
             => MessengerInstance.Send(new RecentItemPinnedOrUnpinnedMessage(this, Pinned.ToString()));

@@ -82,10 +82,19 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         public void OnContextMenuOpening(object sender, ContextMenuEventArgs e)
-            => GetContextCommands();
+        {
+            if (SelectedItem == null)
+            {
+                e.Handled = true; //need to suppress empty menu
+            }
+
+            GetContextCommands();
+        }
 
         public void OnContextMenuClosing(object sender, ContextMenuEventArgs e)
-        { } // don't set SelectedItem = null here, doing so causes the context menu to be empty
+        {
+            // don't set SelectedItem = null in this method, doing so causes the context menu to be empty
+        }
 
         protected override void RaiseCanExecuteChanged()
         {
