@@ -140,7 +140,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Button
-                            Command="{Binding ClickCommand}"
+                            Command="{Binding SelectItemCommand}"
                             IsTabStop="False"
                             Style="{StaticResource ColumnListItemStyle}"
                             >
