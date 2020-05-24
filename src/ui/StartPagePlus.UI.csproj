@@ -84,6 +84,7 @@
     <Compile Include="Interfaces\IStartAction.cs" />
     <Compile Include="Extensions\RecentItemExtensions.cs" />
     <Compile Include="Messages\RecentItemClickMessage.cs" />
+    <Compile Include="Messages\RecentItemPinnedOrUnpinnedMessage.cs" />
     <Compile Include="Messages\RecentItemsRefreshedMessage.cs" />
     <Compile Include="Observables\ObservableCommandList.cs" />
     <Compile Include="Observables\ObservableContextCommandList.cs" />

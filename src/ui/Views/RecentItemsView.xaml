@@ -162,15 +162,23 @@
                                     <DockPanel x:Name="RecentItemGroup"
                                         LastChildFill="True"
                                         >
-                                        <imaging:CrispImage x:Name="RecentItemPinImage"
-                                            Height="16"
-                                            Margin="0,4"
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Top"
+                                        <Button x:Name="PinUnpinButton"
+                                            Width="16"
+                                            Margin="3"
+                                            Padding="0"
+                                            Background="Transparent"
+                                            BorderBrush="Transparent"
+                                            Command="{Binding PinOrUnpinItemCommand}"
                                             DockPanel.Dock="Right"
-                                            Moniker="{Binding Pinned, Converter={c:BoolToPinMonikerConverter}}"
-                                            Visibility="{Binding Pinned, Converter={c:BoolToVisibilityConverter WhenFalse=Hidden}}"
-                                            />
+                                            >
+                                            <imaging:CrispImage x:Name="RecentItemPinImage"
+                                                Height="16"
+                                                Margin="0"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Top"
+                                                Moniker="{Binding Pinned, Converter={c:BoolToPinMonikerConverter}}"
+                                                />
+                                        </Button>
 
                                         <TextBlock x:Name="RecentItemDate"
                                             Margin="3,5,3,2"

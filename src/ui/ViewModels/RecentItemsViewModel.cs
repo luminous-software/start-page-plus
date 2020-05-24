@@ -42,7 +42,8 @@ namespace StartPagePlus.UI.ViewModels
             GetCommands();
             Refresh();
 
-            MessengerInstance.Register<RecentItemClickMessage>(this, ExecuteAction);
+            MessengerInstance.Register<RecentItemClickMessage>(this, SelectItem);
+            MessengerInstance.Register<RecentItemPinnedOrUnpinnedMessage>(this, (pinned) => PinOrUnpinItem(pinned));
         }
 
         public IRecentItemService ItemService { get; }
@@ -83,9 +84,8 @@ namespace StartPagePlus.UI.ViewModels
         public void OnContextMenuOpening(object sender, ContextMenuEventArgs e)
             => GetContextCommands();
 
-        // don't SelectedItem = null here, doing so causes the context menu to be empty
         public void OnContextMenuClosing(object sender, ContextMenuEventArgs e)
-        { }
+        { } // don't set SelectedItem = null here, doing so causes the context menu to be empty
 
         protected override void RaiseCanExecuteChanged()
         {
@@ -119,8 +119,26 @@ namespace StartPagePlus.UI.ViewModels
                 CanRemoveItem, RemoveItem,
                 CanCopyItemPath, CopyItemPath);
 
-        private void ExecuteAction(RecentItemClickMessage message)
+        private void SelectItem(RecentItemClickMessage message)
             => ActionService.ExecuteAction(message.Content);
+
+        private void PinOrUnpinItem(RecentItemPinnedOrUnpinnedMessage message)
+        {
+            var item = message.Content;
+
+            switch (item.Pinned)
+            {
+                case true:
+                    UnpinItem(item);
+                    break;
+
+                case false:
+                    PinItem(item);
+                    break;
+            }
+
+            Refresh();
+        }
 
         private bool CanCopyItemPath
             => (SelectedItem != null);
@@ -150,10 +168,13 @@ namespace StartPagePlus.UI.ViewModels
             => (SelectedItem?.Pinned == false);
 
         private void PinItem()
+            => PinItem(SelectedItem);
+
+        private void PinItem(RecentItemViewModel item)
         {
-            if (!ItemService.PinItem(SelectedItem))
+            if (!ItemService.PinItem(item))
             {
-                DialogService.ShowMessage($"Unable to pin '{SelectedItem?.Name}'", Vsix.Name);
+                DialogService.ShowExclamation($"Unable to pin '{item?.Name}'");
             }
             Refresh();
         }
@@ -162,10 +183,13 @@ namespace StartPagePlus.UI.ViewModels
             => (SelectedItem?.Pinned == true);
 
         private void UnpinItem()
+            => UnpinItem(SelectedItem);
+
+        private void UnpinItem(RecentItemViewModel item)
         {
-            if (!ItemService.UnpinItem(SelectedItem))
+            if (!ItemService.UnpinItem(item))
             {
-                DialogService.ShowMessage($"Unable to unpin '{SelectedItem?.Name}'", Vsix.Name);
+                DialogService.ShowExclamation($"Unable to unpin '{item?.Name}'");
             }
             Refresh();
         }
