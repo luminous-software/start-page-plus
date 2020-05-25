@@ -18,11 +18,14 @@ namespace StartPagePlus.UI.ViewModels
         {
             SelectItemCommand = new RelayCommand(SelectItem, true);
             PinOrUnpinItemCommand = new RelayCommand(PinOrUnpinItem, true);
+            CopyItemPathCommand = new RelayCommand(CopyItemPath, true);
         }
 
         public ICommand SelectItemCommand { get; }
 
         public ICommand PinOrUnpinItemCommand { get; }
+
+        public ICommand CopyItemPathCommand { get; }
 
         public string Name { get; set; }
 
@@ -45,5 +48,8 @@ namespace StartPagePlus.UI.ViewModels
 
         private void PinOrUnpinItem()
             => MessengerInstance.Send(new RecentItemPinnedOrUnpinnedMessage(this, Pinned.ToString()));
+
+        private void CopyItemPath()
+            => MessengerInstance.Send(new RecentItemCopyPathMessage(this));
     }
 }

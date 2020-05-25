@@ -5,7 +5,6 @@ using GalaSoft.MvvmLight.Command;
 
 namespace StartPagePlus.UI.ViewModels
 {
-
     using Core.Interfaces;
 
     using Interfaces;
@@ -27,7 +26,8 @@ namespace StartPagePlus.UI.ViewModels
             IRecentItemActionService actionService,
             IRecentItemCommandService commandService,
             IRecentItemService itemService,
-            IDialogService dialogService)
+            IDialogService dialogService,
+            IClipboardService clipboardService)
             : base()
         {
             DataService = dataService;
@@ -35,7 +35,7 @@ namespace StartPagePlus.UI.ViewModels
             CommandService = commandService;
             ItemService = itemService;
             DialogService = dialogService;
-
+            ClipboardService = clipboardService;
             Heading = HEADING;
             IsVisible = true;
 
@@ -43,7 +43,8 @@ namespace StartPagePlus.UI.ViewModels
             Refresh();
 
             MessengerInstance.Register<RecentItemSelectedMessage>(this, SelectItem);
-            MessengerInstance.Register<RecentItemPinnedOrUnpinnedMessage>(this, (pinned) => PinOrUnpinItem(pinned));
+            MessengerInstance.Register<RecentItemPinnedOrUnpinnedMessage>(this, PinOrUnpinItem);
+            MessengerInstance.Register<RecentItemCopyPathMessage>(this, CopyItemPath);
         }
 
         public IRecentItemService ItemService { get; }
@@ -55,6 +56,8 @@ namespace StartPagePlus.UI.ViewModels
         public IRecentItemCommandService CommandService { get; }
 
         public IDialogService DialogService { get; }
+
+        public IClipboardService ClipboardService { get; }
 
         public ObservableCollection<RecentItemViewModel> Items
         {
@@ -109,6 +112,8 @@ namespace StartPagePlus.UI.ViewModels
                 {
                     case nameof(PinItem):
                     case nameof(UnpinItem):
+                    case nameof(RemoveItem):
+                    case nameof(CopyItemPath):
                         relayCommand.RaiseCanExecuteChanged();
                         break;
 
@@ -149,30 +154,6 @@ namespace StartPagePlus.UI.ViewModels
             Refresh();
         }
 
-        private bool CanCopyItemPath
-            => (SelectedItem != null);
-
-        private void CopyItemPath()
-        {
-            if (!ItemService.CopyItemPath(SelectedItem))
-            {
-                DialogService.ShowMessage("Path copied: '{SelectedItem?.Name}'", Vsix.Name);
-            }
-            SelectedItem = null;
-        }
-
-        private bool CanRemoveItem
-            => (SelectedItem != null);
-
-        private void RemoveItem()
-        {
-            if (!ItemService.RemoveItem(SelectedItem))
-            {
-                DialogService.ShowMessage($"Unable to remove '{SelectedItem?.Name}'", Vsix.Name);
-            }
-            Refresh();
-        }
-
         private bool CanPinItem
             => (SelectedItem?.Pinned == false);
 
@@ -202,6 +183,34 @@ namespace StartPagePlus.UI.ViewModels
             }
             Refresh();
         }
+
+        private bool CanRemoveItem
+            => (SelectedItem != null);
+
+        private void RemoveItem()
+        {
+            if (!ItemService.RemoveItem(SelectedItem))
+            {
+                DialogService.ShowMessage($"Unable to remove '{SelectedItem?.Name}'", Vsix.Name);
+            }
+            Refresh();
+        }
+
+        private bool CanCopyItemPath
+            => (SelectedItem != null);
+
+        private void CopyItemPath(RecentItemCopyPathMessage message)
+        {
+            var item = message.Content;
+
+            CopyItemPath(item);
+        }
+
+        private void CopyItemPath()
+        => CopyItemPath(SelectedItem);
+
+        private void CopyItemPath(RecentItemViewModel item)
+            => ClipboardService.CopyToClipboard(item.Path);
 
         public void Refresh()
         {
