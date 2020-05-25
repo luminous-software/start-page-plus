@@ -11,14 +11,18 @@ namespace StartPagePlus.UI.Services
 
     public class RecentItemService : IRecentItemService
     {
-        public RecentItemService(IRecentItemDataService dataService, IDialogService dialogService)
+        public RecentItemService(IRecentItemDataService dataService, IDialogService dialogService, IClipboardService clipboardService)
         {
             DataService = dataService;
             DialogService = dialogService;
+            ClipboardService = clipboardService;
         }
+
         public IRecentItemDataService DataService { get; }
 
         public IDialogService DialogService { get; }
+
+        public IClipboardService ClipboardService { get; }
 
         public bool RemoveItem(RecentItemViewModel viewModel)
         {
@@ -77,6 +81,11 @@ namespace StartPagePlus.UI.Services
             return true;
         }
 
-        public bool CopyItemPath(RecentItemViewModel viewModel) { return true; }
+        public bool CopyItemPath(RecentItemViewModel viewModel)
+        {
+            ClipboardService.CopyToClipboard(viewModel.Path);
+
+            return true;
+        }
     }
 }

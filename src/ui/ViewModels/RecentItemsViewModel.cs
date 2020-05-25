@@ -26,8 +26,8 @@ namespace StartPagePlus.UI.ViewModels
             IRecentItemActionService actionService,
             IRecentItemCommandService commandService,
             IRecentItemService itemService,
-            IDialogService dialogService,
-            IClipboardService clipboardService)
+            IDialogService dialogService
+            )
             : base()
         {
             DataService = dataService;
@@ -35,7 +35,6 @@ namespace StartPagePlus.UI.ViewModels
             CommandService = commandService;
             ItemService = itemService;
             DialogService = dialogService;
-            ClipboardService = clipboardService;
             Heading = HEADING;
             IsVisible = true;
 
@@ -56,8 +55,6 @@ namespace StartPagePlus.UI.ViewModels
         public IRecentItemCommandService CommandService { get; }
 
         public IDialogService DialogService { get; }
-
-        public IClipboardService ClipboardService { get; }
 
         public ObservableCollection<RecentItemViewModel> Items
         {
@@ -210,7 +207,7 @@ namespace StartPagePlus.UI.ViewModels
         => CopyItemPath(SelectedItem);
 
         private void CopyItemPath(RecentItemViewModel item)
-            => ClipboardService.CopyToClipboard(item.Path);
+            => ItemService.CopyItemPath(item);
 
         public void Refresh()
         {
