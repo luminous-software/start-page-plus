@@ -2,6 +2,7 @@
 
 namespace StartPagePlus.UI.ViewModels
 {
+
     using Core.Interfaces;
 
     using Interfaces;   // TODO: why are these interfaces not in Core.Interfaces?
@@ -42,17 +43,13 @@ namespace StartPagePlus.UI.ViewModels
         public static NewsViewModel NewsViewModel
             => SimpleIoc.Default.GetInstance<NewsViewModel>();
 
-        public static void Initialise()
-        {
-
-        }
-
         private void RegisterServices(SimpleIoc container)
         {
             container.Register<IDialogService, DialogService>();
             container.Register<IVisualStudioService, VisualStudioService>();
 
             container.Register<IDateTimeService, DateTimeService>();
+            container.Register<IClipboardService, ClipboardService>();
 
             container.Register<IRecentItemService, RecentItemService>();
 
