@@ -11,6 +11,7 @@ page on the [Start Page+][start-page-plus-url] website.
 #### Added
   - the ability to **pin**/**unpin** items in the *Recent Items* list [(GitHub Issue #21)][github-issue-21]
   - the ability to **remove** items from the *Recent Items* list [(GitHub Issue #35)][github-issue-35]
+  - the ability to copy an item's path to the Windows clipboard
   - a **Restart Visual Studio** option to *Get Started* column [(GitHub Issue #20)][github-issue-20]
     - also **Restart Visual Studio as Administrator**
   - a **Start Page+ Options** command to open `Tools` | `Options` | `Start Page+` | `General`

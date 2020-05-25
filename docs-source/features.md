@@ -14,30 +14,30 @@ and the grouping by timeframe that we had in VS 2017.
 Type a name, or a partial name, into the filter box above the list to display just the matching items
 as you type.
 
-Click the X in the filter box to start again, or to go back to the full list of items.
+Click the **X** in the filter box to start again, or to go back to the full list of items.
 
-### Collapsible Timeframes
+### Collapse/Expand Timeframes
 
 Each timeframe group can be collapsed or expanded by clicking anywhere on the group name.
 This can come in handy if you want to view items that are currently not being displayed
 without having to scroll all the way down.
 
-### Pin/Unpin Items
+### Pin/Unpin An Item
 
-Right-click an unpinned item in the *Recent Items* list, and select *Pin item* to pin it.
+Right-click an ***unpinned*** item in the *Recent Items* list, and select *Pin item* to ***pin*** it.
 Or click on the icon to the right of the date.
 
-Right-click on a pinned item in the *Recent Items* list, and select *Unpin item** to unpin it.
+Right-click on a ***pinned*** item in the *Recent Items* list, and select *Unpin item* to ***unpin*** it.
 Or click on the icon to the right of the date.
 
-### Remove Items
+### Remove An Item
 
 Right-click any item in the *Recent Items* list, and select *Remove item* to remove it.
 
-### Recent Items to Display
+### Copy An Item's Path
 
-You can decide how many items you want displayed in your *Recent Items* list,
-by clicking on the *Options* button, then clicking on the *Settings* page.
+Right-click any item in the *Recent Items* list, and select *Copy item path* to copy it
+path to the Windows clipboard. You can then paste it anywhere you need to.
 
 ### Refresh
 
@@ -52,22 +52,22 @@ The *Start Actions* list gives new users a simplified way to get to their code, 
 
 ![Start Actions](assets/images/start-actions.png)
 
-### Clone or checkout code
+### Clone Or Checkout Code
 
 Quickly get code from an online repository by entering the repository location.
 You can also browse GitHub or Azure DevOps repositories from here,
 which will take you to the *Connect* dialog.
 
-### Open a local folder
+### Open A Local Folder
 
 Open any folder on your local machine, or on a network share.
 Here *local* basically just means '*not in the cloud*'.
 
-### Open a project or solution
+### Open A Project Or Solution
 
 A quick way to get to the *Open Project/Solution* dialog without having to use `File` | `Open` | `Project/Solution`.
 
-### Create a new project
+### Create A New Project
 
 A quick way to get to the *New Project* dialog without having to use `File` | `New` | `Project`.
 
@@ -76,7 +76,7 @@ A quick way to get to the *New Project* dialog without having to use `File` | `N
 Any time you need to restart Visual Studio you can do it from the *Start Page+* window in just one click.
 No need to close and re-open Visual Studio manually.
 
-### Restart Visual Studio as Administrator
+### Restart Visual Studio As Administrator
 
 You can also restart Visual Studio as Administrator without having to you through the hassle of finding
 and right-clcking a Visual Studio shortcut etc.
