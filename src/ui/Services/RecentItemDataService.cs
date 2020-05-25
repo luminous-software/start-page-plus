@@ -125,5 +125,15 @@ namespace StartPagePlus.UI.Services
 
             return items;
         }
+
+        public bool SetLastAccessed(string path, DateTime time)
+        {
+            var items = GetRecentItems();
+            var item = items.FirstOrDefault(x => x.Key == path);
+
+            item.Value.LastAccessed = time.ToUniversalTime();
+
+            return UpdateRecentItems(items);
+        }
     }
 }

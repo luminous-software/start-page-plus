@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 namespace StartPagePlus.UI.Interfaces
@@ -12,6 +13,9 @@ namespace StartPagePlus.UI.Interfaces
         ObservableCollection<RecentItemViewModel> GetItems(int itemsToDisplay, bool hideExtensions);
 
         List<RecentItem> GetRecentItems();
+
         bool UpdateRecentItems(List<RecentItem> recentItems);
+
+        bool SetLastAccessed(string path, DateTime time);
     }
 }
