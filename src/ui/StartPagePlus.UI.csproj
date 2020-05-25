@@ -96,6 +96,7 @@
     <Compile Include="Models\RecentItemProperties.cs" />
     <Compile Include="Models\RecentItemValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ClipboardService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Interfaces\IVisualStudioService.cs" />
     <Compile Include="Services\RecentItemService.cs" />
