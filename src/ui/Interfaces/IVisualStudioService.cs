@@ -2,19 +2,15 @@
 {
     public interface IVisualStudioService
     {
-        void ExecuteCommand(string action, string path);
+        bool ExecuteCommand(string action, string path);
 
-        void ShowMessage(string message);
+        bool OpenWebPage(string url, bool internalBrowser);
 
-        bool Confirmed(string message);
+        bool OpenFolder(string path = "");
 
-        void OpenWebPage(string url, bool internalBrowser);
+        bool OpenSolution(string path = null);
 
-        void OpenFolder(string path = "");
-
-        //void OpenSolution(string path = null);
-
-        void OpenProject(string path = "");
+        bool OpenProject(string path = "");
 
         void CreateNewProject();
 

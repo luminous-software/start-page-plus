@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Security.Principal;
-using System.Windows;
 
 using EnvDTE80;
 
@@ -19,6 +18,8 @@ namespace StartPagePlus.UI.Services
 
     using Interfaces;
 
+    using StartPagePlus.Core.Interfaces;
+
     public class VisualStudioService : IVisualStudioService
     {
         private const string VERB_OPEN = "Open";
@@ -28,8 +29,10 @@ namespace StartPagePlus.UI.Services
         private const string FILE_CLONE_OR_CHECKOUT_CODE = "File.Cloneorcheckoutcode";
         private const uint FORCE_NEW_WINDOW = (uint)__VSWBNAVIGATEFLAGS.VSNWB_ForceNew;
 
-        public VisualStudioService()
-        { }
+        public VisualStudioService(IDialogService dialogService)
+            => DialogService = dialogService;
+
+        private IDialogService DialogService { get; }
 
         private IVsWebBrowsingService BrowsingService
             => AsyncPackageBase.GetGlobalService<SVsWebBrowsingService, IVsWebBrowsingService>();
@@ -43,19 +46,24 @@ namespace StartPagePlus.UI.Services
         private IVsShell4 VsShell4
             => GlobalServices.VsShell4;
 
-        public void ExecuteCommand(string action)
-            => Dte.ExecuteCommand(action);
+        public bool ExecuteCommand(string action)
+            => ExecuteCommand(action);
 
-        public void ExecuteCommand(string action, string args = null)
-            => Dte.ExecuteCommand(action, args);
+        public bool ExecuteCommand(string action, string args = null)
+        {
+            try
+            {
+                Dte.ExecuteCommand(action, args);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
 
-        public void ShowMessage(string message)
-            => MessageBox.Show(message, Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Information);
-
-        public bool Confirmed(string message)
-            => (MessageBox.Show(message, Vsix.Name, MessageBoxButton.OKCancel, MessageBoxImage.Information) == MessageBoxResult.OK);
-
-        public void OpenWebPage(string url, bool internalBrowser)
+        public bool OpenWebPage(string url, bool internalBrowser)
         {
             try
             {
@@ -74,25 +82,39 @@ namespace StartPagePlus.UI.Services
                         proc.Start();
                     }
                 }
+                return true;
             }
             catch
             {
-                MessageBox.Show("Can't launch this url", Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Error);
+                DialogService.ShowError("Can't launch this url");
+                return false;
             }
         }
 
-        public void OpenFolder(string path = "")
-            => Dte?.ExecuteCommand(FILE_OPEN_FOLDER, path);
+        public bool OpenFolder(string path = "")
+            => ExecuteCommand(FILE_OPEN_FOLDER, path);
 
-        //public void OpenSolution(string path = null)
-        //{
-        //    ThreadHelper.ThrowIfNotOnUIThread();
+        public bool OpenSolution(string path = null)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
 
-        //    Dte?.Solution.Open(path);
-        //}
+            if (path == null)
+                return false;
 
-        public void OpenProject(string path = "")
-            => Dte?.ExecuteCommand(FILE_OPEN_PROJECT, path);
+            try
+            {
+                Dte?.Solution.Open(path);
+                return true;
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
+
+        public bool OpenProject(string path = "")
+            => ExecuteCommand(FILE_OPEN_PROJECT, path);
 
         public void CreateNewProject()
             => ExecuteCommand(FILE_NEW_PROJECT);
@@ -106,7 +128,7 @@ namespace StartPagePlus.UI.Services
             {
                 if (IsRunningElevated)
                 {
-                    if (!Confirmed("Visual Studio is currently running as Administrator. To return to running normally Visual Studio will need to close"))
+                    if (!DialogService.Confirmed("Visual Studio is currently running as Administrator. To return to running normally Visual Studio will need to close"))
                     {
                         return;
                     }
@@ -130,7 +152,7 @@ namespace StartPagePlus.UI.Services
             }
             catch (Exception ex)
             {
-                ShowMessage(ex.ExtendedMessage());
+                DialogService.ShowError(ex);
             }
         }
 
@@ -141,7 +163,7 @@ namespace StartPagePlus.UI.Services
         {
             var suffix = (elevated) ? " as Administrator" : "";
 
-            return Confirmed($"You're about to restart Visual Studio{suffix}");
+            return DialogService.Confirmed($"You're about to restart Visual Studio{suffix}");
         }
 
         private string RestartNormal()
