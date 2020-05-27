@@ -8,6 +8,8 @@ using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.Services
 {
+    using Core.Interfaces;
+
     using Enums;
 
     using Interfaces;
@@ -18,10 +20,21 @@ namespace StartPagePlus.UI.Services
     {
         private const string SURROUND_WITH_QUOTES = "\"{0}\"";
 
-        public RecentItemActionService(IVisualStudioService vsService)
-            => VsService = vsService;
+        public RecentItemActionService(IRecentItemDataService dataService, IVisualStudioService vsService, IDialogService dialogService, IDateTimeService dateTimeService)
+        {
+            DataService = dataService;
+            VsService = vsService;
+            DialogService = dialogService;
+            DateTimeService = dateTimeService;
+        }
+
+        public IRecentItemDataService DataService { get; }
 
         public IVisualStudioService VsService { get; }
+
+        private IDialogService DialogService { get; }
+
+        private IDateTimeService DateTimeService { get; }
 
         public void ExecuteAction(RecentItemViewModel viewModel)
         {
@@ -31,25 +44,34 @@ namespace StartPagePlus.UI.Services
                 Assumes.Present(VsService);
 
                 var path = SafePath(viewModel.Path);
-                //var folder = Path.GetDirectoryName(path);
                 var itemType = viewModel.ItemType;
 
                 switch (itemType)
                 {
                     case RecentItemType.Folder:
-                        VsService.ExecuteCommand("File.OpenFolder", path);
+                        if (VsService.OpenFolder(path))
+                        {
+                            SetLastAccessed(path);
+                        };
                         break;
 
                     case RecentItemType.Solution:
-                    //VsService.OpenSolution(path);
-                    //break;
+                        if (VsService.OpenSolution(path))
+                        {
+                            SetLastAccessed(path);
+                        }
+                        break;
 
                     case RecentItemType.CSharpProject:
-                        VsService.ExecuteCommand("File.OpenProject", path);
+                    case RecentItemType.VisualBasicProject:
+                        if (VsService.OpenProject(path))
+                        {
+                            SetLastAccessed(path);
+                        }
                         break;
 
                     default:
-                        VsService.ShowMessage($"Unhandled item type:'{itemType}'");
+                        DialogService.ShowMessage($"Unhandled item type:'{itemType}'");
                         break;
                 }
             }
@@ -58,6 +80,9 @@ namespace StartPagePlus.UI.Services
                 MessageBox.Show($"Error:'{ex.ExtendedMessage()}'", Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void SetLastAccessed(string path)
+            => DataService.SetLastAccessed(path, DateTimeService.Today.Date);
 
         private string SafePath(string path)
             => path.Contains(" ")
