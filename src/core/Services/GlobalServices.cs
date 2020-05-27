@@ -1,8 +1,11 @@
-﻿using EnvDTE;
+﻿using System.Runtime.InteropServices;
+
+using EnvDTE;
 
 using EnvDTE80;
 
 using Microsoft.VisualStudio.ComponentModelHost;
+using Microsoft.VisualStudio.Settings;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
@@ -47,6 +50,9 @@ namespace StartPagePlus.Core.Services
 
         public static IVsNavigateToService NavigateToService
             => GetGlobalService<SVsNavigateToService, IVsNavigateToService>();
+
+        public static ISettingsManager SettingsPersistenceManager
+            => GetGlobalService<SVsSettingsPersistenceManager, ISettingsManager>();
 
         public static IVsProfileDataManager ProfileDataManager
             => GetGlobalService<SVsProfileDataManager, IVsProfileDataManager>();
@@ -96,5 +102,10 @@ namespace StartPagePlus.Core.Services
         private static TInterface GetGlobalService<TService, TInterface>()
             where TInterface : class
             => (TInterface)(Package.GetGlobalService(typeof(TService)) as TInterface);
+
+
+        [Guid("9b164e40-c3a2-4363-9bc5-eb4039def653")]
+        private class SVsSettingsPersistenceManager
+        { }
     }
 }
