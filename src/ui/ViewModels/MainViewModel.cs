@@ -2,7 +2,7 @@
 
 using GalaSoft.MvvmLight;
 
-using Microsoft.Win32;
+using Luminous.Code.VisualStudio.Packages;
 
 namespace StartPagePlus.UI.ViewModels
 {
@@ -27,7 +27,7 @@ namespace StartPagePlus.UI.ViewModels
 
         public bool IsVisible { get; }
 
-        public static RegistryKey RegistryRoot { get; set; }
+        public static AsyncPackageBase Package { get; set; }
 
         public ObservableCollection<TabViewModel> Tabs { get; }
 

@@ -6,7 +6,7 @@ page on the [Start Page+][start-page-plus-url] website.
 
 ## Releases
 
-### v1.0 - 2020-05-22
+### v1.0 - 2020-05-28
 
 #### Added
   - the ability to **pin**/**unpin** items in the *Recent Items* list [(GitHub Issue #21)][github-issue-21]
@@ -54,6 +54,7 @@ project/solution/folder path
   - '*Projects with space in the name not opening*' [(GitHub Issue #23)][github-issue-23]
   - '*Dates have a fixed AU/UK format in the Recent Items list*' [(GitHub Issue #24)][github-issue-24]
   - '*Only Folder, Solution, and C# Project currently have icons in Recent Items*' [(GitHub Issue #26)][github-issue-26]
+  - '*Recent Item accessed date not updating*' [(Github Issue #37)][github-issue-37]
   - *Start Page+* is not respecting the *Open Links in VS* option
 
 [github-issue-5]: https://github.com/luminous-software/start-page-plus/issues/5
@@ -64,6 +65,7 @@ project/solution/folder path
 [github-issue-23]: https://github.com/luminous-software/start-page-plus/issues/23
 [github-issue-24]: https://github.com/luminous-software/start-page-plus/issues/24
 [github-issue-26]: https://github.com/luminous-software/start-page-plus/issues/26
+[github-issue-37]: https://github.com/luminous-software/start-page-plus/issues/37
 
 ## Preview Releases
 

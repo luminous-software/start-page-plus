@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Windows.Controls;
 
-using Microsoft.Win32;
+using Luminous.Code.VisualStudio.Packages;
 
 namespace StartPagePlus.UI.Views
 {
-
     using ViewModels;
 
     public partial class MainView : UserControl
     {
-        public MainView(RegistryKey registryRoot)
+        public MainView(AsyncPackageBase package)
         {
             InitializeComponent();
 
-            MainViewModel.RegistryRoot = registryRoot;
+            MainViewModel.Package = package;
 
             DataContext = ViewModelLocator.MainViewModel;
         }
