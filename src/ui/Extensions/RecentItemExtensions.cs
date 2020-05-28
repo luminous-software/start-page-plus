@@ -1,4 +1,6 @@
-﻿using System;
+﻿RecentItemExtensions.cs
+
+using System;
 using System.IO;
 
 namespace StartPagePlus.UI.Extensions
@@ -12,11 +14,11 @@ namespace StartPagePlus.UI.Extensions
 
     public static class RecentItemExtensions
     {
-        public static RecentItemViewModel ToViewModel(this RecentItem result, DateTime today, bool hideExtension)
+        public static RecentItemViewModel ToViewModel(this RecentItem result, DateTime today, bool showExtension)
         {
             var path = result.Value.LocalProperties.FullPath;
             var date = result.Value.LastAccessed.Date;
-            var name = hideExtension ? Path.GetFileNameWithoutExtension(path) : Path.GetFileName(path);
+            var name = showExtension ? Path.GetFileName(path) : Path.GetFileNameWithoutExtension(path);
             var pinned = result.Value.IsFavorite;
             var folder = Path.GetDirectoryName(path);
             var period = CalculatePeriodType(pinned, today, date);
