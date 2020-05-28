@@ -4,6 +4,10 @@
 
 [github-issue-29]: https://github.com/luminous-software/start-page-plus/issues/29
 
+## Start Tab
+
+- if you change the *Start* tab's title, you won't see it change until Visual Studio is restarted
+
 ## Recent Items list
 
   - the list currently isn't in sync with Microsoft's *Start Window*
