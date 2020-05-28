@@ -1,6 +1,4 @@
-﻿RecentItemActionService.cs
-
-using System;
+﻿using System;
 
 using GalaSoft.MvvmLight.Messaging;
 

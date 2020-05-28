@@ -1,6 +1,4 @@
-﻿RecentItemExtensions.cs
-
-using System;
+﻿using System;
 using System.IO;
 
 namespace StartPagePlus.UI.Extensions
