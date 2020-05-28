@@ -28,6 +28,8 @@ page on the [Start Page+][start-page-plus-url] website.
   - a functional **Pin** button to *Recent Items*
   - an **Unpin** button to *Recent Items*
   - an auto-refresh to *Recent Items* after clicking on an item
+  - a setting to display, or not display, the *Start* tab's title
+  - a setting that allows you to change the *Start* tab's title text
 
 [github-issue-20]: https://github.com/luminous-software/start-page-plus/issues/20
 [github-issue-21]: https://github.com/luminous-software/start-page-plus/issues/21

@@ -167,38 +167,50 @@ When this setting is set to `true`, any clicked item that opens a web page will 
 
 When set to `false`, clicked items that open a web page will be opened in your default browser.
 
+The default value is `true`.
+
 ### Enable 'Start Page+ Options'
 
 When this setting is set to `true` a 'Start Page+ Options' command is added to the `Tools` | `Options` menu.
+
+The default value is `true`.
 
 ## Setting Options
 
 ![Feature Options](assets/images/options-settings.png)
 
-### Hide Recent Item Extensions
-
-This setting allows to hide a project/solution's extension (.csproj, .sln) in the *Recent Items* list.
-
-
 ### Max Width
 
-The default value of 1175 should be fine for everyone, regardless of your monitor resolution.
-However if you'd like the contents of the _Start Page+_ window to be wider or narrower,
+Thei setting will allow you to make the contents of the _Start Page+_ window wider or narrower
+
+The default value is `1175`.
 
 ### News Items to Display
 
 This setting will allow you to determine how many items are displayed in the *Developer News* list.
 
-The default value is 10.
+The default value is `10`.
 
 ### Recent Items to Display
 
 This setting will allow you to determine how many items are displayed in the *Recent Item* list.
 
-The default value is 50.
+The default value is `50`.
+
+### Show Recent Item Extensions
+
+This setting allows to hide a project/solution's extension (.csproj, .sln) in the *Recent Items* list.
+
+The default value is `false`;
 
 ### Show Start Tab Title
 
-By default, the *Start* tab displays a title. This setting will allow you to hide it.
+This setting determines whether the *Start* tab title is displayed.
 
 The default value is `true`.
+
+### Start Tab Title
+
+This setting will allow you to change the *Start* tab title.
+
+The default value is `What would you like to do today?`.

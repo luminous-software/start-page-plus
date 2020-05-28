@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows;
-
-using Luminous.Code.Extensions.ExceptionExtensions;
 
 using Microsoft.Win32;
 
@@ -106,7 +103,7 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public ObservableCollection<RecentItemViewModel> GetItems(int itemsToDisplay, bool hideExtensions)
+        public ObservableCollection<RecentItemViewModel> GetItems(int itemsToDisplay, bool showExtensions)
         {
 
             var items = new ObservableCollection<RecentItemViewModel>();
@@ -120,11 +117,11 @@ namespace StartPagePlus.UI.Services
                     .Take(itemsToDisplay)
                     .ToList()
                     .ForEach((recentItem)
-                        => items.Add(recentItem.ToViewModel(today, hideExtensions)));
+                        => items.Add(recentItem.ToViewModel(today, showExtensions)));
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ExtendedMessage());
+                DialogService.ShowError(ex);
             }
 
             return items;
