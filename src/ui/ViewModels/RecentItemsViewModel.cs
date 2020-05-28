@@ -217,8 +217,8 @@ namespace StartPagePlus.UI.ViewModels
 
             var settingOptions = SettingOptions.Instance;
             var itemsToDisplay = settingOptions.RecentItemsToDisplay;
-            var hideExtensions = settingOptions.HideRecentItemExtensions;
-            var items = DataService.GetItems(itemsToDisplay, hideExtensions);
+            var showExtensions = settingOptions.ShowRecentItemExtensions;
+            var items = DataService.GetItems(itemsToDisplay, showExtensions);
 
             Items.Clear();
 

@@ -22,7 +22,7 @@
         public const string PackageVersion = "Version Number";
         public const string OpenLinksInVS = "Open Links in VS";
 
-        public const string HideRecentItemExtensions = "Hide Recent Item Extensions";
+        public const string ShowRecentItemExtensions = "Show Recent Item Extensions";
         public const string ShowStartTabTitle = "Show Start Tab Title";
         public const string MaxWidth = "Max Width";
         public const string NewsItemsToDisplay = "News Items To Display";
