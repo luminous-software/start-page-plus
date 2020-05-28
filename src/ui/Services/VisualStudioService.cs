@@ -1,10 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Security.Principal;
-using System.Windows;
 
 using EnvDTE80;
 
 using Luminous.Code.Extensions.ExceptionExtensions;
+using Luminous.Code.Extensions.Strings;
 using Luminous.Code.VisualStudio.Packages;
 
 using Microsoft.VisualStudio;
@@ -15,6 +16,8 @@ using Diagnostics = System.Diagnostics;
 
 namespace StartPagePlus.UI.Services
 {
+
+    using Core.Interfaces;
     using Core.Services;
 
     using Interfaces;
@@ -28,8 +31,10 @@ namespace StartPagePlus.UI.Services
         private const string FILE_CLONE_OR_CHECKOUT_CODE = "File.Cloneorcheckoutcode";
         private const uint FORCE_NEW_WINDOW = (uint)__VSWBNAVIGATEFLAGS.VSNWB_ForceNew;
 
-        public VisualStudioService()
-        { }
+        public VisualStudioService(IDialogService dialogService)
+            => DialogService = dialogService;
+
+        private IDialogService DialogService { get; }
 
         private IVsWebBrowsingService BrowsingService
             => AsyncPackageBase.GetGlobalService<SVsWebBrowsingService, IVsWebBrowsingService>();
@@ -43,19 +48,25 @@ namespace StartPagePlus.UI.Services
         private IVsShell4 VsShell4
             => GlobalServices.VsShell4;
 
-        public void ExecuteCommand(string action)
-            => Dte.ExecuteCommand(action);
+        public bool ExecuteCommand(string action)
+            => ExecuteCommand(action);
 
-        public void ExecuteCommand(string action, string args = null)
-            => Dte.ExecuteCommand(action, args);
+        public bool ExecuteCommand(string action, string args = null)
+        {
+            try
+            {
+                Dte.ExecuteCommand(action, args);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
 
-        public void ShowMessage(string message)
-            => MessageBox.Show(message, Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Information);
+        }
 
-        public bool Confirmed(string message)
-            => (MessageBox.Show(message, Vsix.Name, MessageBoxButton.OKCancel, MessageBoxImage.Information) == MessageBoxResult.OK);
-
-        public void OpenWebPage(string url, bool internalBrowser)
+        public bool OpenWebPage(string url, bool internalBrowser)
         {
             try
             {
@@ -74,25 +85,83 @@ namespace StartPagePlus.UI.Services
                         proc.Start();
                     }
                 }
+                return true;
             }
             catch
             {
-                MessageBox.Show("Can't launch this url", Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Error);
+                DialogService.ShowError("Can't launch this url");
+                return false;
             }
         }
 
-        public void OpenFolder(string path = "")
-            => Dte?.ExecuteCommand(FILE_OPEN_FOLDER, path);
+        public bool OpenFolder(string path = "")
+        {
+            try
+            {
+                if (Directory.Exists(path))
+                {
+                    return ExecuteCommand(FILE_OPEN_FOLDER, path.ToQuotedString());
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"'{path}' doesn't exist");
+                    return false;
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
 
-        //public void OpenSolution(string path = null)
-        //{
-        //    ThreadHelper.ThrowIfNotOnUIThread();
+        public bool OpenSolution(string path = null)
+        {
+            ThreadHelper.ThrowIfNotOnUIThread();
 
-        //    Dte?.Solution.Open(path);
-        //}
+            if (path == null)
+                return false;
 
-        public void OpenProject(string path = "")
-            => Dte?.ExecuteCommand(FILE_OPEN_PROJECT, path);
+            try
+            {
+                if (File.Exists(path))
+                {
+                    Dte?.Solution.Open(path.ToQuotedString());
+                    return true;
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"Can't find '{path}'");
+                    return false;
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
+
+        public bool OpenProject(string path = "")
+        {
+            try
+            {
+                if (File.Exists(path))
+                {
+                    return ExecuteCommand(FILE_OPEN_PROJECT, path.ToQuotedString());
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"Can't find '{path}'");
+                    return false;
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
 
         public void CreateNewProject()
             => ExecuteCommand(FILE_NEW_PROJECT);
@@ -106,7 +175,7 @@ namespace StartPagePlus.UI.Services
             {
                 if (IsRunningElevated)
                 {
-                    if (!Confirmed("Visual Studio is currently running as Administrator. To return to running normally Visual Studio will need to close"))
+                    if (!DialogService.Confirmed("Visual Studio is currently running as Administrator. To return to running normally Visual Studio will need to close"))
                     {
                         return;
                     }
@@ -130,7 +199,7 @@ namespace StartPagePlus.UI.Services
             }
             catch (Exception ex)
             {
-                ShowMessage(ex.ExtendedMessage());
+                DialogService.ShowError(ex);
             }
         }
 
@@ -141,7 +210,7 @@ namespace StartPagePlus.UI.Services
         {
             var suffix = (elevated) ? " as Administrator" : "";
 
-            return Confirmed($"You're about to restart Visual Studio{suffix}");
+            return DialogService.Confirmed($"You're about to restart Visual Studio{suffix}");
         }
 
         private string RestartNormal()

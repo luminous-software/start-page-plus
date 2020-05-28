@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 
 using Luminous.Code.Extensions.ExceptionExtensions;
@@ -12,7 +13,6 @@ using Newtonsoft.Json.Linq;
 
 namespace StartPagePlus.UI.Services
 {
-    using System.Linq;
 
     using Core.Interfaces;
 
@@ -32,13 +32,17 @@ namespace StartPagePlus.UI.Services
         private const string CODE_CONTAINERS = "CodeContainers";
         private const string OFFLINE = "Offline";
 
-        public IDateTimeService DateTimeService { get; }
-        public IDialogService DialogService { get; }
+        private IDateTimeService DateTimeService { get; }
 
-        public RecentItemDataService(IDateTimeService dateTimeService, IDialogService dialogService)
+        private IDialogService DialogService { get; }
+
+        private IServiceProvider ServiceProvider { get; }
+
+        public RecentItemDataService(IDateTimeService dateTimeService, IDialogService dialogService, IServiceProvider serviceProvider)
         {
             DateTimeService = dateTimeService;
             DialogService = dialogService;
+            ServiceProvider = serviceProvider;
         }
 
         private string CodeContainersKey
@@ -48,7 +52,7 @@ namespace StartPagePlus.UI.Services
         {
             var items = new List<RecentItem>();
 
-            using (var regKey = MainViewModel.RegistryRoot.OpenSubKey(CodeContainersKey))
+            using (var regKey = MainViewModel.Package.UserRegistryRoot.OpenSubKey(CodeContainersKey))
             {
                 try
                 {
@@ -76,7 +80,7 @@ namespace StartPagePlus.UI.Services
 
         public bool UpdateRecentItems(List<RecentItem> items)
         {
-            using (var regKey = MainViewModel.RegistryRoot.OpenSubKey(CodeContainersKey, true))
+            using (var regKey = MainViewModel.Package.UserRegistryRoot.OpenSubKey(CodeContainersKey, true))
             {
                 try
                 {
@@ -124,6 +128,16 @@ namespace StartPagePlus.UI.Services
             }
 
             return items;
+        }
+
+        public bool SetLastAccessed(string path, DateTime date)
+        {
+            var items = GetRecentItems();
+            var item = items.FirstOrDefault(x => x.Key == path);
+
+            item.Value.LastAccessed = date;
+
+            return UpdateRecentItems(items);
         }
     }
 }

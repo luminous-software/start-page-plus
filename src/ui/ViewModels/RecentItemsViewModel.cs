@@ -5,6 +5,7 @@ using GalaSoft.MvvmLight.Command;
 
 namespace StartPagePlus.UI.ViewModels
 {
+
     using Core.Interfaces;
 
     using Interfaces;
@@ -41,6 +42,7 @@ namespace StartPagePlus.UI.ViewModels
             GetCommands();
             Refresh();
 
+            MessengerInstance.Register<RecentItemsRefreshMessage>(this, RefreshRequested);
             MessengerInstance.Register<RecentItemSelectedMessage>(this, SelectItem);
             MessengerInstance.Register<RecentItemPinnedOrUnpinnedMessage>(this, PinOrUnpinItem);
             MessengerInstance.Register<RecentItemCopyPathMessage>(this, CopyItemPath);
@@ -209,7 +211,7 @@ namespace StartPagePlus.UI.ViewModels
         private void CopyItemPath(RecentItemViewModel item)
             => ItemService.CopyItemPath(item);
 
-        public void Refresh()
+        private void Refresh()
         {
             Refreshed = false;
 
@@ -227,5 +229,8 @@ namespace StartPagePlus.UI.ViewModels
 
             Refreshed = true;
         }
+
+        private void RefreshRequested(RecentItemsRefreshMessage message)
+            => Refresh();
     }
 }

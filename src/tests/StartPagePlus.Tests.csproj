@@ -54,6 +54,7 @@
     <Compile Include="Strings\ToPluralString_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Enums\RecentItemTypeToImageMoniker_Tests.cs" />
+    <Compile Include="Strings\ToQuotedPath_Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\core\StartPagePlus.Core.csproj">

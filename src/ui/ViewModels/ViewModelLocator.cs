@@ -1,8 +1,11 @@
-﻿using GalaSoft.MvvmLight.Ioc;
+﻿using System;
+
+using GalaSoft.MvvmLight.Ioc;
+
+using Luminous.Code.VisualStudio.Packages;
 
 namespace StartPagePlus.UI.ViewModels
 {
-
     using Core.Interfaces;
 
     using Interfaces;   // TODO: why are these interfaces not in Core.Interfaces?
@@ -45,6 +48,7 @@ namespace StartPagePlus.UI.ViewModels
 
         private void RegisterServices(SimpleIoc container)
         {
+            container.Register<IServiceProvider>(() => (IServiceProvider)AsyncPackageBase.Instance);
             container.Register<IDialogService, DialogService>();
             container.Register<IVisualStudioService, VisualStudioService>();
 
