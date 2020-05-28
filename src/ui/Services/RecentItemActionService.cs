@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows;
 
+using GalaSoft.MvvmLight.Messaging;
+
 using Luminous.Code.Extensions.ExceptionExtensions;
 
 using Microsoft;
@@ -14,12 +16,12 @@ namespace StartPagePlus.UI.Services
 
     using Interfaces;
 
+    using Messages;
+
     using ViewModels;
 
     public class RecentItemActionService : IRecentItemActionService
     {
-        private const string SURROUND_WITH_QUOTES = "\"{0}\"";
-
         public RecentItemActionService(IRecentItemDataService dataService, IVisualStudioService vsService, IDialogService dialogService, IDateTimeService dateTimeService)
         {
             DataService = dataService;
@@ -43,7 +45,7 @@ namespace StartPagePlus.UI.Services
                 ThreadHelper.ThrowIfNotOnUIThread();
                 Assumes.Present(VsService);
 
-                var path = SafePath(viewModel.Path);
+                var path = viewModel.Path;
                 var itemType = viewModel.ItemType;
 
                 switch (itemType)
@@ -52,21 +54,17 @@ namespace StartPagePlus.UI.Services
                         if (VsService.OpenFolder(path))
                         {
                             SetLastAccessed(path);
+                            SendRefreshMessage();
                         };
                         break;
 
                     case RecentItemType.Solution:
-                        if (VsService.OpenSolution(path))
-                        {
-                            SetLastAccessed(path);
-                        }
-                        break;
-
                     case RecentItemType.CSharpProject:
                     case RecentItemType.VisualBasicProject:
                         if (VsService.OpenProject(path))
                         {
                             SetLastAccessed(path);
+                            SendRefreshMessage();
                         }
                         break;
 
@@ -84,9 +82,7 @@ namespace StartPagePlus.UI.Services
         private void SetLastAccessed(string path)
             => DataService.SetLastAccessed(path, DateTimeService.Today.Date);
 
-        private string SafePath(string path)
-            => path.Contains(" ")
-                ? string.Format(SURROUND_WITH_QUOTES, path)
-                : path;
+        private void SendRefreshMessage()
+            => Messenger.Default.Send(new RecentItemsRefreshMessage());
     }
 }
