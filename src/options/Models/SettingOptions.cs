@@ -14,6 +14,11 @@ namespace StartPagePlus.Options.Models
         public bool HideRecentItemExtensions { get; set; } = true;
 
         [Category(Settings)]
+        [DisplayName(Constants.PageConstants.ShowStartTabTitle)]
+        [Description("Allow the title displayed in the Start Tab title to be shown or hidden")]
+        public bool ShowStartTabTitle { get; set; } = true;
+
+        [Category(Settings)]
         [DisplayName(Constants.PageConstants.MaxWidth)]
         [Description("Sets the max width of the window's contents")]
         public int MaxWidth { get; set; } = 1175;
