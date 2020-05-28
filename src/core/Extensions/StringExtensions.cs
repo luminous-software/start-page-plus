@@ -42,5 +42,15 @@ namespace Luminous.Code.Extensions.Strings
                     return $"{instance}s";
             }
         }
+
+        public static string ToQuotedString(this string instance)
+        {
+            if (string.IsNullOrEmpty(instance))
+                return "";
+
+            return !instance.Contains(" ")
+                ? instance
+                : (char)34 + instance + (char)34;
+        }
     }
 }
