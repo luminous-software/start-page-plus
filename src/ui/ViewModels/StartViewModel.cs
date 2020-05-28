@@ -2,6 +2,8 @@
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Options.Models;
+
     public class StartViewModel : TabViewModel
     {
         public StartViewModel() : base()
@@ -19,5 +21,8 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         public ObservableCollection<ColumnViewModel> Columns { get; set; }
+
+        public bool ShowStartTabTitle
+            => SettingOptions.Instance.ShowStartTabTitle;
     }
 }
