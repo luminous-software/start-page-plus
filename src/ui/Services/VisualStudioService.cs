@@ -1,9 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Security.Principal;
 
 using EnvDTE80;
 
 using Luminous.Code.Extensions.ExceptionExtensions;
+using Luminous.Code.Extensions.Strings;
 using Luminous.Code.VisualStudio.Packages;
 
 using Microsoft.VisualStudio;
@@ -14,11 +16,11 @@ using Diagnostics = System.Diagnostics;
 
 namespace StartPagePlus.UI.Services
 {
+
+    using Core.Interfaces;
     using Core.Services;
 
     using Interfaces;
-
-    using StartPagePlus.Core.Interfaces;
 
     public class VisualStudioService : IVisualStudioService
     {
@@ -61,6 +63,7 @@ namespace StartPagePlus.UI.Services
                 DialogService.ShowError(ex);
                 return false;
             }
+
         }
 
         public bool OpenWebPage(string url, bool internalBrowser)
@@ -92,7 +95,25 @@ namespace StartPagePlus.UI.Services
         }
 
         public bool OpenFolder(string path = "")
-            => ExecuteCommand(FILE_OPEN_FOLDER, path);
+        {
+            try
+            {
+                if (Directory.Exists(path))
+                {
+                    return ExecuteCommand(FILE_OPEN_FOLDER, path.ToQuotedString());
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"'{path}' doesn't exist");
+                    return false;
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
 
         public bool OpenSolution(string path = null)
         {
@@ -103,8 +124,16 @@ namespace StartPagePlus.UI.Services
 
             try
             {
-                Dte?.Solution.Open(path);
-                return true;
+                if (File.Exists(path))
+                {
+                    Dte?.Solution.Open(path.ToQuotedString());
+                    return true;
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"Can't find '{path}'");
+                    return false;
+                }
             }
             catch (ArgumentException ex)
             {
@@ -114,7 +143,25 @@ namespace StartPagePlus.UI.Services
         }
 
         public bool OpenProject(string path = "")
-            => ExecuteCommand(FILE_OPEN_PROJECT, path);
+        {
+            try
+            {
+                if (File.Exists(path))
+                {
+                    return ExecuteCommand(FILE_OPEN_PROJECT, path.ToQuotedString());
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"Can't find '{path}'");
+                    return false;
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
 
         public void CreateNewProject()
             => ExecuteCommand(FILE_NEW_PROJECT);
