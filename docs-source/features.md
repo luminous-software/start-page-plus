@@ -196,4 +196,9 @@ The default value is 10.
 This setting will allow you to determine how many items are displayed in the *Recent Item* list.
 
 The default value is 50.
+
+### Show Start Tab Title
+
+By default, the *Start* tab displays a title. This setting will allow you to hide it.
+
 The default value is `true`.

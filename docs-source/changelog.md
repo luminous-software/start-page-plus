@@ -27,6 +27,7 @@ page on the [Start Page+][start-page-plus-url] website.
   - a **Hide Extensions** setting to hide a project/solution's extension in *Recent Items* list
   - a functional **Pin** button to *Recent Items*
   - an **Unpin** button to *Recent Items*
+  - an auto-refresh to *Recent Items* after clicking on an item
 
 [github-issue-20]: https://github.com/luminous-software/start-page-plus/issues/20
 [github-issue-21]: https://github.com/luminous-software/start-page-plus/issues/21
@@ -54,6 +55,7 @@ project/solution/folder path
   - '*Projects with space in the name not opening*' [(GitHub Issue #23)][github-issue-23]
   - '*Dates have a fixed AU/UK format in the Recent Items list*' [(GitHub Issue #24)][github-issue-24]
   - '*Only Folder, Solution, and C# Project currently have icons in Recent Items*' [(GitHub Issue #26)][github-issue-26]
+  - '_VS stopped responding for 28 seconds_' [(Github Issue #31)][github-issue-31]
   - '*Recent Item accessed date not updating*' [(Github Issue #37)][github-issue-37]
   - *Start Page+* is not respecting the *Open Links in VS* option
 
@@ -65,6 +67,7 @@ project/solution/folder path
 [github-issue-23]: https://github.com/luminous-software/start-page-plus/issues/23
 [github-issue-24]: https://github.com/luminous-software/start-page-plus/issues/24
 [github-issue-26]: https://github.com/luminous-software/start-page-plus/issues/26
+[github-issue-31]: https://github.com/luminous-software/start-page-plus/issues/31
 [github-issue-37]: https://github.com/luminous-software/start-page-plus/issues/37
 
 ## Preview Releases
