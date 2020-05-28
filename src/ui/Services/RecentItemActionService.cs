@@ -1,9 +1,8 @@
-﻿using System;
-using System.Windows;
+﻿RecentItemActionService.cs
+
+using System;
 
 using GalaSoft.MvvmLight.Messaging;
-
-using Luminous.Code.Extensions.ExceptionExtensions;
 
 using Microsoft;
 using Microsoft.VisualStudio.Shell;
@@ -75,7 +74,7 @@ namespace StartPagePlus.UI.Services
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error:'{ex.ExtendedMessage()}'", Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Error);
+                DialogService.ShowError(ex);
             }
         }
 
