@@ -10,7 +10,7 @@ namespace StartPagePlus.UI.ViewModels
         {
 
             Name = "Start";
-            Title = "Hi, what would you like to do today?";
+            Title = SettingOptions.Instance.StartTabTitleText;
             IsVisible = true;
             Columns = new ObservableCollection<ColumnViewModel>
             {
