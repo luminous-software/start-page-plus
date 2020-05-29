@@ -6,7 +6,7 @@ namespace StartPagePlus.UI.Messages
 
     public class RecentItemPinnedOrUnpinnedMessage : NotificationMessage<RecentItemViewModel>
     {
-        public RecentItemPinnedOrUnpinnedMessage(RecentItemViewModel sender, string notification) : base(sender, notification)
+        public RecentItemPinnedOrUnpinnedMessage(RecentItemViewModel sender) : base(sender, "")
         { }
     }
 }

@@ -87,6 +87,7 @@
     <Compile Include="Messages\RecentItemSelectedMessage.cs" />
     <Compile Include="Messages\RecentItemPinnedOrUnpinnedMessage.cs" />
     <Compile Include="Messages\RecentItemCopyPathMessage.cs" />
+    <Compile Include="Messages\RecentItemRemovedMessage.cs" />
     <Compile Include="Messages\RecentItemsRefreshedMessage.cs" />
     <Compile Include="Messages\RecentItemsRefreshMessage.cs" />
     <Compile Include="Observables\ObservableCommandList.cs" />

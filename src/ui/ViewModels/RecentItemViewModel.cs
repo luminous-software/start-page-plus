@@ -17,13 +17,16 @@ namespace StartPagePlus.UI.ViewModels
         public RecentItemViewModel()
         {
             SelectItemCommand = new RelayCommand(SelectItem, true);
-            PinOrUnpinItemCommand = new RelayCommand(PinOrUnpinItem, true);
+            TogglePinnedCommand = new RelayCommand(TogglePinned, true);
+            RemoveItemCommand = new RelayCommand(RemoveItem, true);
             CopyItemPathCommand = new RelayCommand(CopyItemPath, true);
         }
 
         public ICommand SelectItemCommand { get; }
 
-        public ICommand PinOrUnpinItemCommand { get; }
+        public ICommand TogglePinnedCommand { get; }
+
+        public ICommand RemoveItemCommand { get; }
 
         public ICommand CopyItemPathCommand { get; }
 
@@ -46,8 +49,11 @@ namespace StartPagePlus.UI.ViewModels
         private void SelectItem()
             => MessengerInstance.Send(new RecentItemSelectedMessage(this));
 
-        private void PinOrUnpinItem()
-            => MessengerInstance.Send(new RecentItemPinnedOrUnpinnedMessage(this, Pinned.ToString()));
+        private void TogglePinned()
+            => MessengerInstance.Send(new RecentItemPinnedOrUnpinnedMessage(this));
+
+        private void RemoveItem()
+            => MessengerInstance.Send(new RecentItemRemovedMessage(this));
 
         private void CopyItemPath()
             => MessengerInstance.Send(new RecentItemCopyPathMessage(this));
