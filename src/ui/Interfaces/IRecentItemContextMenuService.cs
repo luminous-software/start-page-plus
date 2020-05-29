@@ -3,7 +3,7 @@ namespace StartPagePlus.UI.Interfaces
 {
     using ViewModels;
 
-    public interface IRecentItemService
+    public interface IRecentItemContextMenuService
     {
         bool RemoveItem(RecentItemViewModel viewModel);
 

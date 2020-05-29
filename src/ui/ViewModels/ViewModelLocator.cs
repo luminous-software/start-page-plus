@@ -55,7 +55,7 @@ namespace StartPagePlus.UI.ViewModels
             container.Register<IDateTimeService, DateTimeService>();
             container.Register<IClipboardService, ClipboardService>();
 
-            container.Register<IRecentItemService, RecentItemService>();
+            container.Register<IRecentItemContextMenuService, RecentItemContextMenuService>();
 
             container.Register<IRecentItemDataService, RecentItemDataService>();
             container.Register<IRecentItemActionService, RecentItemActionService>();

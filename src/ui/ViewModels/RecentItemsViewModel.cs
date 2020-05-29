@@ -26,7 +26,7 @@ namespace StartPagePlus.UI.ViewModels
             IRecentItemDataService dataService,
             IRecentItemActionService actionService,
             IRecentItemCommandService commandService,
-            IRecentItemService itemService,
+            IRecentItemContextMenuService contextMenuService,
             IDialogService dialogService
             )
             : base()
@@ -34,7 +34,7 @@ namespace StartPagePlus.UI.ViewModels
             DataService = dataService;
             ActionService = actionService;
             CommandService = commandService;
-            ItemService = itemService;
+            ContextMenuService = contextMenuService;
             DialogService = dialogService;
             Heading = HEADING;
             IsVisible = true;
@@ -49,7 +49,7 @@ namespace StartPagePlus.UI.ViewModels
             MessengerInstance.Register<RecentItemCopyPathMessage>(this, CopyItemPath);
         }
 
-        public IRecentItemService ItemService { get; }
+        public IRecentItemContextMenuService ContextMenuService { get; }
 
         public IRecentItemActionService ActionService { get; }
 
@@ -162,7 +162,7 @@ namespace StartPagePlus.UI.ViewModels
 
         private void PinItem(RecentItemViewModel item)
         {
-            if (!ItemService.PinItem(item))
+            if (!ContextMenuService.PinItem(item))
             {
                 DialogService.ShowExclamation($"Unable to pin '{item?.Name}'");
             }
@@ -177,7 +177,7 @@ namespace StartPagePlus.UI.ViewModels
 
         private void UnpinItem(RecentItemViewModel item)
         {
-            if (!ItemService.UnpinItem(item))
+            if (!ContextMenuService.UnpinItem(item))
             {
                 DialogService.ShowExclamation($"Unable to unpin '{item?.Name}'");
             }
@@ -199,7 +199,7 @@ namespace StartPagePlus.UI.ViewModels
 
         private void RemoveItem(RecentItemViewModel item)
         {
-            if (!ItemService.RemoveItem(item))
+            if (!ContextMenuService.RemoveItem(item))
             {
                 DialogService.ShowExclamation($"Unable to remove '{item?.Name}'");
             }
@@ -223,7 +223,7 @@ namespace StartPagePlus.UI.ViewModels
         => CopyItemPath(SelectedItem);
 
         private bool CopyItemPath(RecentItemViewModel item)
-            => ItemService.CopyItemPath(item);
+            => ContextMenuService.CopyItemPath(item);
 
         private void Refresh()
         {

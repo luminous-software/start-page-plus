@@ -9,9 +9,9 @@ namespace StartPagePlus.UI.Services
 
     using ViewModels;
 
-    public class RecentItemService : IRecentItemService
+    public class RecentItemContextMenuService : IRecentItemContextMenuService
     {
-        public RecentItemService(IRecentItemDataService dataService, IDialogService dialogService, IClipboardService clipboardService)
+        public RecentItemContextMenuService(IRecentItemDataService dataService, IDialogService dialogService, IClipboardService clipboardService)
         {
             DataService = dataService;
             DialogService = dialogService;

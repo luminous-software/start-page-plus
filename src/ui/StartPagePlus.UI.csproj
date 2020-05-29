@@ -61,7 +61,7 @@
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\IntToPluralStringConverter.cs" />
     <Compile Include="Interfaces\IClipboardService.cs" />
-    <Compile Include="Interfaces\IRecentItemService.cs" />
+    <Compile Include="Interfaces\IRecentItemContextMenuService.cs" />
     <Compile Include="MarkupExtensions\MultValueConverterMarkupExtension.cs" />
     <Compile Include="MarkupExtensions\ValueConverterMarkupExtension.cs" />
     <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
@@ -101,7 +101,7 @@
     <Compile Include="Services\ClipboardService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Interfaces\IVisualStudioService.cs" />
-    <Compile Include="Services\RecentItemService.cs" />
+    <Compile Include="Services\RecentItemContextMenuService.cs" />
     <Compile Include="Services\NewsItemActionService.cs" />
     <Compile Include="Services\DateTimeService.cs" />
     <Compile Include="Services\NewsItemCommandService.cs" />
