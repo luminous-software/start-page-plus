@@ -179,9 +179,23 @@ The default value is `true`.
 
 ![Feature Options](assets/images/options-settings.png)
 
+### Developer News Url
+
+This setting allows you to change the feed url for *Developer News* to any RSS feed that you choose.
+
+Microsoft is currently still maintaining the original feed, but could stop doing that at any time.
+You could choose to use the *Visual Studio Blog* feed url instead if you wanted.
+
+In the past the two feeds have displayed a different set of posts,
+with Visual Studio Blog having more posts that the Developer News feed.
+But it seems that may currently have the same items.
+The *Visual Studio Blog* feed url is `https://devblogs.microsoft.com/visualstudio/feed/`.
+
+The default value is `https://vsstartpage.blob.core.windows.net/news/vs`.
+
 ### Max Width
 
-Thei setting will allow you to make the contents of the _Start Page+_ window wider or narrower
+This setting will allow you to make the contents of the _Start Page+_ window wider or narrower
 
 The default value is `1175`.
 

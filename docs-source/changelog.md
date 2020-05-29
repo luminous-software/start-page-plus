@@ -26,14 +26,15 @@ page on the [Start Page+][start-page-plus-url] website.
     - opens the website's changelog page
   - an **Options** button to the right of the version number in the *Get Started* column
     - opens `Tools` | `Options` | `Start Page+` | `General`
+  - a **Start Page+ Options** menu item to open `Tools` | `Options` | `Start Page+` | `General`
+    - found in `Tools` | `Options`
   - new options pages (**Features**, **Settings**)
   - a **Recent Items to Display** setting
-  - a **News Items to Display** setting
   - a **Hide Extensions** setting to hide a project/solution's extension in *Recent Items* list
   - a setting to **display**, or **not display**, the *Start* tab's title
   - a setting that allows you to **change** the *Start* tab's title text
-  - a **Start Page+ Options** menu item to open `Tools` | `Options` | `Start Page+` | `General`
-    - found in `Tools` | `Options`
+  - a **News Items to Display** setting
+  - a **Developer News Url** setting
 
 [github-issue-20]: https://github.com/luminous-software/start-page-plus/issues/20
 [github-issue-21]: https://github.com/luminous-software/start-page-plus/issues/21
