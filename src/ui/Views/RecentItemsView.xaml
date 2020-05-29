@@ -73,7 +73,6 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Moniker="{x:Static catalog:KnownMonikers.Close}"
-                        Stretch="Fill"
                         />
                 </Button>
             </Grid>
@@ -139,7 +138,7 @@
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Button
+                        <Button x:Name="RecentItemButton"
                             Command="{Binding SelectItemCommand}"
                             IsTabStop="False"
                             Style="{StaticResource ColumnListItemStyle}"
@@ -159,19 +158,20 @@
                                     DockPanel.Dock="Right"
                                     Orientation="Vertical"
                                     >
-                                    <DockPanel x:Name="RecentItemGroup"
+                                    <DockPanel x:Name="RecentItemLine1"
                                         LastChildFill="True"
                                         >
-                                        <Button x:Name="PinUnpinButton"
+                                        <Button x:Name="TogglePinnedButton"
                                             Width="16"
-                                            Margin="3"
+                                            Height="16"
+                                            Margin="0,0,2,2"
                                             Padding="0"
                                             Background="Transparent"
                                             BorderBrush="Transparent"
-                                            Command="{Binding PinOrUnpinItemCommand}"
+                                            Command="{Binding TogglePinnedCommand}"
                                             DockPanel.Dock="Right"
                                             >
-                                            <imaging:CrispImage x:Name="RecentItemPinImage"
+                                            <imaging:CrispImage x:Name="TogglePinnedImage"
                                                 Height="16"
                                                 Margin="0"
                                                 HorizontalAlignment="Center"
@@ -203,17 +203,56 @@
                                             />
                                     </DockPanel>
 
-                                    <TextBlock x:Name="RecentItemDescription"
-                                        Margin="3,0,3,3"
-                                        Padding="0"
-                                        HorizontalAlignment="Stretch"
-                                        FontFamily="Segoe WP Semilight"
-                                        FontSize="11"
-                                        FontWeight="Normal"
-                                        Foreground="{DynamicResource ItemDescriptionBrush}"
-                                        Text="{Binding Description}"
-                                        TextWrapping="Wrap"
-                                        />
+                                    <DockPanel x:Name="RecentItemLine2"
+                                        LastChildFill="True"
+                                        >
+                                        <Button x:Name="RemoveItemButton"
+                                            Width="16"
+                                            Height="16"
+                                            Margin="0,-1,2,2"
+                                            Background="Transparent"
+                                            BorderBrush="Transparent"
+                                            Command="{Binding RemoveItemCommand}"
+                                            DockPanel.Dock="Right"
+                                            >
+                                            <Button.Style>
+                                                <!-- https://stackoverflow.com/a/206537/281489 -->
+
+                                                <Style TargetType="{x:Type Button}">
+                                                    <Setter Property="Visibility" Value="Hidden"/>
+
+                                                    <Style.Triggers>
+                                                        <DataTrigger
+                                                            Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListViewItem}}, Path=IsMouseOver}"
+                                                            Value="True"
+                                                            >
+                                                            <Setter Property="Visibility" Value="Visible"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Button.Style>
+
+                                            <imaging:CrispImage x:Name="RemoveItemImage"
+                                                Height="11"
+                                                Margin="1,0,0,0"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Top"
+                                                Moniker="{x:Static catalog:KnownMonikers.Cancel}"
+                                                />
+                                        </Button>
+
+                                        <TextBlock x:Name="RecentItemDescription"
+                                            Margin="3,0,3,3"
+                                            Padding="0"
+                                            HorizontalAlignment="Stretch"
+                                            FontFamily="Segoe WP Semilight"
+                                            FontSize="11"
+                                            FontWeight="Normal"
+                                            Foreground="{DynamicResource ItemDescriptionBrush}"
+                                            Text="{Binding Description}"
+                                            TextWrapping="Wrap"
+                                            />
+                                    </DockPanel>
                                 </StackPanel>
                             </DockPanel>
                         </Button>

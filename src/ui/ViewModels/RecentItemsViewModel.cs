@@ -44,7 +44,8 @@ namespace StartPagePlus.UI.ViewModels
 
             MessengerInstance.Register<RecentItemsRefreshMessage>(this, RefreshRequested);
             MessengerInstance.Register<RecentItemSelectedMessage>(this, SelectItem);
-            MessengerInstance.Register<RecentItemPinnedOrUnpinnedMessage>(this, PinOrUnpinItem);
+            MessengerInstance.Register<RecentItemPinnedOrUnpinnedMessage>(this, TogglePinned);
+            MessengerInstance.Register<RecentItemRemovedMessage>(this, RemoveItem);
             MessengerInstance.Register<RecentItemCopyPathMessage>(this, CopyItemPath);
         }
 
@@ -135,7 +136,7 @@ namespace StartPagePlus.UI.ViewModels
         private void SelectItem(RecentItemSelectedMessage message)
             => ActionService.ExecuteAction(message.Content);
 
-        private void PinOrUnpinItem(RecentItemPinnedOrUnpinnedMessage message)
+        private void TogglePinned(RecentItemPinnedOrUnpinnedMessage message)
         {
             var item = message.Content;
 
@@ -186,11 +187,21 @@ namespace StartPagePlus.UI.ViewModels
         private bool CanRemoveItem
             => (SelectedItem != null);
 
-        private void RemoveItem()
+        private void RemoveItem(RecentItemRemovedMessage message)
         {
-            if (!ItemService.RemoveItem(SelectedItem))
+            var item = message.Content;
+
+            RemoveItem(item);
+        }
+
+        private void RemoveItem()
+        => RemoveItem(SelectedItem);
+
+        private void RemoveItem(RecentItemViewModel item)
+        {
+            if (!ItemService.RemoveItem(item))
             {
-                DialogService.ShowMessage($"Unable to remove '{SelectedItem?.Name}'", Vsix.Name);
+                DialogService.ShowExclamation($"Unable to remove '{item?.Name}'");
             }
             Refresh();
         }
