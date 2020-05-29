@@ -12,7 +12,7 @@ namespace StartPagePlus.Options.Models
         [Category(Settings)]
         [DisplayName(DeveloperNewsUrlDisplayName)]
         [Description(DeveloperNewsUrlDescription)]
-        public string DeveloperNewsUrl { get; set; } = "";
+        public string DeveloperNewsUrl { get; set; } = "https://vsstartpage.blob.core.windows.net/news/vs";
 
         [Category(Settings)]
         [DisplayName(MaxWidthDisplayName)]
