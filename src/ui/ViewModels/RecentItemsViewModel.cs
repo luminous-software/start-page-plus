@@ -213,13 +213,16 @@ namespace StartPagePlus.UI.ViewModels
         {
             var item = message.Content;
 
-            CopyItemPath(item);
+            if (!CopyItemPath(item))
+            {
+                DialogService.ShowExclamation($"Unable to copy path of '{item?.Name}'");
+            }
         }
 
         private void CopyItemPath()
         => CopyItemPath(SelectedItem);
 
-        private void CopyItemPath(RecentItemViewModel item)
+        private bool CopyItemPath(RecentItemViewModel item)
             => ItemService.CopyItemPath(item);
 
         private void Refresh()
