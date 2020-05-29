@@ -9,27 +9,31 @@ page on the [Start Page+][start-page-plus-url] website.
 ### v1.0 - 2020-05-28
 
 #### Added
+  - a **Restart Visual Studio** item to *Get Started* column [(GitHub Issue #20)][github-issue-20]
+    - also a Restart Visual Studio **_as Administrator_** item
   - the ability to **pin**/**unpin** items in the *Recent Items* list [(GitHub Issue #21)][github-issue-21]
-  - the ability to **remove** items from the *Recent Items* list [(GitHub Issue #35)][github-issue-35]
-  - the ability to copy an item's path to the Windows clipboard
-  - a **Restart Visual Studio** option to *Get Started* column [(GitHub Issue #20)][github-issue-20]
-    - also **Restart Visual Studio as Administrator**
-  - a **Start Page+ Options** command to open `Tools` | `Options` | `Start Page+` | `General`
-    - found in `Tools` | `Options`
-  - a **Changelog** button to *Get Started* column to open the website's changelog page
-  - an **Options** button to *Get Started* column to open `Tools` | `Options` | `Start Page+` | `General`
   - a **Max Width** setting [(GitHub Issue #32)][github-issue-32]
-    - replaces fixed width of 1175
+    - replaces fixed width of `1175`
+  - the ability to **remove** items from the *Recent Items* list [(GitHub Issue #35)][github-issue-35]
+  - the ability to **copy** an item's path to the Windows clipboard
+  - the ability to **collapse**/**expand** the group headings in the *Recent Items* list
+  - a _functional_ **Pin** button to *Recent Items*
+    - previous pinned button did nothing
+  - an **Unpin** button to *Recent Items*
+  - a **Remove** button to *Recent Items* that only appears when the mouse hovers over an item
+  - an **auto-refresh** to *Recent Items* after an item is clicked
+  - a **Changelog** button to the left of the version number in the *Get Started* column
+    - opens the website's changelog page
+  - an **Options** button to the right of the version number in the *Get Started* column
+    - opens `Tools` | `Options` | `Start Page+` | `General`
+  - new options pages (**Features**, **Settings**)
   - a **Recent Items to Display** setting
   - a **News Items to Display** setting
-  - the ability to **collapse**/**expand** the group heading in the *Recent Items* list
-  - new options pages (**Features**, **Settings**)
   - a **Hide Extensions** setting to hide a project/solution's extension in *Recent Items* list
-  - a functional **Pin** button to *Recent Items*
-  - an **Unpin** button to *Recent Items*
-  - an auto-refresh to *Recent Items* after clicking on an item
-  - a setting to display, or not display, the *Start* tab's title
-  - a setting that allows you to change the *Start* tab's title text
+  - a setting to **display**, or **not display**, the *Start* tab's title
+  - a setting that allows you to **change** the *Start* tab's title text
+  - a **Start Page+ Options** menu item to open `Tools` | `Options` | `Start Page+` | `General`
+    - found in `Tools` | `Options`
 
 [github-issue-20]: https://github.com/luminous-software/start-page-plus/issues/20
 [github-issue-21]: https://github.com/luminous-software/start-page-plus/issues/21
