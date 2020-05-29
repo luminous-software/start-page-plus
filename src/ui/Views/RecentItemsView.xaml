@@ -215,6 +215,23 @@
                                             Command="{Binding RemoveItemCommand}"
                                             DockPanel.Dock="Right"
                                             >
+                                            <Button.Style>
+                                                <!-- https://stackoverflow.com/a/206537/281489 -->
+
+                                                <Style TargetType="{x:Type Button}">
+                                                    <Setter Property="Visibility" Value="Hidden"/>
+
+                                                    <Style.Triggers>
+                                                        <DataTrigger
+                                                            Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListViewItem}}, Path=IsMouseOver}"
+                                                            Value="True"
+                                                            >
+                                                            <Setter Property="Visibility" Value="Visible"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Button.Style>
+
                                             <imaging:CrispImage x:Name="RemoveItemImage"
                                                 Height="11"
                                                 Margin="1,0,0,0"
