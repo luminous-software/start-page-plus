@@ -23,6 +23,9 @@
         public const string OpenLinksInVS = "Open Links in VS";
         public const string PackageVersion = "Version Number";
 
+        public const string DeveloperNewsUrlDisplayName = "Developer News Url";
+        public const string DeveloperNewsUrlDescription = "Sets the url of the 'Developer News' feed";
+
         public const string MaxWidthDisplayName = "Max Width";
         public const string MaxWidthDescription = "Sets the max width of contents of the Start Page+ window";
 

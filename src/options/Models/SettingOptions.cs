@@ -8,6 +8,12 @@ namespace StartPagePlus.Options.Models
 
     public class SettingOptions : BaseOptionModel<SettingOptions>
     {
+
+        [Category(Settings)]
+        [DisplayName(DeveloperNewsUrlDisplayName)]
+        [Description(DeveloperNewsUrlDescription)]
+        public string DeveloperNewsUrl { get; set; } = "";
+
         [Category(Settings)]
         [DisplayName(MaxWidthDisplayName)]
         [Description(MaxWidthDescription)]
