@@ -62,7 +62,7 @@
                             IsTabStop="False"
                             Style="{StaticResource ColumnListItemStyle}"
                             >
-                            <Grid grid:Props.ColumnWidths="Auto,*">
+                            <Grid grid:Props.ColumnWidths="45,*">
                                 <imaging:CrispImage
                                     Name="StartActionImage"
                                     Grid.Column="0"
@@ -84,9 +84,9 @@
                                         Margin="0"
                                         Padding="5,0,5,0"
                                         HorizontalAlignment="Left"
-                                        FontFamily="Segoe WP Semilight"
-                                        FontSize="20"
-                                        FontWeight="SemiBold"
+                                        FontFamily="{StaticResource DefaultFont}"
+                                        FontSize="19"
+                                        FontWeight="Normal"
                                         Foreground="{DynamicResource ItemNameBrush}"
                                         Text="{Binding Name}"
                                         TextWrapping="Wrap"
@@ -94,9 +94,9 @@
 
                                     <TextBlock x:Name="StartActionDescription"
                                         Margin="0"
-                                        Padding="5,0,5,5"
-                                        FontFamily="Segoe WP Semilight"
-                                        FontSize="12"
+                                        Padding="7,0,5,5"
+                                        FontFamily="{StaticResource DefaultFont}"
+                                        FontSize="13"
                                         FontWeight="Normal"
                                         Foreground="{DynamicResource ItemDescriptionBrush}"
                                         Text="{Binding Description}"

@@ -7,6 +7,8 @@
         <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
+    <FontFamily x:Key="DefaultFont">Segoe UI</FontFamily>
+
     <!-- Columns -->
 
     <Style x:Key="ColumnStyle"
@@ -22,11 +24,12 @@
     <Style x:Key="ColumnHeadingStyle"
         TargetType="TextBlock"
         >
-        <Setter Property="Margin" Value="10,10,10,5"/>
-        <Setter Property="Padding" Value="5,0,0,0"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
         <Setter Property="FontSize" Value="20"/>
-        <Setter Property="Foreground" Value="{DynamicResource ColumnHeadingBrush}"/>
         <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Foreground" Value="{DynamicResource ColumnHeadingBrush}"/>
+        <Setter Property="Margin" Value="10,10,10,5"/>
+        <Setter Property="Padding" Value="0,0,0,0"/>
     </Style>
 
 
@@ -35,24 +38,35 @@
     <Style x:Key="ColumnListStyle"
         TargetType="ListView"
         >
-        <Setter Property="Margin" Value="10,0"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="DockPanel.Dock" Value="Top"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
         <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Margin" Value="5,0"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="SelectedIndex" Value="{Binding SelectedIndex, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
         <Setter Property="SelectedItem" Value="{Binding SelectedItem, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
         <Setter Property="SelectionMode" Value="Single"/>
+    </Style>
+
+    <Style x:Key="ColumnListItemContainerStyle"
+        TargetType="ListViewItem"
+        >
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="IsTabStop" Value="False"/>
     </Style>
 
     <Style x:Key="ColumnListItemStyle"
         TargetType="Button"
         >
-        <Setter Property="IsTabStop" Value="False"/>
         <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+        <Setter Property="IsTabStop" Value="False"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -107,14 +121,6 @@
         </Setter>
     </Style>
 
-    <Style x:Key="ColumnListItemContainerStyle"
-        TargetType="ListViewItem"
-        >
-        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-        <Setter Property="IsTabStop" Value="False"/>
-        <Setter Property="Cursor" Value="Hand"/>
-    </Style>
-
     <!-- https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377 -->
 
     <!-- Commands -->
@@ -122,7 +128,7 @@
     <Style x:Key="ColumnCommandsStyle"
         TargetType="ItemsControl"
         >
-        <Setter Property="Margin" Value="10,10,10,5"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
         <Setter Property="DockPanel.Dock" Value="Bottom"/>
         <Setter Property="ItemsSource" Value="{Binding Commands}"/>
         <Setter Property="IsTabStop" Value="False"/>
@@ -133,13 +139,16 @@
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
+        <Setter Property="Margin" Value="10,3,10,3"/>
 
         <Setter Property="ItemTemplate">
             <Setter.Value>
                 <DataTemplate>
                     <Button x:Name="CommandButton"
+                        VerticalContentAlignment="Bottom"
                         Command="{Binding Command}"
                         Content="{Binding Name}"
+                        FontFamily="{StaticResource DefaultFont}"
                         IsEnabled="{Binding IsEnabled}"
                         IsTabStop="False"
                         Visibility="{Binding IsVisible, Converter={c:BoolToVisibilityConverter}}"
@@ -147,10 +156,11 @@
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">
                                 <TextBlock x:Name="text"
-                                    Height="30"
+                                    Margin="0,5"
                                     HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
+                                    VerticalAlignment="Bottom"
                                     Cursor="Hand"
+                                    FontFamily="{DynamicResource DefaultFont}"
                                     FontSize="14"
                                     FontWeight="Medium"
                                     Foreground="{DynamicResource CommandActiveBrush}"
@@ -178,8 +188,9 @@
     <Style x:Key="ColumnCommandContainerStyle"
         TargetType="ListViewItem"
         >
-        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="IsTabStop" Value="False"/>
     </Style>
 
@@ -268,13 +279,14 @@
     </Style>
 
     <Style TargetType="{x:Type Expander}">
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Expander}">

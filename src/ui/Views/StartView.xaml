@@ -17,6 +17,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -31,6 +32,7 @@
             HorizontalAlignment="Stretch"
             VerticalAlignment="Top"
             DockPanel.Dock="Top"
+            FontFamily="{StaticResource DefaultFont}"
             FontSize="24"
             FontWeight="Light"
             Foreground="{DynamicResource TitleBrush}"
@@ -41,6 +43,8 @@
 
         <ItemsControl
             Margin="10,0,0,0"
+            Padding="0"
+            Foreground="{DynamicResource TitleBrush}"
             IsTabStop="False"
             ItemsSource="{Binding Columns}"
             >

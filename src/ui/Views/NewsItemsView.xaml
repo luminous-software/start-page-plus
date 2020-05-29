@@ -49,23 +49,23 @@
                             <DockPanel x:Name="NewsItemContainer"
                                 Margin="0,0,0,5"
                                 >
-                                <TextBlock x:Name="Title"
+                                <TextBlock x:Name="RecentItemName"
                                     Margin="0,0,0,2"
                                     DockPanel.Dock="Top"
-                                    FontFamily="Segoe WP Semilight"
-                                    FontSize="14"
-                                    FontWeight="Bold"
+                                    FontFamily="{StaticResource DefaultFont}"
+                                    FontSize="15"
+                                    FontWeight="SemiBold"
                                     Foreground="{DynamicResource ItemNameBrush}"
                                     Text="{Binding Title}"
                                     TextTrimming="WordEllipsis"
                                     TextWrapping="NoWrap"
                                     />
 
-                                <TextBlock x:Name="Description"
+                                <TextBlock x:Name="RecentItemDescription"
                                     MaxHeight="45"
                                     DockPanel.Dock="Top"
-                                    FontFamily="Segoe WP Semilight"
-                                    FontSize="12"
+                                    FontFamily="{StaticResource DefaultFont}"
+                                    FontSize="13"
                                     Foreground="{DynamicResource ItemDescriptionBrush}"
                                     Text="{Binding Description}"
                                     TextTrimming="WordEllipsis"
@@ -78,7 +78,7 @@
                                     Orientation="Horizontal"
                                     >
                                     <TextBlock x:Name="New"
-                                        FontFamily="Segoe WP Semilight"
+                                        FontFamily="{StaticResource DefaultFont}"
                                         FontSize="10"
                                         Foreground="Orange"
                                         Text="{Binding New}"
@@ -86,7 +86,7 @@
                                         />
 
                                     <TextBlock x:Name="Date"
-                                        FontFamily="Segoe WP Semilight"
+                                        FontFamily="{StaticResource DefaultFont}"
                                         FontSize="11"
                                         FontWeight="Medium"
                                         Foreground="{DynamicResource ItemDateBrush}"

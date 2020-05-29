@@ -22,6 +22,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -36,6 +37,7 @@
         <TextBlock x:Name="Company"
             Height="50"
             DockPanel.Dock="Top"
+            FontFamily="Segoe UI LIght"
             FontSize="26"
             Foreground="{DynamicResource TextLightBrush}"
             Text="{Binding Company}"
@@ -45,13 +47,14 @@
 
         <TabControl x:Name="MainTabs"
             Background="Transparent"
+            FontFamily="{StaticResource DefaultFont}"
             IsTabStop="False"
             ItemsSource="{Binding Tabs}"
             SelectedIndex="0"
             >
             <TabControl.Resources>
                 <Style TargetType="TabItem">
-                    <Setter Property="FontSize" Value="26"/>
+                    <Setter Property="FontSize" Value="28"/>
                     <Setter Property="IsTabStop" Value="False"/>
                     <Setter Property="Template">
                         <Setter.Value>
@@ -106,14 +109,14 @@
 
             <TabControl.Template>
                 <ControlTemplate TargetType="TabControl">
-                    <Grid
+                    <Grid x:Name="TabControlContainer"
                         grid:Props.RowHeights="Auto,*"
                         Background="{DynamicResource MenuBackgroundBrush}"
                         KeyboardNavigation.TabNavigation="Local"
                         >
                         <TabPanel x:Name="HeaderPanel"
                             Grid.Row="0"
-                            Margin="0,0,0,15"
+                            Margin="0,0,0,10"
                             Panel.ZIndex="1"
                             IsItemsHost="True"
                             KeyboardNavigation.TabIndex="1"
