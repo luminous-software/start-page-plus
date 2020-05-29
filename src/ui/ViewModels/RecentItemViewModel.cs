@@ -47,15 +47,15 @@ namespace StartPagePlus.UI.ViewModels
         public bool Pinned { get; set; }
 
         private void SelectItem()
-            => MessengerInstance.Send(new RecentItemSelectedMessage(this));
+            => MessengerInstance.Send(new RecentItemClickedMessage(this));
 
         private void TogglePinned()
-            => MessengerInstance.Send(new RecentItemPinnedOrUnpinnedMessage(this));
+            => MessengerInstance.Send(new RecentItemTogglePinnedClickedMessage(this));
 
         private void RemoveItem()
-            => MessengerInstance.Send(new RecentItemRemovedMessage(this));
+            => MessengerInstance.Send(new RecentItemRemoveClickedMessage(this));
 
         private void CopyItemPath()
-            => MessengerInstance.Send(new RecentItemCopyPathMessage(this));
+            => MessengerInstance.Send(new RecentItemCopyPathClickedMessage(this));
     }
 }

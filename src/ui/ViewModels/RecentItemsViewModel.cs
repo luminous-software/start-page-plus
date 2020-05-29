@@ -42,11 +42,11 @@ namespace StartPagePlus.UI.ViewModels
             GetCommands();
             Refresh();
 
-            MessengerInstance.Register<RecentItemsRefreshMessage>(this, RefreshRequested);
-            MessengerInstance.Register<RecentItemSelectedMessage>(this, SelectItem);
-            MessengerInstance.Register<RecentItemPinnedOrUnpinnedMessage>(this, TogglePinned);
-            MessengerInstance.Register<RecentItemRemovedMessage>(this, RemoveItem);
-            MessengerInstance.Register<RecentItemCopyPathMessage>(this, CopyItemPath);
+            MessengerInstance.Register<RecentItemsRefreshRequestedMessage>(this, RefreshRequested);
+            MessengerInstance.Register<RecentItemClickedMessage>(this, SelectItem);
+            MessengerInstance.Register<RecentItemTogglePinnedClickedMessage>(this, TogglePinned);
+            MessengerInstance.Register<RecentItemRemoveClickedMessage>(this, RemoveItem);
+            MessengerInstance.Register<RecentItemCopyPathClickedMessage>(this, CopyItemPath);
         }
 
         public IRecentItemContextMenuService ContextMenuService { get; }
@@ -79,7 +79,7 @@ namespace StartPagePlus.UI.ViewModels
                 if (Set(ref refreshed, value, nameof(Refreshed)) && (value == true))
                 {
                     SelectedItem = null;
-                    MessengerInstance.Send(new RecentItemsRefreshedMessage());
+                    MessengerInstance.Send(new RecentItemsRefreshClickedMessage());
                 }
             }
         }
@@ -133,10 +133,10 @@ namespace StartPagePlus.UI.ViewModels
                 CanRemoveItem, RemoveItem,
                 CanCopyItemPath, CopyItemPath);
 
-        private void SelectItem(RecentItemSelectedMessage message)
+        private void SelectItem(RecentItemClickedMessage message)
             => ActionService.ExecuteAction(message.Content);
 
-        private void TogglePinned(RecentItemPinnedOrUnpinnedMessage message)
+        private void TogglePinned(RecentItemTogglePinnedClickedMessage message)
         {
             var item = message.Content;
 
@@ -187,7 +187,7 @@ namespace StartPagePlus.UI.ViewModels
         private bool CanRemoveItem
             => (SelectedItem != null);
 
-        private void RemoveItem(RecentItemRemovedMessage message)
+        private void RemoveItem(RecentItemRemoveClickedMessage message)
         {
             var item = message.Content;
 
@@ -209,7 +209,7 @@ namespace StartPagePlus.UI.ViewModels
         private bool CanCopyItemPath
             => (SelectedItem != null);
 
-        private void CopyItemPath(RecentItemCopyPathMessage message)
+        private void CopyItemPath(RecentItemCopyPathClickedMessage message)
         {
             var item = message.Content;
 
@@ -244,7 +244,7 @@ namespace StartPagePlus.UI.ViewModels
             Refreshed = true;
         }
 
-        private void RefreshRequested(RecentItemsRefreshMessage message)
+        private void RefreshRequested(RecentItemsRefreshRequestedMessage message)
             => Refresh();
     }
 }

@@ -41,7 +41,7 @@ namespace StartPagePlus.UI.Views
                 RefreshViewWhenFilterChanges(view);
                 SetSelectedItemToNull();
 
-                Messenger.Default.Register<RecentItemsRefreshedMessage>(this, FocusFilterTextBox);
+                Messenger.Default.Register<RecentItemsRefreshClickedMessage>(this, FocusFilterTextBox);
             }
             catch (Exception ex)
             {

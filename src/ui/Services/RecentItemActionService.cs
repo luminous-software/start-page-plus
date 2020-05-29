@@ -80,6 +80,6 @@ namespace StartPagePlus.UI.Services
             => DataService.SetLastAccessed(path, DateTimeService.Today.Date);
 
         private void SendRefreshMessage()
-            => Messenger.Default.Send(new RecentItemsRefreshMessage());
+            => Messenger.Default.Send(new RecentItemsRefreshRequestedMessage());
     }
 }
