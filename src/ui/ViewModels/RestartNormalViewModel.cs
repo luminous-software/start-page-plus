@@ -8,11 +8,11 @@ namespace StartPagePlus.UI.ViewModels
     {
         public RestartNormalViewModel(IVisualStudioService vsService) : base(vsService)
         {
-            Moniker = KnownMonikers.VisualStudio;
+            Moniker = KnownMonikers.Restart;
             Name = "Restart Visual Studio";
             Description = "Restart Visual Studio and come back to the same project";
-            ImageSize = 32;
-            Margin = "10,0,0,0";
+            ImageSize = 34;
+            Margin = "11,0,0,0";
         }
 
         protected override void ExecuteClick()

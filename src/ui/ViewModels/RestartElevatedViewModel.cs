@@ -8,11 +8,11 @@ namespace StartPagePlus.UI.ViewModels
     {
         public RestartElevatedViewModel(IVisualStudioService vsService) : base(vsService)
         {
-            Moniker = KnownMonikers.VisualStudioExpressWindowsPhone;
+            Moniker = KnownMonikers.User;
             Name = "Restart As Administrator";
-            Description = "Restart an elevated Visual Studio session";
-            ImageSize = 36;
-            Margin = "10,0,0,0";
+            Description = "Restart in an elevated Visual Studio session";
+            ImageSize = 34;
+            Margin = "11,0,0,0";
         }
 
         protected override void ExecuteClick()
