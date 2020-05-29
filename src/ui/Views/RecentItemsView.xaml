@@ -44,7 +44,7 @@
                 Text="{Binding Heading}"
                 />
 
-            <Grid
+            <Grid x:Name="RecentItemFilterContainer"
                 Margin="10,0,10,6"
                 DockPanel.Dock="Top"
                 >
@@ -78,7 +78,7 @@
                 </Button>
             </Grid>
 
-            <ItemsControl x:Name="Commands"
+            <ItemsControl x:Name="RecentItemCommands"
                 Style="{StaticResource ColumnCommandsStyle}"
                 />
 
@@ -104,10 +104,9 @@
                                                 IsTabStop="False"
                                                 OverridesDefaultStyle="True"
                                                 >
-                                                <!-- Template="{StaticResource PlusMinusExpanderTemplate}" -->
                                                 <Expander.Header>
                                                     <StackPanel Orientation="Horizontal">
-                                                        <TextBlock
+                                                        <TextBlock x:Name="RecentItemGroupName"
                                                             Margin="5,5,5,2"
                                                             HorizontalAlignment="Left"
                                                             FontFamily="{StaticResource DefaultFont}"
@@ -116,7 +115,7 @@
                                                             Foreground="{DynamicResource ItemGroupNameBrush}"
                                                             Text="{Binding Path=Name, Converter={c:PeriodTypeToNameConverter}}"
                                                             />
-                                                        <TextBlock
+                                                        <TextBlock x:Name="RecentItemGroupCount"
                                                             Margin="2,4,0,0"
                                                             VerticalAlignment="Center"
                                                             FontFamily="{StaticResource DefaultFont}"
@@ -249,7 +248,7 @@
                                             Padding="0"
                                             HorizontalAlignment="Stretch"
                                             FontFamily="{StaticResource DefaultFont}"
-                                            FontSize="11"
+                                            FontSize="12"
                                             FontWeight="Normal"
                                             Foreground="{DynamicResource ItemDescriptionBrush}"
                                             Text="{Binding Description}"
@@ -275,8 +274,10 @@
 
                         <ContextMenu.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <imaging:CrispImage x:Name="ContextCommandImage"
+                                <StackPanel x:Name="RecentItemContextCommand"
+                                    Orientation="Horizontal"
+                                    >
+                                    <imaging:CrispImage x:Name="RecentItemContextCommandImage"
                                         Width="16"
                                         Height="16"
                                         Margin="-42,0,0,0"
@@ -285,7 +286,7 @@
                                         Moniker="{Binding Moniker}"
                                         Stretch="Fill"
                                         />
-                                    <TextBlock x:Name="ContextCommandName"
+                                    <TextBlock x:Name="RecentItemContextCommandName"
                                         FontFamily="{StaticResource DefaultFont}"
                                         Text="{Binding Name}"
                                         />
