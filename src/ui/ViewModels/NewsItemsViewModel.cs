@@ -2,16 +2,19 @@
 
 using GalaSoft.MvvmLight.Messaging;
 
+using Luminous.Code.VisualStudio.Packages;
+
 using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.ViewModels
 {
     using Core.Interfaces;
 
-
     using Interfaces;
 
     using Options.Models;
+    using Options.Pages;
+
 
     public class NewsItemsViewModel : ColumnViewModel
     {
@@ -49,18 +52,20 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         private void GetCommands()
-            => Commands = CommandService.GetCommands(Refresh);
+            => Commands = CommandService.GetCommands(Refresh, OpenSettings);
 
         public void Refresh()
         {
-            var itemsToDisplay = SettingOptions.Instance.NewsItemsToDisplay;
-
             Items.Clear();
 
-            var url = SettingOptions.Instance.DeveloperNewsUrl;
+            var itemsToDisplay = NewsItemsOptions.Instance.NewsItemsToDisplay;
+            var url = NewsItemsOptions.Instance.NewsItemsFeedUrl;
 
             ThreadHelper.JoinableTaskFactory.RunAsync(
                 async () => Items = await DataService.GetItemsAsync(url, itemsToDisplay));
         }
+
+        private void OpenSettings()
+            => AsyncPackageBase.Instance.ShowOptionsPage<DialogPageProvider.NewsItems>();
     }
 }

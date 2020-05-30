@@ -20,7 +20,7 @@ namespace StartPagePlus.Commands
             => await InstantiateAsync(new StartPagePlusOptions(package));
 
         protected override bool CanExecute
-          => base.CanExecute && FeatureOptions.Instance.EnableStartPagePlusOptions;
+          => base.CanExecute && GeneralOptions.Instance.EnableStartPagePlusOptions;
 
         protected override void OnExecute(OleMenuCommand command)
             => ExecuteCommand()

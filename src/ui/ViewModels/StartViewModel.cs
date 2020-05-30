@@ -10,7 +10,7 @@ namespace StartPagePlus.UI.ViewModels
         {
 
             Name = "Start";
-            Title = SettingOptions.Instance.StartTabTitleText;
+            Title = StartTabOptions.Instance.StartTabTitleText;
             IsVisible = true;
             Columns = new ObservableCollection<ColumnViewModel>
             {
@@ -23,6 +23,6 @@ namespace StartPagePlus.UI.ViewModels
         public ObservableCollection<ColumnViewModel> Columns { get; set; }
 
         public bool ShowStartTabTitle
-            => SettingOptions.Instance.ShowStartTabTitle;
+            => StartTabOptions.Instance.ShowStartTabTitle;
     }
 }

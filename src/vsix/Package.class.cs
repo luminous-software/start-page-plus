@@ -19,6 +19,8 @@ namespace StartPagePlus
 
     using Options.Pages;
 
+    using StartPagePlus.Options.Models;
+
     using UI;
     using UI.ViewModels;
 
@@ -29,11 +31,13 @@ namespace StartPagePlus
 
     [InstalledProductRegistration(Name, Description, Version)]
     [Guid(PackageString)]
-    [DisplayName("Start Page+")]
+    [DisplayName(Name)]
 
     [ProvideOptionPage(typeof(DialogPageProvider.General), Name, nameof(DialogPageProvider.General), 0, 0, supportsAutomation: true)]
-    [ProvideOptionPage(typeof(DialogPageProvider.Features), Name, nameof(DialogPageProvider.Features), 0, 0, supportsAutomation: true)]
-    [ProvideOptionPage(typeof(DialogPageProvider.Settings), Name, nameof(DialogPageProvider.Settings), 0, 0, supportsAutomation: true)]
+    [ProvideOptionPage(typeof(DialogPageProvider.StartTab), Name, StartTabOptions.Category, 0, 0, supportsAutomation: true)]
+    [ProvideOptionPage(typeof(DialogPageProvider.RecentItems), Name, RecentItemsOptions.Category, 0, 0, supportsAutomation: true)]
+    [ProvideOptionPage(typeof(DialogPageProvider.NewsItems), Name, NewsItemsOptions.Category, 0, 0, supportsAutomation: true)]
+
     [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
 
     public sealed class PackageClass : AsyncPackageBase

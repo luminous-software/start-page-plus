@@ -3,6 +3,8 @@ using System.Windows.Controls;
 
 using GalaSoft.MvvmLight.Command;
 
+using Luminous.Code.VisualStudio.Packages;
+
 namespace StartPagePlus.UI.ViewModels
 {
 
@@ -13,6 +15,7 @@ namespace StartPagePlus.UI.ViewModels
     using Messages;
 
     using Options.Models;
+    using Options.Pages;
 
     public class RecentItemsViewModel : ColumnViewModel
     {
@@ -124,7 +127,7 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         private void GetCommands()
-            => Commands = CommandService.GetCommands(Refresh);
+            => Commands = CommandService.GetCommands(Refresh, OpenSettings);
 
         private void GetContextCommands()
             => ContextCommands = CommandService.GetContextCommands(
@@ -229,9 +232,9 @@ namespace StartPagePlus.UI.ViewModels
         {
             Refreshed = false;
 
-            var settingOptions = SettingOptions.Instance;
-            var itemsToDisplay = settingOptions.RecentItemsToDisplay;
-            var showExtensions = settingOptions.ShowRecentItemExtensions;
+            var options = RecentItemsOptions.Instance;
+            var itemsToDisplay = options.ItemsToDisplay;
+            var showExtensions = options.ShowFileExtensions;
             var items = DataService.GetItems(itemsToDisplay, showExtensions);
 
             Items.Clear();
@@ -246,5 +249,8 @@ namespace StartPagePlus.UI.ViewModels
 
         private void RefreshRequested(RecentItemsRefreshRequestedMessage message)
             => Refresh();
+
+        private void OpenSettings()
+            => AsyncPackageBase.Instance.ShowOptionsPage<DialogPageProvider.RecentItems>();
     }
 }

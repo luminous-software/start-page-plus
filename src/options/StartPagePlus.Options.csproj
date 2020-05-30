@@ -54,13 +54,14 @@
     <Compile Include="Constants\PageConstants.cs" />
     <Compile Include="Models\BaseOptionModel.cs" />
     <Compile Include="Models\GeneralOptions.cs" />
-    <Compile Include="Models\FeatureOptions.cs" />
+    <Compile Include="Models\NewsItemsOptions.cs" />
+    <Compile Include="Models\RecentItemsOptions.cs" />
+    <Compile Include="Models\StartTabOptions.cs" />
     <Compile Include="Pages\BaseOptionPage.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Pages\DialogPageProvider.cs" />
     <Compile Include="Constants\OptionsGuids.cs" />
-    <Compile Include="Models\SettingOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,7 @@ namespace StartPagePlus.UI.Interfaces
 
     public interface IRecentItemCommandService
     {
-        ObservableCommandList GetCommands(Action refresh);
+        ObservableCommandList GetCommands(Action refresh, Action showSettings);
 
         ObservableContextCommandList GetContextCommands(
             bool canPin, Action pin,

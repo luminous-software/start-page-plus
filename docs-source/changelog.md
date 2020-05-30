@@ -12,29 +12,32 @@ page on the [Start Page+][start-page-plus-url] website.
   - a **Restart Visual Studio** item to *Get Started* column [(GitHub Issue #20)][github-issue-20]
     - also a Restart Visual Studio **_as Administrator_** item
   - the ability to **pin**/**unpin** items in the *Recent Items* list [(GitHub Issue #21)][github-issue-21]
-  - a **Max Width** setting [(GitHub Issue #32)][github-issue-32]
+  - a **Max Width** option [(GitHub Issue #32)][github-issue-32]
     - replaces fixed width of `1175`
   - the ability to **remove** items from the *Recent Items* list [(GitHub Issue #35)][github-issue-35]
   - the ability to **copy** an item's path to the Windows clipboard
   - the ability to **collapse**/**expand** the group headings in the *Recent Items* list
-  - a _functional_ **Pin** button to *Recent Items*
+  - **Pin**/**Unpin** buttons to *Recent Items*
     - previous pinned button did nothing
-  - an **Unpin** button to *Recent Items*
-  - a **Remove** button to *Recent Items* that only appears when the mouse hovers over an item
-  - an **auto-refresh** to *Recent Items* after an item is clicked
+  - a **Remove** button to *Recent Items* (only appears when the mouse hovers over an item)
+  - an **auto-refresh** to *Recent Items* after an item is clicked (updates the date/group it falls into)
+  - new options pages (**Start Tab**, **Recent Items**, **Developer News**)
   - a **Changelog** button to the left of the version number in the *Get Started* column
     - opens the website's changelog page
   - an **Options** button to the right of the version number in the *Get Started* column
-    - opens `Tools` | `Options` | `Start Page+` | `General`
+    - opens `Tools` | `Options` | `Start Page+` | `General` in one click
+  - a **Settings** button to the right of the *Refresh* button in the *Recent Items* column
+    - opens `Tools` | `Options` | `Start Page+` | `Start Tab` | `Recent Items` in one click
+  - a **Settings** button to the right of the *Refresh* button in the *Developer News* column
+    - opens `Tools` | `Options` | `Start Page+` | `Start Tab` | `Developer News` in one click
   - a **Start Page+ Options** menu item to open `Tools` | `Options` | `Start Page+` | `General`
     - found in `Tools` | `Options`
-  - new options pages (**Features**, **Settings**)
-  - a **Recent Items to Display** setting
-  - a **Hide Extensions** setting to hide a project/solution's extension in *Recent Items* list
-  - a setting to **display**, or **not display**, the *Start* tab's title
-  - a setting that allows you to **change** the *Start* tab's title text
-  - a **News Items to Display** setting
-  - a **Developer News Url** setting
+  - an **Items to Display** option for *Recent Items*
+  - a **Show Extensions** option to show or hide project/solution extensions in *Recent Items* list
+  - a **Show Start Tab Title** option
+  - a **Start Tab Title Text** option that allows you to change the *Start* tab's title text
+  - an **Items to Display** option for *Developer News*
+  - an **Items Feed Url** option for *Developer News*
 
 [github-issue-20]: https://github.com/luminous-software/start-page-plus/issues/20
 [github-issue-21]: https://github.com/luminous-software/start-page-plus/issues/21

@@ -32,7 +32,7 @@ namespace StartPagePlus.UI.ViewModels
         public ObservableCollection<TabViewModel> Tabs { get; }
 
         public int MaxWidth
-            => SettingOptions.Instance.MaxWidth;
+            => StartTabOptions.Instance.MaxWidth;
     }
 
 }
