@@ -50,8 +50,6 @@
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="Interfaces\IDateTimeService.cs" />
     <Compile Include="Interfaces\IDialogService.cs" />
-    <Compile Include="Models\FeedItem.cs" />
-    <Compile Include="Models\NewsItemFeedItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Services\GlobalServices.cs" />
