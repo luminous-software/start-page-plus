@@ -16,7 +16,7 @@ as you type.
 
 Click the **X** in the filter box to start again, or to go back to the full list of items.
 
-### Collapse/Expand Timeframes
+### Collapsible Timeframes
 
 Each timeframe group can be collapsed or expanded by clicking anywhere on the group name.
 This can come in handy if you want to view items that are currently not being displayed
@@ -44,6 +44,11 @@ path to the Windows clipboard. You can then paste it anywhere you need to.
 When you select the number of items to display, you'll need to click the *Refresh* button to see
 the change.
 It's also a quick way to expand all of the timeframe groups at once.
+
+### Settings
+
+Clicking on the *Settings* button will open the *Recent Items* settings page in the
+Tools | Options | Start Page+ dialog without having to navigate through teh dropdowns.
 
 ## Start Actions
 
@@ -76,7 +81,7 @@ A quick way to get to the *New Project* dialog without having to use `File` | `N
 Any time you need to restart Visual Studio you can do it from the *Start Page+* window in just one click.
 No need to close and re-open Visual Studio manually.
 
-### Restart Visual Studio As Administrator
+### Restart As Administrator
 
 You can also restart Visual Studio as Administrator without having to you through the hassle of finding
 and right-clcking a Visual Studio shortcut etc.
@@ -111,6 +116,26 @@ start page.
 
 ![Developer News](assets/images/developer-news.png)
 
+### Set Items Feed Url
+
+By default the feed url is set to the url of the original *Developer News* that used to be in Visual Studio 2017.
+Microsoft is currently still maintaining that feed, but could stop doing so at any time.
+You could choose to use the *Visual Studio Blog* feed url instead if you wanted.
+
+In the past the two feeds have displayed a different set of posts,
+with Visual Studio Blog having more posts that the Developer News feed.
+But it seems that may currently have the same items.
+
+The *Visual Studio Blog* feed url is `https://devblogs.microsoft.com/visualstudio/feed`.
+
+### Set Items to Display
+
+You can choose the number of items that are displayed in the list.
+
+There are only 10 items in the orginal feed, and Microsoft replaces older posts with new ones.
+If you set a feed url to something that has a lerger number of items you might want to limit
+how many are downloaded and displayed.
+
 ### Open Links in VS or Browser
 
 By default the items open right in VS itself, rather than switching to the default browser.
@@ -121,17 +146,12 @@ to switch to a different application, and then back again to Visual Studio.
 However, for those people who prefer links to be opened in their default browser,
 there's an option to change Start Page+'s behavior to do just that.
 
-### News Items to Display
-
-You can decide how many news items you want displayed in your *Developer News* list,
-by clicking on the *Options* button, then clicking on the *Settings* page.
-
-## Refresh
+### Refresh
 
 There is currently no auto-refresh for *Developer News*, so you'll have to click *Refresh* to
 check if you have the latest available news items from Microsoft.
 
-ALso, when you select the number of items to display, you'll need to click the *Refresh* button
+Also, when you select the number of items to display, you'll need to click the *Refresh* button
 to see the change.
 
 ## General Options
@@ -140,82 +160,31 @@ to see the change.
 
 ### Enable 'Start Page+'
 
-This setting allows _Start Page+_ to be *turned off*, without having to uninstall the _Start Page+_ extension,
-which would require you to exit **all** instances of Visual Studio, wait while the _VSIX installer_ does its thing,
+This setting allows _Start Page+_ to be disabled if you need to,
+without having to uninstall the _Start Page+_ extension, which would require you to exit
+**all** instances of Visual Studio, wait while the _VSIX installer_ does its thing,
 then open Visual Studio again.
 
-If you're worried about the _Start Page+_ extension still using resources, once you enable this setting,
-the _View_ | _Start Page+_ and the _Tools_ | _Start Page+ Options_ menu items will no longer be available,
-so the extension will have no need to be loaded.
+### Enable 'Start Page+ Options'
 
-However, instances of any tool window are never _destroyed_ when they're _closed_, so until you close Visual Studio there will
-be some remaining resources being used. But the next time you start Visual Studio, there'll be no way to open
-the _Start Page+_ window, so the extension will not need to be loaded.
+By default, a 'Start Page+ Options' command is added to the `Tools` | `Options` menu.
+This setting lets you choose to not have the menu item added.
+
+The default value is `true`.
 
 ### Version Number
 
 This setting simply displays the version number of _Start Page+_ that's currently installed.
 
-## Feature Options
+## Start Tab Options
 
-![Feature Options](assets/images/options-features.png)
-
-### Enable 'Open Links in VS'
-
-When this setting is set to `true`, any clicked item that opens a web page will be opened in a browser window
-**inside** of Visual Studio.
-
-When set to `false`, clicked items that open a web page will be opened in your default browser.
-
-The default value is `true`.
-
-### Enable 'Start Page+ Options'
-
-When this setting is set to `true` a 'Start Page+ Options' command is added to the `Tools` | `Options` menu.
-
-The default value is `true`.
-
-## Setting Options
-
-![Feature Options](assets/images/options-settings.png)
-
-### Developer News Url
-
-This setting allows you to change the feed url for *Developer News* to any RSS feed that you choose.
-
-Microsoft is currently still maintaining the original feed, but could stop doing that at any time.
-You could choose to use the *Visual Studio Blog* feed url instead if you wanted.
-
-In the past the two feeds have displayed a different set of posts,
-with Visual Studio Blog having more posts that the Developer News feed.
-But it seems that may currently have the same items.
-The *Visual Studio Blog* feed url is `https://devblogs.microsoft.com/visualstudio/feed/`.
-
-The default value is `https://vsstartpage.blob.core.windows.net/news/vs`.
+![Start Tab Options](assets/images/options-start-tab.png)
 
 ### Max Width
 
 This setting will allow you to make the contents of the _Start Page+_ window wider or narrower
 
 The default value is `1175`.
-
-### News Items to Display
-
-This setting will allow you to determine how many items are displayed in the *Developer News* list.
-
-The default value is `10`.
-
-### Recent Items to Display
-
-This setting will allow you to determine how many items are displayed in the *Recent Item* list.
-
-The default value is `50`.
-
-### Show Recent Item Extensions
-
-This setting allows to hide a project/solution's extension (.csproj, .sln) in the *Recent Items* list.
-
-The default value is `false`;
 
 ### Show Start Tab Title
 
@@ -228,3 +197,44 @@ The default value is `true`.
 This setting will allow you to change the *Start* tab title.
 
 The default value is `What would you like to do today?`.
+
+## Recent Items Options
+
+![Recent Items Options](assets/images/options-recent-items.png)
+
+### Items to Display
+
+This setting will allow you to determine how many items are displayed in the *Recent Item* list.
+
+The default value is `50`.
+
+### Show File Extensions
+
+This setting allows to hide a project/solution's extension (.csproj, .sln) in the *Recent Items* list.
+
+The default value is `false`;
+
+## Developer News Options
+
+![Developer News Options](assets/images/options-developer-news.png)
+
+### Items to Display
+
+This setting will allow you to determine how many items are displayed in the *Developer News* list.
+
+The default value is `10`.
+
+### Items Feed Url
+
+This setting allows you to change the feed url for *Developer News* to any RSS feed that you choose.
+
+The default value is `https://vsstartpage.blob.core.windows.net/news/vs`.
+
+### Open Links in VS
+
+When this setting is set to `true`, any clicked item that opens a web page will be opened in a browser window
+**inside** of Visual Studio.
+
+When set to `false`, clicked items that open a web page will be opened in your default browser.
+
+The default value is `true`.
