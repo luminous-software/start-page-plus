@@ -57,6 +57,7 @@
     <Compile Include="Models\FeatureOptions.cs" />
     <Compile Include="Models\NewsItemsOptions.cs" />
     <Compile Include="Models\RecentItemsOptions.cs" />
+    <Compile Include="Models\StartTabOptions.cs" />
     <Compile Include="Pages\BaseOptionPage.cs">
       <SubType>Component</SubType>
     </Compile>
