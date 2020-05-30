@@ -40,7 +40,7 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         private bool OpenLinksInVS
-            => FeatureOptions.Instance.OpenLinksInVS;
+            => NewsItemsOptions.Instance.OpenLinksInVS;
 
         private void GetCommands()
             => Commands = CommandService.GetCommands(OpenChangelog, OpenWebsite, OpenOptions);

@@ -5,6 +5,7 @@ using Luminous.Code.VisualStudio.Options.Pages;
 namespace StartPagePlus.Options.Models
 {
     using static Constants.PageConstants;
+    using static Core.Constants.StringConstants;
 
     public class RecentItemsOptions : BaseOptionModel<RecentItemsOptions>
     {
@@ -13,11 +14,11 @@ namespace StartPagePlus.Options.Models
         [Category(Settings)]
         [DisplayName(RecentItemsToDisplayDisplayName)]
         [Description(RecentItemsToDisplayDescription)]
-        public int RecentItemsToDisplay { get; set; } = 50;
+        public int ItemsToDisplay { get; set; } = 50;
 
         [Category(Settings)]
-        [DisplayName(ShowRecentItemExtensionsDisplayName)]
-        [Description(ShowRecentItemExtensionsDescription)]
-        public bool ShowRecentItemExtensions { get; set; } = false;
+        [DisplayName(ShowFileExtensionsDisplayName)]
+        [Description(ShowFileExtensionsDescription)]
+        public bool ShowFileExtensions { get; set; } = false;
     }
 }

@@ -53,11 +53,10 @@ namespace StartPagePlus.UI.ViewModels
 
         public void Refresh()
         {
-            var itemsToDisplay = SettingOptions.Instance.NewsItemsToDisplay;
-
             Items.Clear();
 
-            var url = SettingOptions.Instance.DeveloperNewsUrl;
+            var itemsToDisplay = NewsItemsOptions.Instance.NewsItemsToDisplay;
+            var url = NewsItemsOptions.Instance.NewsItemsFeedUrl;
 
             ThreadHelper.JoinableTaskFactory.RunAsync(
                 async () => Items = await DataService.GetItemsAsync(url, itemsToDisplay));

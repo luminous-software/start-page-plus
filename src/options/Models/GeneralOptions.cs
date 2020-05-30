@@ -10,9 +10,14 @@ namespace StartPagePlus.Options.Models
     public class GeneralOptions : BaseOptionModel<GeneralOptions>
     {
         [Category(General)]
-        [DisplayName(Enable + Space + Quote + PackageName + Quote)]
-        [Description("Allows the whole set of '" + PackageName + "' features to be turned off together")]
+        [DisplayName(EnableStartPagePlusDispayName)]
+        [Description(EnableStartPagePlusDescription)]
         public bool EnableStartPagePlus { get; set; } = true;
+
+        [Category(General)]
+        [DisplayName(EnableOptionsMenuItemDispayName)]
+        [Description(EnableOptionsMenuItemDescription)]
+        public bool EnableStartPagePlusOptions { get; set; } = true;
 
         [Category(General)]
         [DisplayName(Constants.PageConstants.PackageVersion)]

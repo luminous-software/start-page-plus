@@ -38,9 +38,6 @@ namespace StartPagePlus
     [ProvideOptionPage(typeof(DialogPageProvider.RecentItems), Name, RecentItemsOptions.Category, 0, 0, supportsAutomation: true)]
     [ProvideOptionPage(typeof(DialogPageProvider.NewsItems), Name, NewsItemsOptions.Category, 0, 0, supportsAutomation: true)]
 
-    [ProvideOptionPage(typeof(DialogPageProvider.Features), Name, nameof(DialogPageProvider.Features), 0, 0, supportsAutomation: true)]
-    [ProvideOptionPage(typeof(DialogPageProvider.Settings), Name, nameof(DialogPageProvider.Settings), 0, 0, supportsAutomation: true)]
-
     [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
 
     public sealed class PackageClass : AsyncPackageBase

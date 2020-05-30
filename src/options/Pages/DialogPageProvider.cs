@@ -15,17 +15,13 @@ namespace StartPagePlus.Options.Pages
         [Guid(GeneralPageGuidString)]
         public class General : BaseOptionPage<GeneralOptions> { }
 
+        [Guid(StartTabPageGuidString)]
         public class StartTab : BaseOptionPage<StartTabOptions> { }
 
+        [Guid(RecentItemsPageGuidString)]
         public class RecentItems : BaseOptionPage<RecentItemsOptions> { }
 
+        [Guid(NewsItemsPageGuidString)]
         public class NewsItems : BaseOptionPage<NewsItemsOptions> { }
-
-
-        [Guid(SettingPageGuidString)]
-        public class Settings : BaseOptionPage<SettingOptions> { }
-
-        [Guid(FeaturePageGuidString)]
-        public class Features : BaseOptionPage<FeatureOptions> { }
     }
 }

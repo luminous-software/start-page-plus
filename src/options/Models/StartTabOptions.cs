@@ -5,6 +5,7 @@ using Luminous.Code.VisualStudio.Options.Pages;
 namespace StartPagePlus.Options.Models
 {
     using static Constants.PageConstants;
+    using static Core.Constants.StringConstants;
 
     public class StartTabOptions : BaseOptionModel<StartTabOptions>
     {
