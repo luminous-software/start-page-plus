@@ -9,7 +9,7 @@ namespace StartPagePlus.Options.Models
 
     public class NewsItemsOptions : BaseOptionModel<NewsItemsOptions>
     {
-        public const string Category = @"Start Tab\News Items";
+        public const string Category = @"Start Tab\Developer News";
 
         [Category(Settings)]
         [DisplayName(ClearListBeforeRefreshDisplayName)]
