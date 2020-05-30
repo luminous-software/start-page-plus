@@ -94,6 +94,7 @@
                         <GroupStyle.ContainerStyle>
                             <Style TargetType="GroupItem">
                                 <Setter Property="IsTabStop" Value="False"/>
+                                <Setter Property="Cursor" Value="Hand"/>
                                 <Setter Property="Template">
                                     <Setter.Value>
                                         <ControlTemplate TargetType="{x:Type GroupItem}">
