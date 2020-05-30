@@ -56,7 +56,8 @@ namespace StartPagePlus.UI.ViewModels
 
         public void Refresh()
         {
-            Items.Clear();
+            if (NewsItemsOptions.Instance.ClearListBeforeRefresh)
+                Items.Clear();
 
             var itemsToDisplay = NewsItemsOptions.Instance.NewsItemsToDisplay;
             var url = NewsItemsOptions.Instance.NewsItemsFeedUrl;

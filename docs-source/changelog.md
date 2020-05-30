@@ -36,6 +36,7 @@ page on the [Start Page+][start-page-plus-url] website.
   - a **Show Extensions** option to show or hide project/solution extensions in *Recent Items* list
   - a **Show Start Tab Title** option
   - a **Start Tab Title Text** option that allows you to change the *Start* tab's title text
+  - a **Clear List Before Display** option for *Developer News*
   - an **Items to Display** option for *Developer News*
   - an **Items Feed Url** option for *Developer News*
 

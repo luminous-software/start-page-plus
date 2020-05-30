@@ -218,6 +218,13 @@ The default value is `false`;
 
 ![Developer News Options](assets/images/options-developer-news.png)
 
+### Clear List Before Refresh
+
+This setting clears the list before the data is retrieved, so there's a visual cue that the
+list has in fact been refreshed.
+
+The default value is `true`.
+
 ### Items to Display
 
 This setting will allow you to determine how many items are displayed in the *Developer News* list.

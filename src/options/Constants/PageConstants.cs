@@ -51,6 +51,9 @@
 
         // Developer News
 
+        public const string ClearListBeforeRefreshDisplayName = "Clear List Before Refresh";
+        public const string ClearListBeforeRefreshDescription = "Clears the list to give a visual indication that the list has been refreshed";
+
         public const string NewsItemsFeedUrlDisplayName = "Items Feed Url";
         public const string NewsItemsFeedUrlDescription = "Sets the url of the 'Developer News' feed";
 

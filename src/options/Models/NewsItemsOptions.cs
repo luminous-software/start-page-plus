@@ -12,6 +12,11 @@ namespace StartPagePlus.Options.Models
         public const string Category = @"Start Tab\News Items";
 
         [Category(Settings)]
+        [DisplayName(ClearListBeforeRefreshDisplayName)]
+        [Description(ClearListBeforeRefreshDescription)]
+        public bool ClearListBeforeRefresh { get; set; } = true;
+
+        [Category(Settings)]
         [DisplayName(NewsItemsFeedUrlDisplayName)]
         [Description(NewsItemsFeedUrlDescription)]
         public string NewsItemsFeedUrl { get; set; } = "https://vsstartpage.blob.core.windows.net/news/vs";
