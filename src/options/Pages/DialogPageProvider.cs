@@ -15,6 +15,9 @@ namespace StartPagePlus.Options.Pages
         [Guid(GeneralPageGuidString)]
         public class General : BaseOptionPage<GeneralOptions> { }
 
+        public class RecentItems : BaseOptionPage<RecentItemsOptions> { }
+
+
         [Guid(SettingPageGuidString)]
         public class Settings : BaseOptionPage<SettingOptions> { }
 
