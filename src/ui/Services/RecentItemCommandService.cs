@@ -14,13 +14,18 @@ namespace StartPagePlus.UI.Services
 
     public class RecentItemCommandService : IRecentItemCommandService
     {
-        public ObservableCommandList GetCommands(Action refresh)
+        public ObservableCommandList GetCommands(Action refresh, Action showSettings)
             => new ObservableCommandList
             {
                 new CommandViewModel
                 {
                     Name = "Refresh",
                     Command = new RelayCommand(refresh, true),
+                }  ,
+                new CommandViewModel
+                {
+                    Name = "Settings",
+                    Command = new RelayCommand(showSettings, true),
                 }
             };
 
