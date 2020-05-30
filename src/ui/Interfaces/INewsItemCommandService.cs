@@ -6,7 +6,7 @@ namespace StartPagePlus.UI.Interfaces
 
     public interface INewsItemCommandService
     {
-        ObservableCommandList GetCommands(/*Action moreNews, */Action refresh);
+        ObservableCommandList GetCommands(Action refresh, Action openSettings);
 
     }
 }

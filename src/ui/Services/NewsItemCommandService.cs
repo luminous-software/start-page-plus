@@ -12,13 +12,18 @@ namespace StartPagePlus.UI.Services
 
     public class NewsItemCommandService : INewsItemCommandService
     {
-        public ObservableCommandList GetCommands(/*Action moreNews, */Action refresh)
+        public ObservableCommandList GetCommands(Action refresh, Action openSettings)
             => new ObservableCommandList
             {
                 new CommandViewModel
                 {
                     Name = "Refresh",
                     Command = new RelayCommand(refresh, true),
+                },
+                new CommandViewModel
+                {
+                    Name = "Settings",
+                    Command = new RelayCommand(openSettings, true),
                 }
             };
     }
