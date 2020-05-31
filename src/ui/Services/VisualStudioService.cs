@@ -49,8 +49,8 @@ namespace StartPagePlus.UI.Services
         private IVsShell4 VsShell4
             => GlobalServices.VsShell4;
 
-        public bool ExecuteCommand(string action)
-            => ExecuteCommand(action);
+        //public bool ExecuteCommand(string action)
+        //    => ExecuteCommand(action);
 
         public bool ExecuteCommand(string action, string args = null)
         {
