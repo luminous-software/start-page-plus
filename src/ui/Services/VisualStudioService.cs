@@ -16,6 +16,7 @@ using Diagnostics = System.Diagnostics;
 
 namespace StartPagePlus.UI.Services
 {
+    using System.Diagnostics;
 
     using Core.Interfaces;
     using Core.Services;
@@ -248,6 +249,56 @@ namespace StartPagePlus.UI.Services
                 VsShell3.IsRunningElevated(out var elevated);
 
                 return elevated;
+            }
+        }
+
+
+        public bool OpenProjectOrSolutionInVS(string path)
+        {
+            try
+            {
+                using (var proc = new Process())
+                {
+                    proc.StartInfo.FileName = path.ToQuotedString();
+                    proc.StartInfo.Verb = VERB_OPEN;
+                    proc.Start();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
+
+        public bool OpenFolderInVS(string path)
+        {
+            try
+            {
+                if (Directory.Exists(path))
+                {
+                    using (var process = new Process())
+                    {
+                        var startInfo = new ProcessStartInfo("devenv.exe", "/edit " + path.ToQuotedString());
+
+                        process.StartInfo = startInfo;
+                        process.Start();
+
+                        return true;
+                    }
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"'{path}' doesn't exist");
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
             }
         }
 
