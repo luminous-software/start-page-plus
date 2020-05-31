@@ -11,18 +11,24 @@ namespace StartPagePlus.UI.Services
 
     public class RecentItemContextMenuService : IRecentItemContextMenuService
     {
-        public RecentItemContextMenuService(IRecentItemDataService dataService, IDialogService dialogService, IClipboardService clipboardService)
+        private readonly IDateTimeService dateTimeService;
+
+        public RecentItemContextMenuService(IRecentItemDataService dataService, IDialogService dialogService, IClipboardService clipboardService, IDateTimeService dateTimeService, IVisualStudioService visualStudioService)
         {
             DataService = dataService;
             DialogService = dialogService;
             ClipboardService = clipboardService;
+            this.dateTimeService = dateTimeService;
+            VisualStudioService = visualStudioService;
         }
 
-        public IRecentItemDataService DataService { get; }
+        private IRecentItemDataService DataService { get; }
 
-        public IDialogService DialogService { get; }
+        private IDialogService DialogService { get; }
 
-        public IClipboardService ClipboardService { get; }
+        private IClipboardService ClipboardService { get; }
+
+        public IVisualStudioService VisualStudioService { get; }
 
         public bool RemoveItem(RecentItemViewModel viewModel)
         {
@@ -86,6 +92,21 @@ namespace StartPagePlus.UI.Services
             ClipboardService.CopyToClipboard(viewModel.Path);
 
             return true;
+        }
+
+        public bool OpenInVS(RecentItemViewModel viewModel)
+        {
+            var path = viewModel.Path;
+            var result = (viewModel.ItemType == (Enums.RecentItemType.Folder)
+                ? VisualStudioService.OpenFolderInVS(path)
+                : VisualStudioService.OpenProjectOrSolutionInVS(path));
+
+            if (result)
+            {
+                DataService.SetLastAccessed(path, dateTimeService.Today.Date);
+            }
+
+            return result;
         }
     }
 }
