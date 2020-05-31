@@ -2,6 +2,8 @@ To display the new *Start Page+* window:
 
 - click **View** | **Start Page+**
 
+![Recent Items](assets/images/start-page-plus.png)
+
 ## Recent Items
 
 The *Recent Items* list brings back the ability to filter the list of recent items,
@@ -16,39 +18,84 @@ as you type.
 
 Click the **X** in the filter box to start again, or to go back to the full list of items.
 
+![Recent Items](assets/images/recent-items-live-filtering.png)
+
 ### Collapsible Timeframes
 
 Each timeframe group can be collapsed or expanded by clicking anywhere on the group name.
 This can come in handy if you want to view items that are currently not being displayed
 without having to scroll all the way down.
 
-### Pin/Unpin An Item
+![Recent Items](assets/images/recent-items-collapsed.png)
 
-Right-click an ***unpinned*** item in the *Recent Items* list, and select *Pin item* to ***pin*** it.
+### Buttons
+
+#### Pin An Item
+
+![Recent Items](assets/images/recent-item-pin.png)
+
+#### Unpin An Item
+
+![Recent Items](assets/images/recent-item-unpin.png)
+
+#### Remove An Item
+
+![Recent Items](assets/images/recent-item-remove.png)
+
+### Context Menu
+
+Right-clicking an item brings up a context menu to give you access to more actions.
+
+#### Pin/Unpin An Item
+
+Right-click an ***unpinned*** item in the *Recent Items* list, and select *Pin item*
+in the context menu to ***pin*** it.
 Or click on the icon to the right of the date.
 
-Right-click on a ***pinned*** item in the *Recent Items* list, and select *Unpin item* to ***unpin*** it.
+Right-click on a ***pinned*** item in the *Recent Items* list, and select *Unpin item*
+in the context menu to ***unpin*** it.
 Or click on the icon to the right of the date.
 
-### Remove An Item
+![Recent Items](assets/images/recent-item-context-menu-unpin.png)
 
-Right-click any item in the *Recent Items* list, and select *Remove item* to remove it.
+#### Remove An Item
 
-### Copy An Item's Path
+Right-click any item in the *Recent Items* list, and select *Remove item*
+in the context menu to remove it.
 
-Right-click any item in the *Recent Items* list, and select *Copy item path* to copy it
-path to the Windows clipboard. You can then paste it anywhere you need to.
+![Recent Items](assets/images/recent-item-context-menu-remove.png)
 
-### Refresh
 
-When you select the number of items to display, you'll need to click the *Refresh* button to see
+#### Copy An Item's Path
+
+Right-click any item in the *Recent Items* list, and select *Copy item path*
+in the context menu to copy it path to the Windows clipboard.
+You can then paste it anywhere you need to.
+
+![Recent Items](assets/images/recent-item-context-menu-copy-item-path.png)
+
+#### Open Item In VS
+
+Right-click any item in the *Recent Items* list, and select *Open in new VS instance*
+in the context menu to copy its path to the Windows clipboard.
+You can then paste it anywhere you need to.
+
+![Recent Items](assets/images/recent-item-context-menu-open-in-vs.png)
+
+### Links
+
+![Recent Items](assets/images/recent-items-links.png)
+
+#### Refresh
+
+When you select the number of items to display, you'll need to click the *Refresh* link to see
 the change.
 It's also a quick way to expand all of the timeframe groups at once.
 
-### Settings
+#### Settings
 
-Clicking on the *Settings* button will open the *Recent Items* settings page in the
-Tools | Options | Start Page+ dialog without having to navigate through teh dropdowns.
+Clicking on the *Settings* link will open the `Tools` | `Options` | `Start Page+` | `Recent Items`
+settings page without having to navigate through the dropdowns.
 
 ## Start Actions
 
@@ -90,11 +137,15 @@ Note: if you launch Visual Studio as Administrator, you can't get back to a non-
 clicking on *Restart Visual Studio*.
 There doesn't seem to be a programmatic way to force an elevated session to restart as a normal session.
 
-### Changelog Button
+### Links
+
+![Recent Items](assets/images/get-started-links.png)
+
+#### Changelog
 
 With just a single-click you can see what's changed in the new version of *Start Page+*.
 
-### Version Number
+#### Version Number
 
 This is a subtle way of being able to see the version number of the currently installed version of
 *Start Page+*.
@@ -102,9 +153,9 @@ This is a subtle way of being able to see the version number of the currently in
 Clicking on the version number will open the website's Overview page.
 On there you can see what the latest available version of *Start Page+* is at the top of the page.
 
-### Options Button
+#### Options
 
-Clicking on the *Options* button is a quick way to get to the *Start Page+* options page without
+Clicking on the *Options* link is a quick way to get to the *Start Page+* options page without
 having to use `Tools` | `Options` | `Start Page+`.
 
 ## Developer News
@@ -116,7 +167,7 @@ start page.
 
 ![Developer News](assets/images/developer-news.png)
 
-### Set Items Feed Url
+### Items Feed Url
 
 By default the feed url is set to the url of the original *Developer News* that used to be in Visual Studio 2017.
 Microsoft is currently still maintaining that feed, but could stop doing so at any time.
@@ -128,7 +179,7 @@ But it seems that may currently have the same items.
 
 The *Visual Studio Blog* feed url is `https://devblogs.microsoft.com/visualstudio/feed`.
 
-### Set Items to Display
+### Items to Display
 
 You can choose the number of items that are displayed in the list.
 
@@ -136,7 +187,7 @@ There are only 10 items in the orginal feed, and Microsoft replaces older posts 
 If you set a feed url to something that has a lerger number of items you might want to limit
 how many are downloaded and displayed.
 
-### Open Links in VS or Browser
+### Open Items in VS
 
 By default the items open right in VS itself, rather than switching to the default browser.
 Personally, I prefer having to switch applications as little as possible.
@@ -146,26 +197,35 @@ to switch to a different application, and then back again to Visual Studio.
 However, for those people who prefer links to be opened in their default browser,
 there's an option to change Start Page+'s behavior to do just that.
 
+### Links
+
+![Recent Items](assets/images/developer-news-links.png)
+
 ### Refresh
 
 There is currently no auto-refresh for *Developer News*, so you'll have to click *Refresh* to
 check if you have the latest available news items from Microsoft.
 
-Also, when you select the number of items to display, you'll need to click the *Refresh* button
+Also, when you select the number of items to display, you'll need to click the *Refresh* link
 to see the change.
+
+#### Settings
+
+Clicking on the *Settings* link will open the `Tools` | `Options` | `Start Page+` | `Developer News`
+settings page without having to navigate through the dropdowns.
 
 ## General Options
 
 ![General Options](assets/images/options-general.png)
 
-### Enable 'Start Page+'
+### Enable Start Page+
 
 This setting allows _Start Page+_ to be disabled if you need to,
 without having to uninstall the _Start Page+_ extension, which would require you to exit
 **all** instances of Visual Studio, wait while the _VSIX installer_ does its thing,
 then open Visual Studio again.
 
-### Enable 'Start Page+ Options'
+### Enable Start Page+ Options
 
 By default, a 'Start Page+ Options' command is added to the `Tools` | `Options` menu.
 This setting lets you choose to not have the menu item added.
@@ -242,6 +302,6 @@ The default value is `https://vsstartpage.blob.core.windows.net/news/vs`.
 When this setting is set to `true`, any clicked item that opens a web page will be opened in a browser window
 **inside** of Visual Studio.
 
-When set to `false`, clicked items that open a web page will be opened in your default browser.
+When set to `false`, clicked items will be opened in your default browser.
 
 The default value is `true`.

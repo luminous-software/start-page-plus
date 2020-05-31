@@ -12,5 +12,7 @@ namespace StartPagePlus.UI.Interfaces
         bool UnpinItem(RecentItemViewModel viewModel);
 
         bool CopyItemPath(RecentItemViewModel viewModel);
+
+        bool OpenInVS(RecentItemViewModel viewModel);
     }
 }

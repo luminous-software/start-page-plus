@@ -85,6 +85,7 @@
     <Compile Include="Interfaces\IStartAction.cs" />
     <Compile Include="Extensions\RecentItemExtensions.cs" />
     <Compile Include="Messages\RecentItemClickedMessage.cs" />
+    <Compile Include="Messages\RecentItemOpenInVSClickedMessage.cs" />
     <Compile Include="Messages\RecentItemTogglePinnedClickedMessage.cs" />
     <Compile Include="Messages\RecentItemCopyPathClickedMessage.cs" />
     <Compile Include="Messages\RecentItemRemoveClickedMessage.cs" />

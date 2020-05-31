@@ -50,6 +50,7 @@ namespace StartPagePlus.UI.ViewModels
             MessengerInstance.Register<RecentItemTogglePinnedClickedMessage>(this, TogglePinned);
             MessengerInstance.Register<RecentItemRemoveClickedMessage>(this, RemoveItem);
             MessengerInstance.Register<RecentItemCopyPathClickedMessage>(this, CopyItemPath);
+            MessengerInstance.Register<RecentItemOpenInVSClickedMessage>(this, OpenInVS);
         }
 
         public IRecentItemContextMenuService ContextMenuService { get; }
@@ -81,7 +82,6 @@ namespace StartPagePlus.UI.ViewModels
             {
                 if (Set(ref refreshed, value, nameof(Refreshed)) && (value == true))
                 {
-                    SelectedItem = null;
                     MessengerInstance.Send(new RecentItemsRefreshClickedMessage());
                 }
             }
@@ -91,7 +91,7 @@ namespace StartPagePlus.UI.ViewModels
         {
             if (SelectedItem == null)
             {
-                e.Handled = true; //need to suppress empty menu
+                e.Handled = true; //suppress empty menu
             }
 
             GetContextCommands();
@@ -117,6 +117,7 @@ namespace StartPagePlus.UI.ViewModels
                     case nameof(UnpinItem):
                     case nameof(RemoveItem):
                     case nameof(CopyItemPath):
+                    case nameof(OpenInVS):
                         relayCommand.RaiseCanExecuteChanged();
                         break;
 
@@ -134,8 +135,8 @@ namespace StartPagePlus.UI.ViewModels
                 CanPinItem, PinItem,
                 CanUnpinItem, UnpinItem,
                 CanRemoveItem, RemoveItem,
-                CanCopyItemPath, CopyItemPath);
-
+                CanCopyItemPath, CopyItemPath,
+                CanOpenInVS, OpenInVS);
         private void SelectItem(RecentItemClickedMessage message)
             => ActionService.ExecuteAction(message.Content);
 
@@ -223,14 +224,36 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         private void CopyItemPath()
-        => CopyItemPath(SelectedItem);
+            => CopyItemPath(SelectedItem);
 
         private bool CopyItemPath(RecentItemViewModel item)
             => ContextMenuService.CopyItemPath(item);
 
+        private bool CanOpenInVS
+            => (SelectedItem != null);
+
+        private void OpenInVS(RecentItemOpenInVSClickedMessage message)
+        {
+            var item = message.Content;
+
+            Refresh();
+
+            if (!OpenInVS(item))
+            {
+                DialogService.ShowExclamation($"Unable to launch '{item?.Name}' in a new instance of VS");
+            }
+        }
+
+        private void OpenInVS()
+            => OpenInVS(SelectedItem);
+
+        private bool OpenInVS(RecentItemViewModel item)
+            => ContextMenuService.OpenInVS(item);
+
         private void Refresh()
         {
             Refreshed = false;
+            SelectedItem = null;
 
             var options = RecentItemsOptions.Instance;
             var itemsToDisplay = options.ItemsToDisplay;

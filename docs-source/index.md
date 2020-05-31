@@ -54,7 +54,7 @@ When Visual Studio 2019 was released, many developers were dismayed to find that
 had been completely replaced by the new _Start Window_ (a big **modal** dialog window, with no room
 for _Developer News_).
 
-![Start Window](assets/images/start-window-dark.png)
+![Start Window](assets/images/start-window-light.png)
 
 ## Introducing Start Page+
 
@@ -64,6 +64,8 @@ _Start Page_, and unfortunately those pleas have fallen on deaf ears.
 [developer-community-forum-url]: https://developercommunity.visualstudio.com/search.html?f=&type=question+OR+problem+OR+idea&type=question+OR+problem+OR+idea&c=&redirect=search%2Fsearch&sort=relevance&q=start+page
 
 Well, you asked and now _Start Page+_ delivers!
+
+![Start Window](assets/images/start-page-plus.png)
 
 The [Start Page+][start-page-plus-url] extension adds a new start page that is a **dockable tool window**,
 not a **modal window**.

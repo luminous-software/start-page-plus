@@ -17,5 +17,8 @@
         void CloneOrCheckoutCode();
 
         void RestartVisualStudio(bool confirm = true, bool elevated = false);
+
+        public bool OpenProjectOrSolutionInVS(string path);
+        bool OpenFolderInVS(string path);
     }
 }
