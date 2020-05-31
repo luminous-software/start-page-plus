@@ -22,7 +22,7 @@ namespace StartPagePlus.Core.Services
             => GetGlobalService<SComponentModel, IComponentModel>();
 
         public static DTE DTE
-            => GetGlobalService<SDTE, DTE>();
+            => GetGlobalService<_DTE, DTE>();
 
         public static DTE2 DTE2
             => (DTE2)DTE;

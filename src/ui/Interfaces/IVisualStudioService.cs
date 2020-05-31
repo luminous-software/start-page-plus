@@ -6,11 +6,13 @@
 
         bool OpenWebPage(string url, bool internalBrowser);
 
-        bool OpenFolder(string path = "");
+        bool OpenFolder(string path);
 
-        bool OpenSolution(string path = null);
+        bool OpenFolder();
 
-        bool OpenProject(string path = "");
+        bool OpenProject(string path);
+
+        bool OpenProject();
 
         void CreateNewProject();
 

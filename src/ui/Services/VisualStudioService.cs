@@ -49,10 +49,7 @@ namespace StartPagePlus.UI.Services
         private IVsShell4 VsShell4
             => GlobalServices.VsShell4;
 
-        //public bool ExecuteCommand(string action)
-        //    => ExecuteCommand(action);
-
-        public bool ExecuteCommand(string action, string args = null)
+        public bool ExecuteCommand(string action, string args = "")
         {
             try
             {
@@ -95,10 +92,18 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public bool OpenFolder(string path = "")
+        public bool OpenFolder(string path)
         {
             try
             {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                if (path == null)
+                    return false;
+
+                if (path == "")
+                    return OpenFolder();
+
                 if (Directory.Exists(path))
                 {
                     return ExecuteCommand(FILE_OPEN_FOLDER, path.ToQuotedString());
@@ -116,25 +121,13 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public bool OpenSolution(string path = null)
+        public bool OpenFolder()
         {
-            ThreadHelper.ThrowIfNotOnUIThread();
-
-            if (path == null)
-                return false;
-
             try
             {
-                if (File.Exists(path))
-                {
-                    Dte?.Solution.Open(path.ToQuotedString());
-                    return true;
-                }
-                else
-                {
-                    DialogService.ShowExclamation($"Can't find '{path}'");
-                    return false;
-                }
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                return ExecuteCommand(FILE_OPEN_FOLDER, "");
             }
             catch (ArgumentException ex)
             {
@@ -143,10 +136,15 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public bool OpenProject(string path = "")
+        public bool OpenProject(string path)
         {
             try
             {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                if (!string.IsNullOrEmpty(path))
+                    path = path.ToQuotedString();
+
                 if (File.Exists(path))
                 {
                     return ExecuteCommand(FILE_OPEN_PROJECT, path.ToQuotedString());
@@ -164,11 +162,48 @@ namespace StartPagePlus.UI.Services
             }
         }
 
+        public bool OpenProject()
+        {
+            try
+            {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                return ExecuteCommand(FILE_OPEN_PROJECT);
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
+
         public void CreateNewProject()
-            => ExecuteCommand(FILE_NEW_PROJECT);
+        {
+            try
+            {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                ExecuteCommand(FILE_NEW_PROJECT);
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+            }
+        }
 
         public void CloneOrCheckoutCode()
-            => ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
+        {
+            try
+            {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+            }
+        }
 
         public void RestartVisualStudio(bool confirm = true, bool elevated = false)
         {
