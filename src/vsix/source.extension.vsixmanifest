@@ -11,7 +11,6 @@
         <Icon>Resources\logo.png</Icon>
         <PreviewImage>Resources\logo.png</PreviewImage>
         <Tags>Start Page+, start-page-plus, StartPagePlus, start page, start-page, startpage, luminous, yannduran, yd</Tags>
-        <Preview>true</Preview>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0, 17.0)" />
