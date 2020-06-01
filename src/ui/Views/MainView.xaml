@@ -14,6 +14,7 @@
     d:DesignWidth="300"
     Background="{DynamicResource MenuBackgroundBrush}"
     Foreground="{DynamicResource MenuInactiveBrush}"
+    IsTabStop="False"
     mc:Ignorable="d"
     >
 
@@ -21,41 +22,14 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
-
-                <ResourceDictionary>
-                    <Style TargetType="TabItem">
-                        <Setter Property="FontSize" Value="26"/>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="TabItem">
-                                    <ContentPresenter x:Name="ContentSite"
-                                        Margin="10,0,10,0"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        ContentSource="Header"
-                                        />
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsSelected" Value="True">
-                                            <Setter Property="Foreground" Value="{DynamicResource MenuActiveBrush}"/>
-                                            <Setter Property="FontWeight" Value="Normal"/>
-                                        </Trigger>
-
-                                        <Trigger Property="IsSelected" Value="False">
-                                            <Setter Property="Foreground" Value="{DynamicResource MenuInactiveBrush}"/>
-                                            <Setter Property="FontWeight" Value="Light"/>
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
 
     <DockPanel x:Name="LayoutRoot"
         Width="Auto"
+        MaxWidth="{Binding MaxWidth}"
         Margin="10,15,10,10"
         Background="Transparent"
         LastChildFill="True"
@@ -63,6 +37,7 @@
         <TextBlock x:Name="Company"
             Height="50"
             DockPanel.Dock="Top"
+            FontFamily="Segoe UI LIght"
             FontSize="26"
             Foreground="{DynamicResource TextLightBrush}"
             Text="{Binding Company}"
@@ -72,14 +47,15 @@
 
         <TabControl x:Name="MainTabs"
             Background="Transparent"
+            FontFamily="{StaticResource DefaultFont}"
             IsTabStop="False"
             ItemsSource="{Binding Tabs}"
             SelectedIndex="0"
             >
-            <!--  SelectionChanged="TabControl_SelectionChanged"  -->
             <TabControl.Resources>
                 <Style TargetType="TabItem">
-                    <Setter Property="FontSize" Value="26"/>
+                    <Setter Property="FontSize" Value="28"/>
+                    <Setter Property="IsTabStop" Value="False"/>
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="TabItem">
@@ -133,14 +109,14 @@
 
             <TabControl.Template>
                 <ControlTemplate TargetType="TabControl">
-                    <Grid
+                    <Grid x:Name="TabControlContainer"
                         grid:Props.RowHeights="Auto,*"
                         Background="{DynamicResource MenuBackgroundBrush}"
                         KeyboardNavigation.TabNavigation="Local"
                         >
                         <TabPanel x:Name="HeaderPanel"
                             Grid.Row="0"
-                            Margin="0,0,0,15"
+                            Margin="0,0,0,10"
                             Panel.ZIndex="1"
                             IsItemsHost="True"
                             KeyboardNavigation.TabIndex="1"

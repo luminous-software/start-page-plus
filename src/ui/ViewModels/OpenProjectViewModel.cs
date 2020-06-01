@@ -8,12 +8,12 @@ namespace StartPagePlus.UI.ViewModels
     {
         public OpenProjectViewModel(IVisualStudioService vsService) : base(vsService)
         {
-            Moniker = KnownMonikers.OpenDocumentGroup;
+            Moniker = KnownMonikers.OpenTopic;  // OpenDocumentGroup missing from KnownMonikers in SDK v15.9.3
             Name = "Open a project or solution";
-            Description = "Open a local Visual Studio project or a .sln file";
+            Description = "Open a local Visual Studio project or a '.sln' file";
         }
 
         protected override void ExecuteClick()
-            => VisualStudioService.ExecuteCommand("File.OpenProject");
+            => VisualStudioService.OpenProject();
     }
 }

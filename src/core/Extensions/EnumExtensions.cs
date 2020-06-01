@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace StartPagePlus.Core.Extensions.EnumExtensions
+namespace StartPagePlus.Core.Extensions.Enums
 {
     public static class EnumExtensions
     {

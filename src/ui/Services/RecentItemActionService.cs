@@ -1,53 +1,85 @@
 ﻿using System;
-using System.IO;
-using System.Windows;
-using EnvDTE;
-using EnvDTE80;
-using Luminous.Code.Extensions.ExceptionExtensions;
+
+using GalaSoft.MvvmLight.Messaging;
+
+using Microsoft;
 using Microsoft.VisualStudio.Shell;
 
 namespace StartPagePlus.UI.Services
 {
+    using Core.Interfaces;
+
     using Enums;
-    using UI.Interfaces;
+
+    using Interfaces;
+
+    using Messages;
+
     using ViewModels;
 
     public class RecentItemActionService : IRecentItemActionService
     {
-        public void ExecuteAction(RecentItemViewModel currentViewModel)
+        public RecentItemActionService(IRecentItemDataService dataService, IVisualStudioService vsService, IDialogService dialogService, IDateTimeService dateTimeService)
+        {
+            DataService = dataService;
+            VsService = vsService;
+            DialogService = dialogService;
+            DateTimeService = dateTimeService;
+        }
+
+        public IRecentItemDataService DataService { get; }
+
+        public IVisualStudioService VsService { get; }
+
+        private IDialogService DialogService { get; }
+
+        private IDateTimeService DateTimeService { get; }
+
+        public void ExecuteAction(RecentItemViewModel viewModel)
         {
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
+                Assumes.Present(VsService);
 
-                var dte = Package.GetGlobalService(typeof(_DTE)) as DTE2;
-                var path = currentViewModel.Path;
-                var folder = Path.GetDirectoryName(path);
-                var itemType = currentViewModel.ItemType;
+                var path = viewModel.Path;
+                var itemType = viewModel.ItemType;
 
                 switch (itemType)
                 {
                     case RecentItemType.Folder:
-                        dte?.ExecuteCommand("File.OpenFolder", path);
+                        if (VsService.OpenFolder(path))
+                        {
+                            SetLastAccessed(path);
+                            SendRefreshMessage();
+                        };
                         break;
 
                     case RecentItemType.Solution:
-                        dte?.Solution.Open(path);
-                        break;
-
-                    case RecentItemType.CsProject:
-                        dte?.ExecuteCommand("File.OpenProject", path);
+                    case RecentItemType.CSharpProject:
+                    case RecentItemType.VisualBasicProject:
+                        if (VsService.OpenProject(path))
+                        {
+                            SetLastAccessed(path);
+                            SendRefreshMessage();
+                        }
                         break;
 
                     default:
-                        MessageBox.Show($"Unhandled item type:'{itemType}'", Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Information);
+                        DialogService.ShowMessage($"Unhandled item type:'{itemType}'");
                         break;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error:'{ex.ExtendedMessage()}'", Vsix.Name, MessageBoxButton.OK, MessageBoxImage.Error);
+                DialogService.ShowError(ex);
             }
         }
+
+        private void SetLastAccessed(string path)
+            => DataService.SetLastAccessed(path, DateTimeService.Today.Date);
+
+        private void SendRefreshMessage()
+            => Messenger.Default.Send(new RecentItemsRefreshRequestedMessage());
     }
 }

@@ -1,10 +1,15 @@
-﻿using CommonServiceLocator;
+﻿using System;
+
 using GalaSoft.MvvmLight.Ioc;
+
+using Luminous.Code.VisualStudio.Packages;
 
 namespace StartPagePlus.UI.ViewModels
 {
     using Core.Interfaces;
-    using Interfaces;   //TODO: why are these interfaces not in Core.Interfaces?
+
+    using Interfaces;   // TODO: why are these interfaces not in Core.Interfaces?
+
     using Services;
 
     public class ViewModelLocator
@@ -13,18 +18,44 @@ namespace StartPagePlus.UI.ViewModels
         {
             var container = SimpleIoc.Default;
 
-            ServiceLocator.SetLocatorProvider(() => container);
-
             RegisterServices(container);
             RegisterViewModels(container);
         }
 
+        public static MainViewModel MainViewModel
+            => SimpleIoc.Default.GetInstance<MainViewModel>();
+
+        public static StartViewModel StartViewModel
+            => SimpleIoc.Default.GetInstance<StartViewModel>();
+
+        public static RecentItemsViewModel RecentItemsViewModel
+            => SimpleIoc.Default.GetInstance<RecentItemsViewModel>();
+
+        public static StartActionsViewModel StartActionsViewModel
+            => SimpleIoc.Default.GetInstance<StartActionsViewModel>();
+
+        public static NewsItemsViewModel NewsItemsViewModel
+            => SimpleIoc.Default.GetInstance<NewsItemsViewModel>();
+
+        public static FavoritesViewModel FavoritesViewModel
+            => SimpleIoc.Default.GetInstance<FavoritesViewModel>();
+
+        public static CreateViewModel CreateViewModel
+            => SimpleIoc.Default.GetInstance<CreateViewModel>();
+
+        public static NewsViewModel NewsViewModel
+            => SimpleIoc.Default.GetInstance<NewsViewModel>();
+
         private void RegisterServices(SimpleIoc container)
         {
+            container.Register<IServiceProvider>(() => (IServiceProvider)AsyncPackageBase.Instance);
             container.Register<IDialogService, DialogService>();
             container.Register<IVisualStudioService, VisualStudioService>();
 
             container.Register<IDateTimeService, DateTimeService>();
+            container.Register<IClipboardService, ClipboardService>();
+
+            container.Register<IRecentItemContextMenuService, RecentItemContextMenuService>();
 
             container.Register<IRecentItemDataService, RecentItemDataService>();
             container.Register<IRecentItemActionService, RecentItemActionService>();
@@ -53,29 +84,5 @@ namespace StartPagePlus.UI.ViewModels
 
             container.Register<MainViewModel>();
         }
-
-        public static MainViewModel MainViewModel
-            => ServiceLocator.Current.GetInstance<MainViewModel>();
-
-        public static StartViewModel StartViewModel
-            => ServiceLocator.Current.GetInstance<StartViewModel>();
-
-        public static RecentItemsViewModel RecentItemsViewModel
-            => ServiceLocator.Current.GetInstance<RecentItemsViewModel>();
-
-        public static StartActionsViewModel StartActionsViewModel
-            => ServiceLocator.Current.GetInstance<StartActionsViewModel>();
-
-        public static NewsItemsViewModel NewsItemsViewModel
-            => ServiceLocator.Current.GetInstance<NewsItemsViewModel>();
-
-        public static FavoritesViewModel FavoritesViewModel
-            => ServiceLocator.Current.GetInstance<FavoritesViewModel>();
-
-        public static CreateViewModel CreateViewModel
-            => ServiceLocator.Current.GetInstance<CreateViewModel>();
-
-        public static NewsViewModel NewsViewModel
-            => ServiceLocator.Current.GetInstance<NewsViewModel>();
     }
 }

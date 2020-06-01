@@ -8,13 +8,12 @@ namespace StartPagePlus.UI.ViewModels
     {
         public GetCodeViewModel(IVisualStudioService vsService) : base(vsService)
         {
-            Moniker = KnownMonikers.DownloadNoColor;
+            Moniker = KnownMonikers.DownloadNoColor; // SourceControl
             Name = "Clone or checkout code";
-            Description = "Get code from an online repository like GitHub or Azure DevOps";
-
+            Description = "Get code from an online repository like GitHub or Azure DevOps etc";
         }
 
         protected override void ExecuteClick()
-            => VisualStudioService.ExecuteCommand("File.Cloneorcheckoutcode");
+            => VisualStudioService.CloneOrCheckoutCode();
     }
 }

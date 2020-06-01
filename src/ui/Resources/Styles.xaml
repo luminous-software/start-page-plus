@@ -7,11 +7,14 @@
         <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
-    <!--  Columns  -->
+    <FontFamily x:Key="DefaultFont">Segoe UI</FontFamily>
+
+    <!-- Columns -->
 
     <Style x:Key="ColumnStyle"
         TargetType="Border"
         >
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="0,10,10,10"/>
         <Setter Property="Background" Value="{DynamicResource ColumnBackgroundBrush}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource ColumnBorderBrush}"/>
@@ -21,24 +24,27 @@
     <Style x:Key="ColumnHeadingStyle"
         TargetType="TextBlock"
         >
-        <Setter Property="Margin" Value="10,10,10,5"/>
-        <Setter Property="Padding" Value="5,0,0,0"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
         <Setter Property="FontSize" Value="20"/>
-        <Setter Property="Foreground" Value="{DynamicResource ColumnHeadingBrush}"/>
         <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="Foreground" Value="{DynamicResource ColumnHeadingBrush}"/>
+        <Setter Property="Margin" Value="10,10,10,5"/>
+        <Setter Property="Padding" Value="0,0,0,0"/>
     </Style>
 
 
-    <!--  Items  -->
+    <!-- Items -->
 
     <Style x:Key="ColumnListStyle"
         TargetType="ListView"
         >
-        <Setter Property="Margin" Value="10,0"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="DockPanel.Dock" Value="Top"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
         <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Margin" Value="5,0"/>
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
         <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="SelectedIndex" Value="{Binding SelectedIndex, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
@@ -46,9 +52,22 @@
         <Setter Property="SelectionMode" Value="Single"/>
     </Style>
 
+    <Style x:Key="ColumnListItemContainerStyle"
+        TargetType="ListViewItem"
+        >
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="IsTabStop" Value="False"/>
+    </Style>
+
     <Style x:Key="ColumnListItemStyle"
         TargetType="Button"
         >
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+        <Setter Property="IsTabStop" Value="False"/>
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -102,23 +121,17 @@
         </Setter>
     </Style>
 
-    <Style x:Key="ColumnListItemContainerStyle"
-        TargetType="ListViewItem"
-        >
-        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-        <Setter Property="Cursor" Value="Hand"/>
-    </Style>
+    <!-- https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377 -->
 
-    <!--  https://stackoverflow.com/questions/5122334/how-do-i-make-a-wpf-button-look-like-a-link/5122377  -->
-
-    <!--  Commands  -->
+    <!-- Commands -->
 
     <Style x:Key="ColumnCommandsStyle"
         TargetType="ItemsControl"
         >
-        <Setter Property="Margin" Value="10,10,10,5"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
         <Setter Property="DockPanel.Dock" Value="Bottom"/>
         <Setter Property="ItemsSource" Value="{Binding Commands}"/>
+        <Setter Property="IsTabStop" Value="False"/>
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
@@ -126,23 +139,28 @@
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
+        <Setter Property="Margin" Value="10,3,10,3"/>
 
         <Setter Property="ItemTemplate">
             <Setter.Value>
                 <DataTemplate>
                     <Button x:Name="CommandButton"
+                        VerticalContentAlignment="Bottom"
                         Command="{Binding Command}"
                         Content="{Binding Name}"
-                        IsEnabled="{Binding Enabled}"
+                        FontFamily="{StaticResource DefaultFont}"
+                        IsEnabled="{Binding IsEnabled}"
+                        IsTabStop="False"
                         Visibility="{Binding IsVisible, Converter={c:BoolToVisibilityConverter}}"
                         >
                         <Button.Template>
                             <ControlTemplate TargetType="{x:Type Button}">
                                 <TextBlock x:Name="text"
-                                    Height="30"
+                                    Margin="0,5"
                                     HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
+                                    VerticalAlignment="Bottom"
                                     Cursor="Hand"
+                                    FontFamily="{DynamicResource DefaultFont}"
                                     FontSize="14"
                                     FontWeight="Medium"
                                     Foreground="{DynamicResource CommandActiveBrush}"
@@ -170,7 +188,159 @@
     <Style x:Key="ColumnCommandContainerStyle"
         TargetType="ListViewItem"
         >
-        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="IsTabStop" Value="False"/>
+    </Style>
+
+    <!-- https://stackoverflow.com/q/4332069/281489 -->
+
+    <Style x:Key="ExpanderHeaderFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+                        <Rectangle
+                            Margin="0"
+                            SnapsToDevicePixels="true"
+                            Stroke="Black"
+                            StrokeDashArray="1 2"
+                            StrokeThickness="1"
+                            />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ExpanderDownHeaderStyle"
+        TargetType="{x:Type ToggleButton}"
+        >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border Padding="{TemplateBinding Padding}">
+                        <Grid
+                            Margin="6,0,6,0"
+                            Background="Transparent"
+                            SnapsToDevicePixels="False"
+                            >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="19"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Ellipse x:Name="circle"
+                                Width="19"
+                                Height="19"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Stroke="Transparent"
+                                />
+                            <Path x:Name="arrow"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Data="M 1,1.5 L 4.5,5 L 8,1.5"
+                                SnapsToDevicePixels="false"
+                                Stroke="{StaticResource ExpanderIconBrush}"
+                                StrokeThickness="2"
+                                />
+                            <ContentPresenter x:Name="content"
+                                Grid.Column="1"
+                                Margin="4,0,0,0"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Center"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="True"
+                                />
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="arrow" Property="Data" Value="M 1,4.5  L 4.5,1  L 8,4.5"/>
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="circle" Property="Stroke" Value="{DynamicResource ExpanderMouseOverBrush}"/>
+                            <Setter TargetName="arrow" Property="Stroke" Value="{DynamicResource ExpanderMouseOverBrush}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="circle" Property="Stroke" Value="{DynamicResource ExpanderIsPressedBrush}"/>
+                            <Setter TargetName="circle" Property="StrokeThickness" Value="1.5"/>
+                            <Setter TargetName="arrow" Property="Stroke" Value="{DynamicResource ExpanderIsPressedBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Expander}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="FontFamily" Value="{DynamicResource DefaultFont}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Expander}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="3"
+                        SnapsToDevicePixels="true"
+                        >
+                        <DockPanel>
+                            <ToggleButton x:Name="HeaderSite"
+                                MinWidth="0"
+                                MinHeight="0"
+                                Margin="1"
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding Header}"
+                                ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                ContentTemplateSelector="{TemplateBinding HeaderTemplateSelector}"
+                                DockPanel.Dock="Top"
+                                FocusVisualStyle="{StaticResource ExpanderHeaderFocusVisual}"
+                                FontFamily="{TemplateBinding FontFamily}"
+                                FontSize="{TemplateBinding FontSize}"
+                                FontStretch="{TemplateBinding FontStretch}"
+                                FontStyle="{TemplateBinding FontStyle}"
+                                FontWeight="{TemplateBinding FontWeight}"
+                                Foreground="{TemplateBinding Foreground}"
+                                IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                Style="{StaticResource ExpanderDownHeaderStyle}"
+                                />
+                            <ContentPresenter x:Name="ExpandSite"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                DockPanel.Dock="Bottom"
+                                Focusable="false"
+                                Visibility="Collapsed"
+                                />
+                        </DockPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsExpanded" Value="true">
+                            <Setter TargetName="ExpandSite" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>

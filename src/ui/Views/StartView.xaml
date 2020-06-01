@@ -2,6 +2,7 @@
     x:Class="StartPagePlus.UI.Views.StartView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:StartPagePlus.UI.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:v="clr-namespace:StartPagePlus.UI.Views"
@@ -9,33 +10,41 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     Background="{DynamicResource ContentBackgroundBrush}"
-    mc:Ignorable="d"
     IsTabStop="False"
+    mc:Ignorable="d"
     >
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Brushes.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/StartPagePlus.UI;component/Resources/Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <DockPanel LastChildFill="True">
+    <DockPanel x:Name="StartViewLayoutRoot"
+        LastChildFill="True"
+        >
+
         <TextBlock x:Name="Title"
             Height="34"
             Margin="10,10,10,0"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Top"
             DockPanel.Dock="Top"
+            FontFamily="{StaticResource DefaultFont}"
             FontSize="24"
             FontWeight="Light"
             Foreground="{DynamicResource TitleBrush}"
             Text="{Binding Title}"
             TextAlignment="Left"
+            Visibility="{Binding ShowStartTabTitle, Converter={c:BoolToVisibilityConverter}}"
             />
 
         <ItemsControl
             Margin="10,0,0,0"
+            Padding="0"
+            Foreground="{DynamicResource TitleBrush}"
             IsTabStop="False"
             ItemsSource="{Binding Columns}"
             >
@@ -47,11 +56,6 @@
                         />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
-
-            <!--<ItemsControl.ItemContainerStyle>
-                <Style>
-                </Style>
-            </ItemsControl.ItemContainerStyle>-->
 
             <ItemsControl.Resources>
                 <DataTemplate DataType="{x:Type vm:RecentItemsViewModel}">

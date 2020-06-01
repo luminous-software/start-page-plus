@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Luminous.Code.Extensions.DateExtensions
+namespace Luminous.Code.Extensions.Dates
 {
     public static class DateExtensions
     {
@@ -13,7 +13,7 @@ namespace Luminous.Code.Extensions.DateExtensions
 
         // https://markb.uk/csharp-datetime-get-first-last-day-of-week-or-month.html
 
-        //TODO: add tests for FirstDayOfPreviousWeek, LastDayOfPreviousWeek, FirstDayOfWeek, LastDayOfWeek, FirstDayOfMonth, LastDayOfMonth, FirstDayOfPreviousMonth, LastDayOfPreviousMonth
+        // TODO: add tests for FirstDayOfPreviousWeek, LastDayOfPreviousWeek, FirstDayOfWeek, LastDayOfWeek, FirstDayOfMonth, LastDayOfMonth, FirstDayOfPreviousMonth, LastDayOfPreviousMonth
 
         public static DateTime FirstDayOfPreviousWeek(this DateTime instance)
             => instance.LastDayOfPreviousWeek().AddDays(-6);

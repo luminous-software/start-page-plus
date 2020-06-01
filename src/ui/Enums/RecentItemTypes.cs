@@ -17,41 +17,78 @@ namespace StartPagePlus.UI.Enums
 
             var ext = Path.GetExtension(instance).TrimStart(new char[] { '.' });
 
-            switch (ext)
+            return ext switch
             {
-                case "":
-                    return RecentItemType.Folder;
+                "" => RecentItemType.Folder,
 
-                case "sln":
-                    return RecentItemType.Solution;
+                "sln" => RecentItemType.Solution,
 
-                case "csproj":
-                    return RecentItemType.CsProject;
+                "vcxproj" => RecentItemType.CPlusPlusProject,
 
-                default:
-                    return RecentItemType.Unknown;
-            }
+                "vcxitems" => RecentItemType.CPlusPlusSharedProject,
+
+                "csproj" => RecentItemType.CSharpProject,
+
+                "shproj" => RecentItemType.CSharpSharedProject,
+
+                // "dbproj" => RecentItemType.DatabaseProject,
+
+                "fsproj" => RecentItemType.FSharpProject,
+
+                "jsproj" => RecentItemType.JavascriptProject,
+
+                // "njsproj" => RecentItemType.NodejsProject,
+
+                "pyproj" => RecentItemType.PythonProject,
+
+                "tsproj" => RecentItemType.TypeScriptProject,
+
+                "vbproj" => RecentItemType.VisualBasicProject,
+
+                _ => RecentItemType.Unknown,
+            };
         }
 
         public static ImageMoniker ToImageMoniker(this RecentItemType itemType)
         {
-            switch (itemType)
+            return itemType switch
             {
-                case RecentItemType.Unknown:
-                    return KnownMonikers.QuestionMark;
+                RecentItemType.Unknown => KnownMonikers.QuestionMark,
 
-                case RecentItemType.Folder:
-                    return KnownMonikers.FolderOpened;
+                RecentItemType.Folder => KnownMonikers.FolderOpened,
 
-                case RecentItemType.Solution:
-                    return KnownMonikers.Solution;
+                RecentItemType.Solution => KnownMonikers.Solution,
 
-                case RecentItemType.CsProject:
-                    return KnownMonikers.CSProjectNode;
+                RecentItemType.CSharpProject => KnownMonikers.CSProjectNode,
 
-                default:
-                    return KnownMonikers.QuestionMark;
-            }
+                RecentItemType.CSharpSharedProject => KnownMonikers.CSSharedProject,
+
+                RecentItemType.CPlusPlusProject => KnownMonikers.CPPProjectNode,
+
+                RecentItemType.CPlusPlusSharedProject => KnownMonikers.CPPSharedProject,
+
+                // RecentItemType.DatabaseProject => KnownMonikers.Database,
+
+                RecentItemType.FSharpProject => KnownMonikers.FSProjectNode,
+
+                RecentItemType.JavascriptProject => KnownMonikers.JSProjectNode,
+
+                RecentItemType.JavascriptSharedProject => KnownMonikers.JSSharedProject,
+
+                // RecentItemType.NodeJsProject => return KnownMonikers.NodejsProject;
+
+                RecentItemType.PythonProject => KnownMonikers.PYProjectNode,
+
+                RecentItemType.SharedProject => KnownMonikers.SharedProject,
+
+                RecentItemType.TypeScriptProject => KnownMonikers.TSProjectNode,
+
+                RecentItemType.VisualBasicProject => KnownMonikers.VBProjectNode,
+
+                RecentItemType.VisualBasicSharedProject => KnownMonikers.VBSharedProject,
+
+                _ => KnownMonikers.ExclamationPoint
+            };
         }
     }
 }

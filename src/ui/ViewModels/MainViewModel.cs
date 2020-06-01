@@ -1,9 +1,13 @@
 ﻿using System.Collections.ObjectModel;
+
 using GalaSoft.MvvmLight;
-using Microsoft.Win32;
+
+using Luminous.Code.VisualStudio.Packages;
 
 namespace StartPagePlus.UI.ViewModels
 {
+    using Options.Models;
+
     public class MainViewModel : ViewModelBase
     {
         public MainViewModel()
@@ -23,9 +27,12 @@ namespace StartPagePlus.UI.ViewModels
 
         public bool IsVisible { get; }
 
-        public static RegistryKey RegistryRoot { get; set; }
+        public static AsyncPackageBase Package { get; set; }
 
         public ObservableCollection<TabViewModel> Tabs { get; }
+
+        public int MaxWidth
+            => GeneralOptions.Instance.MaxWidth;
     }
 
 }

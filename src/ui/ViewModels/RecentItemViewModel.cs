@@ -1,18 +1,37 @@
 ﻿using System;
 using System.Windows.Input;
+
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using GalaSoft.MvvmLight.Messaging;
+
+using Microsoft.VisualStudio.Imaging.Interop;
 
 namespace StartPagePlus.UI.ViewModels
 {
     using Enums;
-    using Microsoft.VisualStudio.Imaging.Interop;
+
+    using Messages;
 
     public class RecentItemViewModel : ViewModelBase
     {
         public RecentItemViewModel()
-            => ClickCommand = new RelayCommand(ExecuteClick, true);
+        {
+            SelectItemCommand = new RelayCommand(SelectItem, true);
+            TogglePinnedCommand = new RelayCommand(TogglePinned, true);
+            RemoveItemCommand = new RelayCommand(RemoveItem, true);
+            CopyItemPathCommand = new RelayCommand(CopyItemPath, true);
+            OpenInVSCommand = new RelayCommand(OpenInVS, true);
+        }
+
+        public ICommand SelectItemCommand { get; }
+
+        public ICommand TogglePinnedCommand { get; }
+
+        public ICommand RemoveItemCommand { get; }
+
+        public ICommand CopyItemPathCommand { get; }
+
+        public ICommand OpenInVSCommand { get; }
 
         public string Name { get; set; }
 
@@ -30,9 +49,19 @@ namespace StartPagePlus.UI.ViewModels
 
         public bool Pinned { get; set; }
 
-        public ICommand ClickCommand { get; set; }
+        private void SelectItem()
+            => MessengerInstance.Send(new RecentItemClickedMessage(this));
 
-        private void ExecuteClick()
-            => MessengerInstance.Send(new NotificationMessage<RecentItemViewModel>(this, Path));
+        private void TogglePinned()
+            => MessengerInstance.Send(new RecentItemTogglePinnedClickedMessage(this));
+
+        private void RemoveItem()
+            => MessengerInstance.Send(new RecentItemRemoveClickedMessage(this));
+
+        private void CopyItemPath()
+            => MessengerInstance.Send(new RecentItemCopyPathClickedMessage(this));
+
+        private void OpenInVS()
+            => MessengerInstance.Send(new RecentItemOpenInVSClickedMessage(this));
     }
 }

@@ -1,21 +1,29 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Threading;
+
 using Luminous.Code.Extensions.ExceptionExtensions;
 using Luminous.Code.VisualStudio.Commands;
 using Luminous.Code.VisualStudio.Packages;
+
 using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+
 using Tasks = System.Threading.Tasks;
 
 namespace StartPagePlus
 {
     using Commands;
+
     using Options.Pages;
+
+    using StartPagePlus.Options.Models;
+
     using UI;
     using UI.ViewModels;
-    using static Core.Constants.StringConstants;
+
     using static PackageGuids;
     using static Vsix;
 
@@ -23,17 +31,17 @@ namespace StartPagePlus
 
     [InstalledProductRegistration(Name, Description, Version)]
     [Guid(PackageString)]
+    [DisplayName(Name)]
 
-    [ProvideOptionPage(typeof(GeneralDialogPage), Name, General, 0, 0, supportsAutomation: true)]
-    [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "E13EEDEF-B531-4afe-9725-28A69FA4F896", MultiInstances = false)]
+    [ProvideOptionPage(typeof(DialogPageProvider.General), Name, nameof(DialogPageProvider.General), 0, 0, supportsAutomation: true)]
+    [ProvideOptionPage(typeof(DialogPageProvider.StartTab), Name, StartTabOptions.Category, 0, 0, supportsAutomation: true)]
+    [ProvideOptionPage(typeof(DialogPageProvider.RecentItems), Name, RecentItemsOptions.Category, 0, 0, supportsAutomation: true)]
+    [ProvideOptionPage(typeof(DialogPageProvider.NewsItems), Name, NewsItemsOptions.Category, 0, 0, supportsAutomation: true)]
+
+    [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
 
     public sealed class PackageClass : AsyncPackageBase
     {
-        private static GeneralDialogPage generalOptions;
-
-        public static GeneralDialogPage GeneralOptions
-                    => generalOptions ?? (generalOptions = GetDialogPage<GeneralDialogPage>());
-
         public PackageClass() : base(PackageCommandSet, Name, Description)
             => _ = new ViewModelLocator();
 
@@ -52,7 +60,8 @@ namespace StartPagePlus
 
             // any potentially expensive work, preferably done on a background thread where possible
 
-            return UserRegistryRoot; // this is passed to the tool window constructor
+            // ApplicationRegistryRoot;
+            return this; // this is passed to the tool window constructor
         }
 
         public override IVsAsyncToolWindowFactory GetAsyncToolWindowFactory(Guid toolWindowType)
@@ -60,7 +69,7 @@ namespace StartPagePlus
                 ? this
                 : null; //base.GetAsyncToolWindowFactory(toolWindowType);
 
-        //TODO: is GetToolWindowTitle REALLY necessary?
+        // TODO: is GetToolWindowTitle REALLY necessary?
         protected override string GetToolWindowTitle(Type toolWindowType, int id)
             => (toolWindowType == typeof(StartPagePlusWindow))
                 ? $"{Vsix.Name}"
@@ -71,21 +80,7 @@ namespace StartPagePlus
         {
             try
             {
-                Instance.JoinableTaskFactory.RunAsync(async delegate
-                {
-                    var window = await Instance.ShowToolWindowAsync(typeof(T), 0, true, cancellationToken);
-                    if ((null == window) || (null == window.Frame))
-                    {
-                        throw new NotSupportedException("Cannot create tool window");
-                    }
-
-                    await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
-
-                    var windowFrame = (IVsWindowFrame)window.Frame;
-                    ErrorHandler.ThrowOnFailure(windowFrame.Show());
-                });
-
-                return new SuccessResult();
+                return ShowToolWindow(typeof(T), problem);
             }
             catch (Exception ex)
             {
@@ -99,16 +94,18 @@ namespace StartPagePlus
             {
                 Instance.JoinableTaskFactory.RunAsync(async delegate
                 {
-                    var window = await Instance.ShowToolWindowAsync(type, 0, true, Instance.DisposalToken);
-                    if ((null == window) || (null == window.Frame))
+                    using (var window = await Instance.ShowToolWindowAsync(type, 0, true, Instance.DisposalToken))
                     {
-                        throw new NotSupportedException("Cannot create tool window");
+                        if ((null == window) || (null == window.Frame))
+                        {
+                            throw new NotSupportedException("Cannot create tool window");
+                        }
+
+                        await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
+
+                        var windowFrame = (IVsWindowFrame)window.Frame;
+                        ErrorHandler.ThrowOnFailure(windowFrame.Show());
                     }
-
-                    await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
-
-                    var windowFrame = (IVsWindowFrame)window.Frame;
-                    ErrorHandler.ThrowOnFailure(windowFrame.Show());
                 });
 
                 return new SuccessResult();

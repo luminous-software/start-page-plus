@@ -36,7 +36,7 @@ namespace StartPagePlus.UI.Tests.Converters
         {
             var converter = new RecentItemTypeToImageMonikerConverter();
 
-            var result = (ImageMoniker)converter.Convert(RecentItemType.CsProject, typeof(ImageMoniker), null, CultureInfo.InvariantCulture);
+            var result = (ImageMoniker)converter.Convert(RecentItemType.CSharpProject, typeof(ImageMoniker), null, CultureInfo.InvariantCulture);
 
             result.Should().Be(KnownMonikers.CSProjectNode);
         }

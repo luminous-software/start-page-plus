@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+
 using GalaSoft.MvvmLight;
 
 namespace StartPagePlus.UI.ViewModels
@@ -6,7 +7,8 @@ namespace StartPagePlus.UI.ViewModels
     public class CommandViewModel : ViewModelBase
     {
         private bool isVisible = true;
-        private bool isEnabled;
+
+        private bool isEnabled = true;
 
         public string Name { get; set; }
 

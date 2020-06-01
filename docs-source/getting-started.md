@@ -2,13 +2,13 @@
 
 There are three ways you can install *Start Page+*:
 
-1. From Inside Visual Studio
-2. Download and Install Manually
-3. From the *source code*
+1. From Extension Manager
+2. From VS Marketplace
+3. From Source Code
 
-## Option 1 - From Inside Visual Studio
+## Option 1 - From Extension Manager
 
-1. In Visual Studio open the *Extensions* dialog
+1. In Visual Studio, open the *Extensions* dialog
    - VS 2017: *Extensions and Updates*
    - VS 2019: *Manage Extensions*
 2. Click on the *Online* tab
@@ -16,7 +16,7 @@ There are three ways you can install *Start Page+*:
 4. Click on *Start Page+* in the list
 5. Click the *Download* button
 
-## Option 2 - Download and Install Manually
+## Option 2 - From Visual Studio Marketplace
 
 1. Click on this link to download from [Visual Studio Marketplace website][marketplace-url]
 2. Click the *Download* button, and select where to save it
@@ -24,7 +24,7 @@ There are three ways you can install *Start Page+*:
 
 [marketplace-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus
 
-## Option 3 - From the Source Code
+## Option 3 - From Source Code
 
 1. Find the [source code][source-code-url] on GitHub
 2. Fork it or clone it
@@ -35,4 +35,4 @@ There are three ways you can install *Start Page+*:
 
 ## View StartPage+
 
-Once StartPage+ is installed simply click on _View_ | _StartPage+__
+Once StartPage+ is installed simply click on _View_ | _StartPage+_

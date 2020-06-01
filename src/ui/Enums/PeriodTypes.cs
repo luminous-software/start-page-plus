@@ -1,9 +1,9 @@
 ﻿using System;
-using Luminous.Code.Extensions.DateExtensions;
-using StartPagePlus.Core.Extensions.EnumExtensions;
+using Luminous.Code.Extensions.Dates;
 
 namespace StartPagePlus.UI.Enums
 {
+    using Core.Extensions.Enums;
     using static Dates.DateMethods;
 
     public static class PeriodTypes

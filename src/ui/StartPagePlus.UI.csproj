@@ -13,6 +13,9 @@
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
@@ -54,7 +57,11 @@
     <Compile Include="AttachedProperties\Grids\Props.cs" />
     <Compile Include="Constants\GuidConstants.cs" />
     <Compile Include="Converters\BoolToPinConverter.cs" />
+    <Compile Include="Converters\DateToStringConverter.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\IntToPluralStringConverter.cs" />
+    <Compile Include="Interfaces\IClipboardService.cs" />
+    <Compile Include="Interfaces\IRecentItemContextMenuService.cs" />
     <Compile Include="MarkupExtensions\MultValueConverterMarkupExtension.cs" />
     <Compile Include="MarkupExtensions\ValueConverterMarkupExtension.cs" />
     <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
@@ -64,7 +71,7 @@
     <Compile Include="Converters\TextToVisibilityConverter.cs" />
     <Compile Include="Enums\PeriodTypes.cs" />
     <Compile Include="Enums\PeriodType.cs" />
-    <Compile Include="Dates\DatesMethods.cs" />
+    <Compile Include="Dates\DateMethods.cs" />
     <Compile Include="Enums\RecentItemType.cs" />
     <Compile Include="Enums\RecentItemTypes.cs" />
     <Compile Include="Interfaces\INewsItemActionService.cs" />
@@ -76,15 +83,26 @@
     <Compile Include="Interfaces\IStartActionCommandService.cs" />
     <Compile Include="Interfaces\IStartActionDataService.cs" />
     <Compile Include="Interfaces\IStartAction.cs" />
+    <Compile Include="Extensions\RecentItemExtensions.cs" />
+    <Compile Include="Messages\RecentItemClickedMessage.cs" />
+    <Compile Include="Messages\RecentItemOpenInVSClickedMessage.cs" />
+    <Compile Include="Messages\RecentItemTogglePinnedClickedMessage.cs" />
+    <Compile Include="Messages\RecentItemCopyPathClickedMessage.cs" />
+    <Compile Include="Messages\RecentItemRemoveClickedMessage.cs" />
+    <Compile Include="Messages\RecentItemsRefreshClickedMessage.cs" />
+    <Compile Include="Messages\RecentItemsRefreshRequestedMessage.cs" />
     <Compile Include="Observables\ObservableCommandList.cs" />
+    <Compile Include="Observables\ObservableContextCommandList.cs" />
     <Compile Include="Observables\ObservableList.cs" />
     <Compile Include="Observables\ObservedCollection.cs" />
     <Compile Include="Models\RecentItem.cs" />
     <Compile Include="Models\RecentItemProperties.cs" />
     <Compile Include="Models\RecentItemValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ClipboardService.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Interfaces\IVisualStudioService.cs" />
+    <Compile Include="Services\RecentItemContextMenuService.cs" />
     <Compile Include="Services\NewsItemActionService.cs" />
     <Compile Include="Services\DateTimeService.cs" />
     <Compile Include="Services\NewsItemCommandService.cs" />
@@ -97,12 +115,14 @@
     <Compile Include="StartPagePlusWindow.cs" />
     <Compile Include="ViewModels\ColumnViewModel.cs" />
     <Compile Include="Services\VisualStudioService.cs" />
-    <Compile Include="ViewModels\ContinueWithoutCodeViewModel.cs" />
+    <Compile Include="ViewModels\ContextCommandViewModel.cs" />
     <Compile Include="ViewModels\OpenFolderViewModel.cs" />
     <Compile Include="ViewModels\OpenProjectViewModel.cs" />
     <Compile Include="ViewModels\CreateProjectViewModel.cs" />
+    <Compile Include="ViewModels\RestartNormalViewModel.cs" />
     <Compile Include="ViewModels\RecentItemViewModel.cs" />
     <Compile Include="ViewModels\NewsItemViewModel.cs" />
+    <Compile Include="ViewModels\RestartElevatedViewModel.cs" />
     <Compile Include="ViewModels\StartActionViewModel.cs" />
     <Compile Include="ViewModels\NewsItemsViewModel.cs" />
     <Compile Include="ViewModels\NewsViewModel.cs" />
@@ -143,11 +163,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Luminous.Code.Core">
+      <Version>1.4.2</Version>
+    </PackageReference>
     <PackageReference Include="Luminous.Code.VisualStudio">
-      <Version>1.4.0</Version>
+      <Version>1.4.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis">
+      <Version>3.3.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK">
-      <Version>16.0.200</Version>
+      <Version>15.9.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
+      <Version>1.1.19</Version>
     </PackageReference>
     <PackageReference Include="MvvmLightLibs">
       <Version>5.4.1.1</Version>
@@ -209,6 +238,5 @@
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

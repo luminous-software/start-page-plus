@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Luminous.Code.Tests.Dates
 {
-    using Luminous.Code.Extensions.DateExtensions;
+    using Luminous.Code.Extensions.Dates;
 
     public class StartOfWeek_Tests
     {

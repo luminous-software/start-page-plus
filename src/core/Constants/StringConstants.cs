@@ -7,5 +7,6 @@
         public const string Quote = "'";
 
         public const string General = "General";
+        public const string Settings = "Settings";
     }
 }

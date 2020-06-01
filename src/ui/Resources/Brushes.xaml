@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:vsshell="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.15.0"
     >
-    <!--  Menu  -->
+    <!-- Menu -->
 
     <SolidColorBrush x:Key="MenuActiveBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabSelectedTextKey}}"
@@ -17,7 +17,7 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowBackgroundKey}}"
         />
 
-    <!--  Content  -->
+    <!-- Content -->
 
     <SolidColorBrush x:Key="TitleBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.AutoHideTabTextKey}}"
@@ -35,7 +35,7 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.ActiveCaptionKey}}"
         />
 
-    <!--  Columns  -->
+    <!-- Columns -->
 
     <SolidColorBrush x:Key="ColumnBorderBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.ToolWindowTabTextKey}}"
@@ -49,10 +49,32 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextHeadingSelectedKey}}"
         />
 
-    <!--  Items  -->
+    <!-- Expanders -->
+
+    <SolidColorBrush x:Key="ExpanderIconBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedHoverKey}}"
+        />
+
+    <SolidColorBrush x:Key="ExpanderMouseOverBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedKey}}"
+        />
+
+    <SolidColorBrush x:Key="ExpanderIsPressedBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedHoverKey}}"
+        />
+
+    <!-- Items -->
+
+    <SolidColorBrush x:Key="ItemGroupCountBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedHoverKey}}"
+        />
 
     <SolidColorBrush x:Key="ItemGroupNameBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedHoverKey}}"
+        />
+
+    <SolidColorBrush x:Key="ItemGroupIsMouseOverBrush"
+        Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedKey}}"
         />
 
     <SolidColorBrush x:Key="ItemNameBrush"
@@ -75,7 +97,7 @@
         Color="{DynamicResource {x:Static vsshell:VsColors.ScrollBarBackgroundKey}}"
         />
 
-    <!--  Commands  -->
+    <!-- Commands -->
 
     <SolidColorBrush x:Key="CommandActiveBrush"
         Color="{DynamicResource {x:Static vsshell:VsColors.StartPageTextControlLinkSelectedHoverKey}}"

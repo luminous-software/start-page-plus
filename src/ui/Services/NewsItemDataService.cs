@@ -9,6 +9,7 @@ using System.Xml.Linq;
 namespace StartPagePlus.UI.Services
 {
     using Interfaces;
+
     using ViewModels;
 
     public class NewsItemDataService : INewsItemDataService
@@ -24,7 +25,7 @@ namespace StartPagePlus.UI.Services
         public NewsItemDataService()
         { }
 
-        public async Task<ObservableCollection<NewsItemViewModel>> GetItemsAsync(string feedUrl)
+        public async Task<ObservableCollection<NewsItemViewModel>> GetItemsAsync(string feedUrl, int itemsToDisplay)
         {
             //https://wp.qmatteoq.com/?p=6486
             //https://blog.qmatteoq.com/the-mvvm-pattern-dependency-injection/
@@ -34,7 +35,9 @@ namespace StartPagePlus.UI.Services
                 var response = await client.GetStringAsync(feedUrl);
                 var document = XDocument.Parse(response);
                 var viewModels = (
-                    from item in document.Descendants(ITEM_ELEMENT_NAME)
+                    from item in document
+                        .Descendants(ITEM_ELEMENT_NAME)
+                        .Take(itemsToDisplay)
                     select new NewsItemViewModel
                     {
                         Title = ExtractTitle(item),
