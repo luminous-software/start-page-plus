@@ -87,7 +87,7 @@ namespace StartPagePlus.UI.Services
             }
             catch
             {
-                DialogService.ShowError("Can't launch this url");
+                DialogService.ShowError($"Can't open '{url}'");
                 return false;
             }
         }

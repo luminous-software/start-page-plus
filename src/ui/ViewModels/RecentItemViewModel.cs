@@ -20,7 +20,7 @@ namespace StartPagePlus.UI.ViewModels
             TogglePinnedCommand = new RelayCommand(TogglePinned, true);
             RemoveItemCommand = new RelayCommand(RemoveItem, true);
             CopyItemPathCommand = new RelayCommand(CopyItemPath, true);
-            LaunchInVSCommand = new RelayCommand(LaunchInVS, true);
+            OpenInVSCommand = new RelayCommand(OpenInVS, true);
         }
 
         public ICommand SelectItemCommand { get; }
@@ -31,7 +31,7 @@ namespace StartPagePlus.UI.ViewModels
 
         public ICommand CopyItemPathCommand { get; }
 
-        public ICommand LaunchInVSCommand { get; }
+        public ICommand OpenInVSCommand { get; }
 
         public string Name { get; set; }
 
@@ -61,7 +61,7 @@ namespace StartPagePlus.UI.ViewModels
         private void CopyItemPath()
             => MessengerInstance.Send(new RecentItemCopyPathClickedMessage(this));
 
-        private void LaunchInVS()
+        private void OpenInVS()
             => MessengerInstance.Send(new RecentItemOpenInVSClickedMessage(this));
     }
 }

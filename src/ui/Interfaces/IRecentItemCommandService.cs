@@ -13,6 +13,6 @@ namespace StartPagePlus.UI.Interfaces
             bool canUnpin, Action unpin,
             bool canRemove, Action remove,
             bool canCopyPath, Action copyPath,
-            bool canLaunchInVS, Action launchInVS);
+            bool canOpenInVS, Action openInVS);
     }
 }

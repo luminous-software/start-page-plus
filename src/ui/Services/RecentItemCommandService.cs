@@ -34,7 +34,7 @@ namespace StartPagePlus.UI.Services
             bool canUnpin, Action unpin,
             bool canRemove, Action remove,
             bool canCopyPath, Action copyPath,
-            bool canLaunchInVS, Action launchInVS
+            bool canOpenInVS, Action openInVS
             )
             => new ObservableContextCommandList
             {
@@ -68,9 +68,9 @@ namespace StartPagePlus.UI.Services
                 },
                 new ContextCommandViewModel
                 {
-                    Name = "Launch in new VS",
+                    Name = "Open in VS",
                     Moniker = KnownMonikers.VisualStudio,
-                    Command = new RelayCommand(launchInVS, canLaunchInVS),
+                    Command = new RelayCommand(openInVS, canOpenInVS),
                     IsVisible = canCopyPath,
                 },
             };
