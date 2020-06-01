@@ -31,7 +31,7 @@ page on the [Start Page+][start-page-plus-url] website.
         - **Copy item path** (to the Windows clipboard)
         - **Open item in VS** (new instance)
     - an **auto-refresh** after an item is clicked (updates the date/group it falls into)
-    - a **Settings** button to the right of the *Refresh* button
+    - a **Settings** link to the right of the *Refresh* link
         - opens `Tools` | `Options` | `Start Page+` | `Start Tab` | `Recent Items` in one click
     - a **Show Extensions** option to show or hide project/solution extensions
     - an **Items to Display** option
@@ -39,13 +39,13 @@ page on the [Start Page+][start-page-plus-url] website.
 - Get Started
     - a **Restart Visual Studio** item[(GitHub Issue #20)][github-issue-20]
         - also a Restart Visual Studio **_as Administrator_** item
-    - a **Changelog** button to the left of the version number
+    - a **Changelog** link to the left of the version number
         - opens the website's changelog page
-    - an **Options** button to the right of the version number
+    - an **Options** link to the right of the version number
         - opens `Tools` | `Options` | `Start Page+` | `General` in one click
 
 - Developer News
-    - a **Settings** button to the right of the *Refresh* button
+    - a **Settings** link to the right of the *Refresh* link
         - opens `Tools` | `Options` | `Start Page+` | `Start Tab` | `Developer News` in one click
     - a **Clear List Before Display** option
     - an **Items to Display** option

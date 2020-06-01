@@ -26,7 +26,7 @@
         public const string EnableStartPagePlusDescription = "Allows the whole set of '" + PackageName + "' features to be turned off together";
 
         public const string EnableOptionsMenuItemDispayName = "Enable '" + PackageName + "' Options";
-        public const string EnableOptionsMenuItemDescription = "Determines if a button to open the options page is added to the Tools | Options menu";
+        public const string EnableOptionsMenuItemDescription = "Determines if a menu item to open the options page is added to the Tools | Options menu";
 
         public const string PackageVersion = "Version Number";
 
