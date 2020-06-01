@@ -10,60 +10,59 @@
 
 You can download this extension [from the Visual Studio Marketplace][marketplace-url]
 
+If *Start Page+* has saved you time and hassle, please come back and show your support:
+
+  - you could [***rate *Start Page+****][rate-or-review-url] (only takes a couple of seconds)
+  - or [***review *Start Page+****][rate-or-review-url] (help others benefit from your experience)
+  - or [***shout me a coke***](https://www.paypal.me/yannduran/5) (I don't drink coffee or beer lol)
+
+[rate-or-review-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus#review-details
 [marketplace-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus
 
----
+## Please Note
 
-Please understand that this is a **preview release**.
-
-While the features of the _Start Tab_ are _functional_ in this preview (I'm using it myself),
-there are still some quirks that need to be ironed out, plus a number of missing features that still
-need to be added.
-I just wanted to get this up to the marketplace as quickly as I could, so people can see it and
-start to use it.
-
-**Feedback is welcome**, however **don't** add your ideas and/or feeback to any forum post where you might have
-discovered _Start Page+_, please use the [GitHub Issues][github-issues-url] page.
-I won't be able to address your feedback in any forum posts, as it's not fair to people to have posts highjacked.
-
-Please consult the [Roadmap][roadmap-url] page, or the [GitHub Issues][github-issues-url] page
-**before** you add an issue for new features, feature enhancements etc.
-If you don't see your desired feature or enhancement mentioned on the website,
-then by all means go ahead and add an issue for it.
-
-Please consult the _Start Page+_ website's [Known Issues][website-url] page,
-or the [GitHub Issues][github-issues-url] page before adding issues for any bugs you may have discovered.
-Duplicate _issues_ just waste everyone's time.
-
-The _Favorites_ tab, the _Create_ tab, and the _News_ tab are **still being worked on**.
+- **feedback is welcome**, just use the [GitHub Issues][github-issues-url] page
+for new features, enhancements, bugs etc
+- please consult the [Roadmap][roadmap-url] page, or the [GitHub Issues][github-issues-url] page
+**before** you add an issue
+- for any known issues, please consult the _Start Page+_ website's [Known Issues][known-issues-url] page
 
 [github-issues-url]: https://github.com/luminous-software/start-page-plus/issues
-[website-url]: https://luminous-software.solutions/start-page-plus
+[known-issues-url]: https://luminous-software.solutions/start-page-plus
 
 ---
 
 ## Bring Back Start Page!
 
-When Visual Studio 2019 was released, many developers were dismayed to find that the _Start Page_ had been completely
-replaced by the new _Start Window_ (a big **modal** dialog window, with no room for _Developer News_).
+When Visual Studio 2019 was released, many developers were dismayed to find that the _Start **Page**_
+had been completely replaced by a new _Start **Window**_ (a big **modal** dialog window,
+with no _Developer News_).
 
-![Start Window](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/start-window-dark.png)
+![Start Window](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/start-window-light.png)
 
 ## Introducing Start Page+
 
 So many of you, in **so many posts** in the [Developer Community forum][developer-community-forum-url], **pleaded** for Microsoft to bring back the Visual Studio 2017
-_Start Page_, and unfortunately those pleas have fallen on deaf ears.
+_Start Page_, and unfortunately those pleas fell on deaf ears.
 
 [developer-community-forum-url]: https://developercommunity.visualstudio.com/search.html?f=&type=question+OR+problem+OR+idea&type=question+OR+problem+OR+idea&c=&redirect=search%2Fsearch&sort=relevance&q=start+page
 
-Well, you asked and now _Start Page+_ delivers!
+Well, you asked for it, and now _Start Page+_ delivers it. All that was taken away,
+**plus** more! (get it?)
 
-The [Start Page+][start-page-plus-url] extension adds a new start page that is a **dockable tool window**,
-not a **modal window**.
+![Start Window](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/start-page-plus.png)
+
+[Start Page+][start-page-plus-url] is a start page replacement
+that is a **dockable tool window**, not a **modal window**.
 It's been written **from the ground up**, and doesn't rely on any of Visual Studio's *internal* code.
 So it can't be taken  away by Microsoft. And it's open source!
 
-To open the new _Start Page+_ window:
+For a complete list of *Start Page+*'s features, including images, [click here][features-url] to go to
+the *Features* page on the *Start Page+* website.
+
+[features-url]: https://luminous-software/start-page-plus/features.md
+
+### To Open The Start Page+ Window
 
 - make sure Visual Studio's *Start Window* is disabled
     - in **Tools** | **Options** | **Environment** | **Startup** select _Empty Environment_
@@ -72,76 +71,78 @@ To open the new _Start Page+_ window:
 
 - click on **View** | **Start Page+**
 
-The _Start Page+_ window is accessed from the **View** menu, because it makes sense.
-It's also easy to remember because you think "I want to **view** the start page",
-you don't think "I want to **file** the start page.
+The _Start Page+_ window is accessed from the **View** menu, because it just *makes sense*.
+It's also easy to remember because you think "*I want to **view** the start page*",
+you don't think "*I want to **file** the start page*".
 
 The Visual Studio 2010-2017's _Start Page_ was always in the **View** menu,
-until Microsoft moved it to the **File** menu in later versions of VS 2017, and then permanently in VS 2019,
-which never really made **any** sense.
+until Microsoft moved it to the **File** menu in later versions of VS 2017,
+and then permanently in VS 2019, which never really made **any** sense to me.
 
 [start-page-plus-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus
 [roadmap-url]: https://luminous-software.solutions/start-page-plus/roadmap
 [give-back-start-page-url]: https://developercommunity.visualstudio.com/idea/434456/start-page-please-give-it-back.html
 
+---
+
 ## Theme Samples
 
-This is what Start Page+ currently looks like in the *Blue (VS 2019)*, *Blue (VS 2017)*, *Dark*, and *Light* themes.
+### Built-in themes
 
-### Blue (VS 2019) Theme
+#### Blue Theme
 
-![Blue 2019](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/blue-2019.png)
+![Blue 2019](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/themes/builtin/blue.png)
 
-### Blue (VS 2017) Theme
+#### Dark Theme
 
-![Blue 2017](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/blue-2017.png)
+![Dark](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/themes/builtin/dark.png)
 
-### Dark Theme
+#### Light Theme
 
-![Dark](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/dark.png)
+![Light](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/themes/builtin/light.png)
 
-### Light Theme
+### Custom Themes
 
-![Light](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/light.png)
+*Start Page+* will use colors from any custom theme.
 
-Other themes from the [Color Theme Editor for VS 2019][color-theme-editor-url] should also look good too,
-such as the *Purple* and *Tan* themes below.
+#### Dark Purple
 
-[color-theme-editor-url]: https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2019ColorThemeEditor
+This is my custom *Dark Purple* theme, based on the built-in *Dark* theme.
 
-### Purple Theme
+![Dark Purple](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/themes/custom/dark-purple.png)
 
-![Purple](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/purple.png)
+#### Original Blue Theme (from VS 2017)
 
-### Tan Theme
+Mads Kristensen wrote an extension called [Original Blue Theme][original-blue-theme-extension]
+to bring back the original theme from VS 2017.
 
-![Tan](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/tan.png)
+[original-blue-theme-extension]: https://marketplace.visualstudio.com/items?itemName=MadsKristensen.BlueColorTheme
 
-And finally, this is my customised *Dark* theme, that I call *Dark Purple*.
+![Blue 2017](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/themes/custom/blue-2017.png)
 
-### Dark Purple (custom theme)
+### Color Theme Editor Themes
 
-![Dark Purple](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/dark-purple.png)
+The [Color Theme Editor for Visual Studio 2019][color-theme-editor-extension]
+extension adds more themes to choose from, and lets you create your own themes (which is what I did).
+However Microsoft has now marked it *deprecated*, advising users to use
+[Visual Studio Color Theme Designer][vs-color-theme-designer-extension] instead.
+However I've found it extremely frustrating, and had no success creating a decent custom theme.
 
-## More Information
+[color-theme-editor-extension]: https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2019ColorThemeEditor
+[vs-color-theme-designer-extension]: https://marketplace.visualstudio.com/items?itemName=ms-madsk.ColorThemeDesigner
 
-You can read more about _Start Page+_ on its website:
+#### Green Theme
 
-[Overview][website-url] **|** [Getting Started][getting-started-url] **|** [Features][features-url] **|** [Changelog][changelog-url] **|** [Roadmap][roadmap-url] **|** [Known Issues][known-issues-url]
+![Green](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/themes/extra/green.png)
 
-[website-url]: https://luminous-software.solutions/start-page-plus
-[getting-started-url]: https://luminous-software.solutions/start-page-plus/getting-started
-[features-url]: https://luminous-software.solutions/start-page-plus/features
-[changelog-url]: https://luminous-software.solutions/start-page-plus/changelog
-[roadmap-url]: https://luminous-software.solutions/start-page-plus/roadmap
-[known-issues-url]: https://luminous-software.solutions/start-page-plus/known-issues
+#### Purple Theme
 
-## Support the Project
+![Purple](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/themes/extra/purple.png)
 
-If *Start Page+* has saved you time and hassle, please come back and show your support:
+#### Red Theme
 
-  - you could [***rate *Start Page+****][rate-or-review-url] (only takes a couple of seconds)
-  - or [***review *Start Page+****][rate-or-review-url] (help others benefit from your experience)
-  - or [***shout me a coke***](https://www.paypal.me/yannduran/5) (I don't drink coffee or beer lol)
+![Red](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/themes/extra/red.png)
 
-[rate-or-review-url]: https://marketplace.visualstudio.com/items?itemName=YannDuran.StartPagePlus#review-details
+#### Tan Theme
+
+![Tan](https://github.com/luminous-software/start-page-plus/raw/master/docs/assets/images/themes/extra/tan.png)
