@@ -36,7 +36,12 @@ namespace StartPagePlus.UI.ViewModels
             Refresh();
 
             MessengerInstance.Register<NotificationMessage<NewsItemViewModel>>(this,
-                (message) => ActionService.DoAction(message.Content));
+            (message) =>
+            {
+                var openInVS = NewsItemsOptions.Instance.OpenLinksInVS;
+
+                ActionService.DoAction(message.Content, openInVS);
+            });
         }
 
         public INewsItemDataService DataService { get; }

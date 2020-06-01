@@ -64,13 +64,13 @@ namespace StartPagePlus.UI.Services
 
         }
 
-        public bool OpenWebPage(string url, bool internalBrowser)
+        public bool OpenWebPage(string url, bool openInVS)
         {
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
-                if (internalBrowser == true)
+                if (openInVS == true)
                 {
                     BrowsingService.Navigate(url, FORCE_NEW_WINDOW, out var ppFrame);
                 }

@@ -1,7 +1,9 @@
 ﻿namespace StartPagePlus.UI.Services
 {
     using Core.Interfaces;
+
     using Interfaces;
+
     using ViewModels;
 
     public class NewsItemActionService : INewsItemActionService
@@ -11,11 +13,11 @@
 
         public IVisualStudioService VisualStudioService { get; }
 
-        public void DoAction(NewsItemViewModel currentViewModel, bool internalBrowser = true)
+        public void DoAction(NewsItemViewModel currentViewModel, bool openInVS = true)
         {
             var url = currentViewModel.Link;
 
-            VisualStudioService.OpenWebPage(url, internalBrowser);
+            VisualStudioService.OpenWebPage(url, openInVS);
         }
     }
 }
