@@ -201,7 +201,7 @@ there's an option to change *Start Page+*'s behavior to do just that.
 
 ![Recent Items](assets/images/developer-news-links.png)
 
-### Refresh
+#### Refresh
 
 There is currently no auto-refresh for *Developer News*, so you'll have to click *Refresh* to
 check if you have the latest available news items from Microsoft.
