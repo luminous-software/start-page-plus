@@ -12,11 +12,6 @@ namespace StartPagePlus.Options.Models
         public const string Category = @"Start Tab\General";
 
         [Category(Settings)]
-        [DisplayName(MaxWidthDisplayName)]
-        [Description(MaxWidthDescription)]
-        public int MaxWidth { get; set; } = 1175;
-
-        [Category(Settings)]
         [DisplayName(ShowStartTabTitleDisplayName)]
         [Description(ShowStartTabTitleDescription)]
         public bool ShowStartTabTitle { get; set; } = true;

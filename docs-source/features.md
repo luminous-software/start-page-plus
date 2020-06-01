@@ -195,7 +195,7 @@ When I'm working in Visual Studio, I prefer to stay in Visual Studio, and not ha
 to switch to a different application, and then back again to Visual Studio.
 
 However, for those people who prefer links to be opened in their default browser,
-there's an option to change Start Page+'s behavior to do just that.
+there's an option to change *Start Page+*'s behavior to do just that.
 
 ### Links
 
@@ -232,6 +232,12 @@ This setting lets you choose to not have the menu item added.
 
 The default value is `true`.
 
+### Max Width
+
+This setting will allow you to make the contents of the _Start Page+_ window wider or narrower
+
+The default value is `1175`.
+
 ### Version Number
 
 This setting simply displays the version number of _Start Page+_ that's currently installed.
@@ -240,21 +246,15 @@ This setting simply displays the version number of _Start Page+_ that's currentl
 
 ![Start Tab Options](assets/images/options-start-tab.png)
 
-### Max Width
-
-This setting will allow you to make the contents of the _Start Page+_ window wider or narrower
-
-The default value is `1175`.
-
 ### Show Start Tab Title
 
 This setting determines whether the *Start* tab title is displayed.
 
 The default value is `true`.
 
-### Start Tab Title
+### Start Tab Title Text
 
-This setting will allow you to change the *Start* tab title.
+This setting will allow you to change the text of the *Start* tab title.
 
 The default value is `What would you like to do today?`.
 

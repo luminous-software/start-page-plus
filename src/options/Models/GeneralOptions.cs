@@ -23,5 +23,10 @@ namespace StartPagePlus.Options.Models
         [DisplayName(Constants.PageConstants.PackageVersion)]
         [Description("Installed '" + PackageName + "' version")]
         public string PackageVersion { get; } = Vsix.Version;
+
+        [Category(General)]
+        [DisplayName(MaxWidthDisplayName)]
+        [Description(MaxWidthDescription)]
+        public int MaxWidth { get; set; } = 1175;
     }
 }
