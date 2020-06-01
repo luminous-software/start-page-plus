@@ -12,7 +12,7 @@ namespace StartPagePlus.UI.ViewModels
             Name = "Restart As Administrator";
             Description = "Restart in an elevated Visual Studio session";
             ImageSize = 34;
-            Margin = "11,0,0,0";
+            Margin = "11,5,0,0";
         }
 
         protected override void ExecuteClick()

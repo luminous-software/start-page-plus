@@ -16,7 +16,7 @@ namespace StartPagePlus.UI.ViewModels
             VisualStudioService = vsService;
             ClickCommand = new RelayCommand(ExecuteClick, true);
             ImageSize = 40;
-            Margin = "5,0,0,0";
+            Margin = "5,5,0,0";
             IsEnabled = true;
         }
 

@@ -10,9 +10,9 @@ namespace StartPagePlus.UI.ViewModels
         {
             Moniker = KnownMonikers.Restart;
             Name = "Restart Visual Studio";
-            Description = "Restart Visual Studio and come back to the same project";
+            Description = "Restart Visual Studio with one click";
             ImageSize = 34;
-            Margin = "11,0,0,0";
+            Margin = "11,5,0,0";
         }
 
         protected override void ExecuteClick()
