@@ -9,7 +9,8 @@ namespace StartPagePlus.UI.Services
 
     public class StartActionDataService : IStartActionDataService
     {
-        public StartActionDataService(IVisualStudioService vsService) => VsService = vsService;
+        public StartActionDataService(IVisualStudioService vsService)
+            => VsService = vsService;
 
         public IVisualStudioService VsService { get; }
 
