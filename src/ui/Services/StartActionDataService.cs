@@ -18,7 +18,7 @@ namespace StartPagePlus.UI.Services
         {
             var items = new ObservableCollection<StartActionViewModel>
             {
-                ViewModelLocator.GetCodeViewModel,
+                ViewModelLocator.CloneOrCheckoutCodeViewModel,
                 ViewModelLocator.OpenFolderViewModel,
                 ViewModelLocator.OpenProjectViewModel,
                 ViewModelLocator.CreateProjectViewModel,

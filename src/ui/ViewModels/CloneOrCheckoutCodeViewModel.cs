@@ -4,9 +4,9 @@ namespace StartPagePlus.UI.ViewModels
 {
     using Interfaces;
 
-    public class GetCodeViewModel : StartActionViewModel
+    public class CloneOrCheckoutCodeViewModel : StartActionViewModel
     {
-        public GetCodeViewModel(IStartActionClickService clickService) : base(clickService)
+        public CloneOrCheckoutCodeViewModel(IStartActionClickService clickService) : base(clickService)
         {
             Moniker = KnownMonikers.DownloadNoColor; // SourceControl
             Name = "Clone or checkout code";

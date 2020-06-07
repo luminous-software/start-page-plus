@@ -9,14 +9,11 @@
 
         private IVisualStudioService VisualStudioService { get; }
 
-        public bool OpenWebPage(string url, bool openInVS)
-            => VisualStudioService.OpenWebPage(url, openInVS);
+        public bool CloneOrCheckoutCode()
+            => VisualStudioService.CloneOrCheckoutCode();
 
         public bool CreateNewProject()
             => VisualStudioService.CreateNewProject();
-
-        public bool CloneOrCheckoutCode()
-            => VisualStudioService.CloneOrCheckoutCode();
 
         public bool OpenFolder()
             => VisualStudioService.OpenFolder();
@@ -26,5 +23,8 @@
 
         public bool RestartVisualStudio(bool confirm, bool elevated)
             => VisualStudioService.RestartVisualStudio(confirm, elevated);
+
+        public bool OpenWebPage(string url, bool openInVS)
+            => VisualStudioService.OpenWebPage(url, openInVS);
     }
 }

@@ -200,9 +200,7 @@ namespace StartPagePlus.UI.Services
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
-                ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
-
-                return true;
+                return ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
             }
             catch (ArgumentException ex)
             {

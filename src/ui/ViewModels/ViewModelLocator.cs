@@ -46,8 +46,11 @@ namespace StartPagePlus.UI.ViewModels
         public static NewsViewModel NewsViewModel
             => SimpleIoc.Default.GetInstance<NewsViewModel>();
 
-        public static GetCodeViewModel GetCodeViewModel
-            => SimpleIoc.Default.GetInstance<GetCodeViewModel>();
+        public static WebWindowViewModel WebWindowViewModel
+            => SimpleIoc.Default.GetInstance<WebWindowViewModel>();
+
+        public static CloneOrCheckoutCodeViewModel CloneOrCheckoutCodeViewModel
+            => SimpleIoc.Default.GetInstance<CloneOrCheckoutCodeViewModel>();
 
         public static OpenFolderViewModel OpenFolderViewModel
             => SimpleIoc.Default.GetInstance<OpenFolderViewModel>();
@@ -63,6 +66,12 @@ namespace StartPagePlus.UI.ViewModels
 
         public static RestartElevatedViewModel RestartElevatedViewModel
             => SimpleIoc.Default.GetInstance<RestartElevatedViewModel>();
+
+        public static OpenAzureDevOpsViewModel OpenAzureDevOpsViewModel
+            => SimpleIoc.Default.GetInstance<OpenAzureDevOpsViewModel>();
+
+        public static AzureDevOpsViewModel AzureDevOpsViewModel
+            => SimpleIoc.Default.GetInstance<AzureDevOpsViewModel>();
 
         private void RegisterServices(SimpleIoc container)
         {
@@ -90,12 +99,15 @@ namespace StartPagePlus.UI.ViewModels
 
         private void RegisterViewModels(SimpleIoc container)
         {
-            container.Register<GetCodeViewModel>();
+            container.Register<CloneOrCheckoutCodeViewModel>();
             container.Register<OpenFolderViewModel>();
             container.Register<OpenProjectViewModel>();
             container.Register<CreateProjectViewModel>();
             container.Register<RestartNormalViewModel>();
             container.Register<RestartElevatedViewModel>();
+            container.Register<AzureDevOpsViewModel>();
+            container.Register<OpenAzureDevOpsViewModel>();
+            container.Register<WebWindowViewModel>();
 
             container.Register<RecentItemsViewModel>();
             container.Register<StartActionsViewModel>();
