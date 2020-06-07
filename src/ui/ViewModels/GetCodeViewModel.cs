@@ -6,7 +6,7 @@ namespace StartPagePlus.UI.ViewModels
 
     public class GetCodeViewModel : StartActionViewModel
     {
-        public GetCodeViewModel(IVisualStudioService vsService) : base(vsService)
+        public GetCodeViewModel(IStartActionClickService clickService) : base(clickService)
         {
             Moniker = KnownMonikers.DownloadNoColor; // SourceControl
             Name = "Clone or checkout code";
@@ -14,6 +14,6 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         protected override void ExecuteClick()
-            => VisualStudioService.CloneOrCheckoutCode();
+            => ClickService.CloneOrCheckoutCode();
     }
 }

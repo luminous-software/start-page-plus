@@ -6,7 +6,7 @@ namespace StartPagePlus.UI.ViewModels
 
     public class CreateProjectViewModel : StartActionViewModel
     {
-        public CreateProjectViewModel(IVisualStudioService vsService) : base(vsService)
+        public CreateProjectViewModel(IStartActionClickService clickService) : base(clickService)
         {
             Moniker = KnownMonikers.AddDocument;  // AddDocumentGroup missing from KnownMonikers in SDK v15.9.3
             Name = "Create a new project";
@@ -14,6 +14,6 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         protected override void ExecuteClick()
-            => VisualStudioService.CreateNewProject();
+            => ClickService.CreateNewProject();
     }
 }

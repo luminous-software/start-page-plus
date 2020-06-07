@@ -11,9 +11,9 @@ namespace StartPagePlus.UI.ViewModels
 
     public abstract class StartActionViewModel : ViewModelBase
     {
-        public StartActionViewModel(IVisualStudioService vsService)
+        public StartActionViewModel(IStartActionClickService clickService)
         {
-            VisualStudioService = vsService;
+            ClickService = clickService;
             ClickCommand = new RelayCommand(ExecuteClick, true);
             ImageSize = 40;
             Margin = "5,5,0,0";
@@ -36,7 +36,7 @@ namespace StartPagePlus.UI.ViewModels
 
         public ICommand ClickCommand { get; set; }
 
-        public IVisualStudioService VisualStudioService { get; }
+        public IStartActionClickService ClickService { get; }
 
         protected virtual void ExecuteClick()
         { }
