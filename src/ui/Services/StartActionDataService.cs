@@ -18,12 +18,12 @@ namespace StartPagePlus.UI.Services
         {
             var items = new ObservableCollection<StartActionViewModel>
             {
-                new GetCodeViewModel(VsService),
-                new OpenFolderViewModel(VsService),
-                new OpenProjectViewModel(VsService),
-                new CreateProjectViewModel(VsService),
-                new RestartNormalViewModel(VsService),
-                new RestartElevatedViewModel(VsService),
+                ViewModelLocator.GetCodeViewModel,
+                ViewModelLocator.OpenFolderViewModel,
+                ViewModelLocator.OpenProjectViewModel,
+                ViewModelLocator.CreateProjectViewModel,
+                ViewModelLocator.RestartNormalViewModel,
+                ViewModelLocator.RestartElevatedViewModel,
             };
 
             return items;
