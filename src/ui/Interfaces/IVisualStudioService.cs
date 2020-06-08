@@ -8,7 +8,7 @@
 
         bool OpenWebPage(string url, bool internalBrowser);
 
-        bool CloneOrCheckoutCode();
+        bool CloneRepository();
 
         bool OpenFolder(string path);
 

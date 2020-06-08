@@ -29,7 +29,7 @@ namespace StartPagePlus.UI.Services
         private const string FILE_OPEN_FOLDER = "File.OpenFolder";
         private const string FILE_OPEN_PROJECT = "File.OpenProject";
         private const string FILE_NEW_PROJECT = "File.NewProject";
-        private const string FILE_CLONE_OR_CHECKOUT_CODE = "File.Cloneorcheckoutcode";
+        private const string FILE_CLONE_REPOSITORY = "File.CloneRepository";
         private const uint FORCE_NEW_WINDOW = (uint)__VSWBNAVIGATEFLAGS.VSNWB_ForceNew;
 
         public VisualStudioService(IDialogService dialogService)
@@ -107,13 +107,13 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public bool CloneOrCheckoutCode()
+        public bool CloneRepository()
         {
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
-                return ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
+                return ExecuteCommand(FILE_CLONE_REPOSITORY);
             }
             catch (ArgumentException ex)
             {

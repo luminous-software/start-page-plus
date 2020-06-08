@@ -4,16 +4,16 @@ namespace StartPagePlus.UI.ViewModels
 {
     using Interfaces;
 
-    public class CloneOrCheckoutCodeViewModel : StartActionViewModel
+    public class CloneRepositoryViewModel : StartActionViewModel
     {
-        public CloneOrCheckoutCodeViewModel(IStartActionClickService clickService) : base(clickService)
+        public CloneRepositoryViewModel(IStartActionClickService clickService) : base(clickService)
         {
             Moniker = KnownMonikers.DownloadNoColor; // SourceControl
-            Name = "Clone or checkout code";
+            Name = "Clone a repository";
             Description = "Get code from an online repository like GitHub or Azure DevOps etc";
         }
 
         protected override void ExecuteClick()
-            => ClickService.CloneOrCheckoutCode();
+            => ClickService.CloneRepository();
     }
 }

@@ -9,8 +9,8 @@
 
         private IVisualStudioService VisualStudioService { get; }
 
-        public bool CloneOrCheckoutCode()
-            => VisualStudioService.CloneOrCheckoutCode();
+        public bool CloneRepository()
+            => VisualStudioService.CloneRepository();
 
         public bool CreateNewProject()
             => VisualStudioService.CreateNewProject();

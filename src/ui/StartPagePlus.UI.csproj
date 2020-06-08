@@ -133,7 +133,7 @@
     <Compile Include="ViewModels\FavoritesViewModel.cs" />
     <Compile Include="ViewModels\RecentItemsViewModel.cs" />
     <Compile Include="ViewModels\StartActionsViewModel.cs" />
-    <Compile Include="ViewModels\CloneOrCheckoutCodeViewModel.cs" />
+    <Compile Include="ViewModels\CloneRepositoryViewModel.cs" />
     <Compile Include="ViewModels\StartViewModel.cs" />
     <Compile Include="ViewModels\CommandViewModel.cs" />
     <Compile Include="ViewModels\TabViewModel.cs" />

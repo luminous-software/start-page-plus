@@ -2,7 +2,7 @@
 {
     public interface IStartActionClickService
     {
-        bool CloneOrCheckoutCode();
+        bool CloneRepository();
 
         bool CreateNewProject();
 

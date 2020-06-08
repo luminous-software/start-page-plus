@@ -46,8 +46,8 @@ namespace StartPagePlus.UI.ViewModels
         public static NewsViewModel NewsViewModel
             => SimpleIoc.Default.GetInstance<NewsViewModel>();
 
-        public static CloneOrCheckoutCodeViewModel CloneOrCheckoutCodeViewModel
-            => SimpleIoc.Default.GetInstance<CloneOrCheckoutCodeViewModel>();
+        public static CloneRepositoryViewModel CloneRepositoryViewModel
+            => SimpleIoc.Default.GetInstance<CloneRepositoryViewModel>();
 
         public static OpenFolderViewModel OpenFolderViewModel
             => SimpleIoc.Default.GetInstance<OpenFolderViewModel>();
@@ -90,7 +90,7 @@ namespace StartPagePlus.UI.ViewModels
 
         private void RegisterViewModels(SimpleIoc container)
         {
-            container.Register<CloneOrCheckoutCodeViewModel>();
+            container.Register<CloneRepositoryViewModel>();
             container.Register<OpenFolderViewModel>();
             container.Register<OpenProjectViewModel>();
             container.Register<CreateProjectViewModel>();
