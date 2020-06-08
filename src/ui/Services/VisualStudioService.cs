@@ -128,7 +128,7 @@ namespace StartPagePlus.UI.Services
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
-                return ExecuteCommand(FILE_OPEN_FOLDER, "");
+                return ExecuteCommand(FILE_OPEN_FOLDER);
             }
             catch (ArgumentException ex)
             {

@@ -46,9 +46,6 @@ namespace StartPagePlus.UI.ViewModels
         public static NewsViewModel NewsViewModel
             => SimpleIoc.Default.GetInstance<NewsViewModel>();
 
-        public static WebWindowViewModel WebWindowViewModel
-            => SimpleIoc.Default.GetInstance<WebWindowViewModel>();
-
         public static CloneOrCheckoutCodeViewModel CloneOrCheckoutCodeViewModel
             => SimpleIoc.Default.GetInstance<CloneOrCheckoutCodeViewModel>();
 
@@ -66,12 +63,6 @@ namespace StartPagePlus.UI.ViewModels
 
         public static RestartElevatedViewModel RestartElevatedViewModel
             => SimpleIoc.Default.GetInstance<RestartElevatedViewModel>();
-
-        public static OpenAzureDevOpsViewModel OpenAzureDevOpsViewModel
-            => SimpleIoc.Default.GetInstance<OpenAzureDevOpsViewModel>();
-
-        public static AzureDevOpsViewModel AzureDevOpsViewModel
-            => SimpleIoc.Default.GetInstance<AzureDevOpsViewModel>();
 
         private void RegisterServices(SimpleIoc container)
         {
@@ -105,9 +96,6 @@ namespace StartPagePlus.UI.ViewModels
             container.Register<CreateProjectViewModel>();
             container.Register<RestartNormalViewModel>();
             container.Register<RestartElevatedViewModel>();
-            container.Register<AzureDevOpsViewModel>();
-            container.Register<OpenAzureDevOpsViewModel>();
-            container.Register<WebWindowViewModel>();
 
             container.Register<RecentItemsViewModel>();
             container.Register<StartActionsViewModel>();
