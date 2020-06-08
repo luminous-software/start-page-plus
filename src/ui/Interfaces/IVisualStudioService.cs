@@ -2,9 +2,13 @@
 {
     public interface IVisualStudioService
     {
+        bool ExecuteCommand(string action);
+
         bool ExecuteCommand(string action, string path);
 
         bool OpenWebPage(string url, bool internalBrowser);
+
+        bool CloneOrCheckoutCode();
 
         bool OpenFolder(string path);
 
@@ -14,13 +18,12 @@
 
         bool OpenProject();
 
-        void CreateNewProject();
+        bool CreateNewProject();
 
-        void CloneOrCheckoutCode();
+        bool RestartVisualStudio(bool confirm = true, bool elevated = false);
 
-        void RestartVisualStudio(bool confirm = true, bool elevated = false);
+        bool OpenProjectOrSolutionInVS(string path);
 
-        public bool OpenProjectOrSolutionInVS(string path);
         bool OpenFolderInVS(string path);
     }
 }
