@@ -49,7 +49,22 @@ namespace StartPagePlus.UI.Services
         private IVsShell4 VsShell4
             => GlobalServices.VsShell4;
 
-        public bool ExecuteCommand(string action, string args = "")
+        public bool ExecuteCommand(string action)
+        {
+            try
+            {
+                Dte.ExecuteCommand(action);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+
+        }
+
+        public bool ExecuteCommand(string action, string args)
         {
             try
             {
@@ -92,27 +107,13 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public bool OpenFolder(string path)
+        public bool CloneOrCheckoutCode()
         {
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
-                if (path == null)
-                    return false;
-
-                if (path == "")
-                    return OpenFolder();
-
-                if (Directory.Exists(path))
-                {
-                    return ExecuteCommand(FILE_OPEN_FOLDER, path.ToQuotedString());
-                }
-                else
-                {
-                    DialogService.ShowExclamation($"'{path}' doesn't exist");
-                    return false;
-                }
+                return ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
             }
             catch (ArgumentException ex)
             {
@@ -136,22 +137,19 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public bool OpenProject(string path)
+        public bool OpenFolder(string path)
         {
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
-                if (!string.IsNullOrEmpty(path))
-                    path = path.ToQuotedString();
-
-                if (File.Exists(path))
+                if (Directory.Exists(path))
                 {
-                    return ExecuteCommand(FILE_OPEN_PROJECT, path.ToQuotedString());
+                    return ExecuteCommand(FILE_OPEN_FOLDER, path.ToQuotedString());
                 }
                 else
                 {
-                    DialogService.ShowExclamation($"Can't find '{path}'");
+                    DialogService.ShowExclamation($"'{path}' doesn't exist");
                     return false;
                 }
             }
@@ -177,6 +175,29 @@ namespace StartPagePlus.UI.Services
             }
         }
 
+        public bool OpenProject(string path)
+        {
+            try
+            {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                if (File.Exists(path))
+                {
+                    return ExecuteCommand(FILE_OPEN_PROJECT, path.ToQuotedString());
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"Can't find '{path}'");
+                    return false;
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
+
         public bool CreateNewProject()
         {
             try
@@ -186,21 +207,6 @@ namespace StartPagePlus.UI.Services
                 ExecuteCommand(FILE_NEW_PROJECT);
 
                 return true;
-            }
-            catch (ArgumentException ex)
-            {
-                DialogService.ShowError(ex);
-                return false;
-            }
-        }
-
-        public bool CloneOrCheckoutCode()
-        {
-            try
-            {
-                ThreadHelper.ThrowIfNotOnUIThread();
-
-                return ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
             }
             catch (ArgumentException ex)
             {
@@ -248,25 +254,6 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public bool OpenProjectOrSolutionInVS(string path)
-        {
-            try
-            {
-                using (var proc = new Process())
-                {
-                    proc.StartInfo.FileName = path.ToQuotedString();
-                    proc.StartInfo.Verb = VERB_OPEN;
-                    proc.Start();
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                DialogService.ShowError(ex);
-                return false;
-            }
-        }
-
         public bool OpenFolderInVS(string path)
         {
             try
@@ -288,7 +275,25 @@ namespace StartPagePlus.UI.Services
                     DialogService.ShowExclamation($"'{path}' doesn't exist");
                     return false;
                 }
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
 
+        public bool OpenProjectOrSolutionInVS(string path)
+        {
+            try
+            {
+                using (var proc = new Process())
+                {
+                    proc.StartInfo.FileName = path.ToQuotedString();
+                    proc.StartInfo.Verb = VERB_OPEN;
+                    proc.Start();
+                }
+                return true;
             }
             catch (Exception ex)
             {
