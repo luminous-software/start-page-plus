@@ -6,6 +6,17 @@ page on the [Start Page+][start-page-plus-url] website.
 
 ## Releases
 
+### v1.0.1 - 2020-06-16
+
+#### Fixed
+- "*Extension tells me projects do not exist*" [(GitHub Issue #38)][github-issue-38]
+- "*Clicking `Clone or checkout code` show an error*" [(GitHub Issue #42)][github-issue-42]
+- "*Space in Solution Path - Can't Open Solution from Recent Items*" [(GitHub Issue #43)][github-issue-43]
+
+[github-issue-38]: https://github.com/luminous-software/start-page-plus/issues/38
+[github-issue-42]: https://github.com/luminous-software/start-page-plus/issues/42
+[github-issue-43]: https://github.com/luminous-software/start-page-plus/issues/43
+
 ### v1.0 - 2020-05-28
 
 #### Added
@@ -13,26 +24,26 @@ page on the [Start Page+][start-page-plus-url] website.
     - a **Show Start Tab Title** option
     - a **Start Tab Title Text** option
     - a **Max Width** option [(GitHub Issue #32)][github-issue-32]
-    - replaces fixed width of `1175`
+      - replaces fixed width of `1175`
     - new options pages (**Start Tab**, **Recent Items**, **Developer News**)
     - a **Start Page+ Options** menu item to open `Tools` | `Options` | `Start Page+` | `General`
-    - found in `Tools` | `Options`
+      - found in `Tools` | `Options`
 
 - Recent Items
     - the ability to **pin**/**unpin** items [(GitHub Issue #21)][github-issue-21]
     - a **Pin/Unpin** button to *Recent Items*
-        - previous pin button did nothing
+      - previous pin button did nothing
     - the ability to **Remove** items [(GitHub Issue #35)][github-issue-35]
     - a **Remove** button (only appears when the mouse hovers over an item)
     - the ability to **collapse**/**expand** the group headings
     - a context menu
-        - **Pin**/**Unpin item**
-        - **Remove item**
-        - **Copy item path** (to the Windows clipboard)
-        - **Open item in VS** (new instance)
+      - **Pin**/**Unpin item**
+      - **Remove item**
+      - **Copy item path** (to the Windows clipboard)
+      - **Open item in VS** (new instance)
     - an **auto-refresh** after an item is clicked (updates the date/group it falls into)
     - a **Settings** link to the right of the *Refresh* link
-        - opens `Tools` | `Options` | `Start Page+` | `Start Tab` | `Recent Items` in one click
+      - opens `Tools` | `Options` | `Start Page+` | `Start Tab` | `Recent Items` in one click
     - a **Show Extensions** option to show or hide project/solution extensions
     - an **Items to Display** option
 
@@ -107,7 +118,7 @@ page on the [Start Page+][start-page-plus-url] website.
     - filtering in *Recent Items*
     - *clear filter* button
     - descriptions for tabs that have yet to be implemented
-    - easy-to-find, but non-intrusive version number to *Start Actions*
+    - easy-to-find, but non-intrusive version number to *Get Started*
         - clicking on the link opens the *Start Page+* website's changelog page
   - improved
     - unreadable color combinations in the *Blue* theme ([GitHub Issue #2][github-issue-2])
@@ -130,7 +141,7 @@ page on the [Start Page+][start-page-plus-url] website.
 
 - Preview 1
   - implemented basic *Recent Items*
-  - implemented *Start Actions*
+  - implemented *Get Started*
   - implemented *Developer News*
 
 ## Internal Releases
@@ -141,7 +152,7 @@ page on the [Start Page+][start-page-plus-url] website.
 - added `MainView`
 - added `StartView`
   - added `RecentItemsView`
-  - added `StartActionsView`
+  - added `StartItemsView`
   - added `NewsItemsView`
 - added temporary `FavoritesView`
 - added temporary `CreateView`
