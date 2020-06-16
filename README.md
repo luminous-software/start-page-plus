@@ -4,15 +4,17 @@
 [![License][license-badge]](https://github.com/luminous-software/start-page-plus/blob/master/LICENSE)
 [![Donate][paypal-badge]](https://www.paypal.me/yannduran/5)
 
-[version-badge-url]: http://vsmarketplacebadge.apphb.com/version-short/YannDuran.StartPagePlus.svg?label=version&colorB=7E57C2&style=flat-square
-[installs-badge-url]: http://vsmarketplacebadge.apphb.com/installs-short/YannDuran.StartPagePlus.svg?colorB=7E57C2&style=flat-square
-[rating-badge-url]: http://vsmarketplacebadge.apphb.com/rating-short/YannDuran.StartPagePlus.svg?colorB=7E57C2&style=flat-square
-[license-badge]: https://img.shields.io/badge/license-MIT-7E57C2.svg?style=flat-square
+[version-badge-url]: https://img.shields.io/visual-studio-marketplace/v/YannDuran.StartPagePlus?color=7E57C2&style=flat&label=version%3A%20
+[installs-badge-url]: https://img.shields.io/visual-studio-marketplace/i/YannDuran.StartPagePlus?color=7E57C2&style=flat&label=installs%3A%20
+[rating-badge-url]: https://img.shields.io/visual-studio-marketplace/r/YannDuran.StartPagePlus?color=7E57C2&style=flat&label=rating%3A%20
+[license-badge]: https://img.shields.io/badge/license-MIT-7E57C2.svg?style=flat&label=license%3A%20
 [license-url]: https://github.com/luminous-software/start-page-plus/blob/master/LICENSE
-[paypal-badge]: https://img.shields.io/badge/donate-paypal-green.svg?style=flat-square
+[paypal-badge]: https://img.shields.io/badge/donate-paypal-green.svg?style=flat&label=donate%3A%20
 [paypal-url]: https://www.paypal.me/yannduran/10
 
 You can download this extension [from the Visual Studio Marketplace][marketplace-url]
+
+## Support The Project
 
 If *Start Page+* has saved you time and hassle, please come back and show your support:
 
