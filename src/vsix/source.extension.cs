@@ -11,7 +11,7 @@ namespace StartPagePlus
         public const string Name = "Start Page+";
         public const string Description = @"Bring back Start Page! (a document tab, NOT a modal window)";
         public const string Language = "en-US";
-        public const string Version = "1.0.0.8";
+        public const string Version = "1.0.1";
         public const string Author = "Yann Duran";
         public const string Tags = "Start Page+, start-page-plus, StartPagePlus, start page, start-page, startpage, luminous, yannduran, yd";
     }
