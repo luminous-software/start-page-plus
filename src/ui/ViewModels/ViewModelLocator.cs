@@ -46,6 +46,24 @@ namespace StartPagePlus.UI.ViewModels
         public static NewsViewModel NewsViewModel
             => SimpleIoc.Default.GetInstance<NewsViewModel>();
 
+        public static CloneRepositoryViewModel CloneRepositoryViewModel
+            => SimpleIoc.Default.GetInstance<CloneRepositoryViewModel>();
+
+        public static OpenFolderViewModel OpenFolderViewModel
+            => SimpleIoc.Default.GetInstance<OpenFolderViewModel>();
+
+        public static OpenProjectViewModel OpenProjectViewModel
+            => SimpleIoc.Default.GetInstance<OpenProjectViewModel>();
+
+        public static CreateProjectViewModel CreateProjectViewModel
+            => SimpleIoc.Default.GetInstance<CreateProjectViewModel>();
+
+        public static RestartNormalViewModel RestartNormalViewModel
+            => SimpleIoc.Default.GetInstance<RestartNormalViewModel>();
+
+        public static RestartElevatedViewModel RestartElevatedViewModel
+            => SimpleIoc.Default.GetInstance<RestartElevatedViewModel>();
+
         private void RegisterServices(SimpleIoc container)
         {
             container.Register<IServiceProvider>(() => (IServiceProvider)AsyncPackageBase.Instance);
@@ -54,6 +72,7 @@ namespace StartPagePlus.UI.ViewModels
 
             container.Register<IDateTimeService, DateTimeService>();
             container.Register<IClipboardService, ClipboardService>();
+            container.Register<IStartActionClickService, StartActionClickService>();
 
             container.Register<IRecentItemContextMenuService, RecentItemContextMenuService>();
 
@@ -71,6 +90,13 @@ namespace StartPagePlus.UI.ViewModels
 
         private void RegisterViewModels(SimpleIoc container)
         {
+            container.Register<CloneRepositoryViewModel>();
+            container.Register<OpenFolderViewModel>();
+            container.Register<OpenProjectViewModel>();
+            container.Register<CreateProjectViewModel>();
+            container.Register<RestartNormalViewModel>();
+            container.Register<RestartElevatedViewModel>();
+
             container.Register<RecentItemsViewModel>();
             container.Register<StartActionsViewModel>();
             container.Register<NewsItemsViewModel>();

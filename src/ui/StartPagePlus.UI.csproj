@@ -62,6 +62,7 @@
     <Compile Include="Converters\IntToPluralStringConverter.cs" />
     <Compile Include="Interfaces\IClipboardService.cs" />
     <Compile Include="Interfaces\IRecentItemContextMenuService.cs" />
+    <Compile Include="Interfaces\IStartActionClickService.cs" />
     <Compile Include="MarkupExtensions\MultValueConverterMarkupExtension.cs" />
     <Compile Include="MarkupExtensions\ValueConverterMarkupExtension.cs" />
     <Compile Include="Converters\PeriodTypeToStringConverter.cs" />
@@ -110,9 +111,10 @@
     <Compile Include="Services\RecentItemActionService.cs" />
     <Compile Include="Services\RecentItemCommandService.cs" />
     <Compile Include="Services\RecentItemDataService.cs" />
+    <Compile Include="Services\StartActionClickService.cs" />
     <Compile Include="Services\StartActionCommandService.cs" />
     <Compile Include="Services\StartActionDataService.cs" />
-    <Compile Include="StartPagePlusWindow.cs" />
+    <Compile Include="ToolWindows\StartPagePlusToolWindow.cs" />
     <Compile Include="ViewModels\ColumnViewModel.cs" />
     <Compile Include="Services\VisualStudioService.cs" />
     <Compile Include="ViewModels\ContextCommandViewModel.cs" />
@@ -131,7 +133,7 @@
     <Compile Include="ViewModels\FavoritesViewModel.cs" />
     <Compile Include="ViewModels\RecentItemsViewModel.cs" />
     <Compile Include="ViewModels\StartActionsViewModel.cs" />
-    <Compile Include="ViewModels\GetCodeViewModel.cs" />
+    <Compile Include="ViewModels\CloneRepositoryViewModel.cs" />
     <Compile Include="ViewModels\StartViewModel.cs" />
     <Compile Include="ViewModels\CommandViewModel.cs" />
     <Compile Include="ViewModels\TabViewModel.cs" />
@@ -238,5 +240,6 @@
       <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

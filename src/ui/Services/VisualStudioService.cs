@@ -29,7 +29,7 @@ namespace StartPagePlus.UI.Services
         private const string FILE_OPEN_FOLDER = "File.OpenFolder";
         private const string FILE_OPEN_PROJECT = "File.OpenProject";
         private const string FILE_NEW_PROJECT = "File.NewProject";
-        private const string FILE_CLONE_OR_CHECKOUT_CODE = "File.Cloneorcheckoutcode";
+        private const string FILE_CLONE_REPOSITORY = "File.CloneRepository";
         private const uint FORCE_NEW_WINDOW = (uint)__VSWBNAVIGATEFLAGS.VSNWB_ForceNew;
 
         public VisualStudioService(IDialogService dialogService)
@@ -49,7 +49,22 @@ namespace StartPagePlus.UI.Services
         private IVsShell4 VsShell4
             => GlobalServices.VsShell4;
 
-        public bool ExecuteCommand(string action, string args = "")
+        public bool ExecuteCommand(string action)
+        {
+            try
+            {
+                Dte.ExecuteCommand(action);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+
+        }
+
+        public bool ExecuteCommand(string action, string args)
         {
             try
             {
@@ -92,27 +107,13 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public bool OpenFolder(string path)
+        public bool CloneRepository()
         {
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
-                if (path == null)
-                    return false;
-
-                if (path == "")
-                    return OpenFolder();
-
-                if (Directory.Exists(path))
-                {
-                    return ExecuteCommand(FILE_OPEN_FOLDER, path.ToQuotedString());
-                }
-                else
-                {
-                    DialogService.ShowExclamation($"'{path}' doesn't exist");
-                    return false;
-                }
+                return ExecuteCommand(FILE_CLONE_REPOSITORY);
             }
             catch (ArgumentException ex)
             {
@@ -127,7 +128,7 @@ namespace StartPagePlus.UI.Services
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
-                return ExecuteCommand(FILE_OPEN_FOLDER, "");
+                return ExecuteCommand(FILE_OPEN_FOLDER);
             }
             catch (ArgumentException ex)
             {
@@ -136,22 +137,19 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public bool OpenProject(string path)
+        public bool OpenFolder(string path)
         {
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
-                if (!string.IsNullOrEmpty(path))
-                    path = path.ToQuotedString();
-
-                if (File.Exists(path))
+                if (Directory.Exists(path))
                 {
-                    return ExecuteCommand(FILE_OPEN_PROJECT, path.ToQuotedString());
+                    return ExecuteCommand(FILE_OPEN_FOLDER, path.ToQuotedString());
                 }
                 else
                 {
-                    DialogService.ShowExclamation($"Can't find '{path}'");
+                    DialogService.ShowExclamation($"'{path}' doesn't exist");
                     return false;
                 }
             }
@@ -177,35 +175,47 @@ namespace StartPagePlus.UI.Services
             }
         }
 
-        public void CreateNewProject()
+        public bool OpenProject(string path)
+        {
+            try
+            {
+                ThreadHelper.ThrowIfNotOnUIThread();
+
+                if (File.Exists(path))
+                {
+                    return ExecuteCommand(FILE_OPEN_PROJECT, path.ToQuotedString());
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"Can't find '{path}'");
+                    return false;
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
+
+        public bool CreateNewProject()
         {
             try
             {
                 ThreadHelper.ThrowIfNotOnUIThread();
 
                 ExecuteCommand(FILE_NEW_PROJECT);
+
+                return true;
             }
             catch (ArgumentException ex)
             {
                 DialogService.ShowError(ex);
+                return false;
             }
         }
 
-        public void CloneOrCheckoutCode()
-        {
-            try
-            {
-                ThreadHelper.ThrowIfNotOnUIThread();
-
-                ExecuteCommand(FILE_CLONE_OR_CHECKOUT_CODE);
-            }
-            catch (ArgumentException ex)
-            {
-                DialogService.ShowError(ex);
-            }
-        }
-
-        public void RestartVisualStudio(bool confirm = true, bool elevated = false)
+        public bool RestartVisualStudio(bool confirm = true, bool elevated = false)
         {
             try
             {
@@ -213,14 +223,16 @@ namespace StartPagePlus.UI.Services
                 {
                     if (!DialogService.Confirmed("Visual Studio is currently running as Administrator. To return to running normally Visual Studio will need to close"))
                     {
-                        return;
+                        return false;
                     }
 
                     CloseVisualStudio();
+
+                    return true;
                 }
 
                 if (confirm && !RestartConfirmed(elevated))
-                    return;
+                    return false;
 
                 switch (elevated)
                 {
@@ -232,10 +244,61 @@ namespace StartPagePlus.UI.Services
                         RestartNormal();
                         break;
                 }
+
+                return true;
             }
             catch (Exception ex)
             {
                 DialogService.ShowError(ex);
+                return false;
+            }
+        }
+
+        public bool OpenFolderInVS(string path)
+        {
+            try
+            {
+                if (Directory.Exists(path))
+                {
+                    using (var process = new Process())
+                    {
+                        var startInfo = new ProcessStartInfo("devenv.exe", "/edit " + path.ToQuotedString());
+
+                        process.StartInfo = startInfo;
+                        process.Start();
+
+                        return true;
+                    }
+                }
+                else
+                {
+                    DialogService.ShowExclamation($"'{path}' doesn't exist");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
+            }
+        }
+
+        public bool OpenProjectOrSolutionInVS(string path)
+        {
+            try
+            {
+                using (var proc = new Process())
+                {
+                    proc.StartInfo.FileName = path.ToQuotedString();
+                    proc.StartInfo.Verb = VERB_OPEN;
+                    proc.Start();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                DialogService.ShowError(ex);
+                return false;
             }
         }
 
@@ -284,56 +347,6 @@ namespace StartPagePlus.UI.Services
                 VsShell3.IsRunningElevated(out var elevated);
 
                 return elevated;
-            }
-        }
-
-
-        public bool OpenProjectOrSolutionInVS(string path)
-        {
-            try
-            {
-                using (var proc = new Process())
-                {
-                    proc.StartInfo.FileName = path.ToQuotedString();
-                    proc.StartInfo.Verb = VERB_OPEN;
-                    proc.Start();
-                }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                DialogService.ShowError(ex);
-                return false;
-            }
-        }
-
-        public bool OpenFolderInVS(string path)
-        {
-            try
-            {
-                if (Directory.Exists(path))
-                {
-                    using (var process = new Process())
-                    {
-                        var startInfo = new ProcessStartInfo("devenv.exe", "/edit " + path.ToQuotedString());
-
-                        process.StartInfo = startInfo;
-                        process.Start();
-
-                        return true;
-                    }
-                }
-                else
-                {
-                    DialogService.ShowExclamation($"'{path}' doesn't exist");
-                    return false;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                DialogService.ShowError(ex);
-                return false;
             }
         }
 

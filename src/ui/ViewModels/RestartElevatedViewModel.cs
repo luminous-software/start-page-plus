@@ -6,7 +6,7 @@ namespace StartPagePlus.UI.ViewModels
 
     public class RestartElevatedViewModel : StartActionViewModel
     {
-        public RestartElevatedViewModel(IVisualStudioService vsService) : base(vsService)
+        public RestartElevatedViewModel(IStartActionClickService clickService) : base(clickService)
         {
             Moniker = KnownMonikers.User;
             Name = "Restart As Administrator";
@@ -16,6 +16,6 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         protected override void ExecuteClick()
-            => VisualStudioService.RestartVisualStudio(confirm: true, elevated: true);
+            => ClickService.RestartVisualStudio(confirm: true, elevated: true);
     }
 }

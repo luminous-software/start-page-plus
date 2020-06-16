@@ -9,7 +9,8 @@ namespace StartPagePlus.UI.Services
 
     public class StartActionDataService : IStartActionDataService
     {
-        public StartActionDataService(IVisualStudioService vsService) => VsService = vsService;
+        public StartActionDataService(IVisualStudioService vsService)
+            => VsService = vsService;
 
         public IVisualStudioService VsService { get; }
 
@@ -17,12 +18,12 @@ namespace StartPagePlus.UI.Services
         {
             var items = new ObservableCollection<StartActionViewModel>
             {
-                new GetCodeViewModel(VsService),
-                new OpenFolderViewModel(VsService),
-                new OpenProjectViewModel(VsService),
-                new CreateProjectViewModel(VsService),
-                new RestartNormalViewModel(VsService),
-                new RestartElevatedViewModel(VsService),
+                ViewModelLocator.CloneRepositoryViewModel,
+                ViewModelLocator.OpenFolderViewModel,
+                ViewModelLocator.OpenProjectViewModel,
+                ViewModelLocator.CreateProjectViewModel,
+                ViewModelLocator.RestartNormalViewModel,
+                ViewModelLocator.RestartElevatedViewModel,
             };
 
             return items;

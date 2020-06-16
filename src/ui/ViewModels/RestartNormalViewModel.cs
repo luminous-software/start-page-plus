@@ -6,7 +6,7 @@ namespace StartPagePlus.UI.ViewModels
 
     public class RestartNormalViewModel : StartActionViewModel
     {
-        public RestartNormalViewModel(IVisualStudioService vsService) : base(vsService)
+        public RestartNormalViewModel(IStartActionClickService clickService) : base(clickService)
         {
             Moniker = KnownMonikers.Restart;
             Name = "Restart Visual Studio";
@@ -16,6 +16,6 @@ namespace StartPagePlus.UI.ViewModels
         }
 
         protected override void ExecuteClick()
-            => VisualStudioService.RestartVisualStudio(confirm: true, elevated: false);
+            => ClickService.RestartVisualStudio(confirm: true, elevated: false);
     }
 }

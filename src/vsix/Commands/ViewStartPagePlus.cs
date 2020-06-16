@@ -9,7 +9,7 @@ namespace StartPagePlus.Commands
 {
     using Options.Models;
 
-    using UI;
+    using UI.ToolWindows;
 
     internal sealed class ViewStartPagePlus : StartPagePlusCommand
     {
@@ -28,6 +28,6 @@ namespace StartPagePlus.Commands
                 .ShowProblem();
 
         private CommandResult ExecuteCommand()
-            => PackageClass.ShowToolWindow<StartPagePlusWindow>(Package.DisposalToken);
+            => PackageClass.ShowToolWindow<StartPagePlusToolWindow>(Package.DisposalToken);
     }
 }

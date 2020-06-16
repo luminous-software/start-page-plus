@@ -17,11 +17,10 @@ namespace StartPagePlus
 {
     using Commands;
 
+    using Options.Models;
     using Options.Pages;
 
-    using StartPagePlus.Options.Models;
-
-    using UI;
+    using UI.ToolWindows;
     using UI.ViewModels;
 
     using static PackageGuids;
@@ -38,7 +37,7 @@ namespace StartPagePlus
     [ProvideOptionPage(typeof(DialogPageProvider.RecentItems), Name, RecentItemsOptions.Category, 0, 0, supportsAutomation: true)]
     [ProvideOptionPage(typeof(DialogPageProvider.NewsItems), Name, NewsItemsOptions.Category, 0, 0, supportsAutomation: true)]
 
-    [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
+    [ProvideToolWindow(typeof(StartPagePlusToolWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
 
     public sealed class PackageClass : AsyncPackageBase
     {
@@ -65,13 +64,13 @@ namespace StartPagePlus
         }
 
         public override IVsAsyncToolWindowFactory GetAsyncToolWindowFactory(Guid toolWindowType)
-            => (toolWindowType == typeof(StartPagePlusWindow).GUID)
+            => (toolWindowType == typeof(StartPagePlusToolWindow).GUID)
                 ? this
                 : null; //base.GetAsyncToolWindowFactory(toolWindowType);
 
         // TODO: is GetToolWindowTitle REALLY necessary?
         protected override string GetToolWindowTitle(Type toolWindowType, int id)
-            => (toolWindowType == typeof(StartPagePlusWindow))
+            => (toolWindowType == typeof(StartPagePlusToolWindow))
                 ? $"{Vsix.Name}"
                 : base.GetToolWindowTitle(toolWindowType, id);
 
@@ -88,27 +87,40 @@ namespace StartPagePlus
             }
         }
 
-        public static CommandResult ShowToolWindow(Type type, string problem = null)
+        public static CommandResult ShowToolWindow(Type type, string problem = null, int id = 0)
         {
+            CommandResult commandResult = null;
+
             try
             {
                 Instance.JoinableTaskFactory.RunAsync(async delegate
                 {
-                    using (var window = await Instance.ShowToolWindowAsync(type, 0, true, Instance.DisposalToken))
+                    try
                     {
-                        if ((null == window) || (null == window.Frame))
+                        using (var window = await Instance.ShowToolWindowAsync(type, id, create: true, Instance.DisposalToken))
                         {
-                            throw new NotSupportedException("Cannot create tool window");
+                            if ((null == window) || (null == window.Frame))
+                            {
+                                throw new NotSupportedException("Cannot create tool window");
+                            }
+
+                            await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
+
+                            var windowFrame = (IVsWindowFrame)window.Frame;
+                            var result = windowFrame.Show();
+
+                            ErrorHandler.ThrowOnFailure(result);
                         }
 
-                        await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
-
-                        var windowFrame = (IVsWindowFrame)window.Frame;
-                        ErrorHandler.ThrowOnFailure(windowFrame.Show());
+                        commandResult = new SuccessResult();
+                    }
+                    catch (Exception ex)
+                    {
+                        commandResult = new ProblemResult(problem ?? ex.ExtendedMessage());
                     }
                 });
 
-                return new SuccessResult();
+                return commandResult;
             }
             catch (Exception ex)
             {

@@ -84,7 +84,7 @@ You can then paste it anywhere you need to.
 
 ### Links
 
-![Recent Items](assets/images/recent-items-links.png)
+![Recent Items](assets/images/links-recent-items.png)
 
 #### Refresh
 
@@ -97,12 +97,12 @@ It's also a quick way to expand all of the timeframe groups at once.
 Clicking on the *Settings* link will open the `Tools` | `Options` | `Start Page+` | `Recent Items`
 settings page without having to navigate through the dropdowns.
 
-## Start Actions
+## Get Started
 
-The *Start Actions* list gives new users a simplified way to get to their code, the same as in VS 2019's
+The *Get Started* list gives new users a simplified way to get to their code, the same as in VS 2019's
 *Start Window*. Plus a few extras.
 
-![Start Actions](assets/images/start-actions.png)
+![Start Items](assets/images/get-started.png)
 
 ### Clone Or Checkout Code
 
@@ -139,7 +139,7 @@ There doesn't seem to be a programmatic way to force an elevated session to rest
 
 ### Links
 
-![Recent Items](assets/images/get-started-links.png)
+![Recent Items](assets/images/links-get-started.png)
 
 #### Changelog
 
@@ -199,7 +199,7 @@ there's an option to change *Start Page+*'s behavior to do just that.
 
 ### Links
 
-![Recent Items](assets/images/developer-news-links.png)
+![Recent Items](assets/images/links-developer-news.png)
 
 #### Refresh
 
