@@ -88,27 +88,40 @@ namespace StartPagePlus
             }
         }
 
-        public static CommandResult ShowToolWindow(Type type, string problem = null)
+        public static CommandResult ShowToolWindow(Type type, string problem = null, int id = 0)
         {
+            CommandResult commandResult = null;
+
             try
             {
                 Instance.JoinableTaskFactory.RunAsync(async delegate
                 {
-                    using (var window = await Instance.ShowToolWindowAsync(type, 0, true, Instance.DisposalToken))
+                    try
                     {
-                        if ((null == window) || (null == window.Frame))
+                        using (var window = await Instance.ShowToolWindowAsync(type, id, create: true, Instance.DisposalToken))
                         {
-                            throw new NotSupportedException("Cannot create tool window");
+                            if ((null == window) || (null == window.Frame))
+                            {
+                                throw new NotSupportedException("Cannot create tool window");
+                            }
+
+                            await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
+
+                            var windowFrame = (IVsWindowFrame)window.Frame;
+                            var result = windowFrame.Show();
+
+                            ErrorHandler.ThrowOnFailure(result);
                         }
 
-                        await Instance.JoinableTaskFactory.SwitchToMainThreadAsync();
-
-                        var windowFrame = (IVsWindowFrame)window.Frame;
-                        ErrorHandler.ThrowOnFailure(windowFrame.Show());
+                        commandResult = new SuccessResult();
+                    }
+                    catch (Exception ex)
+                    {
+                        commandResult = new ProblemResult(problem ?? ex.ExtendedMessage());
                     }
                 });
 
-                return new SuccessResult();
+                return commandResult;
             }
             catch (Exception ex)
             {
