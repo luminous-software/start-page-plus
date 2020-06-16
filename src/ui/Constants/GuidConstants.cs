@@ -2,6 +2,6 @@
 {
     internal static class GuidConstants
     {
-        public const string StartPagePlusPaneGuidString = "5A9217AE-FA70-4D7C-9750-CA762B886168";
+        public const string StartPagePlusToolWindowGuidString = "AAD663F7-9CE1-4DF7-B995-099B56F5D6AF";
     }
 }

@@ -114,7 +114,7 @@
     <Compile Include="Services\StartActionClickService.cs" />
     <Compile Include="Services\StartActionCommandService.cs" />
     <Compile Include="Services\StartActionDataService.cs" />
-    <Compile Include="StartPagePlusWindow.cs" />
+    <Compile Include="ToolWindows\StartPagePlusToolWindow.cs" />
     <Compile Include="ViewModels\ColumnViewModel.cs" />
     <Compile Include="Services\VisualStudioService.cs" />
     <Compile Include="ViewModels\ContextCommandViewModel.cs" />

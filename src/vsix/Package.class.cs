@@ -17,11 +17,10 @@ namespace StartPagePlus
 {
     using Commands;
 
+    using Options.Models;
     using Options.Pages;
 
-    using StartPagePlus.Options.Models;
-
-    using UI;
+    using UI.ToolWindows;
     using UI.ViewModels;
 
     using static PackageGuids;
@@ -38,7 +37,7 @@ namespace StartPagePlus
     [ProvideOptionPage(typeof(DialogPageProvider.RecentItems), Name, RecentItemsOptions.Category, 0, 0, supportsAutomation: true)]
     [ProvideOptionPage(typeof(DialogPageProvider.NewsItems), Name, NewsItemsOptions.Category, 0, 0, supportsAutomation: true)]
 
-    [ProvideToolWindow(typeof(StartPagePlusWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
+    [ProvideToolWindow(typeof(StartPagePlusToolWindow), Style = VsDockStyle.Tabbed, Window = "DocumentWell", MultiInstances = false)]
 
     public sealed class PackageClass : AsyncPackageBase
     {
@@ -65,13 +64,13 @@ namespace StartPagePlus
         }
 
         public override IVsAsyncToolWindowFactory GetAsyncToolWindowFactory(Guid toolWindowType)
-            => (toolWindowType == typeof(StartPagePlusWindow).GUID)
+            => (toolWindowType == typeof(StartPagePlusToolWindow).GUID)
                 ? this
                 : null; //base.GetAsyncToolWindowFactory(toolWindowType);
 
         // TODO: is GetToolWindowTitle REALLY necessary?
         protected override string GetToolWindowTitle(Type toolWindowType, int id)
-            => (toolWindowType == typeof(StartPagePlusWindow))
+            => (toolWindowType == typeof(StartPagePlusToolWindow))
                 ? $"{Vsix.Name}"
                 : base.GetToolWindowTitle(toolWindowType, id);
 

@@ -6,16 +6,16 @@ using Luminous.Code.VisualStudio.Packages;
 using Microsoft.VisualStudio.Imaging;
 using Microsoft.VisualStudio.Shell;
 
-namespace StartPagePlus.UI
+namespace StartPagePlus.UI.ToolWindows
 {
     using Views;
 
     using static Constants.GuidConstants;
 
-    [Guid(StartPagePlusPaneGuidString)]
-    public class StartPagePlusWindow : ToolWindowPane
+    [Guid(StartPagePlusToolWindowGuidString)]
+    public class StartPagePlusToolWindow : ToolWindowPane
     {
-        public StartPagePlusWindow(AsyncPackageBase package) : base(null)
+        public StartPagePlusToolWindow(AsyncPackageBase package) : base(null)
         {
             Caption = Vsix.Name;
             BitmapImageMoniker = KnownMonikers.Home;
