@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 const gat = require('gulp-all-tasks')();
 const exec = require('child_process').exec;
-const opn = require('opn');
+const opn = require('open');
 
 const config = {
     repo: 'https://github.com/luminous-software/extensibility-logs.git',
